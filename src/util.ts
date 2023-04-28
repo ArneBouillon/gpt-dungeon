@@ -11,8 +11,7 @@ const prompt = function(message) {
     let s = '';
     let buf = Buffer.alloc(1);
     fs.readSync(stdin,buf,0,1,null);
-    while (buf[0] != 92) {
-    // while((buf[0] != 10) && (buf[0] != 13)) {
+    while (buf[0] != 92) { // Stop parsing input at a backslash character
         s += buf;
         fs.readSync(stdin,buf,0,1,null);
     }
@@ -50,6 +49,9 @@ class ChatGPTThread {
 
     public add(message: string, res: ChatMessage) {
         this.messages.push(message, res.text)
+        this.lastRes = res
+        console.log(message + "\n\n---------\n\n")
+        console.log(res.text + "\n\n---------\n\n")
     }
 
     public getOptions() {
@@ -64,7 +66,8 @@ class ChatGPTAsker implements Asker {
     private threads = new Map<string, ChatGPTThread>
 
     public async ask(threadID, message) {
-        const thread: ChatGPTThread = this.threads.has(threadID) ? this.threads[threadID] : (this.threads[threadID] = new ChatGPTThread)
+        if (!this.threads.has(threadID)) this.threads.set(threadID, new ChatGPTThread)
+        const thread = this.threads.get(threadID)!
 
         const options = thread.getOptions()
         const res = await api.sendMessage(message, options)
