@@ -79,6 +79,13 @@ const messageConnectionsSummary =
     "Do not repeat the marks. Try to make the summary short yet clear."
 const { text: connectionsSummary } = await asker.ask(THREAD_MAIN2, messageConnectionsSummary)
 
+const messageRoomSummaries =
+    `${messageRooms}\n\nRecall these rooms. Now state for each room:\n` +
+    "- The overall amount of content in this room (low/medium/high). Ensure a good mix of this. " +
+    "- The types of content present in this room (loot/combat/social/...) " +
+    "- A bit more detail about the content. Keep it at the conceptual level; conciseness is important."
+const { text: roomSummaries } = await asker.ask(THREAD_MAIN2, messageRoomSummaries)
+
 for (let roomIndex = 1; roomIndex <= 10; ++roomIndex) {
     const thread = `room${roomIndex}`
 
