@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "app": "node ./dist/src/index.js",
+    "oneshot": "node ./dist/src/oneshot.js",
+    "dungeon": "node ./dist/src/dungeon.js",
     "build": "tsc"
   },
   "dependencies": {

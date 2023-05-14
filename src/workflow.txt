@@ -1,7 +1,0 @@
-setting = get_setting(t0)
-mission = get_mission(t0)
-motivation = get_motivation(t0)
-acts = get_three_acts(t0)
-for act in acts:
-    elements = get_four_elements(t0)
-

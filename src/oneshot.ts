@@ -1,7 +1,7 @@
 import * as util from './util.js'
 
-const asker = new util.PromptAsker()
-// const asker = new util.ChatGPTAsker()
+// const asker = new util.PromptAsker()
+const asker = new util.ChatGPTAsker()
 
 const THREAD_MAIN = 'main'
 const THREAD_AUX1 = 'aux1'
