@@ -1,9 +1,14 @@
+import * as hb from './homebrewery.js'
 import * as util from './util.js'
-import assert from 'assert'
 
-const asker = new util.PromptAsker()
+import assert from 'assert'
+import * as fs from 'fs'
+
+const asker = new util.ChatGPTAsker()
 
 const THREAD_KEYWORDS = 'kw'
+const THREAD_CONTEXT = 'context'
+
 const THREAD_MAIN = 'main'
 const THREAD_MAIN2 = 'main2'
 
@@ -20,9 +25,14 @@ const messageDungeon =
     "Include the location/building the characters will explore and a brief description of the setting " +
     "(inhabitants, context, positioning) of the place. Ensure to keep the scope very limited. " +
     "The less larger narrative there is to the story, the better. " +
-    "BE CREATIVE AND DON'T STICK TO CLICHES! ANSWER IN A SINGLE SENTENCE.  " +
+    "BE CREATIVE AND DON'T STICK TO CLICHES! ANSWER IN A SINGLE SENTENCE. " +
     `Use the following keywords: ${keywords}`
 const { text: dungeon } = await asker.ask(THREAD_MAIN, messageDungeon)
+
+const messageHistory =
+    "That sounds awesome! Now, very concisely suggest the history of this location. When mentioning people or " +
+    "locations, use concrete names. Be as specific as possible."
+const { text: history } = await asker.ask(THREAD_MAIN, messageHistory)
 
 const messageMission =
     "That sounds awesome! Now we need to add some meat to the story. " +
@@ -31,10 +41,15 @@ const messageMission =
     "Do not yet mention their motivation for this goal. BE CREATIVE AND DON'T STICK TO CLICHES!"
 const { text: mission } = await asker.ask(THREAD_MAIN, messageMission)
 
-const messageMotivation =
-    "That sounds good. Now suggest an interesting motivation for the characters to do this. " +
-    "Ensure it can apply to any set of characters that might be playing!"
-const { text: motivation } = await asker.ask(THREAD_MAIN, messageMotivation)
+const messageContext =
+    "Summarize neatly into a single text. DO NOT LOSE INFORMATION.\n\n" +
+    `${dungeon}\nIts history is summarized as follows. ${history}\n` +
+    `The characters' mission is the following. ${mission}.`
+const { text: context } = await asker.ask(THREAD_CONTEXT, messageContext)
+
+const messageMotivations =
+    "That sounds good. Now suggest a few potential interesting motivations for the characters to do this."
+const { text: motivations } = await asker.ask(THREAD_MAIN, messageMotivations)
 
 const messageChallenges =
     "Great. Now we should identify the main challenges in this dungeon. Select five main challenges that " +
@@ -43,27 +58,27 @@ const messageChallenges =
 const { text: challenges } = await asker.ask(THREAD_MAIN, messageChallenges)
 
 const messageChallengesElaborated =
-    "Now repeat the five main challenges you just gave me, but add the following. If the challenge is a combat encounter, " +
-    "detail precisely the types and numbers of enemies (no stats yet!). If the challenge requires D&D in-game mechanics " +
-    "to be meaningful (such as challenges that relate to a hostile environment), detail VERY SPECIFICALLY how it would " +
-    "work in-game."
+    "Now repeat the five main challenges you just gave me, keeping the relevant information that was there, " +
+    "but add the following. If the challenge is a combat encounter, detail precisely the types and numbers of enemies " +
+    "(no stats yet!). If the challenge requires D&D in-game mechanics to be meaningful " +
+    "(such as challenges that relate to a hostile environment), detail VERY SPECIFICALLY how it would work in-game."
 const { text: challengesElaborated } = await asker.ask(THREAD_MAIN, messageChallengesElaborated)
 
 const messageRooms =
-    `We are designing a D&D dungeon. The setting is as follows: ${dungeon} ${mission} ${motivation} ` +
+    `We are designing a D&D dungeon. The context is as follows: ${context}` +
     `\n\nThe five main challenges for the players will be:\n${challengesElaborated}\n\n` +
-    "Propose 10 rooms into which to divide the dungeon. Start with just a high-level description. Make all the rooms " +
+    "Propose 8 rooms into which to divide the dungeon. Start with just a high-level description. Make all the rooms " +
     "interesting, although they do not all need to be action-packed. Ensure the five challenges from above are all " +
     "accounted for somehow."
 const { text: rooms } = await asker.ask(THREAD_MAIN2, messageRooms)
 const roomsList = rooms.split('\n').map((room) => room.match(/\s*\d\d?.?\s*(.*)\s*/)?.[1]).filter(room => room)
 console.log(roomsList)
-assert(roomsList.length == 10)
+assert(roomsList.length == 8)
 
 const messageLayout =
     "What should be the layout of these rooms? The layout must serve two goals: " +
     "it should provide an exciting adventure with well-paced action and excitement building, " +
-    "but it should not feel railroaded. Please suggest how the 10 rooms mentioned earlier could be connected. " +
+    "but it should not feel railroaded. Please suggest how the 8 rooms mentioned earlier could be connected. " +
     "Where possible, give the characters the freedom to choose multiple paths, although you should not sacrifice the story for that. " +
     "Be concise in your answer and do not repeat the room descriptions. Instead, REFER TO THE ROOMS ABOVE BY NAME. " +
     "ENSURE EVERYTHING MAKES LOGICAL SENSE AND THE CHARACTERS CAN EXPLORE THE ENTIRE DUNGEON WITHOUT GETTING STUCK! " +
@@ -71,15 +86,10 @@ const messageLayout =
 const { text: layout } = await asker.ask(THREAD_MAIN2, messageLayout)
 
 const messageConnections =
-    "Repeat your last message, but anytime you introduce a connection between two rooms, " +
-    "mark it with [Connection: Room 1 <-> Room 2]. Only use this mark with the 10 rooms you proposed above, " +
+    "Repeat your full last message, but anytime you introduce a connection between two rooms, " +
+    "mark it with [Connection: Room 1 <-> Room 2]. Only use this mark with the 8 rooms you proposed above, " +
     "and MAKE SURE ALL CONNECTIONS ARE MARKED!"
 const { text: connections } = await asker.ask(THREAD_MAIN2, messageConnections)
-
-const messageConnectionsSummary =
-    "Concisely summarize the connections. ENSURE EVERY CONNECTION MARKED [Connection] is included in your summary! " +
-    "Do not repeat the marks. Try to make the summary short yet clear."
-const { text: connectionsSummary } = await asker.ask(THREAD_MAIN2, messageConnectionsSummary)
 
 const messageRoomSummaries =
     `${roomsList.join('\n')}\n\nRecall these rooms. Now state for each room:\n` +
@@ -90,14 +100,14 @@ const messageRoomSummaries =
 const { text: roomSummaries } = await asker.ask(THREAD_MAIN2, messageRoomSummaries)
 const roomSummariesList = roomSummaries.split('---').map(room => room.trim()).filter(room => room)
 console.log(roomSummariesList)
-assert(roomSummariesList.length == 10)
+assert(roomSummariesList.length == 8)
 
 let roomTexts: string[] = []
-for (let roomIndex = 1; roomIndex <= 10; ++roomIndex) {
+for (let roomIndex = 1; roomIndex <= 8; ++roomIndex) {
     const thread = `room${roomIndex}`
 
     const messageRoom =
-        `We are designing a D&D dungeon. The setting is as follows: ${dungeon} ${mission} ${motivation} ` +
+        `We are designing a D&D dungeon. The context is as follows: ${context} ` +
         `\n\nThe room I would like to design in more detail is the following: ${roomSummariesList[roomIndex - 1]}.\n\n` +
         "Please propose a detailed description of this room. Feel free to add small things such as decorations, " +
         "minor loot... but nothing too big."
@@ -125,3 +135,27 @@ for (let roomIndex = 1; roomIndex <= 10; ++roomIndex) {
 }
 
 // TODO: Assemble nice text
+
+const titleText =
+    "Propose a title for this adventure."
+const { text: rawTitle } = await asker.ask(THREAD_MAIN, titleText)
+const title = rawTitle.replaceAll(/"'\./g, '')
+
+let roomSections: string[] = []
+for (let roomIndex = 1; roomIndex <= 8; ++roomIndex) {
+    const thread = `room${roomIndex}_2`
+
+    const messageHomebrewery =
+        `${roomTexts[roomIndex - 1]}\n\n` +
+        "Now repeat this in the Homebrewery flavor of Markdown: Brewdown. Use its features to the fullest where possible. " +
+        `Make your main heading a "##" and include the room number: ${roomIndex}. Reply with only the markdown, no other text!`
+    const { text: section } = await asker.ask(thread, messageHomebrewery)
+    roomSections.push(section)
+}
+
+const motivationSection =
+    `## Motivation\nThere are many reasons why the PCs might embark on this quest. Some examples are given.\n\n${motivations}`
+
+const sections = [motivationSection].concat(roomSections)
+const hbText = hb.getMD(title, context, sections)
+fs.writeFile('output.txt', hbText, err => { console.log(err); console.log(hbText) })

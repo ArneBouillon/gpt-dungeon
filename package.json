@@ -8,7 +8,7 @@
     "build": "tsc"
   },
   "dependencies": {
-    "chatgpt": "^5.2.2",
+    "chatgpt": "^5.2.4",
     "clipboardy": "^3.0.0",
     "events": "^3.3.0"
   },

@@ -23,7 +23,8 @@ const token = fs.readFileSync('.token', 'utf-8')
 const api = new ChatGPTUnofficialProxyAPI({
     accessToken: token,
     // apiReverseProxyUrl: 'https://bypass.churchless.tech/api/conversation',
-    apiReverseProxyUrl: 'https://api.pawan.krd/backend-api/conversation',
+    apiReverseProxyUrl: 'https://ai.fakeopen.com/api/conversation',
+    // apiReverseProxyUrl: 'https://api.pawan.krd/backend-api/conversation',
     // debug: true,
 })
 
@@ -70,7 +71,23 @@ class ChatGPTAsker implements Asker {
         const thread = this.threads.get(threadID)!
 
         const options = thread.getOptions()
-        const res = await api.sendMessage(message, options)
+        let res;
+        let attempts = 0;
+        // while (true) {
+        //     try {
+                for (let i=1;i<1000000000;++i);
+                res = await api.sendMessage(message, options)
+        //         break
+        //     } catch(err) {
+        //         attempts++
+        //         if (attempts >= 5) {
+        //             console.log("Error keeps coming, I'm going to stop retrying now!")
+        //             throw err
+        //         } else {
+        //             console.log(`Errored; attempt ${attempts + 1} coming up`)
+        //         }
+        //     }
+        // }
         thread.add(message, res)
         return {
             text: res.text,
