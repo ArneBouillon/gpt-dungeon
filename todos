@@ -1,3 +1,5 @@
+TODOs for `dungeon.ts`
+
 Necessary:
 - Extract enemies and add at the end
 - Extract special items and add at the end
@@ -9,3 +11,10 @@ Nice-to-have:
 - Keep more context in between rooms
     > Ensure no references to later are made that don't come true (e.g. "They find a key that they will need later")
     > Create a more interconnected/integrated feeling
+- Introduce more options
+    > Make the keywords configurable
+    > Give a "slider" for loot amount, difficulty...
+- Add thread that remembers style decisions (for increased uniformity)
+
+Ideas:
+- Maybe we could provide a list with TODOs for the DM? There'll always be a few things left to fill in (and that might not even be a bad thing).
