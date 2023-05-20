@@ -3,6 +3,8 @@ import fs from "fs";
 export { makeUndirectedGraph }
 
 function makeUndirectedGraph(all, connections) {
+    connections = connections.map(conn => conn.sort())
+                             .filter((conn, i, a) => conn.toString() != a[i-1].toString())
     const instructions =
         `
             graph G {
@@ -14,5 +16,5 @@ function makeUndirectedGraph(all, connections) {
         `
 
     console.log(instructions)
-    fs.writeFile('graph.txt', instructions, err => { console.log(err); console.log(instructions) })
+    fs.writeFileSync('graph.txt', instructions)
 }

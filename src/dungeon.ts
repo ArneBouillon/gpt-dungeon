@@ -5,7 +5,7 @@ import * as util from './util.js'
 import assert from 'assert'
 import * as fs from 'fs'
 
-const asker = new util.ChatGPTAsker()
+const asker = new util.PromptAsker()
 
 const THREAD_KEYWORDS = 'kw'
 const THREAD_CONTEXT = 'context'
@@ -40,8 +40,7 @@ const messageHistory =
 const { text: history } = await asker.ask(THREAD_MAIN, messageHistory)
 
 const messageMission =
-    "That sounds awesome! Now we need to add some meat to the story. " +
-    "On a high level, what will be the characters' mission? " +
+    "Great! Now we need to add some meat to the story. On a high level, what will be the characters' mission? " +
     "Suggest a BRIEF, SELF-CONTAINED goal WITH A SMALL SCOPE that can be managed in a single session. " +
     "Do not yet mention their motivation for this goal. BE CREATIVE AND DON'T STICK TO CLICHES!"
 const { text: mission } = await asker.ask(THREAD_MAIN, messageMission)
@@ -77,7 +76,7 @@ const messageRooms =
     "interesting, although they do not all need to be action-packed. Ensure the five challenges from above are all " +
     "accounted for somehow. The first room should be the characters' entry into the dungeon."
 const { text: rooms } = await asker.ask(THREAD_MAIN2, messageRooms)
-const roomsList = rooms.split('\n').map((room) => room.match(/\s*\d\d?.?\s*(.*)\s*/)?.[1]).filter(room => room)
+const roomsList: string[] = rooms.split('\n').map((room) => room.match(/\s*\d\d?.?\s*(.*)\s*/)?.[1]).filter(room => room).map(room => room!)
 console.log(roomsList)
 assert(roomsList.length == 8)
 
@@ -97,24 +96,29 @@ const { text: layout } = await asker.ask(THREAD_MAIN2, messageLayout)
 
 const messageConnections =
     "Repeat your full last message, but anytime you introduce a connection between two rooms, " +
-    `mark it with [Connection: Room 1<-> Room 2]. Start a new mark for each connection. ` +
+    `mark it with [Connection: Room 1 <-> Room 2]. Start a new mark for each connection. ` +
     `Only use this mark with the 8 rooms you proposed above (${rawRoomNames.join(', ')}), ` +
     "and MAKE SURE ALL CONNECTIONS ARE MARKED! "
 const { text: connections } = await asker.ask(THREAD_MAIN2, messageConnections)
 
-const numberConnections = [...connections.matchAll(/\[[cC]onnection:\s?(.+?)\s?<->\s?(.+?)\s?]/g)].map(
-    match => {
-        const numbers = [roomNames.indexOf(preprocessName(match[1])) + 1, roomNames.indexOf(preprocessName(match[2])) + 1]
-        console.log(preprocessName(match[1]))
-        console.log(preprocessName(match[2]))
-        assert(numbers[0] >= 1 && numbers[1] >= 1)
-        return numbers
-    }
-)
-graph.makeUndirectedGraph([1, 2, 3, 4, 5, 6, 7, 8], numberConnections)
+const messageConnectionsMissed =
+    "Are there any marks you missed? Give them here. Again, give a SEPARATE mark for each connection!" // TODO: It still sometimes misses some... It might help to state explicitly here that it should NOT repeat the rest of the text, as that might be linked.
+const { text: connectionsMissed } = await asker.ask(THREAD_MAIN2, messageConnectionsMissed)
 
-console.log(numberConnections)
-throw Error()
+const numberConnections = [...(connections + connectionsMissed)
+    .matchAll(/\[[cC]onnection:\s?(.+?)\s?<->\s?(.+?)\s?]/g)]
+    .filter(
+        match => match[1].toLowerCase() != "room 1"
+    ).map(
+        match => {
+            const numbers = [roomNames.indexOf(preprocessName(match[1])) + 1, roomNames.indexOf(preprocessName(match[2])) + 1]
+            console.log(preprocessName(match[1]))
+            console.log(preprocessName(match[2]))
+            assert(numbers[0] >= 1 && numbers[1] >= 1)
+            return numbers
+        }
+    )
+graph.makeUndirectedGraph([1, 2, 3, 4, 5, 6, 7, 8], numberConnections)
 
 const messageRoomSummaries =
     `${roomsList.join('\n')}\n\nRecall these rooms. Now state for each room:\n` +
@@ -133,7 +137,7 @@ for (let roomNumber = 1; roomNumber <= 8; ++roomNumber) {
 
     const messageRoom =
         `We are designing a D&D dungeon. The context is as follows: ${context} ` +
-        `\n\nThe room I would like to design in more detail is the following: ${roomSummariesList[roomNumber - 1]}.\n\n` +
+        `\n\nThe room I would like to design in more detail is the following: ${roomSummariesList[roomNumber - 1]}\n\n` +
         "Please propose a detailed description of this room. Feel free to add small things such as decorations, " +
         "minor loot... but nothing too big."
     const { text: roomDetail } = await asker.ask(thread, messageRoom)
@@ -181,6 +185,10 @@ for (let roomNumber = 1; roomNumber <= 8; ++roomNumber) {
 const motivationSection =
     `## Motivation\nThere are many reasons why the PCs might embark on this quest. Some examples are given.\n\n${motivations}`
 
-const sections = [motivationSection].concat(roomSections)
+const layoutSection =
+    `## Dungeon layout\nThe dungeon's rooms are laid out as follows.\n\n![layout](TODO) {width:325px,mix-blend-mode:multiply}`
+
+const sections = [motivationSection, layoutSection, ...roomSections]
 const hbText = hb.getMD(title, context, sections)
-fs.writeFile('output.txt', hbText, err => { console.log(err); console.log(hbText) })
+console.log(hbText)
+fs.writeFileSync('output.txt', hbText)

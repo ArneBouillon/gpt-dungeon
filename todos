@@ -3,12 +3,10 @@ TODOs for `dungeon.ts`
 Necessary:
 - Extract enemies and add at the end
 - Extract special items and add at the end
-- Provide at least a rudimentary section on the dungeon's layout
 
 Nice-to-have:
 - Description of the outside/surroundings of the dungeon to read to the players
 - Clarification cycles (e.g. riddles)
-- Make a (basic) map of the dungeon
 - Generate some hidden info or underlying story beforehand, that can then be divided between the rooms
 - Keep more context in between rooms
     > Ensure no references to later are made that don't come true (e.g. "They find a key that they will need later")
