@@ -1,3 +1,4 @@
+import * as graph from './graph.js'
 import * as hb from './homebrewery.js'
 import * as util from './util.js'
 
@@ -11,6 +12,10 @@ const THREAD_CONTEXT = 'context'
 
 const THREAD_MAIN = 'main'
 const THREAD_MAIN2 = 'main2'
+
+function preprocessName(str) {
+    return str.toLowerCase().replaceAll(/(the|a|an|\(.+\))/g, '').trim()
+}
 
 const messageKeywords =
     "Give me three randomly picked nouns or adjectives. Ensure the words are very concrete and not too abstract. " +
@@ -48,7 +53,8 @@ const messageContext =
 const { text: context } = await asker.ask(THREAD_CONTEXT, messageContext)
 
 const messageMotivations =
-    "That sounds good. Now suggest a few potential interesting motivations for the characters to do this."
+    "That sounds good. Now suggest a few potential interesting motivations for the characters to do this. " +
+    "Don't propose too many. ANSWER ONLY WITH A NUMBERED LIST OF MOTIVATIONS; NO OTHER TEXT."
 const { text: motivations } = await asker.ask(THREAD_MAIN, messageMotivations)
 
 const messageChallenges =
@@ -69,27 +75,46 @@ const messageRooms =
     `\n\nThe five main challenges for the players will be:\n${challengesElaborated}\n\n` +
     "Propose 8 rooms into which to divide the dungeon. Start with just a high-level description. Make all the rooms " +
     "interesting, although they do not all need to be action-packed. Ensure the five challenges from above are all " +
-    "accounted for somehow."
+    "accounted for somehow. The first room should be the characters' entry into the dungeon."
 const { text: rooms } = await asker.ask(THREAD_MAIN2, messageRooms)
 const roomsList = rooms.split('\n').map((room) => room.match(/\s*\d\d?.?\s*(.*)\s*/)?.[1]).filter(room => room)
 console.log(roomsList)
 assert(roomsList.length == 8)
+
+const rawRoomNames = roomsList.map(room => room.match(/^(.+?):/)?.[1])
+const roomNames = rawRoomNames.map(room => preprocessName(room))
+console.log(roomNames)
 
 const messageLayout =
     "What should be the layout of these rooms? The layout must serve two goals: " +
     "it should provide an exciting adventure with well-paced action and excitement building, " +
     "but it should not feel railroaded. Please suggest how the 8 rooms mentioned earlier could be connected. " +
     "Where possible, give the characters the freedom to choose multiple paths, although you should not sacrifice the story for that. " +
-    "Be concise in your answer and do not repeat the room descriptions. Instead, REFER TO THE ROOMS ABOVE BY NAME. " +
+    `Be concise in your answer and do not repeat the room descriptions. Instead, REFER TO THE ROOMS ABOVE (${rawRoomNames.join(', ')}) BY NAME. ` +
     "ENSURE EVERYTHING MAKES LOGICAL SENSE AND THE CHARACTERS CAN EXPLORE THE ENTIRE DUNGEON WITHOUT GETTING STUCK! " +
     "ONLY MENTION THE LAYOUT."
 const { text: layout } = await asker.ask(THREAD_MAIN2, messageLayout)
 
 const messageConnections =
     "Repeat your full last message, but anytime you introduce a connection between two rooms, " +
-    "mark it with [Connection: Room 1 <-> Room 2]. Only use this mark with the 8 rooms you proposed above, " +
-    "and MAKE SURE ALL CONNECTIONS ARE MARKED!"
+    `mark it with [Connection: Room 1<-> Room 2]. Start a new mark for each connection. ` +
+    `Only use this mark with the 8 rooms you proposed above (${rawRoomNames.join(', ')}), ` +
+    "and MAKE SURE ALL CONNECTIONS ARE MARKED! "
 const { text: connections } = await asker.ask(THREAD_MAIN2, messageConnections)
+
+const numberConnections = [...connections.matchAll(/\[[cC]onnection:\s?(.+?)\s?<->\s?(.+?)\s?]/g)].map(
+    match => {
+        const numbers = [roomNames.indexOf(preprocessName(match[1])) + 1, roomNames.indexOf(preprocessName(match[2])) + 1]
+        console.log(preprocessName(match[1]))
+        console.log(preprocessName(match[2]))
+        assert(numbers[0] >= 1 && numbers[1] >= 1)
+        return numbers
+    }
+)
+graph.makeUndirectedGraph([1, 2, 3, 4, 5, 6, 7, 8], numberConnections)
+
+console.log(numberConnections)
+throw Error()
 
 const messageRoomSummaries =
     `${roomsList.join('\n')}\n\nRecall these rooms. Now state for each room:\n` +
@@ -103,12 +128,12 @@ console.log(roomSummariesList)
 assert(roomSummariesList.length == 8)
 
 let roomTexts: string[] = []
-for (let roomIndex = 1; roomIndex <= 8; ++roomIndex) {
-    const thread = `room${roomIndex}`
+for (let roomNumber = 1; roomNumber <= 8; ++roomNumber) {
+    const thread = `room${roomNumber}`
 
     const messageRoom =
         `We are designing a D&D dungeon. The context is as follows: ${context} ` +
-        `\n\nThe room I would like to design in more detail is the following: ${roomSummariesList[roomIndex - 1]}.\n\n` +
+        `\n\nThe room I would like to design in more detail is the following: ${roomSummariesList[roomNumber - 1]}.\n\n` +
         "Please propose a detailed description of this room. Feel free to add small things such as decorations, " +
         "minor loot... but nothing too big."
     const { text: roomDetail } = await asker.ask(thread, messageRoom)
@@ -137,18 +162,18 @@ for (let roomIndex = 1; roomIndex <= 8; ++roomIndex) {
 // TODO: Assemble nice text
 
 const titleText =
-    "Propose a title for this adventure."
+    "Propose a title for this adventure. STATE ONLY THE TITLE ITSELF, NO EXTRA TEXT."
 const { text: rawTitle } = await asker.ask(THREAD_MAIN, titleText)
-const title = rawTitle.replaceAll(/"'\./g, '')
+const title = rawTitle.replaceAll(/["'.]/g, '')
 
 let roomSections: string[] = []
-for (let roomIndex = 1; roomIndex <= 8; ++roomIndex) {
-    const thread = `room${roomIndex}_2`
+for (let roomNumber = 1; roomNumber <= 8; ++roomNumber) {
+    const thread = `room${roomNumber}_2`
 
     const messageHomebrewery =
-        `${roomTexts[roomIndex - 1]}\n\n` +
+        `${roomTexts[roomNumber - 1]}\n\n` +
         "Now repeat this in the Homebrewery flavor of Markdown: Brewdown. Use its features to the fullest where possible. " +
-        `Make your main heading a "##" and include the room number: ${roomIndex}. Reply with only the markdown, no other text!`
+        `Make your main heading of the form "## Room ${roomNumber}: Room_name". Reply with only the markdown, no other text!`
     const { text: section } = await asker.ask(thread, messageHomebrewery)
     roomSections.push(section)
 }
