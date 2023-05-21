@@ -4,7 +4,8 @@ export { makeUndirectedGraph }
 
 function makeUndirectedGraph(all, connections) {
     connections = connections.map(conn => conn.sort())
-                             .filter((conn, i, a) => conn.toString() != a[i-1].toString())
+                             .sort()
+                             .filter((conn, i, a) => i == 0 || conn.toString() != a[i-1].toString())
     const instructions =
         `
             graph G {
