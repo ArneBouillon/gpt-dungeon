@@ -19,14 +19,16 @@ const prompt = function(message) {
 }
 
 
-const token = fs.readFileSync('.token', 'utf-8')
-const api = new ChatGPTUnofficialProxyAPI({
-    accessToken: token,
-    // apiReverseProxyUrl: 'https://bypass.churchless.tech/api/conversation',
-    apiReverseProxyUrl: 'https://ai.fakeopen.com/api/conversation',
-    // apiReverseProxyUrl: 'https://api.pawan.krd/backend-api/conversation',
-    // debug: true,
-})
+const tokens = fs.readFileSync('.token', 'utf-8')
+const apis = tokens.split('\n').map(
+    token => new ChatGPTUnofficialProxyAPI({
+        accessToken: token,
+        // apiReverseProxyUrl: 'https://bypass.churchless.tech/api/conversation',
+        apiReverseProxyUrl: 'https://ai.fakeopen.com/api/conversation',
+        // apiReverseProxyUrl: 'https://api.pawan.krd/backend-api/conversation',
+        // debug: true,
+    })
+)
 
 interface Asker {
     ask: (threadID: number, message: string) => Promise<{
@@ -47,6 +49,12 @@ class PromptAsker {
 class ChatGPTThread {
     private messages: string[] = []
     private lastRes: ChatMessage | null = null
+
+    public api: ChatGPTUnofficialProxyAPI
+
+    public constructor() {
+        this.api = apis[Math.floor(Math.random()*apis.length)]
+    }
 
     public add(message: string, res: ChatMessage) {
         this.messages.push(message, res.text)
@@ -73,21 +81,21 @@ class ChatGPTAsker implements Asker {
         const options = thread.getOptions()
         let res;
         let attempts = 0;
-        // while (true) {
-        //     try {
+        while (true) {
+            try {
                 for (let i=1;i<1000000000;++i);
-                res = await api.sendMessage(message, options)
-        //         break
-        //     } catch(err) {
-        //         attempts++
-        //         if (attempts >= 5) {
-        //             console.log("Error keeps coming, I'm going to stop retrying now!")
-        //             throw err
-        //         } else {
-        //             console.log(`Errored; attempt ${attempts + 1} coming up`)
-        //         }
-        //     }
-        // }
+                res = await thread.api.sendMessage(message, options)
+                break
+            } catch(err) {
+                attempts++
+                if (attempts >= 5) {
+                    console.log("Error keeps coming, I'm going to stop retrying now!")
+                    throw err
+                } else {
+                    console.log(`Errored; attempt ${attempts + 1} coming up`)
+                }
+            }
+        }
         thread.add(message, res)
         return {
             text: res.text,

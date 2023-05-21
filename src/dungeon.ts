@@ -98,15 +98,16 @@ const messageConnections =
     "Repeat your full last message, but anytime you introduce a connection between two rooms, " +
     `mark it with [Connection: Room 1 <-> Room 2]. Start a new mark for each connection. ` +
     `Only use this mark with the 6 rooms you proposed above (${rawRoomNames.join(', ')}), ` +
-    "and MAKE SURE ALL CONNECTIONS ARE MARKED! "
+    "and MAKE SURE ALL CONNECTIONS ARE MARKED! ONLY ADD MARKS FOR THE 6 ROOMS!"
 const { text: connections } = await asker.ask(THREAD_MAIN2, messageConnections)
 
 const messageConnectionsMissed =
-    "Are there any marks you missed? Give them here. Again, give a SEPARATE mark for each connection!" // TODO: It still sometimes misses some... It might help to state explicitly here that it should NOT repeat the rest of the text, as that might be linked.
+    "Are there any marks you missed? Give them here. Again, give a SEPARATE mark for each connection! " +
+    `ONLY add marks for the rooms ${rawRoomNames.join(', ')}.` // TODO: It still sometimes misses some... It might help to state explicitly here that it should NOT repeat the rest of the text, as that might be linked.
 const { text: connectionsMissed } = await asker.ask(THREAD_MAIN2, messageConnectionsMissed)
 
 const numberConnections = [...(connections + connectionsMissed)
-    .matchAll(/\[[cC]onnection:\s?(.+?)\s?<->\s?(.+?)\s?]/g)]
+    .matchAll(/\[[cC]onnection:\s?(.+?)\s?<?->\s?(.+?)\s?]/g)]
     .filter(
         match => match[1].toLowerCase() != "room 1"
     ).map(
@@ -114,8 +115,17 @@ const numberConnections = [...(connections + connectionsMissed)
             const numbers = [roomNames.indexOf(preprocessName(match[1])) + 1, roomNames.indexOf(preprocessName(match[2])) + 1]
             console.log(preprocessName(match[1]))
             console.log(preprocessName(match[2]))
-            assert(numbers[0] >= 1 && numbers[1] >= 1)
+            // assert(numbers[0] >= 1 && numbers[1] >= 1)
             return numbers
+        }
+    ).filter(
+        numbers => {
+            if (numbers[0] < 0 || numbers[1] < 0) {
+                console.log("WARNING: Incorrect mark")
+                return false
+            }
+
+            return true
         }
     )
 graph.makeUndirectedGraph([1, 2, 3, 4, 5, 6], numberConnections)
@@ -126,11 +136,11 @@ const messageRoomSummaries =
     "- The types of content present in this room (loot/combat/social/...)\n" +
     "- A bit more detail about the content. Keep it at the conceptual level; conciseness is important.\n\n" +
     "Separate each room's text with three dashes: ---. Reply with ONLY THE 6 ROOMS. " +
-    "Use riddles or puzzles in a maximum of 2 rooms."
+    "I'm looking for a dungeon light on puzzles, medium on combat and high on loot." // TODO: Temporary
 const { text: roomSummaries } = await asker.ask(THREAD_MAIN2, messageRoomSummaries)
 const roomSummariesList = roomSummaries.split('---').map(room => room.trim()).filter(room => room)
 console.log(roomSummariesList)
-assert(roomSummariesList.length == 6)
+assert(roomSummariesList.length >= 6) // TODO: Check that if it's more, it's just bc some note was put after it
 
 let roomTexts: string[] = []
 for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
@@ -140,7 +150,10 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         `We are designing a D&D dungeon. The context is as follows: ${context} ` +
         `\n\nThe room I would like to design in more detail is the following: ${roomSummariesList[roomNumber - 1]}\n\n` +
         "Please propose a detailed description of this room. Feel free to add small things such as decorations, " +
-        "minor loot... but nothing too big."
+        "minor loot... but nothing too big. " +
+        "I'm looking for a room with a fair amount of loot and a lot of potential interactions with items. " + // TODO: Temporary
+        "I'm looking for a room low on puzzles and riddles. Don't overcomplicate things, although you can be creative. " + // TODO: Temporary
+        "Do not introduce items (such as keys) for use later in the dungeon; focus purely on this room and the prompt you're given." // TODO: Temporary
     const { text: roomDetail } = await asker.ask(thread, messageRoom)
 
     const messageRoomText =
@@ -185,11 +198,30 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         "Answer with just a numbered list, nothing else."
     const { text: clarifications } = await asker.ask(clarificationThread, messageClarify)
 
+    const extractionThread = `room${roomNumber}_extract`
+
+    const messageExtract =
+        `${roomDetail}\nClarifications:\n${clarifications}\n\n----------\n\n` +
+        'From this text, extract:\n' +
+        '- Items, if they would benefit from a separate entry (e.g. due to a magic effect or some other unusual quality)\n' +
+        '- All creatures that are mentioned\n' +
+        '-  Spells ONLY if they are on a scroll found in the room.\n\n' +
+        'Answer in three lines (e.g. "Items: ..."), each containing a concise comma-separated list. ' +
+        'Only include names, no details. If nothing matches a given category, put "N/A" there.'
+    const { text: extractionText } = await asker.ask(extractionThread, messageExtract)
+
+    const messageExtractedEntries =
+        "For each of these elements, provide a STANDARD D&D module entry in Markdown (Brewdown) style, using #### for " +
+        "the title. For items, ensure to list at least their weight, value and properties; for spells, their effects; " +
+        "and for enemies a COMPLETE STAT BLOCK. Enemies need a slightly different format: they are started by {{monster,frame " +
+        "and ended by }}. Within this block, the title uses ## and subtitles ###.\n\n" +
+        "FOR EACH OF THE ITEMS ABOVE, PROPOSE AN ENTRY FOLLOWING THE ABOVE RULES. REPLY WITH ONLY THE ENTRIES, " +
+        "separated by three dashes: ---."
+    const { text: extractedEntries } = await asker.ask(extractionThread, messageExtractedEntries)
+
     const finalThread = `room${roomNumber}_f`
 
-    // TODO: Extract stuff to detail at the end
-
-    const messageClarifiedRoomText =
+    const messageClarifiedRoom =
         `${roomDetail}\nClarifications:\n${clarifications}\n\n----------\n\n` +
         "The ideas above are very interesting, but the text is not yet suited for an entry in a D&D module. " +
         "Overhaul the text to be concise and informative, containing all the information needed for the DM to run the session, " +
@@ -200,18 +232,16 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         "- If there are puzzles, add a puzzle section. If not, DO NOT ADD A PUZZLE SECTION.\n" +
         "- Add a loot section.\n" +
         "\n" +
-        "If you mention puzzles or loot, make sure you describe them in full detail, either within or after the features section.\n" +
-        "\n" +
-        "When mentioning items or enemies, do not provide any explanation about them, " + // TODO: Specify which items and enemies after implementing the extraction
+        `When mentioning ANY OF:\n${extractionText}\n, do not provide any explanation about them, ` +
         "as that will be done somewhere else. Simply PRINT THE NAMES IN **BOLD**.\n" +
         "\n" +
         "Note that this is meant for a DM; BE CONCISE, PRECISE, SPECIFIC AND COMPLETE in anything you say. " +
         "ONLY LIST SPECIFIC IN-GAME INFORMATION, NO GENERALITIES OR DM TIPS. List specifically what loot can be found, " +
         "what the precise solution to a puzzle is, how concepts translate to in-game mechanics... " +
         "Answer in the style of a Homebrewery Markdown (Brewdown) module."
-    const { text: clarifiedRoomText } = await asker.ask(finalThread, messageClarifiedRoomText)
+    const { text: clarifiedRoomText } = await asker.ask(finalThread, messageClarifiedRoom)
 
-    roomTexts.push(clarifiedRoomText)
+    roomTexts.push(clarifiedRoomText + '\n\n' + extractedEntries)
 }
 
 const titleText =
