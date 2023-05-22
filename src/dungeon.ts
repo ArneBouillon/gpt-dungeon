@@ -57,9 +57,10 @@ const messageMotivations =
 const { text: motivations } = await asker.ask(THREAD_MAIN, messageMotivations)
 
 const messageChallenges =
-    "Great. Now we should identify the main challenges in this dungeon. Select three main challenges that " +
-    "the characters will have to contend with. Ensure a good mix that might include fights, puzzles, traps... " +
-    "DON'T STICK TO CLICHES!"
+    "Great. Now we should identify the main challenges in this dungeon. " +
+    "Select three main challenges that the characters will have to contend with. " +
+    "Ensure a good mix that might include fights, puzzles, traps... DON'T STICK TO CLICHES! " +
+    "Don't overcomplicate things with fancy riddles and dilemmas. Keep in mind the current inhabitants of the dungeon!"
 const { text: challenges } = await asker.ask(THREAD_MAIN, messageChallenges)
 
 const messageChallengesElaborated =
@@ -148,21 +149,25 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
 
     const messageRoom =
         `We are designing a D&D dungeon. The context is as follows: ${context} ` +
-        `\n\nThe room I would like to design in more detail is the following: ${roomSummariesList[roomNumber - 1]}\n\n` +
+        `\n\nThe room I would like to design in more detail is the following: Room ${roomNumber}: ${roomSummariesList[roomNumber - 1]}\n\n` +
         "Please propose a detailed description of this room. Feel free to add small things such as decorations, " +
         "minor loot... but nothing too big. " +
         "I'm looking for a room with a fair amount of loot and a lot of potential interactions with items. " + // TODO: Temporary
         "I'm looking for a room low on puzzles and riddles. Don't overcomplicate things, although you can be creative. " + // TODO: Temporary
-        "Do not introduce items (such as keys) for use later in the dungeon; focus purely on this room and the prompt you're given." // TODO: Temporary
+        "If there are other creatures in the room, I want them to be hostile. " +
+        "DO NOT INTRODUCE ITEMS (SUCH AS KEYS) SPECIFICALLY FOR USE LATER IN THE DUNGEON." // TODO: Temporary
     const { text: roomDetail } = await asker.ask(thread, messageRoom)
 
     const messageRoomText =
         "The ideas above are very interesting, but the text is not yet suited for an entry in a D&D module. " +
         "Overhaul the text to be concise and informative, containing all the information needed for the DM to run the session, " +
-        "AND NOTHING MORE. If the room contains enemies, do not describe them in any detail. WRITE IN THE STYLE OF A D&D MODULE! \n" +
-        "- Start with a description for the players (between backticks) describing what they see, and the ambiance of the room.\n" +
-        "- Then give a description of the room.\n" +
-        "- Give a list of notable features (and describe in detail potential mechanics implications). \n" +
+        "AND NOTHING MORE. If the room contains enemies, do not describe them in any detail. WRITE IN THE STYLE OF A D&D MODULE!\n" +
+        "- Start with a description for the players, *given in italics*, describing what they see, and the ambiance of the room.\n" +
+        "- Then give a description of the room. Be complete and visual: describe the lay-out of the room and detail what is present.\n" +
+        "- Give a list of notable features. This contains elements from the description that have mechanics implications. " +
+        "This is also the place to talk about where objects and creatures can be found in the room. " +
+        "The names of objects and creatures, as well as any other loot such as coins, must be printed **in bold**. " +
+        "Most things you want to describe here should also have been mentioned in the Description!\n" +
         "- If there are puzzles, add a puzzle section. If not, DO NOT ADD A PUZZLE SECTION.\n" +
         "- Add a loot section.\n" +
         "\n" +
@@ -182,8 +187,8 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         "However, the text is not yet specific enough, often giving examples instead of citing what exactly the characters encounter. " +
         "Identify all the elements that are not yet specific enough for a DM to properly run the adventure. " +
         "Pay special attention to whether the characters have all the information and clues needed to progress. " +
-        "DO NOT INCLUDE ELEMENTS THAT WILL LIKELY BE DETAILED IN LATER PARTS OF THE ADVENTURE, such as other rooms or story elements.\n\n" +
-        "DO NOT PROPOSE TO ADD NEW ELEMENTS! ONLY ELABORATE ON EXISTING ELEMENTS. BE CONCISE. Give a list of unclear elements."
+        "DO NOT PROPOSE TO ADD NEW ELEMENTS! ONLY ELABORATE ON EXISTING ELEMENTS. BE CONCISE. " +
+        "Give a list of as many unclear elements as you can find."
     await asker.ask(clarificationThread, messageUnclear)
     const messageUnclearFilter =
         "Repeat the unclear elements, but leave out those relating to the overarching story instead of to this specific " +
@@ -191,11 +196,11 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
     const { text: unclearText } = await asker.ask(clarificationThread, messageUnclearFilter)
 
     const messageClarify =
-        "Please fill in the specifics of the points left unclear, bearing in mind that the adventure is meant for characters of level 3, " +
-        "meaning everything should be balanced for level 3. DO NOT INTRODUCE ADDITIONAL CONTENT OR NPCs by doing this, " +
+        "Please fill in the specifics of the points left unclear. DO NOT INTRODUCE ADDITIONAL CONTENT OR NPCs by doing this, " +
         "but just ensure the story is concrete and logical. DO NOT INTRODUCE NEW COMBAT OR NPCs! " +
         "I REPEAT: NO NEW COMBAT OR NPCs! Make sure it is clear how the characters should acquire any potential clues. " +
-        "Answer with just a numbered list, nothing else."
+        "Ensure any keys or other specific items introduced get a use within this room, " +
+        "and are not reserved for later use in the dungeon. Answer with just a numbered list, nothing else."
     const { text: clarifications } = await asker.ask(clarificationThread, messageClarify)
 
     const extractionThread = `room${roomNumber}_extract`
@@ -204,33 +209,50 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         `${roomDetail}\nClarifications:\n${clarifications}\n\n----------\n\n` +
         'From this text, extract:\n' +
         '- Items, if they would benefit from a separate entry (e.g. due to a magic effect or some other unusual quality)\n' +
-        '- All creatures that are mentioned\n' +
-        '-  Spells ONLY if they are on a scroll found in the room.\n\n' +
-        'Answer in three lines (e.g. "Items: ..."), each containing a concise comma-separated list. ' +
+        '- All creatures that are mentioned\n\n' +
+        'Answer in two lines (e.g. "Items: ..."), each containing a concise comma-separated list. ' +
         'Only include names, no details. If nothing matches a given category, put "N/A" there.'
     const { text: extractionText } = await asker.ask(extractionThread, messageExtract)
 
-    const messageExtractedEntries =
-        "For each of these elements, provide a STANDARD D&D module entry in Markdown (Brewdown) style, using #### for " +
-        "the title. For items, ensure to list at least their weight, value and properties; for spells, their effects; " +
-        "and for enemies a COMPLETE STAT BLOCK. Enemies need a slightly different format: they are started by {{monster,frame " +
-        "and ended by }}. Within this block, the title uses ## and subtitles ###.\n\n" +
-        "FOR EACH OF THE ITEMS ABOVE, PROPOSE AN ENTRY FOLLOWING THE ABOVE RULES. REPLY WITH ONLY THE ENTRIES, " +
-        "separated by three dashes: ---."
-    const { text: extractedEntries } = await asker.ask(extractionThread, messageExtractedEntries)
+    const messageExtractedItems =
+        "For each of the items (only the items!) above, provide a STANDARD D&D module entry in Markdown (Brewdown) style, " +
+        "using #### for the title. If applicable, list their weight and value; then describe their properties. " +
+        "REPLY ONLY WITH THE ENTRIES, SEPARATED BY THREE DASHES: ---."
+    const { text: extractedItems } = await asker.ask(extractionThread, messageExtractedItems)
+
+    const messageExtractedCreatures =
+        "Now, for each of the creatures, provide a STANDARD D&D module entry in Markdown (Brewdown) style, " +
+        "this time starting each entry with \"{{monster,frame\" and ending it with a newline and\"}}\". " +
+        "Use ## for the title. Give stat blocks (be concise! Avoid giving information that is unlikely to be needed. " +
+        "Don't include a description!). ENSURE CREATURES ARE BALANCED FOR A LEVEL-3 PARTY: CHALLENGING, BUT NOT DEADLY. " +
+        "REPLY ONLY WITH THE ENTRIES, ONE AFTER THE OTHER."
+    const { text: extractedCreatures } = await asker.ask(extractionThread, messageExtractedCreatures)
+
+    const locationThread = `room${roomNumber}_loc`
+
+    const messageLocations =
+        `${roomDetail}\nClarifications:\n${clarifications}\n\n----------\n\n` +
+        "The above text is meant to feature in a D&D module, and the DM uses the text to run the module. " +
+        "However, many elements within the room have not yet been given an exact location. " +
+        "Propose locations for the most important elements in the room: decor elements, " +
+        "items the characters can find, enemies... Answer in a concise bullet list. BE CONCISE!"
+    const { text: locationsText } = await asker.ask(locationThread, messageLocations)
 
     const finalThread = `room${roomNumber}_f`
 
     const messageClarifiedRoom =
-        `${roomDetail}\nClarifications:\n${clarifications}\n\n----------\n\n` +
+        `${roomDetail}\nClarifications:\n${clarifications}\n\nLocations:\n${locationsText}\n\n----------\n\n` +
         "The ideas above are very interesting, but the text is not yet suited for an entry in a D&D module. " +
         "Overhaul the text to be concise and informative, containing all the information needed for the DM to run the session, " +
-        "AND NOTHING MORE. If the room contains enemies, do not describe them in any detail. WRITE IN THE STYLE OF A D&D MODULE! \n" +
-        "- Start with a description for the players (between backticks) describing what they see, and the ambiance of the room.\n" +
-        "- Then give a description of the room.\n" +
-        "- Give a list of notable features (and describe in detail potential mechanics implications). \n" +
-        "- If there are puzzles, add a puzzle section. If not, DO NOT ADD A PUZZLE SECTION.\n" +
-        "- Add a loot section.\n" +
+        "AND NOTHING MORE. If the room contains enemies, do not describe them in any detail. WRITE IN THE STYLE OF A D&D MODULE!\n" +
+        "- START WITH A DESCRIPTION FOR THE PLAYERS, *given in italics*, describing what they see, and the ambiance of the room.\n" +
+        "- THEN GIVE A FULL DESCRIPTION OF THE ROOM. Be complete and visual: describe the lay-out of the room and detail what is present.\n" +
+        "- GIVE A LIST OF NOTABLE FEATURES. This contains elements from the description that have mechanics implications.\n" +
+        "- Add other sections if you really think they are needed.\n" +
+        "This is also the place to talk about where objects and creatures can be found in the room. " +
+        "If there more than one of some item or creature, list the amount! " +
+        "The names of objects and creatures, as well as any other loot such as coins, must be printed **in bold**. " +
+        "Most things you want to describe here should also have been mentioned in the Description!\n" +
         "\n" +
         `When mentioning ANY OF:\n${extractionText}\n, do not provide any explanation about them, ` +
         "as that will be done somewhere else. Simply PRINT THE NAMES IN **BOLD**.\n" +
@@ -241,7 +263,7 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         "Answer in the style of a Homebrewery Markdown (Brewdown) module."
     const { text: clarifiedRoomText } = await asker.ask(finalThread, messageClarifiedRoom)
 
-    roomTexts.push(clarifiedRoomText + '\n\n' + extractedEntries)
+    roomTexts.push(clarifiedRoomText + '\n\n' + extractedItems + '\n\n' + extractedCreatures)
 }
 
 const titleText =
@@ -255,7 +277,7 @@ const motivationSection =
     `## Motivation\nThere are many reasons why the PCs might embark on this quest. Some examples are given.\n\n${motivations}`
 
 const layoutSection =
-    `## Dungeon layout\nThe dungeon's rooms are laid out as follows.\n\n![layout](TODO) {width:325px,mix-blend-mode:multiply}`
+    `## Dungeon layout\nThe dungeon's rooms are laid out as follows.\n\n![layout](TODO) {height:280px,mix-blend-mode:multiply}`
 
 const sections = [motivationSection, layoutSection, ...roomSections]
 const hbText = hb.getMD(title, context, sections)
