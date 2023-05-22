@@ -1,8 +1,6 @@
 TODOs for `dungeon.ts`
 
 Necessary:
-- Extract enemies and add at the end
-- Extract special items and add at the end
 
 Nice-to-have:
 - The connections should be incorporated into the actual room descriptions.
