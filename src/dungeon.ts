@@ -20,7 +20,8 @@ function preprocessName(str) {
 const messageKeywords =
     "Give me three randomly picked nouns or adjectives. Ensure the words are very concrete and not too abstract. " +
     "Also ensure none of the words include anything modern. Answer with a comma-separated list, and no other text."
-const { text: keywords } = await asker.ask(THREAD_KEYWORDS, messageKeywords)
+// const { text: keywords } = await asker.ask(THREAD_KEYWORDS, messageKeywords)
+const keywords = 'Goblin, Tower, Mushroom'
 
 const messageDungeon =
     "We are going to design a D&D dungeon (not necessarily a literal dungeon) for third-level characters. " +
