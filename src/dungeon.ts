@@ -5,7 +5,7 @@ import * as util from './util.js'
 import assert from 'assert'
 import * as fs from 'fs'
 
-const asker = new util.ChatGPTAsker()
+const asker = new util.PromptAsker()
 
 const THREAD_KEYWORDS = 'kw'
 const THREAD_CONTEXT = 'context'
@@ -151,33 +151,32 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
     const messageRoom =
         `We are designing a D&D dungeon. The context is as follows: ${context} ` +
         `\n\nThe room I would like to design in more detail is the following: Room ${roomNumber}: ${roomSummariesList[roomNumber - 1]}\n\n` +
-        "Please propose a detailed description of this room. Feel free to add small things such as decorations, " +
-        "minor loot... but nothing too big. " +
-        "I'm looking for a room with a fair amount of loot and a lot of potential interactions with items. " + // TODO: Temporary
-        "I'm looking for a room low on puzzles and riddles. Don't overcomplicate things, although you can be creative. " + // TODO: Temporary
-        "If there are other creatures in the room, I want them to be hostile. " +
-        "DO NOT INTRODUCE ITEMS (SUCH AS KEYS) SPECIFICALLY FOR USE LATER IN THE DUNGEON." // TODO: Temporary
+        "Please propose a detailed description of this room. Feel free to add small things such as decorations, minor loot... " +
+        "but nothing too big. I'm looking for a room with a fair amount of loot and a lot of potential interactions with items. " +
+        "I'm looking for a room low on puzzles and riddles. Don't overcomplicate things, although you can be creative. " +
+        "If there are other creatures in the room, I want them to be hostile. DO NOT INTRODUCE ITEMS (SUCH AS KEYS) " +
+        "SPECIFICALLY FOR USE LATER IN THE DUNGEON. Make your description EXTREMELY INFORMATION-DENSE and very SPECIFIC: " +
+        "actually say what is in the room, instead of giving examples or vague generalities."
     const { text: roomDetail } = await asker.ask(thread, messageRoom)
 
     const messageRoomText =
         "The ideas above are very interesting, but the text is not yet suited for an entry in a D&D module. " +
         "Overhaul the text to be concise and informative, containing all the information needed for the DM to run the session, " +
         "AND NOTHING MORE. If the room contains enemies, do not describe them in any detail. WRITE IN THE STYLE OF A D&D MODULE!\n" +
-        "- Start with a description for the players, *given in italics*, describing what they see, and the ambiance of the room.\n" +
-        "- Then give a description of the room. Be complete and visual: describe the lay-out of the room and detail what is present.\n" +
-        "- Give a list of notable features. This contains elements from the description that have mechanics implications. " +
+        "- START WITH A DESCRIPTION FOR THE PLAYERS, *given entirely in italics*, describing what they see, and the ambiance of the room.\n" +
+        "- THEN GIVE A FULL DESCRIPTION OF THE ROOM FOR THE DM. Be complete and visual: describe the lay-out of the room and detail what is present.\n" +
+        "- GIVE A LIST OF NOTABLE FEATURES. This contains elements from the description that have mechanics implications. " +
+        "Be very explicit yet concise about these mechanical implications! " +
         "This is also the place to talk about where objects and creatures can be found in the room. " +
-        "The names of objects and creatures, as well as any other loot such as coins, must be printed **in bold**. " +
-        "Most things you want to describe here should also have been mentioned in the Description!\n" +
-        "- If there are puzzles, add a puzzle section. If not, DO NOT ADD A PUZZLE SECTION.\n" +
-        "- Add a loot section.\n" +
-        "\n" +
-        "If you mention puzzles or loot, make sure you describe them in full detail, either within or after the features section.\n" +
+        "Be very explicit yet concise about the location of everything! The names of objects and creatures, " +
+        "as well as any other loot such as coins, must be printed **in bold**. Most things you want to describe here " +
+        "should also have been mentioned in the Description!\n" +
+        "- DO NOT ADD ANY OTHER SECTIONS. STOP THE TEXT IMMEDIATELY AFTER THE NOTABLE FEATURES.\n" +
         "\n" +
         "Note that this is meant for a DM; BE CONCISE, PRECISE, SPECIFIC AND COMPLETE in anything you say. " +
         "ONLY LIST SPECIFIC IN-GAME INFORMATION, NO GENERALITIES OR DM TIPS. List specifically what loot can be found, " +
         "what the precise solution to a puzzle is, how concepts translate to in-game mechanics... " +
-        "Answer in the style of a Homebrewery Markdown (Brewdown) module."
+        "Add no sections that I haven't described above. Answer in the style of a Homebrewery Markdown (Brewdown) module."
     const { text: roomText1 } = await asker.ask(thread, messageRoomText)
 
     const clarificationThread = `room${roomNumber}_c`
@@ -226,6 +225,7 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         "this time starting each entry with \"{{monster,frame\" and ending it with a newline and\"}}\". " +
         "Use ## for the title. Give stat blocks (be concise! Avoid giving information that is unlikely to be needed. " +
         "Don't include a description!). ENSURE CREATURES ARE BALANCED FOR A LEVEL-3 PARTY: CHALLENGING, BUT NOT DEADLY. " +
+        "GENERATE STATS AND CHALLENGE RATINGS THAT REFLECT THIS (and potentially generate cool abilities to offset low stats). " +
         "REPLY ONLY WITH THE ENTRIES, ONE AFTER THE OTHER."
     const { text: extractedCreatures } = await asker.ask(extractionThread, messageExtractedCreatures)
 
