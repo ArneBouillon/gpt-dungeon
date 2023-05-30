@@ -10,7 +10,6 @@ const asker = new util.ChatGPTAsker()
 const alwaysPromptAsker = new util.PromptAsker()
 
 const THREAD_MAIN = 'main'
-const THREAD_MAIN2 = 'main2'
 const THREAD_LORE = 'lore'
 
 let tempThreadCount = 0
@@ -27,7 +26,7 @@ const messageKeywords =
     "Give me three randomly picked nouns or adjectives. Ensure the words are very concrete and not too abstract. " +
     "Also ensure none of the words include anything modern. Answer with a comma-separated list, and no other text."
 // const { text: keywords } = await asker.ask(getTempThread(), messageKeywords)
-const keywords = 'Bandits, Tower, Blue'
+const keywords = 'Circus, Sword, Tamer'
 
 const messageDungeon =
     "We are going to design a D&D dungeon (not necessarily a literal dungeon) for third-level characters. " +
@@ -96,6 +95,7 @@ const roomSummariesList: string[] = []
 for (let roomNumber = 6; roomNumber >= 1; --roomNumber) {
     const messageRoomSummary =
         `Now, for room ${roomNumber}, compile a summary of everything a designer of that room would need to know. ` +
+        "Don't forget your corrections from above." +
         "This includes everything you just told me, specifically any items or information that should be provided. " +
         "Be very detailed here! All details of the items and information should be provided, " +
         "including EXACT TEXT SNIPPETS IF THE OBJECT IS A PIECE OF TEXT. " +
@@ -113,6 +113,7 @@ for (let roomNumber = 6; roomNumber >= 1; --roomNumber) {
 
     roomSummariesList.push(roomSummary + "\n" + roomExtras)
 }
+roomSummariesList.reverse()
 
 // const roomsList: string[] = rooms.split('\n').map((room) => room.match(/\s*\d\d?.?\s*(.*)\s*/)?.[1]).filter(room => room).map(room => room!)
 // console.log(roomsList)
@@ -264,9 +265,10 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         "Now, for each of the creatures, provide a STANDARD D&D module entry in Markdown (Brewdown) style, " +
         "this time starting each entry with \"{{monster,frame\" and ending it with a newline and\"}}\". " +
         "Use ## for the title. Give stat blocks (be concise! Avoid giving information that is unlikely to be needed. " +
-        "Don't include a description!). ENSURE CREATURES ARE BALANCED FOR A LEVEL-3 PARTY: CHALLENGING, BUT NOT DEADLY. " +
+        "Don't include a description!) and include a table of ability stats. " +
+        "ENSURE CREATURES ARE CHALLENGING FOR A LEVEL-3 PARTY. " +
         "GENERATE STATS AND CHALLENGE RATINGS THAT REFLECT THIS (and potentially generate cool abilities to offset low stats). " +
-        "REPLY ONLY WITH THE ENTRIES, ONE AFTER THE OTHER."
+        "REPLY ONLY WITH THE ENTRIES, SEPARATED BY THREE DASHES: ---."
     const { text: extractedCreatures } = await asker.ask(extractionThread, messageExtractedCreatures)
 
     const locationThread = `room${roomNumber}_loc`
@@ -282,16 +284,17 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
     const finalThread = `room${roomNumber}_f`
 
     const messageClarifiedRoom =
-        "We are designing a D&D dungeon. The room I would like to design in more detail is the following:\n" +
+        `We are designing a D&D dungeon. The room I would like to design in more detail is room ${roomNumber}:\n` +
         `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n${locationsText}\n\n----------\n\n` +
         "The ideas above are very interesting, but the text is not yet suited for an entry in a D&D module. " +
         "Overhaul the text to be concise and informative, containing all the information needed for the DM to run the session, " +
         "AND NOTHING MORE. If the room contains enemies, do not describe them in any detail. WRITE IN THE STYLE OF A D&D MODULE!\n" +
+        `- State the title: ## Room ${roomNumber}: room_name\n` +
         "- START WITH A DESCRIPTION FOR THE PLAYERS, *given in italics*, describing what they see, and the ambiance of the room.\n" +
         "- THEN GIVE A FULL DESCRIPTION OF THE ROOM. Be complete and visual: describe the lay-out of the room and detail what is present. " +
         "Pay special attention to the locations and descriptions of general areas in the room.\n" +
-        "- Note that this means features of the room, not items. This contains elements from the description that have mechanics implications. " +
-        "Be detailed and specific! The more information you include, the better. " +
+        "- GIVE A LIST OF NOTABLE FEATURES. Note that this means features of the room, not items. This contains elements " +
+        "from the description that have mechanics implications. Be detailed and specific! The more information you include, the better. " +
         "This is also the place to talk about where objects and creatures can be found in the room. " +
         "If there more than one of some item or creature, list the amount! The names of objects and creatures, " +
         "as well as any other loot such as coins, must be printed **in bold**. " +
