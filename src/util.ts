@@ -6,6 +6,12 @@ export { ChatGPTAsker, PromptAsker }
 
 let stdin = fs.openSync("/dev/stdin","rs");
 
+function sleep(ms) {
+    return new Promise((resolve) => {
+        setTimeout(resolve, ms);
+    });
+}
+
 const prompt = function(message) {
     fs.writeSync(process.stdout.fd, message);
     let s = '';
@@ -83,7 +89,7 @@ class ChatGPTAsker implements Asker {
         let attempts = 0;
         while (true) {
             try {
-                for (let i=1;i<1000000000;++i);
+                await sleep(100 * 3**attempts)
                 res = await thread.api.sendMessage(message, options)
                 break
             } catch(err) {

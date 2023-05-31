@@ -293,15 +293,15 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         "- START WITH A DESCRIPTION FOR THE PLAYERS, *given in italics*, describing what they see, and the ambiance of the room.\n" +
         "- THEN GIVE A FULL DESCRIPTION OF THE ROOM. Be complete and visual: describe the lay-out of the room and detail what is present. " +
         "Pay special attention to the locations and descriptions of general areas in the room.\n" +
-        "- GIVE A LIST OF NOTABLE FEATURES. Note that this means features of the room, not items. This contains elements " +
-        "from the description that have mechanics implications. Be detailed and specific! The more information you include, the better. " +
-        "This is also the place to talk about where objects and creatures can be found in the room. " +
-        "If there more than one of some item or creature, list the amount! The names of objects and creatures, " +
-        "as well as any other loot such as coins, must be printed **in bold**. " +
-        "Most things you want to describe here should also have been mentioned in the Description!\n" +
+        "- GIVE A LIST OF NOTABLE FEATURES. Note that this means decor elements and features of the room, not items. " +
+        "This contains elements from the description that have mechanics implications. Be very brief about those elements that will already get their own section. " +
+        "Be detailed and specific! The more information you include, the better. This is also the place to talk about " +
+        "where objects and creatures can be found in the room. If there more than one of some item or creature, " +
+        "list the amount! The names of objects and creatures, as well as any other loot such as coins, " +
+        "must be printed **in bold**. Most things you want to describe here should also have been mentioned in the Description!\n" +
         "- Add OTHER SECTIONS if you think they are needed for specific mechanics or puzzles that merit their own section. " +
         "This is encouraged, but you should provide a lot of details! Ensure a DM has all the information they need. " +
-        "DO NOT ADD SECTIONS FOR LOOT OR CREATURES.\n\n" +
+        "Be very specific about mechanical implications! DO NOT ADD SECTIONS FOR LOOT OR CREATURES.\n\n" +
         `When mentioning ANY OF:\n${extractionText}\n, do not provide any explanation about them, ` +
         "as that will be done somewhere else. Simply PRINT THE NAMES IN **BOLD**.\n" +
         "\n" +
@@ -324,12 +324,12 @@ const roomSections = roomTexts
 const motivationSection =
     `## Motivation\nThere are many reasons why the PCs might embark on this quest. Some examples are given.\n\n${motivations}`
 
-const layoutSection =
-    `## Dungeon layout\nThe dungeon's rooms are laid out as follows.\n\n![layout](TODO) {height:280px,mix-blend-mode:multiply}`
+// const layoutSection =
+//     `## Dungeon layout\nThe dungeon's rooms are laid out as follows.\n\n![layout](TODO) {height:280px,mix-blend-mode:multiply}`
 
 const sections = [
     motivationSection,
-    layoutSection,
+    // layoutSection,
     ...roomSections,
 ]
 const hbText = hb.getMD(title, context, sections)
