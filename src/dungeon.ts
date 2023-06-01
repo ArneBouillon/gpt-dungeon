@@ -12,12 +12,6 @@ const alwaysPromptAsker = new util.PromptAsker()
 const THREAD_MAIN = 'main'
 const THREAD_LORE = 'lore'
 
-let tempThreadCount = 0
-function getTempThread() {
-    tempThreadCount++
-    return `temp_${tempThreadCount}`
-}
-
 function preprocessName(str) {
     return str.toLowerCase().replaceAll(/(the|a|an|\(.+\))/g, '').trim()
 }
@@ -25,8 +19,8 @@ function preprocessName(str) {
 const messageKeywords =
     "Give me three randomly picked nouns or adjectives. Ensure the words are very concrete and not too abstract. " +
     "Also ensure none of the words include anything modern. Answer with a comma-separated list, and no other text."
-// const { text: keywords } = await asker.ask(getTempThread(), messageKeywords)
-const keywords = 'Circus, Sword, Tamer'
+// const { text: keywords } = await asker.ask(util.getTempThread(), messageKeywords)
+const keywords = 'Viking, Electricity, Bridge'
 
 const messageDungeon =
     "We are going to design a D&D dungeon (not necessarily a literal dungeon) for third-level characters. " +
@@ -53,7 +47,7 @@ const messageLore =
     "Ensure to include 1 secret that visiting adventurers could discover."
 const { text: lore } = await alwaysPromptAsker.ask(THREAD_LORE, messageLore)
 
-const missionThread = getTempThread()
+const missionThread = util.getTempThread()
 const messageMission =
     `${lore}\n\n---------\n\nI want to use this location as a D&D dungeon for level-3 characters. ` +
     "Propose a high-level mission for characters venturing into the above location. " +
@@ -75,14 +69,23 @@ const messageRooms =
     `The characters' mission is the following. ${mission}\n\n` +
     "Propose 6 rooms in which to divide the dungeon. They should culminate in an opportunity to complete the above mission. " +
     "For each room, discuss\n" +
-    "- The general setting and atmosphere of the room\n" +
-    "- Potentially: major enemies that can be found there. Only include this in two or three rooms!\n" +
-    "- Potentially: Story-relevant loot items that can be found there. Again, only for a few rooms\n" +
-    "- Topical loot item unrelated to the story. Sometimes, these should be minor; other times, quite powerful for level-3 characters.\n" +
-    "- The lore implications and prerequisites for that room. This is the place to mention what lore information " +
-    "the characters can glean in a room.\n" +
-    "- Non-lore prerequisites. For example, keys or clues from PREVIOUS rooms that characters will need to succeed in this room. " +
-    "Use these sparingly! In particular, don't generate many riddles or puzzles.\n" +
+    "- The general setting and atmosphere of the room.\n" +
+    "- Anything present in the room that relates to the lore of the location and/or the story of the adventure. Be detailed and specific!\n" +
+    "  -> Story-related items, if present.\n" +
+    "  -> Major loot items, if present.\n" +
+    "  -> Topical items related to the lore but without an impact on the story, if present. These can range from very major to funny trinkets.\n" +
+    "  -> Locks, traps, and puzzles, if present. For example, the items above might be locked or trapped. Use puzzles sparingly! " +
+        "Do not make solving puzzles vital for progression! If you use puzzles, mention exactly how the characters can find out the method for solving it! " +
+        "Include at most one puzzle throughout the dungeon.\n" +
+    "  -> Major enemies in this room. Only use this for 2 to 3 rooms.\n" +
+    "  -> Information that the characters can learn here. Ensure to include information that other rooms need! " +
+        "Also sometimes include other lore information the characters can learn.\n" +
+    "- Make a numbered list of each element from the previous points that requires physical prerequisites from other rooms (such as a key)\n" +
+    "  -> For each, mention this prerequisite and DETAIL EXACTLY where it can be found (only consider the room itself, or lower-numbered rooms!).\n" +
+    "- Make a numbered list of each element from the previous points that requires information from other rooms. For each, as well as for any puzzles, do the following.\n" +
+    "  -> List 3 DIFFERENT ways in which the information could be obtained. Be very SPECIFIC: " +
+        "mention exactly how the information could be obtained and in which rooms this is (only consider the room itself, or lower-numbered rooms!)! " +
+        "Go into a lot of detail! Again, LIST THREE DIFFERENT WAYS! The clues can be creative, but should be fairly obvious and simple. Do not use riddles!\n\n" +
     "Start from room 6 and count back! This way, you can ensure to add the required prerequisites. Separate the room entries with three dashes: ---."
 await alwaysPromptAsker.ask(THREAD_LORE, messageRooms)
 
@@ -106,7 +109,7 @@ for (let roomNumber = 6; roomNumber >= 1; --roomNumber) {
 
     const messageRoomExtras =
         "Now add to this room more details that are not necessarily connected to the broader story. " +
-        "Add descriptions, decor elements, potentially minor loot and minor enemies... " +
+        "Add descriptions, cool decor elements, potentially minor loot and minor enemies... " +
         "If possible, connect (minor) gameplay implications to some of the things you introduce. " +
         "Again, answer in unstructured bullet points."
     const { text: roomExtras } = await alwaysPromptAsker.ask(THREAD_LORE, messageRoomExtras)

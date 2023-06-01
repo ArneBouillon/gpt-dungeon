@@ -2,9 +2,15 @@ import {ChatGPTUnofficialProxyAPI, ChatMessage} from 'chatgpt'
 import * as fs from 'fs'
 import clipboard from 'clipboardy'
 
-export { ChatGPTAsker, PromptAsker }
+export { ChatGPTAsker, PromptAsker, getTempThread }
 
 let stdin = fs.openSync("/dev/stdin","rs");
+
+let tempThreadCount = 0
+function getTempThread() {
+    tempThreadCount++
+    return `temp_${tempThreadCount}`
+}
 
 function sleep(ms) {
     return new Promise((resolve) => {
