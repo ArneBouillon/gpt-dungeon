@@ -311,7 +311,7 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         const messageExtractedItems =
             `For the ${item}, provide a STANDARD D&D module entry in Markdown (Brewdown) style, ` +
             "using #### for the title (which should probably be singular). " +
-            "First list the weight and value; then describe the properties in full text. " +
+            "First list the weight and value; then describe the properties IN FULL TEXT. " +
             "Be concise yet specific and include precise D&D mechanics where possible. REPLY ONLY WITH THE ENTRY! NO OTHER TEXT!"
         const { text: ei } = await asker.ask(extractionThreadItems, messageExtractedItems)
         extractedItems += "\n\n" + ei
