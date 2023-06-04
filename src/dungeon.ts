@@ -20,7 +20,7 @@ const messageKeywords =
     "Give me three randomly picked nouns or adjectives. Ensure the words are very concrete and not too abstract. " +
     "Also ensure none of the words include anything modern. Answer with a comma-separated list, and no other text."
 // const { text: keywords } = await asker.ask(util.getTempThread(), messageKeywords)
-const keywords = 'Viking, Electricity, Bridge'
+const keywords = 'Museum, Sheep, Insect'
 
 const messageDungeon =
     "We are going to design a D&D dungeon (not necessarily a literal dungeon) for third-level characters. " +
@@ -74,20 +74,37 @@ const messageRooms =
     "  -> Story-related items, if present.\n" +
     "  -> Major loot items, if present.\n" +
     "  -> Topical items related to the lore but without an impact on the story, if present. These can range from very major to funny trinkets.\n" +
-    "  -> Locks, traps, and puzzles, if present. For example, the items above might be locked or trapped. Use puzzles sparingly! " +
-        "Do not make solving puzzles vital for progression! If you use puzzles, mention exactly how the characters can find out the method for solving it! " +
-        "Include at most one puzzle throughout the dungeon.\n" +
+    "  -> Traps, if present. For example, the items above might be trapped.\n" +
     "  -> Major enemies in this room. Only use this for 2 to 3 rooms.\n" +
-    "  -> Information that the characters can learn here. Ensure to include information that other rooms need! " +
-        "Also sometimes include other lore information the characters can learn.\n" +
-    "- Make a numbered list of each element from the previous points that requires physical prerequisites from other rooms (such as a key)\n" +
-    "  -> For each, mention this prerequisite and DETAIL EXACTLY where it can be found (only consider the room itself, or lower-numbered rooms!).\n" +
-    "- Make a numbered list of each element from the previous points that requires information from other rooms. For each, as well as for any puzzles, do the following.\n" +
-    "  -> List 3 DIFFERENT ways in which the information could be obtained. Be very SPECIFIC: " +
-        "mention exactly how the information could be obtained and in which rooms this is (only consider the room itself, or lower-numbered rooms!)! " +
-        "Go into a lot of detail! Again, LIST THREE DIFFERENT WAYS! The clues can be creative, but should be fairly obvious and simple. Do not use riddles!\n\n" +
-    "Start from room 6 and count back! This way, you can ensure to add the required prerequisites. Separate the room entries with three dashes: ---."
+    "  -> Information that the characters can learn here.\n" +
+    "Start from room 6 and count back! Separate the room entries with three dashes: ---."
 await alwaysPromptAsker.ask(THREAD_LORE, messageRooms)
+
+const messageInterRooms =
+    "We will now add a number of \"inter-room elements\". These are story elements that pertain to multiple rooms. " +
+    "Examples are a lock in room A whose key is in room B, information from room X being required to defeat an enemy " +
+    "in room Y... Everything that pertains to multiple rooms counts.\n\n" +
+    "Inter-room elements can either relate to the descriptions above (for example, " +
+    "by identifying a prerequisite to use an item or evade a trap mentioned there), " +
+    "or they can be entirely new. Each inter-room element can have any number of\n\n" +
+    "Physical prerequisites (such as a key or an object)\n" +
+    "  -> Mention the prerequisite and DETAIL EXACTLY where it can be found (only consider the room itself, or lower-numbered rooms!).\n\n" +
+    "Information/knowledge prerequisites (such as knowing hints for solving a puzzle, or knowing weaknesses of an enemy)\n" +
+    "  -> List 3 DIFFERENT ways in which the information could be obtained. Be very SPECIFIC: " +
+        "mention exactly how the information could be obtained and in which rooms this is (only consider the room itself, " +
+        "or lower-numbered rooms!)! Go into a lot of detail! Again, LIST THREE DIFFERENT WAYS! " +
+        "The clues can be creative, but should be fairly obvious and simple. Do not use riddles!\n\n" +
+    "Meta-prerequisites (ways that the characters can know **how** to solve a problem; e.g. " +
+    "knowing that a previous object can help, or knowing that the solution to a puzzle is to say a specific phrase...)\n" +
+    "  -> As above, give 3 DETAILED ways in which the characters can find this out.\n\n" +
+    "Suggest multiple large-scope inter-room elements here."
+await alwaysPromptAsker.ask(THREAD_LORE, messageInterRooms)
+
+const messageInterRoomsSmall =
+    "Now suggest some new inter-room elements with a smaller scope. You can add new information to the rooms while doing this. " +
+    "These smaller-scope elements should be fun and interesting ways to link the rooms. " +
+    "They could be small easter eggs, or objects from some room that turn out to be useful to find some loot in another room."
+await alwaysPromptAsker.ask(THREAD_LORE, messageInterRoomsSmall)
 
 const messageRoomsCheck =
     "Think long and hard: are there any plot holes or pieces of information the characters can't reasonably be expected to find? " +
@@ -102,19 +119,16 @@ for (let roomNumber = 6; roomNumber >= 1; --roomNumber) {
         "This includes everything you just told me, specifically any items or information that should be provided. " +
         "Be very detailed here! All details of the items and information should be provided, " +
         "including EXACT TEXT SNIPPETS IF THE OBJECT IS A PIECE OF TEXT. " +
-        "ANSWER WITH AN UNSTRUCTURED LIST OF BULLET POINTS. DO NOT SUBDIVIDE THE LIST AND DO NOT USE TITLES.\n\n" +
+        "ANSWER WITH AN UNSTRUCTURED LIST OF BULLET POINTS. DO NOT SUBDIVIDE THE LIST AND DO NOT USE TITLES. " +
+        "Be detailed! Ensure to include all elements you generated above!\n\n" +
+        "Then, add a line with three dashes: ---. Now add to this room more details that are not necessarily connected " +
+        "to the broader story. Add descriptions, cool decor elements, potentially minor loot and minor enemies... " +
+        "If possible, connect (minor) gameplay implications to some of the things you introduce. " +
+        "Again, answer in unstructured bullet points.\n\n" +
         "Keep in mind that each room's text will go to a different designer! " +
         "Thus, if an object has relevance to another room, this should be specified very explicitly."
     const { text: roomSummary } = await alwaysPromptAsker.ask(THREAD_LORE, messageRoomSummary)
-
-    const messageRoomExtras =
-        "Now add to this room more details that are not necessarily connected to the broader story. " +
-        "Add descriptions, cool decor elements, potentially minor loot and minor enemies... " +
-        "If possible, connect (minor) gameplay implications to some of the things you introduce. " +
-        "Again, answer in unstructured bullet points."
-    const { text: roomExtras } = await alwaysPromptAsker.ask(THREAD_LORE, messageRoomExtras)
-
-    roomSummariesList.push(roomSummary + "\n" + roomExtras)
+    roomSummariesList.push(roomSummary.split('---').map(s => s.trim()).slice(0, 2).join('\n'))
 }
 roomSummariesList.reverse()
 
@@ -185,6 +199,7 @@ roomSummariesList.reverse()
 // assert(roomSummariesList.length >= 6) // TODO: Check that if it's more, it's just bc some note was put after it
 
 const roomTexts: string[] = []
+const allCreatures = ''
 for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
     const thread = `room${roomNumber}`
 
@@ -246,33 +261,58 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         "and are not reserved for later use in the dungeon. Answer with just an unstructured bullet list, nothing else."
     const { text: clarifications } = await asker.ask(clarificationThread, messageClarify)
 
-    const extractionThread = `room${roomNumber}_extract`
+    const extractionThreadItems = `room${roomNumber}_extract_i`
 
-    const messageExtract =
+    const messageExtractItems =
         `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n\n----------\n\n` +
-        'From this text, extract:\n' +
-        '- Items, if they would benefit from a separate entry (e.g. due to a magic effect or some other unusual quality). Normal coins or chests should not be mentioned.\n' +
-        '- All creatures that are mentioned\n\n' +
-        'Answer in two lines (e.g. "Items: ..."), each containing a concise comma-separated list. ' +
-        'Only include names, no details. If nothing matches a given category, put "N/A" there.'
-    let { text: extractionText } = await asker.ask(extractionThread, messageExtract)
-    extractionText = extractionText.split("\n").filter(str => !str.includes('N/A')).join('\n')
+        'From this text, extract all items that would benefit from a separate entry (e.g. due to a magic effect or some other unusual quality). Normal coins or chests should not be mentioned.\n' +
+        'Answer in a single line, containing a concise comma-separated list. ' +
+        'Only include names, no details. If nothing matches the given category, put "N/A" instead.'
+    const { text: extractionTextItems } = await asker.ask(extractionThreadItems, messageExtractItems)
+    const items = extractionTextItems.includes('N/A') ? [] : extractionTextItems.split(',').map(s => s.trim())
 
-    const messageExtractedItems =
-        "For each of the items (only the items!) above, provide a STANDARD D&D module entry in Markdown (Brewdown) style, " +
-        "using #### for the title. First list their weight and value; then describe their properties. " +
-        "REPLY ONLY WITH THE ENTRIES, SEPARATED BY THREE DASHES: ---."
-    const { text: extractedItems } = await asker.ask(extractionThread, messageExtractedItems)
+    let extractedItems = ''
+    for (let item of items) {
+        const messageExtractedItems =
+            `For the ${item}, provide a STANDARD D&D module entry in Markdown (Brewdown) style, ` +
+            "using #### for the title. First list the weight and value; then describe the properties. " +
+            "REPLY ONLY WITH THE ENTRY! NO OTHER TEXT!"
+        const { text: ei } = await asker.ask(extractionThreadItems, messageExtractedItems)
+        extractedItems += "\n\n" + ei
+    }
 
-    const messageExtractedCreatures =
-        "Now, for each of the creatures, provide a STANDARD D&D module entry in Markdown (Brewdown) style, " +
-        "this time starting each entry with \"{{monster,frame\" and ending it with a newline and\"}}\". " +
-        "Use ## for the title. Give stat blocks (be concise! Avoid giving information that is unlikely to be needed. " +
-        "Don't include a description!) and include a table of ability stats. " +
-        "ENSURE CREATURES ARE CHALLENGING FOR A LEVEL-3 PARTY. " +
-        "GENERATE STATS AND CHALLENGE RATINGS THAT REFLECT THIS (and potentially generate cool abilities to offset low stats). " +
-        "REPLY ONLY WITH THE ENTRIES, SEPARATED BY THREE DASHES: ---."
-    const { text: extractedCreatures } = await asker.ask(extractionThread, messageExtractedCreatures)
+    const extractionThreadCreatures = `room${roomNumber}_extract_c`
+
+    const messageExtractCreatures =
+        `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n\n----------\n\n` +
+        'From this text, extract all creatures that are mentioned.\n' +
+        'Answer in a single line, containing a concise comma-separated list. ' +
+        'Only include names, no details. If nothing matches the given category, put "N/A" instead.'
+    let { text: extractionTextCreatures } = await asker.ask(extractionThreadCreatures, messageExtractCreatures)
+
+    if (allCreatures.length != 0) {
+        const messageFilterCreatures =
+            `Now imagine there already are descriptions for the following creatures: ${allCreatures}. ` +
+            "Repeat all creatures from your list above that still need a description. Only leave a creature out " +
+            "if it is exactly included in the list I'm giving you!"
+        let { text: t } = await asker.ask(extractionThreadCreatures, messageFilterCreatures)
+        extractionTextCreatures = t
+    }
+
+    const creatures = extractionTextCreatures.includes('N/A') ? [] : extractionTextCreatures.split(',').map(s => s.trim())
+
+    let extractedCreatures = ''
+    for (let creature of creatures) {
+        const messageExtractedCreatures =
+            `For the ${creature} above, provide a STANDARD D&D module entry in Markdown (Brewdown) style. ` +
+            "Use ## for the title. Give a stat block (be concise! Avoid giving information that is unlikely to be needed. " +
+            "Don't include a description!) and include a table of ability stats. " +
+            "The party is level 3; THE CREATURE CAN BE VERY CHALLENGING." +
+            "GENERATE STATS AND CHALLENGE RATINGS THAT REFLECT THIS (and potentially generate cool abilities to offset low stats). " +
+            "REPLY ONLY WITH THE ENTRY! NO OTHER TEXT!"
+        const { text: ec } = await asker.ask(extractionThreadCreatures, messageExtractedCreatures)
+        extractedCreatures += "\n\n{{monster,frame\n" + ec + "\n}}"
+    }
 
     const locationThread = `room${roomNumber}_loc`
 
@@ -305,7 +345,7 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         "- Add OTHER SECTIONS if you think they are needed for specific mechanics or puzzles that merit their own section. " +
         "This is encouraged, but you should provide a lot of details! Ensure a DM has all the information they need. " +
         "Be very specific about mechanical implications! DO NOT ADD SECTIONS FOR LOOT OR CREATURES.\n\n" +
-        `When mentioning ANY OF:\n${extractionText}\n, do not provide any explanation about them, ` +
+        `When mentioning ANY OF:\n${items.join(', ') + "; " + creatures.join(', ')}\n, do not provide any explanation about them, ` +
         "as that will be done somewhere else. Simply PRINT THE NAMES IN **BOLD**.\n" +
         "\n" +
         "Note that this is meant for a DM; BE CONCISE, PRECISE, SPECIFIC AND COMPLETE in anything you say. " +

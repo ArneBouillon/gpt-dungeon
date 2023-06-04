@@ -6,11 +6,6 @@ Nice-to-have:
 - The connections should be incorporated into the actual room descriptions.
 - Description of the outside/surroundings of the dungeon to read to the players
 - More/better clarification cycles (e.g. riddles)
-- Generate some hidden info or underlying story beforehand, that can then be divided between the rooms
-- Keep more context in between rooms
-    > Ensure no references to later are made that don't come true (e.g. "They find a key that they will need later")
-    > Create a more interconnected/integrated feeling
-    > Should also include the hidden info above
 - Introduce more options
     > Make the keywords configurable
     > Give a "slider" for loot amount, difficulty...
@@ -18,10 +13,3 @@ Nice-to-have:
 
 Ideas:
 - Maybe we could provide a list with TODOs for the DM? There'll always be a few things left to fill in (and that might not even be a bad thing).
-
-
-Specific brainstorm: Background threads
-- Lore thread
-    > At the start: generate a comprehensive backstory to the dungeon
-    > When rooms generate lore-containing items, this thread can be asked for info
-- Story thread
