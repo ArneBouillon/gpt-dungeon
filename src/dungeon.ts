@@ -20,7 +20,7 @@ const messageKeywords =
     "Give me three randomly picked nouns or adjectives. Ensure the words are very concrete and not too abstract. " +
     "Also ensure none of the words include anything modern. Answer with a comma-separated list, and no other text."
 // const { text: keywords } = await asker.ask(util.getTempThread(), messageKeywords)
-const keywords = 'Museum, Sheep, Insect'
+const keywords = 'Cave, Blue, Orange'
 
 const messageDungeon =
     "We are going to design a D&D dungeon (not necessarily a literal dungeon) for third-level characters. " +
@@ -52,7 +52,7 @@ const messageMission =
     `${lore}\n\n---------\n\nI want to use this location as a D&D dungeon for level-3 characters. ` +
     "Propose a high-level mission for characters venturing into the above location. " +
     "Suggest a BRIEF, SELF-CONTAINED goal that can be managed in a single session. " +
-    "Do not yet mention their motivation for this goal. Use  elements from the above lore! Answer with a single sentence."
+    "Do not yet mention their motivation for this goal. Use elements from the above lore! Answer with a single sentence."
 const { text: mission } = await asker.ask(missionThread, messageMission)
 
 const messageContext =
@@ -149,7 +149,7 @@ const messageTexts =
     "Separate the three pieces of text with three dashes: ---."
 const { text: texts } = await alwaysPromptAsker.ask(THREAD_LORE, messageTexts)
 const textsList = texts.split('---').map(text => text.trim())
-const intro = textsList[0], outsideDescription = textsList[1], conclusion = '*' + textsList[2] + '*'
+const intro = textsList[0], outsideDescription = '*' + textsList[1] + '*', conclusion = textsList[2]
 
 // const roomsList: string[] = rooms.split('\n').map((room) => room.match(/\s*\d\d?.?\s*(.*)\s*/)?.[1]).filter(room => room).map(room => room!)
 // console.log(roomsList)

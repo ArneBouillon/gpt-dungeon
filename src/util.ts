@@ -100,7 +100,7 @@ class ChatGPTAsker implements Asker {
                 break
             } catch(err) {
                 attempts++
-                if (attempts >= 5) {
+                if (attempts >= 10) {
                     console.log("Error keeps coming, I'm going to stop retrying now!")
                     throw err
                 } else {
