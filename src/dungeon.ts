@@ -77,8 +77,10 @@ const messageRooms =
     "  -> Traps, if present. For example, the items above might be trapped.\n" +
     "  -> Major enemies in this room. Only use this for 2 to 3 rooms.\n" +
     "  -> Information that the characters can learn here.\n" +
-    "Start from room 6 and count back! Separate the room entries with three dashes: ---."
-await alwaysPromptAsker.ask(THREAD_LORE, messageRooms)
+    "Separate the room entries with three dashes: ---."
+const { text: roomsText } = await alwaysPromptAsker.ask(THREAD_LORE, messageRooms)
+const rooms = roomsText.split('---').map(room => room.trim())
+assert(rooms.length >= 6)
 
 const messageInterRooms =
     "We will now add a number of \"inter-room elements\". These are story elements that pertain to multiple rooms. " +
@@ -114,8 +116,9 @@ await alwaysPromptAsker.ask(THREAD_LORE, messageRoomsCheck)
 const roomSummariesList: string[] = []
 for (let roomNumber = 6; roomNumber >= 1; --roomNumber) {
     const messageRoomSummary =
-        `Now, for room ${roomNumber}, compile a summary of everything a designer of that room would need to know. ` +
-        "Don't forget your corrections from above." +
+        `Recall ${rooms[roomNumber - 1]}\n\n` +
+        `Now, for Room ${roomNumber}, compile a summary of everything a designer of that room would need to know. ` +
+        "Don't forget your corrections from above and don't forget the inter-room elements. " +
         "This includes everything you just told me, specifically any items or information that should be provided. " +
         "Be very detailed here! All details of the items and information should be provided, " +
         "including EXACT TEXT SNIPPETS IF THE OBJECT IS A PIECE OF TEXT. " +
@@ -199,7 +202,8 @@ roomSummariesList.reverse()
 // assert(roomSummariesList.length >= 6) // TODO: Check that if it's more, it's just bc some note was put after it
 
 const roomTexts: string[] = []
-const allCreatures = ''
+let allCreatures = ''
+let allItems = ''
 for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
     const thread = `room${roomNumber}`
 
@@ -257,9 +261,14 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         "Please fill in the specifics of the points left unclear. DO NOT INTRODUCE ADDITIONAL CONTENT OR NPCs by doing this, " +
         "but just ensure the story is concrete and logical. DO NOT INTRODUCE NEW COMBAT OR NPCs! " +
         "I REPEAT: NO NEW COMBAT OR NPCs! Make sure it is clear how the characters should acquire any potential clues. " +
-        "Ensure any keys or other specific items introduced get a use within this room, " +
-        "and are not reserved for later use in the dungeon. Answer with just an unstructured bullet list, nothing else."
-    const { text: clarifications } = await asker.ask(clarificationThread, messageClarify)
+        "DO NOT MAKE UP ANY INFORMATION ABOUT OTHER ROOMS IN THE DUNGEON, INCLUDING ANY EFFECTS OBJECTS IN THIS ROOM MIGHT HAVE THERE. " +
+        "Answer with just an unstructured bullet list, nothing else."
+    await asker.ask(clarificationThread, messageClarify)
+
+    const messageClarifyCorrect =
+        "Did you make anything up about other rooms in the dungeon? Repeat your answer from above verbatim, " +
+        "but LEAVE OUT ANYTHING YOU MADE UP ABOUT OTHER ROOMS."
+    const { text: clarifications } = await asker.ask(clarificationThread, messageClarifyCorrect)
 
     const extractionThreadItems = `room${roomNumber}_extract_i`
 
@@ -268,15 +277,26 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         'From this text, extract all items that would benefit from a separate entry (e.g. due to a magic effect or some other unusual quality). Normal coins or chests should not be mentioned.\n' +
         'Answer in a single line, containing a concise comma-separated list. ' +
         'Only include names, no details. If nothing matches the given category, put "N/A" instead.'
-    const { text: extractionTextItems } = await asker.ask(extractionThreadItems, messageExtractItems)
+    let { text: extractionTextItems } = await asker.ask(extractionThreadItems, messageExtractItems)
     const items = extractionTextItems.includes('N/A') ? [] : extractionTextItems.split(',').map(s => s.trim())
+
+    if (allItems.length != 0) {
+        const messageFilterItems =
+            `Now imagine there already are descriptions for the following items: ${allCreatures}. ` +
+            "Repeat all items from your list above that still need a description. Only leave an item out " +
+            "if it is exactly included in the list I'm giving you!"
+        let { text: t } = await asker.ask(extractionThreadItems, messageFilterItems)
+        extractionTextItems = t
+    }
+    allItems += extractionTextItems + ', '
 
     let extractedItems = ''
     for (let item of items) {
         const messageExtractedItems =
             `For the ${item}, provide a STANDARD D&D module entry in Markdown (Brewdown) style, ` +
-            "using #### for the title. First list the weight and value; then describe the properties. " +
-            "REPLY ONLY WITH THE ENTRY! NO OTHER TEXT!"
+            "using #### for the title (which should probably be singular). " +
+            "First list the weight and value; then describe the properties in full text. " +
+            "Be concise yet specific and include precise D&D mechanics where possible. REPLY ONLY WITH THE ENTRY! NO OTHER TEXT!"
         const { text: ei } = await asker.ask(extractionThreadItems, messageExtractedItems)
         extractedItems += "\n\n" + ei
     }
@@ -298,6 +318,7 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         let { text: t } = await asker.ask(extractionThreadCreatures, messageFilterCreatures)
         extractionTextCreatures = t
     }
+    allCreatures += extractionTextCreatures + ', '
 
     const creatures = extractionTextCreatures.includes('N/A') ? [] : extractionTextCreatures.split(',').map(s => s.trim())
 
@@ -305,9 +326,11 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
     for (let creature of creatures) {
         const messageExtractedCreatures =
             `For the ${creature} above, provide a STANDARD D&D module entry in Markdown (Brewdown) style. ` +
-            "Use ## for the title. Give a stat block (be concise! Avoid giving information that is unlikely to be needed. " +
+            "Use ## for the title (which should probably be singular, unless the creature is a swarm). " +
+            "Give a stat block (be concise! Avoid giving information that is unlikely to be needed. " +
             "Don't include a description!) and include a table of ability stats. " +
-            "The party is level 3; THE CREATURE CAN BE VERY CHALLENGING." +
+            "The party is level 3; the combination of creatures in this room (pay attention to their amounts!) " +
+            "should be very challenging, but of course not completely deadly to a level-3 party. " +
             "GENERATE STATS AND CHALLENGE RATINGS THAT REFLECT THIS (and potentially generate cool abilities to offset low stats). " +
             "REPLY ONLY WITH THE ENTRY! NO OTHER TEXT!"
         const { text: ec } = await asker.ask(extractionThreadCreatures, messageExtractedCreatures)
