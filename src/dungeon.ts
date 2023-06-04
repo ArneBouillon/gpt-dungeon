@@ -135,6 +135,22 @@ for (let roomNumber = 6; roomNumber >= 1; --roomNumber) {
 }
 roomSummariesList.reverse()
 
+const messageTexts =
+    "I need three more pieces of text.\n" +
+    "- An introduction to the dungeon module for the DM. Make this a nicely readable and relatively short " +
+        "text that conveys the main challenges and draws of the module. Do not try to sell the dungeon; " +
+        "simply summarize what happens. Do not address the DM directly.\n" +
+    "- A description to read to the characters when they arrive at the outside of the dungeon. " +
+        "What does the location look like from outside? What do the surroundings look like? " +
+        "How do they get into Room 1? Do not make this a challenge gameplay-wise; this is purely for flavor.\n" +
+    "- A text that tells the DM about what happens when the characters complete their mission. " +
+        "What are the consequences? What happens to the location? What can they use the objects they found for?\n\n" +
+    "Answer with these three pieces of text, AND NOTHING ELSE. No accompanying introduction or conclusion. " +
+    "Separate the three pieces of text with three dashes: ---."
+const { text: texts } = await alwaysPromptAsker.ask(THREAD_LORE, messageTexts)
+const textsList = texts.split('---').map(text => text.trim())
+const intro = textsList[0], outsideDescription = textsList[1], conclusion = '*' + textsList[2] + '*'
+
 // const roomsList: string[] = rooms.split('\n').map((room) => room.match(/\s*\d\d?.?\s*(.*)\s*/)?.[1]).filter(room => room).map(room => room!)
 // console.log(roomsList)
 // assert(roomsList.length == 6)
@@ -390,14 +406,22 @@ const roomSections = roomTexts
 const motivationSection =
     `## Motivation\nThere are many reasons why the PCs might embark on this quest. Some examples are given.\n\n${motivations}`
 
+const arrivalSection =
+    `## Arrival\n${outsideDescription}`
+
+const conclusionSection =
+    `## Conclusion\n${conclusion}`
+
 // const layoutSection =
 //     `## Dungeon layout\nThe dungeon's rooms are laid out as follows.\n\n![layout](TODO) {height:280px,mix-blend-mode:multiply}`
 
 const sections = [
     motivationSection,
+    arrivalSection,
     // layoutSection,
     ...roomSections,
+    conclusionSection,
 ]
-const hbText = hb.getMD(title, context, sections)
+const hbText = hb.getMD(title, intro, sections)
 console.log(hbText)
 fs.writeFileSync('output.txt', hbText)
