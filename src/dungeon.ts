@@ -227,21 +227,10 @@ const roomTexts: string[] = []
 let allCreatures = ''
 let allItems = ''
 for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
-    const thread = `room${roomNumber}`
-
-    // const messageRoom =
-    //     `We are designing a D&D dungeon. The context is as follows: ${context} ` +
-    //     `\n\nThe room I would like to design in more detail is the following: Room ${roomNumber}: ${roomSummariesList[roomNumber - 1]}\n\n` +
-    //     "Please propose a detailed description of this room. Feel free to add small things such as decorations, minor loot... " +
-    //     "but nothing too big. I'm looking for a room with a fair amount of loot and a lot of potential interactions with items. " +
-    //     "I'm looking for a room low on puzzles and riddles. Don't overcomplicate things, although you can be creative. " +
-    //     "If there are other creatures in the room, I want them to be hostile. DO NOT INTRODUCE ITEMS (SUCH AS KEYS) " +
-    //     "SPECIFICALLY FOR USE LATER IN THE DUNGEON. Make your description EXTREMELY INFORMATION-DENSE and very SPECIFIC: " +
-    //     "actually say what is in the room, instead of giving examples or vague generalities."
-    // const { text: roomDetail } = await asker.ask(thread, messageRoom)
-
     let clarifications = ''
     for (let clarificationIteration = 1; clarificationIteration <= 2; ++clarificationIteration) {
+        const thread = `room${roomNumber}_c_it_${clarificationIteration}`
+
         const messageRoomText =
             `We are designing a D&D dungeon. The context is as follows. ${context}\n\n----------\n\n` +
             `The room I would like to design in more detail is the following:\n${roomSummariesList[roomNumber - 1]}\n${clarifications}\n\n----------\n\n` +
@@ -264,7 +253,7 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
             "Add no sections that I haven't described above. Answer in the style of a Homebrewery Markdown (Brewdown) module."
         const { text: roomText1 } = await asker.ask(thread, messageRoomText)
 
-        const clarificationThread = `room${roomNumber}_c`
+        const clarificationThread = `room${roomNumber}_c_c_it_${clarificationIteration}`
 
         const messageUnclear =
             `${roomText1}\n\n----------\n\n` +
