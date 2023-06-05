@@ -99,7 +99,7 @@ const messageInterRooms =
     "Meta-prerequisites (ways that the characters can know **how** to solve a problem; e.g. " +
     "knowing that a previous object can help, or knowing that the solution to a puzzle is to say a specific phrase...)\n" +
     "  -> As above, give 3 DETAILED ways in which the characters can find this out.\n\n" +
-    "Suggest multiple large-scope inter-room elements here."
+    "Suggest multiple large-scope inter-room elements here. Start each entry with a description, and then go over to the prerequisites."
 await alwaysPromptAsker.ask(THREAD_LORE, messageInterRooms)
 
 const messageInterRoomsSmall =
@@ -116,7 +116,7 @@ await alwaysPromptAsker.ask(THREAD_LORE, messageRoomsCheck)
 const roomSummariesList: string[] = []
 for (let roomNumber = 6; roomNumber >= 1; --roomNumber) {
     const messageRoomSummary =
-        `Recall ${rooms[roomNumber - 1]}\n\n` +
+        `Recall ${rooms[roomNumber - 1]}\n\n----------\n\n` +
         `Now, for Room ${roomNumber}, compile a summary of everything a designer of that room would need to know. ` +
         "Don't forget your corrections from above and don't forget the inter-room elements. " +
         "This includes everything you just told me, specifically any items or information that should be provided. " +
@@ -124,12 +124,18 @@ for (let roomNumber = 6; roomNumber >= 1; --roomNumber) {
         "including EXACT TEXT SNIPPETS IF THE OBJECT IS A PIECE OF TEXT. " +
         "ANSWER WITH AN UNSTRUCTURED LIST OF BULLET POINTS. DO NOT SUBDIVIDE THE LIST AND DO NOT USE TITLES. " +
         "Be detailed! Ensure to include all elements you generated above!\n\n" +
-        "Then, add a line with three dashes: ---. Now add to this room more details that are not necessarily connected " +
-        "to the broader story. Add descriptions, cool decor elements, potentially minor loot and minor enemies... " +
-        "If possible, connect (minor) gameplay implications to some of the things you introduce. " +
-        "Again, answer in unstructured bullet points.\n\n" +
+        "- Start with all the bullets connected to the room description above. End with three dashes: ---.\n" +
+        "- Then give all the bullets connected to the inter-room elements and to the proposed solution of the previous message. " +
+            "Be detailed! For the inter-room elements, only include the information related to this specific room, " +
+            "but mention explicitly and verbatim that all other parts of the element are dealt with in another room. " +
+            "Since the designers of the other room won't have the necessary context, INCLUDE A LARGE AMOUNT OF DETAILS. " +
+            "End with three dashes: ---.\n" +
+        "- Now add to this room more details that are not necessarily connected to the broader story. " +
+            "Add descriptions, cool decor elements, potentially medium to minor loot and medium to minor enemies... " +
+            "If possible, connect (medium to minor) gameplay implications to some of the things you introduce. " +
+            "Again, answer in unstructured bullet points.\n\n" +
         "Keep in mind that each room's text will go to a different designer! " +
-        "Thus, if an object has relevance to another room, this should be specified very explicitly."
+        "Thus, if an object has relevance to another room, this should be specified very explicitly. Remember to be detailed!"
     const { text: roomSummary } = await alwaysPromptAsker.ask(THREAD_LORE, messageRoomSummary)
     roomSummariesList.push(roomSummary.split('---').map(s => s.trim()).slice(0, 2).join('\n'))
 }
@@ -292,9 +298,8 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n\n----------\n\n` +
         'From this text, extract all items that would benefit from a separate entry (e.g. due to a magic effect or some other unusual quality). Normal coins or chests should not be mentioned.\n' +
         'Answer in a single line, containing a concise comma-separated list. ' +
-        'Only include names, no details. If nothing matches the given category, put "N/A" instead.'
+        'Only include names, no details. If nothing matches the given category, put "None" instead.'
     let { text: extractionTextItems } = await asker.ask(extractionThreadItems, messageExtractItems)
-    const items = extractionTextItems.includes('N/A') ? [] : extractionTextItems.split(',').map(s => s.trim())
 
     if (allItems.length != 0) {
         const messageFilterItems =
@@ -306,13 +311,17 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
     }
     allItems += extractionTextItems + ', '
 
+    const items = extractionTextItems.includes('None') || extractionTextItems.includes('none') ? [] : extractionTextItems.split(',').map(s => s.trim())
+
     let extractedItems = ''
     for (let item of items) {
         const messageExtractedItems =
             `For the ${item}, provide a STANDARD D&D module entry in Markdown (Brewdown) style, ` +
             "using #### for the title (which should probably be singular). " +
-            "First list the weight and value; then describe the properties IN FULL TEXT. " +
-            "Be concise yet specific and include precise D&D mechanics where possible. REPLY ONLY WITH THE ENTRY! NO OTHER TEXT!"
+            "First list the weight and value; then describe the properties in a single, concise text (no bullet points!). " +
+            "Be concise yet specific and include PRECISE D&D MECHANICS WHEREVER POSSIBLE! " +
+            "If the object is minor within the scope of the room, do not give it too many properties. " +
+            "REPLY ONLY WITH THE ENTRY! NO OTHER TEXT!"
         const { text: ei } = await asker.ask(extractionThreadItems, messageExtractedItems)
         extractedItems += "\n\n" + ei
     }
@@ -323,7 +332,7 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n\n----------\n\n` +
         'From this text, extract all creatures that are mentioned.\n' +
         'Answer in a single line, containing a concise comma-separated list. ' +
-        'Only include names, no details. If nothing matches the given category, put "N/A" instead.'
+        'Only include names, no details. If nothing matches the given category, put "None" instead.'
     let { text: extractionTextCreatures } = await asker.ask(extractionThreadCreatures, messageExtractCreatures)
 
     if (allCreatures.length != 0) {
@@ -336,7 +345,7 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
     }
     allCreatures += extractionTextCreatures + ', '
 
-    const creatures = extractionTextCreatures.includes('N/A') ? [] : extractionTextCreatures.split(',').map(s => s.trim())
+    const creatures = extractionTextCreatures.includes('None') || extractionTextCreatures.includes('none') ? [] : extractionTextCreatures.split(',').map(s => s.trim())
 
     let extractedCreatures = ''
     for (let creature of creatures) {
