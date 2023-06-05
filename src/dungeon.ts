@@ -240,57 +240,60 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
     //     "actually say what is in the room, instead of giving examples or vague generalities."
     // const { text: roomDetail } = await asker.ask(thread, messageRoom)
 
-    const messageRoomText =
-        `We are designing a D&D dungeon. The context is as follows. ${context}\n\n----------\n\n` +
-        `The room I would like to design in more detail is the following:\n${roomSummariesList[roomNumber - 1]}\n\n----------\n\n` +
-        "The ideas above are very interesting, but the text is not yet suited for an entry in a D&D module. " +
-        "Overhaul the text to be concise and informative, containing all the information needed for the DM to run the session, " +
-        "AND NOTHING MORE. If the room contains enemies, do not describe them in any detail. WRITE IN THE STYLE OF A D&D MODULE!\n" +
-        "- START WITH A DESCRIPTION FOR THE PLAYERS, *given entirely in italics*, describing what they see, and the ambiance of the room.\n" +
-        "- THEN GIVE A FULL DESCRIPTION OF THE ROOM FOR THE DM. Be complete and visual: describe the lay-out of the room and detail what is present.\n" +
-        "- GIVE A LIST OF NOTABLE FEATURES. This contains elements from the description that have mechanics implications. " +
-        "Be very explicit yet concise about these mechanical implications! " +
-        "This is also the place to talk about where objects and creatures can be found in the room. " +
-        "Be very explicit yet concise about the location of everything! The names of objects and creatures, " +
-        "as well as any other loot such as coins, must be printed **in bold**. Most things you want to describe here " +
-        "should also have been mentioned in the Description!\n" +
-        "- DO NOT ADD ANY OTHER SECTIONS. STOP THE TEXT IMMEDIATELY AFTER THE NOTABLE FEATURES.\n" +
-        "\n" +
-        "Note that this is meant for a DM; BE CONCISE, PRECISE, SPECIFIC AND COMPLETE in anything you say. " +
-        "ONLY LIST SPECIFIC IN-GAME INFORMATION, NO GENERALITIES OR DM TIPS. List specifically what loot can be found, " +
-        "what the precise solution to a puzzle is, how concepts translate to in-game mechanics... " +
-        "Add no sections that I haven't described above. Answer in the style of a Homebrewery Markdown (Brewdown) module."
-    const { text: roomText1 } = await asker.ask(thread, messageRoomText)
+    let clarifications = ''
+    for (let clarificationIteration = 1; clarificationIteration <= 2; ++clarificationIteration) {
+        const messageRoomText =
+            `We are designing a D&D dungeon. The context is as follows. ${context}\n\n----------\n\n` +
+            `The room I would like to design in more detail is the following:\n${roomSummariesList[roomNumber - 1]}\n${clarifications}\n\n----------\n\n` +
+            "The ideas above are very interesting, but the text is not yet suited for an entry in a D&D module. " +
+            "Overhaul the text to be concise and informative, containing all the information needed for the DM to run the session, " +
+            "AND NOTHING MORE. If the room contains enemies, do not describe them in any detail. WRITE IN THE STYLE OF A D&D MODULE!\n" +
+            "- START WITH A DESCRIPTION FOR THE PLAYERS, *given entirely in italics*, describing what they see, and the ambiance of the room.\n" +
+            "- THEN GIVE A FULL DESCRIPTION OF THE ROOM FOR THE DM. Be complete and visual: describe the lay-out of the room and detail what is present.\n" +
+            "- GIVE A LIST OF NOTABLE FEATURES. This contains elements from the description that have mechanics implications. " +
+            "Be very explicit yet concise about these mechanical implications! " +
+            "This is also the place to talk about where objects and creatures can be found in the room. " +
+            "Be very explicit yet concise about the location of everything! The names of objects and creatures, " +
+            "as well as any other loot such as coins, must be printed **in bold**. Most things you want to describe here " +
+            "should also have been mentioned in the Description!\n" +
+            "- DO NOT ADD ANY OTHER SECTIONS. STOP THE TEXT IMMEDIATELY AFTER THE NOTABLE FEATURES.\n" +
+            "\n" +
+            "Note that this is meant for a DM; BE CONCISE, PRECISE, SPECIFIC AND COMPLETE in anything you say. " +
+            "ONLY LIST SPECIFIC IN-GAME INFORMATION, NO GENERALITIES OR DM TIPS. List specifically what loot can be found, " +
+            "what the precise solution to a puzzle is, how concepts translate to in-game mechanics... " +
+            "Add no sections that I haven't described above. Answer in the style of a Homebrewery Markdown (Brewdown) module."
+        const { text: roomText1 } = await asker.ask(thread, messageRoomText)
 
-    const clarificationThread = `room${roomNumber}_c`
+        const clarificationThread = `room${roomNumber}_c`
 
-    const messageUnclear =
-        `${roomText1}\n\n----------\n\n` +
-        "The above section is meant to feature in a D&D module, and the DM uses the text to run the module. " +
-        "However, the text is not yet specific enough, often giving examples instead of citing what exactly the characters encounter. " +
-        "Identify all the elements that are not yet specific enough for a DM to properly run the adventure. " +
-        "Pay special attention to whether the characters have all the information and clues needed to progress. " +
-        "Also make sure everything is named, and described effects are specified on a mechanical level. " +
-        "DO NOT PROPOSE TO ADD NEW ELEMENTS! ONLY ELABORATE ON EXISTING ELEMENTS. BE CONCISE. " +
-        "Give a list of AS MANY UNCLEAR ELEMENTS AS YOU CAN FIND (at least 10, and the more, the better!)."
-    await asker.ask(clarificationThread, messageUnclear)
-    const messageUnclearFilter =
-        "Repeat the unclear elements, but leave out those relating to the overarching story instead of to this specific " +
-        "room in the dungeon. Answer with just a numbered list, nothing else."
-    await asker.ask(clarificationThread, messageUnclearFilter)
+        const messageUnclear =
+            `${roomText1}\n\n----------\n\n` +
+            "The above section is meant to feature in a D&D module, and the DM uses the text to run the module. " +
+            "However, the text is not yet specific enough, often giving examples instead of citing what exactly the characters encounter. " +
+            "Identify all the elements that are not yet specific enough for a DM to properly run the adventure. " +
+            "Pay special attention to whether the characters have all the information and clues needed to progress. " +
+            "Also make sure everything is named, and described effects are specified on a mechanical level. " +
+            "DO NOT PROPOSE TO ADD NEW ELEMENTS! ONLY ELABORATE ON EXISTING ELEMENTS. BE CONCISE. " +
+            `Give a list of AS MANY UNCLEAR ELEMENTS AS YOU CAN FIND${clarificationIteration == 1 ? " (at least 10, and the more, the better!)" : ""}.`
+        await asker.ask(clarificationThread, messageUnclear)
+        const messageUnclearFilter =
+            "Repeat the unclear elements, but leave out those relating to the overarching story instead of to this specific " +
+            "room in the dungeon. Answer with just a numbered list, nothing else."
+        await asker.ask(clarificationThread, messageUnclearFilter)
 
-    const messageClarify =
-        "Please fill in the specifics of the points left unclear. DO NOT INTRODUCE ADDITIONAL CONTENT OR NPCs by doing this, " +
-        "but just ensure the story is concrete and logical. DO NOT INTRODUCE NEW COMBAT OR NPCs! " +
-        "I REPEAT: NO NEW COMBAT OR NPCs! Make sure it is clear how the characters should acquire any potential clues. " +
-        "DO NOT MAKE UP ANY INFORMATION ABOUT OTHER ROOMS IN THE DUNGEON, INCLUDING ANY EFFECTS OBJECTS IN THIS ROOM MIGHT HAVE THERE. " +
-        "Answer with just an unstructured bullet list, nothing else."
-    await asker.ask(clarificationThread, messageClarify)
+        const messageClarify =
+            "Please fill in the specifics of the points left unclear. DO NOT INTRODUCE ADDITIONAL CONTENT OR NPCs by doing this, " +
+            "but just ensure the story is concrete and logical. Make sure it is clear how the characters should acquire any potential clues. " +
+            "DO NOT MAKE UP ANY INFORMATION ABOUT OTHER ROOMS IN THE DUNGEON, INCLUDING ANY EFFECTS OBJECTS IN THIS ROOM MIGHT HAVE THERE. " +
+            "Answer with just an unstructured bullet list, nothing else. I repeat, DO NOT MENTION OTHER ROOMS."
+        await asker.ask(clarificationThread, messageClarify)
 
-    const messageClarifyCorrect =
-        "Did you make anything up about other rooms in the dungeon? Repeat your answer from above verbatim, " +
-        "but LEAVE OUT ANYTHING YOU MADE UP ABOUT OTHER ROOMS."
-    const { text: clarifications } = await asker.ask(clarificationThread, messageClarifyCorrect)
+        const messageClarifyCorrect =
+            "Did you make anything up about other rooms in the dungeon? Repeat your answer from above verbatim, " +
+            "but LEAVE OUT ANYTHING YOU MADE UP ABOUT OTHER ROOMS."
+        const { text: c } = await asker.ask(clarificationThread, messageClarifyCorrect)
+        clarifications += c + '\n'
+    }
 
     const extractionThreadItems = `room${roomNumber}_extract_i`
 
@@ -391,8 +394,8 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         "list the amount! The names of objects and creatures, as well as any other loot such as coins, " +
         "must be printed **in bold**. Most things you want to describe here should also have been mentioned in the Description!\n" +
         "- Add OTHER SECTIONS if you think they are needed for specific mechanics or puzzles that merit their own section. " +
-        "This is encouraged, but you should provide a lot of details! Ensure a DM has all the information they need. " +
-        "Be very specific about mechanical implications! DO NOT ADD SECTIONS FOR LOOT OR CREATURES.\n\n" +
+        "This is encouraged, but you should provide A LOT OF DETAILS! Ensure a DM has all the information they need. " +
+        "Be very specific about D&D mechanical implications! DO NOT ADD SECTIONS FOR LOOT OR CREATURES.\n\n" +
         `When mentioning ANY OF:\n${items.join(', ') + "; " + creatures.join(', ')}\n, do not provide any explanation about them, ` +
         "as that will be done somewhere else. Simply PRINT THE NAMES IN **BOLD**.\n" +
         "\n" +
