@@ -321,7 +321,7 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
 
     const messageExtractCreatures =
         `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n\n----------\n\n` +
-        'From this text, extract all creatures that are mentioned.\n' +
+        'From this text, extract all creatures and enemies that are mentioned.\n' +
         'Answer in a single line, containing a concise comma-separated list. ' +
         'Only include names, no details. If nothing matches the given category, put "None" instead.'
     let { text: extractionTextCreatures } = await asker.ask(extractionThreadCreatures, messageExtractCreatures)
