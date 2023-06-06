@@ -67,7 +67,7 @@ const { text: motivations } = await asker.ask(missionThread, messageMotivations)
 const messageRooms =
     "The above location is used as a D&D dungeon. " +
     `The characters' mission is the following. ${mission}\n\n` +
-    "Propose 6 rooms in which to divide the dungeon. They should culminate in an opportunity to complete the above mission. " +
+    "Propose 6 distinct and unique rooms in which to divide the dungeon. They should culminate in an opportunity to complete the above mission. " +
     "For each room, discuss\n" +
     "- The general setting and atmosphere of the room.\n" +
     "- Anything present in the room that relates to the lore of the location and/or the story of the adventure. Be detailed and specific!\n" +
@@ -104,6 +104,7 @@ await alwaysPromptAsker.ask(THREAD_LORE, messageInterRooms)
 
 const messageInterRoomsSmall =
     "Now suggest some new inter-room elements with a smaller scope. You can add new information to the rooms while doing this. " +
+    "Again, ensure that the needed information is not present in later rooms than the one they're needed in. " +
     "These smaller-scope elements should be fun and interesting ways to link the rooms. " +
     "They could be small easter eggs, or objects from some room that turn out to be useful to find some loot in another room."
 await alwaysPromptAsker.ask(THREAD_LORE, messageInterRoomsSmall)
@@ -129,6 +130,7 @@ for (let roomNumber = 6; roomNumber >= 1; --roomNumber) {
             "Be detailed! For the inter-room elements, only include the information related to this specific room, " +
             "but mention explicitly and verbatim that all other parts of the element are dealt with in another room. " +
             "Since the designers of the other room won't have the necessary context, INCLUDE A LARGE AMOUNT OF DETAILS. " +
+            "When the characters encounter books, text, or speech, give the FULL TEXT SNIPPETS VERBATIM. " +
             "End with three dashes: ---.\n" +
         "- Now add to this room more details that are not necessarily connected to the broader story. " +
             "Add descriptions, cool decor elements, potentially medium to minor loot and medium to minor enemies... " +
