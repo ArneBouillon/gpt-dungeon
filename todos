@@ -3,13 +3,21 @@ TODOs for `dungeon.ts`
 Necessary:
 
 Nice-to-have:
-- The connections should be incorporated into the actual room descriptions.
-- Description of the outside/surroundings of the dungeon to read to the players
-- More/better clarification cycles (e.g. riddles)
+- Re-introduce connections
+    > Generate them somehow
+    > Incorporate them into room descriptions
+- Room details
+    > Improve clarification process
+        -> Extra cycle?
+        -> Even more mechanics
+        -> Find a way to ensure all bullets are incorporated into the text
+    > Separate sections should be more detailed
 - Introduce more options
     > Make the keywords configurable
     > Give a "slider" for loot amount, difficulty...
-- Add thread that remembers style decisions (for increased uniformity)
+- Add threads for style uniformity
+    > Creatures, items, room details...
+- Global items and creatures
 
 Ideas:
 - Maybe we could provide a list with TODOs for the DM? There'll always be a few things left to fill in (and that might not even be a bad thing).

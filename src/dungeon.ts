@@ -295,9 +295,8 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
 
     if (allItems.length != 0) {
         const messageFilterItems =
-            `Now imagine there already are descriptions for the following items: ${allCreatures}. ` +
-            "Repeat all items from your list above that still need a description. Only leave an item out " +
-            "if it is exactly included in the list I'm giving you!"
+            `Now imagine there already are descriptions for the following items: ${allCreatures.slice(0, -2)}. ` +
+            "Repeat all items from your list above that are not in my list."
         let { text: t } = await asker.ask(extractionThreadItems, messageFilterItems)
         extractionTextItems = t
     }
@@ -329,9 +328,8 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
 
     if (allCreatures.length != 0) {
         const messageFilterCreatures =
-            `Now imagine there already are descriptions for the following creatures: ${allCreatures}. ` +
-            "Repeat all creatures from your list above that still need a description. Only leave a creature out " +
-            "if it is exactly included in the list I'm giving you!"
+            `Now imagine there already are descriptions for the following creatures: ${allCreatures.slice(0, -2)}. ` +
+            "Repeat all creatures from your list above that are not in my list"
         let { text: t } = await asker.ask(extractionThreadCreatures, messageFilterCreatures)
         extractionTextCreatures = t
     }
