@@ -295,7 +295,7 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
 
     if (allItems.length != 0) {
         const messageFilterItems =
-            `Now imagine there already are descriptions for the following items: ${allCreatures.slice(0, -2)}. ` +
+            `Now imagine there already are descriptions for the following items: ${allItems.slice(0, -2)}. ` +
             "Repeat all items from your list above that are not in my list."
         let { text: t } = await asker.ask(extractionThreadItems, messageFilterItems)
         extractionTextItems = t
