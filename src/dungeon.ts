@@ -21,7 +21,7 @@ const messageKeywords =
     "Give me three randomly picked nouns or adjectives. Ensure the words are very concrete and not too abstract. " +
     "Also ensure none of the words include anything modern. Answer with a comma-separated list, and no other text."
 // const { text: keywords } = await asker.ask(util.getTempThread(), messageKeywords)
-const keywords = 'Manor, Pirates, Tables, Meerkats'
+const keywords = 'Manor, Eccentric, Inhabited, Captain, Undead'
 
 const messageDungeon =
     "We are going to design a D&D dungeon (not necessarily a literal dungeon) for third-level characters. " +
@@ -132,6 +132,7 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
             "Be detailed! For the inter-room elements, only include the information related to this specific room, " +
             "but mention explicitly and verbatim that all other parts of the element are dealt with in another room. " +
             "Since the designers of the other room won't have the necessary context, INCLUDE A LARGE AMOUNT OF DETAILS. " +
+            "Include all the information and clues from above! " +
             "If this is the first room connected to that inter-room element, explain every aspect of the element in detail!  " +
             "When the characters encounter books, text, or speech, give the FULL TEXT SNIPPETS VERBATIM. " +
             "End with three dashes: ---.\n" +
