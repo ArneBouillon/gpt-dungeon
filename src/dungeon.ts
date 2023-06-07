@@ -4,6 +4,7 @@ import * as util from './util.js'
 
 import assert from 'assert'
 import * as fs from 'fs'
+import {getTempThread} from "./util.js";
 
 const asker = new util.ChatGPTAsker()
 
@@ -20,7 +21,7 @@ const messageKeywords =
     "Give me three randomly picked nouns or adjectives. Ensure the words are very concrete and not too abstract. " +
     "Also ensure none of the words include anything modern. Answer with a comma-separated list, and no other text."
 // const { text: keywords } = await asker.ask(util.getTempThread(), messageKeywords)
-const keywords = 'Ruin, Collector, Plants'
+const keywords = 'Manor, Pirates, Tables, Meerkats'
 
 const messageDungeon =
     "We are going to design a D&D dungeon (not necessarily a literal dungeon) for third-level characters. " +
@@ -115,7 +116,7 @@ const messageRoomsCheck =
 await alwaysPromptAsker.ask(THREAD_LORE, messageRoomsCheck)
 
 const roomSummariesList: string[] = []
-for (let roomNumber = 6; roomNumber >= 1; --roomNumber) {
+for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
     const messageRoomSummary =
         `Recall ${rooms[roomNumber - 1]}\n\n----------\n\n` +
         `Now, for Room ${roomNumber}, compile a summary of everything a designer of that room would need to know. ` +
@@ -125,11 +126,13 @@ for (let roomNumber = 6; roomNumber >= 1; --roomNumber) {
         "including EXACT TEXT SNIPPETS IF THE OBJECT IS A PIECE OF TEXT. " +
         "ANSWER WITH AN UNSTRUCTURED LIST OF BULLET POINTS. DO NOT SUBDIVIDE THE LIST AND DO NOT USE TITLES. " +
         "Be detailed! Ensure to include all elements you generated above!\n\n" +
-        "- Start with all the bullets connected to the room description above. End with three dashes: ---.\n" +
+        "- Start with all the bullets connected to the room description above. When mentioning an item or creature important to the story, " +
+            "describe it in detail! Also give their important properties! End with three dashes: ---.\n" +
         "- Then give all the bullets connected to the inter-room elements and to the proposed solution of the previous message. " +
             "Be detailed! For the inter-room elements, only include the information related to this specific room, " +
             "but mention explicitly and verbatim that all other parts of the element are dealt with in another room. " +
             "Since the designers of the other room won't have the necessary context, INCLUDE A LARGE AMOUNT OF DETAILS. " +
+            "If this is the first room connected to that inter-room element, explain every aspect of the element in detail!  " +
             "When the characters encounter books, text, or speech, give the FULL TEXT SNIPPETS VERBATIM. " +
             "End with three dashes: ---.\n" +
         "- Now add to this room more details that are not necessarily connected to the broader story. " +
@@ -139,9 +142,8 @@ for (let roomNumber = 6; roomNumber >= 1; --roomNumber) {
         "Keep in mind that each room's text will go to a different designer! " +
         "Thus, if an object has relevance to another room, this should be specified very explicitly. Remember to be detailed!"
     const { text: roomSummary } = await alwaysPromptAsker.ask(THREAD_LORE, messageRoomSummary)
-    roomSummariesList.push(roomSummary.split('---').map(s => s.trim()).join('\n'))
+    roomSummariesList.push(roomSummary.split('---').map(s => s.trim()).join('\n').replace(/inter-room /ig, ''))
 }
-roomSummariesList.reverse()
 
 const messageTexts =
     "I need three more pieces of text.\n" +
@@ -225,6 +227,9 @@ const intro = textsList[0], outsideDescription = '*' + textsList[1] + '*', concl
 // console.log(roomSummariesList)
 // assert(roomSummariesList.length >= 6) // TODO: Check that if it's more, it's just bc some note was put after it
 
+const finalMessages: string[] = []
+const finalLambdas: Function[] = []
+
 const roomTexts: string[] = []
 let allCreatures = ''
 let allItems = ''
@@ -302,9 +307,13 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         let { text: t } = await asker.ask(extractionThreadItems, messageFilterItems)
         extractionTextItems = t
     }
-    allItems += extractionTextItems + ', '
-
-    const items = extractionTextItems.includes('None') || extractionTextItems.includes('none') ? [] : extractionTextItems.split(',').map(s => s.trim())
+    let items: string[] = []
+    if (extractionTextItems.includes('None') || extractionTextItems.includes('none')) {
+        items = []
+    } else {
+        items = extractionTextItems.split(',').map(s => s.trim())
+        allItems += extractionTextItems + ', '
+    }
 
     let extractedItems = ''
     for (let item of items) {
@@ -335,9 +344,14 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         let { text: t } = await asker.ask(extractionThreadCreatures, messageFilterCreatures)
         extractionTextCreatures = t
     }
-    allCreatures += extractionTextCreatures + ', '
 
-    const creatures = extractionTextCreatures.includes('None') || extractionTextCreatures.includes('none') ? [] : extractionTextCreatures.split(',').map(s => s.trim())
+    let creatures: string[] = []
+    if (extractionTextCreatures.includes('None') || extractionTextCreatures.includes('none')) {
+        creatures = []
+    } else {
+        creatures = extractionTextCreatures.split(',').map(s => s.trim())
+        allCreatures += extractionTextCreatures + ', '
+    }
 
     let extractedCreatures = ''
     for (let creature of creatures) {
@@ -364,8 +378,6 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         "items the characters can find, enemies... Answer in a concise bullet list. BE CONCISE!"
     const { text: locationsText } = await asker.ask(locationThread, messageLocations)
 
-    const finalThread = `room${roomNumber}_f`
-
     const messageClarifiedRoom =
         `We are designing a D&D dungeon. The room I would like to design in more detail is room ${roomNumber}:\n` +
         `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n${locationsText}\n\n----------\n\n` +
@@ -391,10 +403,15 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         "Note that this is meant for a DM; BE CONCISE, PRECISE, SPECIFIC AND COMPLETE in anything you say. " +
         "ONLY LIST SPECIFIC IN-GAME INFORMATION, NO GENERALITIES OR DM TIPS. List specifically what loot can be found, " +
         "what the precise solution to a puzzle is, how concepts translate to in-game mechanics... " +
-        "Answer in the style of a Homebrewery Markdown (Brewdown) module. ENSURE ALL THE BULLET POINTS ABOVE ARE ADDRESSED."
-    const { text: clarifiedRoomText } = await alwaysPromptAsker.ask(finalThread, messageClarifiedRoom)
+        "Answer in the style of a Homebrewery Markdown (Brewdown) module. If any text was given verbatim, ensure to include it in the module! " +
+        "ENSURE ALL THE BULLET POINTS ABOVE ARE ADDRESSED."
+    finalMessages.push(messageClarifiedRoom)
+    finalLambdas.push(clarifiedRoomText => roomTexts.push(clarifiedRoomText + '\n\n' + extractedItems + '\n\n' + extractedCreatures))
+}
 
-    roomTexts.push(clarifiedRoomText + '\n\n' + extractedItems + '\n\n' + extractedCreatures)
+for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
+    const { text: clarifiedRoomText } = await alwaysPromptAsker.ask(getTempThread(), finalMessages[roomNumber - 1])
+    finalLambdas[roomNumber - 1](clarifiedRoomText)
 }
 
 const titleText =
