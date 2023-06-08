@@ -275,18 +275,23 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         await asker.ask(clarificationThread, messageUnclear)
         const messageUnclearFilter =
             "Repeat the unclear elements, but leave out those relating to the overarching story instead of to this specific " +
-            "room in the dungeon. Answer with just a numbered list, nothing else."
+            "room in the dungeon."
         await asker.ask(clarificationThread, messageUnclearFilter)
 
         const messageClarify =
-            "Please fill in the specifics of the points left unclear. DO NOT INTRODUCE ADDITIONAL CONTENT OR NPCs by doing this, " +
-            "but just ensure the story is concrete and logical. Make sure it is clear how the characters should acquire any potential clues. " +
-            "DO NOT MAKE UP ANY INFORMATION ABOUT OTHER ROOMS IN THE DUNGEON, INCLUDING ANY EFFECTS OBJECTS IN THIS ROOM MIGHT HAVE THERE. " +
+            "Please fill in the specifics of the points left unclear. Do not introduce new content or NPCs by doing this, " +
+            "but just ensure the story is concrete and logical. Add a lot of details. " +
+            "Make sure it is abundantly clear how the characters should acquire any potential clues! " +
+            "When mentioning text, riddles, clues..., GIVE THE PRECISE TEXT VERBATIM THAT THE CHARACTERS ENCOUNTER. " +
+            "DO NOT MAKE UP ANY INFORMATION ABOUT OTHER ROOMS IN THE DUNGEON, INCLUDING ANY EFFECTS OBJECTS IN " +
+            "THIS ROOM MIGHT HAVE THERE. Do not introduce new objects that don't have a purpose, such as new keys or maps. " +
+            "When you have to make up rewards, keep it simple and give an object or coins. " +
+            "Do not provide examples of anything, but choose a specific suggestion. " +
             "Answer with just an unstructured bullet list, nothing else. I repeat, DO NOT MENTION OTHER ROOMS."
         await asker.ask(clarificationThread, messageClarify)
 
         const messageClarifyCorrect =
-            "Did you make anything up about other rooms in the dungeon? Repeat your answer from above verbatim, " +
+            "Did you make anything up about other rooms in the dungeon? Repeat your specifics from above VERBATIM, " +
             "but LEAVE OUT ANYTHING YOU MADE UP ABOUT OTHER ROOMS."
         const { text: c } = await asker.ask(clarificationThread, messageClarifyCorrect)
         clarifications += c + '\n'
