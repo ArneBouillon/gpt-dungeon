@@ -108,12 +108,12 @@ class ChatGPTAsker implements Asker {
         let attempts = 0;
         while (true) {
             try {
-                await sleep(100 * 2**attempts)
+                await sleep(1000)
                 res = await thread.api.sendMessage(message, options)
                 break
             } catch(err) {
                 attempts++
-                if (attempts >= 100) {
+                if (attempts >= 1000) {
                     console.log("Error keeps coming, I'm going to stop retrying now!")
                     throw err
                 } else {
