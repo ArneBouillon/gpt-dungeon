@@ -76,7 +76,7 @@ const messageRooms =
     "  -> Major loot items, if present.\n" +
     "  -> Topical items related to the lore but without an impact on the story, if present. These can range from very major to funny trinkets.\n" +
     "  -> Traps, if present. For example, the items above might be trapped.\n" +
-    "  -> Major enemies in this room. Only use this for 2 to 3 rooms.\n" +
+    "  -> Major enemies in this room. Only use this for 2 to 3 rooms. Ensure to give major enemies some weaker minions to spice up combat.\n" +
     "  -> Information that the characters can learn here.\n" +
     "Again, make the rooms and their contents inspired, distinct, and unique. Don't be afraid to pick weird or atypical rooms! " +
     "Separate the room entries with three dashes: ---."
@@ -449,3 +449,6 @@ const sections = [
 const hbText = hb.getMD(title, intro, sections)
 console.log(hbText)
 fs.writeFileSync('output.txt', hbText)
+
+asker.finalize()
+alwaysPromptAsker.finalize()

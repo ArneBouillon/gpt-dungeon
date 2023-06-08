@@ -46,15 +46,25 @@ interface Asker {
     ask: (threadID: number, message: string) => Promise<{
         text: string,
     }>
+
+    finalize: () => void
 }
 
-class PromptAsker {
+class PromptAsker implements Asker {
+    private count = 0
+
     public async ask(threadID, message) {
+        ++this.count
+
         const totalMessage = `IN THREAD ${threadID}:\n${message}\n\n`
         clipboard.writeSync(message)
         const ans = prompt(totalMessage)
         console.log('\n\n')
         return { text: ans }
+    }
+
+    public finalize() {
+        console.log(`Number of asks: ${this.count}`)
     }
 }
 
@@ -84,9 +94,12 @@ class ChatGPTThread {
 }
 
 class ChatGPTAsker implements Asker {
+    private count = 0
     private threads = new Map<string, ChatGPTThread>
 
     public async ask(threadID, message) {
+        ++this.count
+
         if (!this.threads.has(threadID)) this.threads.set(threadID, new ChatGPTThread)
         const thread = this.threads.get(threadID)!
 
@@ -112,5 +125,9 @@ class ChatGPTAsker implements Asker {
         return {
             text: res.text,
         }
+    }
+
+    public finalize() {
+        console.log(`Number of asks: ${this.count}`)
     }
 }
