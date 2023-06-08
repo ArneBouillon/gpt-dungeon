@@ -78,6 +78,7 @@ const messageRooms =
     "  -> Traps, if present. For example, the items above might be trapped.\n" +
     "  -> Major enemies in this room. Only use this for 2 to 3 rooms.\n" +
     "  -> Information that the characters can learn here.\n" +
+    "Again, make the rooms and their contents inspired, distinct, and unique. Don't be afraid to pick weird or atypical rooms! " +
     "Separate the room entries with three dashes: ---."
 const { text: roomsText } = await alwaysPromptAsker.ask(THREAD_LORE, messageRooms)
 const rooms = roomsText.split('---').map(room => room.trim())
