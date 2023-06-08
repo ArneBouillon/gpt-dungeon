@@ -4,7 +4,7 @@ import * as util from './util.js'
 
 import assert from 'assert'
 import * as fs from 'fs'
-import {getTempThread} from "./util.js";
+import { getTempThread } from "./util.js"
 
 const asker = new util.ChatGPTAsker()
 
@@ -306,17 +306,17 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         'Only include names, no details. If nothing matches the given category, put "None" instead.'
     let { text: extractionTextItems } = await asker.ask(extractionThreadItems, messageExtractItems)
 
-    if (allItems.length != 0) {
-        const messageFilterItems =
-            `Now imagine there already are descriptions for the following items: ${allItems.slice(0, -2)}. ` +
-            "Repeat all items from your list above that are not in my list."
-        let { text: t } = await asker.ask(extractionThreadItems, messageFilterItems)
-        extractionTextItems = t
-    }
     let items: string[] = []
     if (extractionTextItems.includes('None') || extractionTextItems.includes('none')) {
         items = []
     } else {
+        if (allItems.length != 0) {
+            const messageFilterItems =
+                `List 1: ${extractionTextItems}\nList 2: ${allItems.slice(0, -2)}\n\n----------\n\n` +
+                "Repeat verbatim all items from List 1 that are not on List 2."
+            let { text: t } = await asker.ask(getTempThread(), messageFilterItems)
+            extractionTextItems = t
+        }
         items = extractionTextItems.split(',').map(s => s.trim())
         allItems += extractionTextItems + ', '
     }
@@ -343,18 +343,17 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         'Only include names, no details. If nothing matches the given category, put "None" instead.'
     let { text: extractionTextCreatures } = await asker.ask(extractionThreadCreatures, messageExtractCreatures)
 
-    if (allCreatures.length != 0) {
-        const messageFilterCreatures =
-            `Now imagine there already are descriptions for the following creatures: ${allCreatures.slice(0, -2)}. ` +
-            "Repeat all creatures from your list above that are not in my list"
-        let { text: t } = await asker.ask(extractionThreadCreatures, messageFilterCreatures)
-        extractionTextCreatures = t
-    }
-
     let creatures: string[] = []
     if (extractionTextCreatures.includes('None') || extractionTextCreatures.includes('none')) {
         creatures = []
     } else {
+        if (allCreatures.length != 0) {
+            const messageFilterCreatures =
+                `List 1: ${extractionTextCreatures}\nList 2: ${allCreatures.slice(0, -2)}\n\n----------\n\n` +
+                "Repeat verbatim all creatures from List 1 that are not on List 2."
+            let { text: t } = await asker.ask(getTempThread(), messageFilterCreatures)
+            extractionTextCreatures = t
+        }
         creatures = extractionTextCreatures.split(',').map(s => s.trim())
         allCreatures += extractionTextCreatures + ', '
     }
