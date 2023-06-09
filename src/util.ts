@@ -38,7 +38,7 @@ const apis = tokens.split('\n').map(
         // apiReverseProxyUrl: 'https://bypass.churchless.tech/api/conversation',
         apiReverseProxyUrl: 'https://ai.fakeopen.com/api/conversation',
         // apiReverseProxyUrl: 'https://api.pawan.krd/backend-api/conversation',
-        // debug: true,
+        debug: true,
     })
 )
 

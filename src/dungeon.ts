@@ -76,13 +76,20 @@ const messageRooms =
     "  -> Major loot items, if present.\n" +
     "  -> Topical items related to the lore but without an impact on the story, if present. These can range from very major to funny trinkets.\n" +
     "  -> Traps, if present. For example, the items above might be trapped.\n" +
-    "  -> Major enemies in this room. Only use this for 2 to 3 rooms. Ensure to give major enemies some weaker minions to spice up combat.\n" +
+    "  -> Topical enemies in this room. Only use this for 2 to 3 rooms. Ensure to give major enemies some weaker minions to spice up combat!\n" +
     "  -> Information that the characters can learn here.\n" +
     "Again, make the rooms and their contents inspired, distinct, and unique. Don't be afraid to pick weird or atypical rooms! " +
     "Separate the room entries with three dashes: ---."
 const { text: roomsText } = await alwaysPromptAsker.ask(THREAD_LORE, messageRooms)
 const rooms = roomsText.split('---').map(room => room.trim())
 assert(rooms.length >= 6)
+
+const messageRoomNames =
+    `${roomsText}\n\n----------\n\nExtract the names of the 6 rooms. I want a list of 6 items, each on their own line, ` +
+    "in the following format: Room X: Room name. Do not give me any other text!"
+const { text: roomNamesText } = await asker.ask(getTempThread(), messageRoomNames)
+const roomNames = roomNamesText.split('\n').slice(-6).map(t => t.split(':')[1].trim())
+const roomNamesString = roomNames.map((name, i) => `${name} (Room ${i})`).join(', ')
 
 const messageInterRooms =
     "We will now add a number of \"inter-room elements\". These are story elements that pertain to multiple rooms. " +
@@ -101,15 +108,44 @@ const messageInterRooms =
     "Meta-prerequisites (ways that the characters can know **how** to solve a problem; e.g. " +
     "knowing that a previous object can help, or knowing that the solution to a puzzle is to say a specific phrase...)\n" +
     "  -> As above, give 3 DETAILED ways in which the characters can find this out.\n\n" +
-    "Suggest multiple large-scope inter-room elements here. Start each entry with a description, and then go over to the prerequisites."
-await alwaysPromptAsker.ask(THREAD_LORE, messageInterRooms)
+    "Suggest multiple large-scope inter-room elements here. Start each entry with a description, and then go over to the prerequisites. " +
+    "Do not over-complicate the inter-room elements! Make them very straightforward, with clear clues and without having to interact with NPCs. " +
+    "Separate the inter-room elements with three dashes: ---."
+const { text: interRooms1 } = await alwaysPromptAsker.ask(THREAD_LORE, messageInterRooms)
 
 const messageInterRoomsSmall =
     "Now suggest some new inter-room elements with a smaller scope. You can add new information to the rooms while doing this. " +
     "Again, ensure that the needed information is not present in later rooms than the one they're needed in. " +
     "These smaller-scope elements should be fun and interesting ways to link the rooms. " +
-    "They could be small easter eggs, or objects from some room that turn out to be useful to find some loot in another room."
-await alwaysPromptAsker.ask(THREAD_LORE, messageInterRoomsSmall)
+    "They could be small easter eggs, or objects from some room that turn out to be useful to find some loot in another room. " +
+    "Separate the inter-room elements with three dashes: ---."
+const { text: interRooms2 } = await alwaysPromptAsker.ask(THREAD_LORE, messageInterRoomsSmall)
+
+const interRoomTexts: string[] = []; for (let i = 1; i <= 6; ++i) interRoomTexts.push("")
+for (let interRoom of (interRooms1 + '---' + interRooms2).split('---').map(ir => ir.trim())) {
+    const t = getTempThread()
+    const messageRelevantRooms =
+        `${interRoom}\n\n----------\n\nWe're designing a D&D dungeon with 6 rooms: ${roomNamesString}\n\n` +
+        "Which of those rooms are relevant for this inter-room element? Give the numbers of those rooms."
+    await asker.ask(t, messageRelevantRooms)
+    const messageRelevantRoomsList =
+        "Give me the relevant rooms again, but JUST THEIR NUMBERS, COMMA-SEPARATED. NOTHING ELSE."
+    const { text: relevantRoomsText } = await asker.ask(t, messageRelevantRoomsList)
+    const relevantRoomNumbers = relevantRoomsText.split(',').map(s => Number(s.trim()))
+
+    for (let roomNumber of relevantRoomNumbers) {
+        const messageInterRoomRoom =
+            `${interRoom}\n\n----------\n\nWe're designing a D&D dungeon with 6 rooms: ${roomNamesString}\n\n` +
+            `List only the information relevant to Room ${roomNumber} (${roomNames[roomNumber - 1]}). In each bullet point, ` +
+            `be very clear to what extent the responsibility of Room ${roomNumber}'s designer goes! For instance, ` +
+            "when mentioning an object not found in this room, state VERY CLEARLY that it is found somewhere else, and where. " +
+            "Combine talking about this responsibility into the bullets themselves where possible.\n\n" +
+            "Do not use the words \"inter-room element\" or \"prerequisite\" in your answer! " +
+            "When mentioning any other room, include both the name AND THE NUMBER!"
+        const { text: interRoomRoomText } = await asker.ask(getTempThread(), messageInterRoomRoom)
+        interRoomTexts[roomNumber - 1] += interRoomRoomText + "\n"
+    }
+}
 
 const messageRoomsCheck =
     "Think long and hard: are there any plot holes or pieces of information the characters can't reasonably be expected to find? " +
@@ -119,32 +155,30 @@ await alwaysPromptAsker.ask(THREAD_LORE, messageRoomsCheck)
 const roomSummariesList: string[] = []
 for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
     const messageRoomSummary =
-        `Recall ${rooms[roomNumber - 1]}\n\n----------\n\n` +
+        `Recall Room ${roomNumber}. ${rooms[roomNumber - 1]}\n\n----------\n\n` +
         `Now, for Room ${roomNumber}, compile a summary of everything a designer of that room would need to know. ` +
-        "Don't forget your corrections from above and don't forget the inter-room elements. " +
-        "This includes everything you just told me, specifically any items or information that should be provided. " +
+        "Don't forget your corrections from above! This includes everything you just told me, specifically any items or information that should be provided. " +
         "Be very detailed here! All details of the items and information should be provided, " +
         "including EXACT TEXT SNIPPETS IF THE OBJECT IS A PIECE OF TEXT. " +
         "ANSWER WITH AN UNSTRUCTURED LIST OF BULLET POINTS. DO NOT SUBDIVIDE THE LIST AND DO NOT USE TITLES. " +
         "Be detailed! Ensure to include all elements you generated above!\n\n" +
         "- Start with all the bullets connected to the room description above. When mentioning an item or creature important to the story, " +
-            "describe it in detail! Also give their important properties! End with three dashes: ---.\n" +
-        "- Then give all the bullets connected to the inter-room elements and to the proposed solution of the previous message. " +
-            "Be detailed! For the inter-room elements, only include the information related to this specific room, " +
-            "but mention explicitly and verbatim that all other parts of the element are dealt with in another room. " +
-            "Since the designers of the other room won't have the necessary context, INCLUDE A LARGE AMOUNT OF DETAILS. " +
-            "Include all the information and clues from above! " +
-            "If this is the first room connected to that inter-room element, explain every aspect of the element in detail!  " +
-            "When the characters encounter books, text, or speech, give the FULL TEXT SNIPPETS VERBATIM. " +
-            "End with three dashes: ---.\n" +
+            "describe it in detail! Also give their important properties! Include the corrections and clarifications from above here. End with three dashes: ---.\n" +
         "- Now add to this room more details that are not necessarily connected to the broader story. " +
             "Add descriptions, cool decor elements, potentially medium to minor loot and medium to minor enemies... " +
             "If possible, connect (medium to minor) gameplay implications to some of the things you introduce. " +
             "Again, answer in unstructured bullet points.\n\n" +
+        "Don't mention the specific information you elaborated when designing the inter-room elements. " +
         "Keep in mind that each room's text will go to a different designer! " +
         "Thus, if an object has relevance to another room, this should be specified very explicitly. Remember to be detailed!"
     const { text: roomSummary } = await alwaysPromptAsker.ask(THREAD_LORE, messageRoomSummary)
-    roomSummariesList.push(roomSummary.split('---').map(s => s.trim()).join('\n').replace(/inter-room /ig, ''))
+    roomSummariesList.push(
+        roomSummary.split('---')
+                   .map(s => s.trim())
+                   .join('\n')
+                   .replace(/inter-room /ig, '')
+        + "\n" + interRoomTexts[roomNumber - 1]
+    )
 }
 
 const messageTexts =
@@ -374,15 +408,16 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         extractedCreatures += "\n\n{{monster,frame\n" + ec + "\n}}"
     }
 
-    const locationThread = `room${roomNumber}_loc`
-
-    const messageLocations =
-        `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n\n----------\n\n` +
-        "The above text is meant to feature in a D&D module, and the DM uses the text to run the module. " +
-        "However, many elements within the room have not yet been given an exact location. " +
-        "Propose locations for the most important elements in the room: decor elements, " +
-        "items the characters can find, enemies... Answer in a concise bullet list. BE CONCISE!"
-    const { text: locationsText } = await asker.ask(locationThread, messageLocations)
+    // const locationThread = `room${roomNumber}_loc`
+    //
+    // const messageLocations =
+    //     `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n\n----------\n\n` +
+    //     "The above text is meant to feature in a D&D module, and the DM uses the text to run the module. " +
+    //     "However, many elements within the room have not yet been given an exact location. " +
+    //     "Propose locations for the most important elements in the room: decor elements, " +
+    //     "items the characters can find, enemies... Answer in a concise bullet list. BE CONCISE!"
+    // const { text: locationsText } = await asker.ask(locationThread, messageLocations)
+    const locationsText = ''
 
     const messageClarifiedRoom =
         `We are designing a D&D dungeon. The room I would like to design in more detail is room ${roomNumber}:\n` +
@@ -410,12 +445,13 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         "ONLY LIST SPECIFIC IN-GAME INFORMATION, NO GENERALITIES OR DM TIPS. List specifically what loot can be found, " +
         "what the precise solution to a puzzle is, how concepts translate to in-game mechanics... " +
         "Answer in the style of a Homebrewery Markdown (Brewdown) module. If any text was given verbatim, ensure to include it in the module! " +
-        "ENSURE ALL THE BULLET POINTS ABOVE ARE ADDRESSED."
+        "Any clues given in the bullets above should be PRESERVED IN DETAIL. ENSURE ALL THE BULLET POINTS ABOVE ARE ADDRESSED. " +
+        "Again, include all quotes, texts, and clues verbatim!"
     finalMessages.push(messageClarifiedRoom)
     finalLambdas.push(clarifiedRoomText => roomTexts.push(clarifiedRoomText + '\n\n' + extractedItems + '\n\n' + extractedCreatures))
-}
-
-for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
+// }
+//
+// for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
     const { text: clarifiedRoomText } = await alwaysPromptAsker.ask(getTempThread(), finalMessages[roomNumber - 1])
     finalLambdas[roomNumber - 1](clarifiedRoomText)
 }
