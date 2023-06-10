@@ -134,6 +134,7 @@ for (let interRoom of (interRooms1 + '---' + interRooms2).split('---').map(ir =>
     const relevantRoomNumbers = relevantRoomsText.split(',').map(s => Number(s.trim()))
 
     for (let roomNumber of relevantRoomNumbers) {
+        const t = getTempThread()
         const messageInterRoomRoom =
             `${interRoom}\n\n----------\n\nWe're designing a D&D dungeon with 6 rooms: ${roomNamesString}\n\n` +
             `List only the information relevant to Room ${roomNumber} (${roomNames[roomNumber - 1]}). In each bullet point, ` +
@@ -142,7 +143,21 @@ for (let interRoom of (interRooms1 + '---' + interRooms2).split('---').map(ir =>
             "Combine talking about this responsibility into the bullets themselves where possible.\n\n" +
             "Do not use the words \"inter-room element\" or \"prerequisite\" in your answer! " +
             "When mentioning any other room, include both the name AND THE NUMBER!"
-        const { text: interRoomRoomText } = await asker.ask(getTempThread(), messageInterRoomRoom)
+        await asker.ask(t, messageInterRoomRoom)
+
+        const messageInterRoomCompress =
+            "Compress the above bullet points by removing redundant words. Ensure to keep every piece of information! " +
+            "I'd rather the text contains a few too many words than that information is lost. " +
+            "Keep names of objects, creatures, rooms... intact! When mentioning a room with a number, always keep both. " +
+            "Keep all details! Do not remove any objects, creatures or clues! Keep the bullet points and their order intact!"
+        await asker.ask(t, messageInterRoomCompress)
+
+        const messageInterRoomResp =
+            "Repeat the above compressed form, but ensure any information in the bullets as to whose responsibility " +
+            "the design of certain elements is, was retained! Ensure it remains very clear when it is NOT the " +
+            "current designer's job to provide something (and mention this explicitly: " +
+            "Use the phrase \"Not your responsibility to design this\" literally or paraphrase)!"
+        const { text: interRoomRoomText } = await asker.ask(t, messageInterRoomResp)
         interRoomTexts[roomNumber - 1] += interRoomRoomText + "\n"
     }
 }
