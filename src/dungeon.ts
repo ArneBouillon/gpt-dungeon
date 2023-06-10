@@ -89,7 +89,7 @@ const messageRoomNames =
     "in the following format: Room X: Room name. Do not give me any other text!"
 const { text: roomNamesText } = await asker.ask(getTempThread(), messageRoomNames)
 const roomNames = roomNamesText.split('\n').slice(-6).map(t => t.split(':')[1].trim())
-const roomNamesString = roomNames.map((name, i) => `${name} (Room ${i})`).join(', ')
+const roomNamesString = roomNames.map((name, i) => `${name} (Room ${i + 1})`).join(', ')
 
 const messageInterRooms =
     "We will now add a number of \"inter-room elements\". These are story elements that pertain to multiple rooms. " +
