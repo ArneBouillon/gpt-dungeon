@@ -108,7 +108,8 @@ const messageInterRooms =
     "Meta-prerequisites (ways that the characters can know **how** to solve a problem; e.g. " +
     "knowing that a previous object can help, or knowing that the solution to a puzzle is to say a specific phrase...)\n" +
     "  -> As above, give 3 DETAILED ways in which the characters can find this out.\n\n" +
-    "Suggest multiple large-scope inter-room elements here. Start each entry with a description, and then go over to the prerequisites. " +
+    "Suggest multiple large-scope inter-room elements here. Start each entry with a description, " +
+    "continue with a precise description of the effects and results when the players figure out the element, and then go over to the prerequisites. " +
     "Do not over-complicate the inter-room elements! Make them very straightforward, with clear clues and without having to interact with NPCs. " +
     "When mentioning pieces of information, text or clues the characters can find, give them in detail and verbatim! " +
     "Do not include riddles or puzzles! Separate the inter-room elements with three dashes: ---."
