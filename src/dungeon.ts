@@ -21,7 +21,7 @@ const messageKeywords =
     "Give me three randomly picked nouns or adjectives. Ensure the words are very concrete and not too abstract. " +
     "Also ensure none of the words include anything modern. Answer with a comma-separated list, and no other text."
 // const { text: keywords } = await asker.ask(util.getTempThread(), messageKeywords)
-const keywords = 'Mine, Dwarves, Deserted, Dangerous, Fungi'
+const keywords = 'Mine, Dwarves, Deserted, Fungi, Infected Bears'
 
 const messageDungeon =
     "We are going to design a D&D dungeon (not necessarily a literal dungeon) for third-level characters. " +
@@ -123,7 +123,7 @@ const messageInterRoomsSmall =
 const { text: interRooms2 } = await alwaysPromptAsker.ask(THREAD_LORE, messageInterRoomsSmall)
 
 const interRoomTexts: string[] = []; for (let i = 1; i <= 6; ++i) interRoomTexts.push("")
-for (let interRoom of (interRooms1 + '---' + interRooms2).split('---').map(ir => ir.trim())) {
+for (let interRoom of (interRooms1 + '---' + interRooms2).split('---').map(ir => ir.trim()).filter(s => s.length != 0)) {
     const t = getTempThread()
     const messageRelevantRooms =
         `${interRoom}\n\n----------\n\nWe're designing a D&D dungeon with 6 rooms: ${roomNamesString}\n\n` +
