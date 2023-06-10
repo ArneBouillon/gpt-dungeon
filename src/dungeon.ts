@@ -21,7 +21,7 @@ const messageKeywords =
     "Give me three randomly picked nouns or adjectives. Ensure the words are very concrete and not too abstract. " +
     "Also ensure none of the words include anything modern. Answer with a comma-separated list, and no other text."
 // const { text: keywords } = await asker.ask(util.getTempThread(), messageKeywords)
-const keywords = 'Manor, Eccentric, Inhabited, Captain, Undead'
+const keywords = 'Mine, Dwarves, Deserted, Dangerous, Fungi'
 
 const messageDungeon =
     "We are going to design a D&D dungeon (not necessarily a literal dungeon) for third-level characters. " +
@@ -77,9 +77,9 @@ const messageRooms =
     "  -> Topical items related to the lore but without an impact on the story, if present. These can range from very major to funny trinkets.\n" +
     "  -> Traps, if present. For example, the items above might be trapped.\n" +
     "  -> Topical enemies in this room. Only use this for 2 to 3 rooms. Ensure to give major enemies some weaker minions to spice up combat!\n" +
-    "  -> Information that the characters can learn here.\n" +
+    "  -> Information that the characters can learn here.\n\n" +
     "Again, make the rooms and their contents inspired, distinct, and unique. Don't be afraid to pick weird or atypical rooms! " +
-    "Separate the room entries with three dashes: ---."
+    "Number the room entries from 1 to 6, and place three dashes after each: ---."
 const { text: roomsText } = await alwaysPromptAsker.ask(THREAD_LORE, messageRooms)
 const rooms = roomsText.split('---').map(room => room.trim())
 assert(rooms.length >= 6)
@@ -165,8 +165,9 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         "- Start with all the bullets connected to the room description above. When mentioning an item or creature important to the story, " +
             "describe it in detail! Also give their important properties! Include the corrections and clarifications from above here. End with three dashes: ---.\n" +
         "- Now add to this room more details that are not necessarily connected to the broader story. " +
-            "Add descriptions, cool decor elements, potentially medium to minor loot and medium to minor enemies... " +
-            "If possible, connect (medium to minor) gameplay implications to some of the things you introduce. " +
+            "Add descriptions, cool decor elements, potentially loot and enemies... Do not introduce maps. " +
+            "If possible, connect gameplay implications to some of the things you introduce. " +
+            "This is the moment to get really creative, and make the room feel like a cool, real place! " +
             "Again, answer in unstructured bullet points.\n\n" +
         "Don't mention the specific information you elaborated when designing the inter-room elements. " +
         "Keep in mind that each room's text will go to a different designer! " +
@@ -267,8 +268,8 @@ const finalMessages: string[] = []
 const finalLambdas: Function[] = []
 
 const roomTexts: string[] = []
-let allCreatures = ''
-let allItems = ''
+let allCreatures: string[] = []
+let allItems: string[] = []
 for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
     let clarifications = ''
     for (let clarificationIteration = 1; clarificationIteration <= 2; ++clarificationIteration) {
@@ -328,7 +329,14 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         const messageClarifyCorrect =
             "Did you make anything up about other rooms in the dungeon? Repeat your specifics from above VERBATIM, " +
             "but LEAVE OUT ANYTHING YOU MADE UP ABOUT OTHER ROOMS."
-        const { text: c } = await asker.ask(clarificationThread, messageClarifyCorrect)
+        await asker.ask(clarificationThread, messageClarifyCorrect)
+
+        const messageClarifyConcise =
+            "Repeat your answer from above, but compress the text by removing redundant words. " +
+            "Ensure to keep every piece of information! I'd rather the text contains a few too many words than that information is lost. " +
+            "Keep names of objects, creatures, rooms... intact! When mentioning a room with a number, always keep both. " +
+            "Keep all details! Do not remove any objects, creatures or clues! Answer in unstructured bullet points."
+        const { text: c } = await asker.ask(clarificationThread, messageClarifyConcise)
         clarifications += c + '\n'
     }
 
@@ -345,15 +353,8 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
     if (extractionTextItems.includes('None') || extractionTextItems.includes('none')) {
         items = []
     } else {
-        if (allItems.length != 0) {
-            const messageFilterItems =
-                `List 1: ${extractionTextItems}\nList 2: ${allItems.slice(0, -2)}\n\n----------\n\n` +
-                "Repeat verbatim all items from List 1 that are not on List 2."
-            let { text: t } = await asker.ask(getTempThread(), messageFilterItems)
-            extractionTextItems = t
-        }
-        items = extractionTextItems.split(',').map(s => s.trim())
-        allItems += extractionTextItems + ', '
+        items = extractionTextItems.split(',').map(s => s.trim()).filter(item => !allItems.map(s => s.toLowerCase()).includes(item.toLowerCase()))
+        allItems = allItems.concat(items)
     }
 
     let extractedItems = ''
@@ -382,15 +383,8 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
     if (extractionTextCreatures.includes('None') || extractionTextCreatures.includes('none')) {
         creatures = []
     } else {
-        if (allCreatures.length != 0) {
-            const messageFilterCreatures =
-                `List 1: ${extractionTextCreatures}\nList 2: ${allCreatures.slice(0, -2)}\n\n----------\n\n` +
-                "Repeat verbatim all creatures from List 1 that are not on List 2."
-            let { text: t } = await asker.ask(getTempThread(), messageFilterCreatures)
-            extractionTextCreatures = t
-        }
-        creatures = extractionTextCreatures.split(',').map(s => s.trim())
-        allCreatures += extractionTextCreatures + ', '
+        creatures = extractionTextCreatures.split(',').map(s => s.trim()).filter(creature => !allCreatures.map(s => s.toLowerCase()).includes(creature.toLowerCase()))
+        allCreatures = allCreatures.concat(creatures)
     }
 
     let extractedCreatures = ''
@@ -438,9 +432,9 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
         "- Add OTHER SECTIONS if you think they are needed for specific mechanics or puzzles that merit their own section. " +
         "This is encouraged, but you should provide A LOT OF DETAILS! Ensure a DM has all the information they need. " +
         "Be very specific about D&D mechanical implications! DO NOT ADD SECTIONS FOR LOOT OR CREATURES.\n\n" +
-        `When mentioning ANY OF:\n${items.join(', ') + "; " + creatures.join(', ')}\n, do not provide any explanation about them, ` +
-        "as that will be done somewhere else. Simply PRINT THE NAMES IN **BOLD**.\n" +
-        "\n" +
+        `When mentioning ANY ITEMS (${items.map(i => `**${i}**`).join(', ')}) ` +
+        `OR CREATURES (${creatures.map(c => `**${c}**`).join(', ')}), do not provide any explanation about them, ` +
+        "as that will be done somewhere else. Simply PRINT THE NAMES IN **BOLD**.\n\n" +
         "Note that this is meant for a DM; BE CONCISE, PRECISE, SPECIFIC AND COMPLETE in anything you say. " +
         "ONLY LIST SPECIFIC IN-GAME INFORMATION, NO GENERALITIES OR DM TIPS. List specifically what loot can be found, " +
         "what the precise solution to a puzzle is, how concepts translate to in-game mechanics... " +
