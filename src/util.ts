@@ -47,6 +47,8 @@ interface Asker {
         text: string,
     }>
 
+    rollback: (threadID: number) => void
+
     finalize: () => void
 }
 
@@ -63,6 +65,8 @@ class PromptAsker implements Asker {
         return { text: ans }
     }
 
+    public rollback(_threadID) {}
+
     public finalize() {
         console.log(`Number of asks: ${this.count}`)
     }
@@ -70,6 +74,7 @@ class PromptAsker implements Asker {
 
 class ChatGPTThread {
     private messages: string[] = []
+    private ress: ChatMessage[] = []
     private lastRes: ChatMessage | null = null
 
     public api: ChatGPTUnofficialProxyAPI
@@ -80,9 +85,15 @@ class ChatGPTThread {
 
     public add(message: string, res: ChatMessage) {
         this.messages.push(message, res.text)
+        this.ress.push(res)
         this.lastRes = res
         console.log(message + "\n\n---------\n\n")
         console.log(res.text + "\n\n---------\n\n")
+    }
+
+    public rollback() {
+        this.ress.pop()
+        this.lastRes = this.ress.length > 0 ? this.ress[this.ress.length - 1] : null
     }
 
     public getOptions() {
@@ -126,6 +137,10 @@ class ChatGPTAsker implements Asker {
         return {
             text: res.text,
         }
+    }
+
+    public rollback(threadID) {
+        this.threads.get(threadID)!.rollback()
     }
 
     public finalize() {

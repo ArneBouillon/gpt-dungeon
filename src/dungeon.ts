@@ -104,11 +104,11 @@ const messageInterRooms =
     "  -> List 3 DIFFERENT ways in which the information could be obtained. Be very SPECIFIC: " +
         "mention exactly how the information could be obtained and in which rooms this is (only consider the room itself, " +
         "or lower-numbered rooms!)! Go into a lot of detail! Again, LIST THREE DIFFERENT WAYS! " +
-        "The clues can be creative, but should be fairly obvious and simple. Do not use riddles!\n\n" +
+        "The clues can be creative, but should be fairly obvious and simple. Do not use riddles! Make the clues explicit!\n\n" +
     "Meta-prerequisites (ways that the characters can know **how** to solve a problem; e.g. " +
     "knowing that a previous object can help, or knowing that the solution to a puzzle is to say a specific phrase...)\n" +
     "  -> As above, give 3 DETAILED ways in which the characters can find this out.\n\n" +
-    "Suggest multiple large-scope inter-room elements here. Start each entry with a description, " +
+    "Suggest 1 or 2 large-scope inter-room elements here. Start each entry with a description, " +
     "continue with a precise description of the effects and results when the players figure out the element, and then go over to the prerequisites. " +
     "Do not over-complicate the inter-room elements! Make them very straightforward, with clear clues and without having to interact with NPCs. " +
     "When mentioning pieces of information, text or clues the characters can find, give them in detail and verbatim! " +
@@ -116,7 +116,7 @@ const messageInterRooms =
 const { text: interRooms1 } = await alwaysPromptAsker.ask(THREAD_LORE, messageInterRooms)
 
 const messageInterRoomsSmall =
-    "Now suggest some new inter-room elements with a smaller scope. You can add new information to the rooms while doing this. " +
+    "Now suggest 2 new inter-room elements with a smaller scope. You can add new information to the rooms while doing this. " +
     "Again, ensure that the needed information is not present in later rooms than the one they're needed in. " +
     "These smaller-scope elements should be fun and interesting ways to link the rooms. " +
     "They could be small easter eggs, or objects from some room that turn out to be useful to find some loot in another room. " +
@@ -361,13 +361,23 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
 
     const extractionThreadItems = `room${roomNumber}_extract_i`
 
-    const messageExtractItems =
-        `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n\n----------\n\n` +
-        'From this text, extract all items, weapons and harvestables that would benefit from a separate entry ' +
-        '(e.g. due to a magic effect or some other unusual quality). Normal coins or chests should not be mentioned.\n\n' +
-        'Answer in a single line, containing a concise comma-separated list. ' +
-        'Only include names, no details. If nothing matches the given category, put "None" instead.'
-    let { text: extractionTextItems } = await asker.ask(extractionThreadItems, messageExtractItems)
+    let extractionTextItems = ''
+    while (true) {
+        const messageExtractItems =
+            `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n\n----------\n\n` +
+            'From this text, extract all items, weapons and harvestables that would benefit from a separate entry ' +
+            '(e.g. due to a magic effect or some other unusual quality). Normal coins or chests should not be mentioned.\n\n' +
+            'Answer in a single line, containing a concise comma-separated list. ' +
+            'Only include names, no details. If nothing matches the given category, put "None" instead.'
+        let { text: eti } = await asker.ask(extractionThreadItems, messageExtractItems)
+
+        if ((eti.includes('None') || eti.includes('none')) && eti.includes(',')) {
+            asker.rollback(extractionThreadItems)
+        } else {
+            extractionTextItems = eti
+            break
+        }
+    }
 
     let items: string[] = []
     let filteredItems: string[] = []
@@ -395,13 +405,23 @@ for (let roomNumber = 1; roomNumber <= 6; ++roomNumber) {
 
     const extractionThreadCreatures = `room${roomNumber}_extract_c`
 
-    const messageExtractCreatures =
-        `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n\n----------\n\n` +
-        'From this text, extract all creatures and enemies that are mentioned, that occur in this room, ' +
-        'and that the characters could possibly end up fighting against.\n' +
-        'Answer in a single line, containing a concise comma-separated list. ' +
-        'Only include names, no details. If nothing matches the given category, put "None" instead.'
-    let { text: extractionTextCreatures } = await asker.ask(extractionThreadCreatures, messageExtractCreatures)
+    let extractionTextCreatures = ''
+    while (true) {
+        const messageExtractCreatures =
+            `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n\n----------\n\n` +
+            'From this text, extract all creatures and enemies that are mentioned, that occur in this room, ' +
+            'and that the characters could possibly end up fighting against.\n' +
+            'Answer in a single line, containing a concise comma-separated list. ' +
+            'Only include names, no details. If nothing matches the given category, put "None" instead.'
+        let { text: etc } = await asker.ask(extractionThreadCreatures, messageExtractCreatures)
+
+        if ((etc.includes('None') || etc.includes('none')) && etc.includes(',')) {
+            asker.rollback(extractionThreadCreatures)
+        } else {
+            extractionTextCreatures = etc
+            break
+        }
+    }
 
     let creatures: string[] = []
     let filteredCreatures: string[] = []
