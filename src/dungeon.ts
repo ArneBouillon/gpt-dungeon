@@ -16,10 +16,31 @@ const THREAD_LORE = 'lore'
 const options = {
     keywords: 'Frozen, Abandoned, Arctic, Crypt, Undead',
     numRooms: 6,
-    combatDifficulty: 'medium', // 'low', 'medium', 'high'
-    lootValue: 'medium', // 'low', 'medium', 'high'
-    wackiness: 'medium', // 'low', 'medium', 'high'
+    combatDifficulty: 'high', // 'low', 'medium', 'high'
+    lootValue: 'high', // 'low', 'medium', 'high'
+    wackiness: 'high', // 'low', 'medium', 'high'
 }
+
+const combatModifier =
+    options.combatDifficulty == 'low' ?
+        'make combat fairly easy for level-3 characters' :
+        options.combatDifficulty == 'medium' ?
+            'keep in mind that the characters are level-3' :
+            'make combat difficult for level-3 characters'
+
+const lootModifier =
+    options.lootValue == 'low' ?
+        ' Valuable loot should be rare.' :
+        options.lootValue == 'medium' ?
+            '' :
+            ' Loot should be fairly valuable and plentiful.'
+
+const wackyModifier =
+    options.wackiness == 'low' ?
+        ' Keep everything rather grounded and do not introduce anything weird or frivolous.' :
+        options.wackiness == 'medium' ?
+            '' :
+            ' Some of the things you introduce should be somewhat weird, funny, or wacky.'
 
 function preprocessName(str) {
     return str.toLowerCase().replaceAll(/(the|a|an|\(.+\))/g, '').trim()
@@ -46,7 +67,7 @@ const messageLore =
     `${dungeon}\n${history}\n\n---------\n\n` +
     "Develop a full lore about this location. Focus primarily on the current state of the location, " +
     "its potential inhabitants, and the secrets hidden within. Be very information-dense! " +
-    "Do not overcomplicate things and keep everything self-contained. " +
+    `Do not overcomplicate things and keep everything self-contained.${wackyModifier} ` +
     "Ensure to include 1 secret that visiting adventurers could discover."
 const { text: lore } = await alwaysPromptAsker.ask(THREAD_LORE, messageLore)
 
@@ -75,12 +96,13 @@ const messageRooms =
     "- The general setting and atmosphere of the room.\n" +
     "- Anything present in the room that relates to the lore of the location and/or the story of the adventure. Be detailed and specific!\n" +
     "  -> Story-related items, if present.\n" +
-    "  -> Major loot items, if present.\n" +
+    `  -> Major loot items, if present.${lootModifier}` +
     "  -> Topical items related to the lore but without an impact on the story, if present. These can range from very major to funny trinkets.\n" +
     "  -> Traps, if present. For example, the items above might be trapped.\n" +
-    "  -> Topical enemies in this room. Only use this for 2 to 3 rooms. Ensure to give major enemies some weaker minions to spice up combat!\n" +
+    "  -> Topical enemies in this room. Only use this for 2 to 3 rooms. Ensure to give major enemies some weaker minions to spice up combat! " +
+        `Mention the CR of each enemy between parentheses and ${combatModifier}.\n` +
     "  -> Information that the characters can learn here.\n\n" +
-    "Again, make the rooms and their contents inspired, distinct, and unique. Don't be afraid to pick weird or atypical rooms! " +
+    `Again, make the rooms and their contents inspired, distinct, and unique.${wackyModifier} ` +
     `Number the room entries from 1 to ${options.numRooms}, and place three dashes after each: ---.`
 const { text: roomsText } = await alwaysPromptAsker.ask(THREAD_LORE, messageRooms)
 const rooms = roomsText.split('---').map(room => room.trim())
@@ -124,7 +146,7 @@ const messageInterRoomsSmall =
     "Again, ensure that the needed information is not present in later rooms than the one they're needed in. " +
     "These smaller-scope elements should be fun and interesting ways to link the rooms. " +
     "They could be small easter eggs, or objects from some room that turn out to be useful to find some loot in another room. " +
-    "Do not include riddles or puzzles! Again, the elements should only relate to 2 rooms each. Separate the inter-room elements with three dashes: ---."
+    `Do not include riddles or puzzles!${wackyModifier} Again, the elements should only relate to 2 rooms each. Separate the inter-room elements with three dashes: ---.`
 const { text: interRooms2 } = await alwaysPromptAsker.ask(THREAD_LORE, messageInterRoomsSmall)
 
 const interRoomTexts: string[] = []; for (let i = 1; i <= options.numRooms; ++i) interRoomTexts.push("")
@@ -187,10 +209,11 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
             "describe it in detail! Also give their important properties! " +
             "Include the corrections and clarifications from above here, with all their details! End with three dashes: ---.\n" +
         "- Now add to this room more details that are not necessarily connected to the broader story. " +
-            "Add descriptions, cool decor elements, potentially loot and enemies... Do not introduce maps. " +
+            `Add descriptions, cool decor elements, potentially loot${lootModifier ? ` (${lootModifier})` : ''} and enemies (for enemies, ` +
+            `mention the CR between parentheses and ${combatModifier})... DO NOT INTRODUCE MAPS. ` +
             "If possible, connect gameplay implications to some of the things you introduce. " +
             "This is the moment to get really creative, and make the room feel like a cool, real place! " +
-            "You can add really cool items! Again, answer in unstructured bullet points.\n\n" +
+            `You can add really cool items!${wackyModifier} Again, answer in unstructured bullet points.\n\n` +
         "Don't mention the specific information you elaborated when designing the inter-room elements. " +
         "When talking about clues, texts, or quotes, ensure to give the entire one verbatim! " +
         "Keep in mind that each room's text will go to a different designer! " +
@@ -401,7 +424,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
             "using #### for the title (which should probably be singular). " +
             "First list the weight and value; then describe the properties in a single, concise text (no bullet points!). " +
             "Be concise yet specific and include PRECISE D&D MECHANICS WHEREVER POSSIBLE! " +
-            "If the object is minor within the scope of the room, do not give it too many properties. " +
+            `If the object is minor within the scope of the room, do not give it too many properties.${lootModifier} ` +
             "REPLY ONLY WITH THE ENTRY! NO OTHER TEXT!"
         const { text: ei } = await asker.ask(extractionThreadItems, messageExtractedItems)
         extractedItems += "\n\n" + ei
