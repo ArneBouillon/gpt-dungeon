@@ -535,7 +535,8 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
             "list the amount! The names of objects and creatures, as well as any other loot such as coins, " +
             "must be printed **in bold**. Most things you want to describe here should also have been mentioned in the Description!\n" +
         "- Add OTHER SECTIONS if you think they are needed for specific mechanics or puzzles that merit their own section. " +
-            "This is encouraged, but you should provide A LOT OF DETAILS! Ensure a DM has all the information they need. " +
+            "This is encouraged, but you should provide A LOT OF DETAILS, more than in the notable features list! " +
+            "Ensure a DM has all the information they need. " +
             "Be very specific about D&D mechanical implications! DO NOT ADD SECTIONS FOR LOOT OR CREATURES.\n\n" +
             `When mentioning ANY ITEMS (${items.map(i => `**${i}**`).join(', ')}) ` +
             `OR CREATURES (${creatures.map(c => `**${c}**`).join(', ')}), do not provide any explanation about them, ` +
