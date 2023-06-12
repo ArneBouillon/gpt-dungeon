@@ -119,9 +119,9 @@ const roomNames = roomNamesText.split('\n').slice(-options.numRooms).map(t => t.
 const roomNamesString = roomNames.map((name, i) => `${name} (Room ${i + 1})`).join(', ')
 
 const messageInterRooms =
-    "We will now add a number of \"inter-room elements\". These are story elements that pertain to multiple rooms. " +
+    "We will now add a number of \"inter-room elements\". These are story elements that pertain to 2 or 3 rooms. " +
     "Examples are a lock in room A whose key is in room B, information from room X being required to defeat an enemy " +
-    "in room Y... Everything that pertains to multiple rooms counts.\n\n" +
+    "in room Y... Everything that pertains to 2 or 3 rooms counts.\n\n" +
     "Inter-room elements can either relate to the descriptions above (for example, " +
     "by identifying a prerequisite to use an item or evade a trap mentioned there), " +
     "or they can be entirely new. Each inter-room element can have any number of\n\n" +
@@ -223,6 +223,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
         "Keep in mind that each room's text will go to a different designer! " +
         "Thus, if an object has relevance to another room, this should be specified very explicitly. Remember to be detailed!"
     const { text: roomSummary } = await alwaysPromptAsker.ask(THREAD_LORE, messageRoomSummary)
+    alwaysPromptAsker.rollback(THREAD_LORE)
     roomSummariesList.push(
         roomSummary.split('---')
                    .map(s => s.trim())
@@ -492,7 +493,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
     const locationsText = ''
 
     const messageClarifiedRoomDescription =
-        `We are designing a D&D dungeon. The room I would like to design in more detail is room ${roomNumber} (${roomNames[roomNumber - 1]}):\n` +
+        `We are designing a D&D dungeon. The room I would like to design in more detail is Room ${roomNumber} (${roomNames[roomNumber - 1]}):\n` +
         `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n${locationsText}\n\n----------\n\n` +
         "The ideas above are very interesting, but the text is not yet suited for an entry in a D&D module. " +
         "Overhaul the text to be concise and informative, containing all the information needed for the DM to run the session, " +
@@ -573,7 +574,7 @@ const conclusionSection =
     `## Conclusion\n${conclusion}`
 
 const creditsSection =
-    `*This module was generated using a script based on artificial intelligence, with the following parameters.\n\n${Object.keys(options).map(k => `${k}: ${options[k]}`).join(';\n')}.*`
+    `{{descriptive\nThis module was generated using a script based on artificial intelligence, with the following parameters.\n:\n${Object.keys(options).map(k => `${k}: ${options[k]}`).join('\n:\n')}.\n}}`
 
 // const layoutSection =
 //     `## Dungeon layout\nThe dungeon's rooms are laid out as follows.\n\n![layout](TODO) {height:280px,mix-blend-mode:multiply}`
