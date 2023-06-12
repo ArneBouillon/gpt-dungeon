@@ -105,7 +105,8 @@ const messageRooms =
     `  -> Topical (major) enemies in this room. Only use this for ${numRoomsEnemy} to ${numRoomsEnemy + 1} rooms. Ensure to give major enemies some weaker minions to spice up combat! ` +
         `Mention the CR of each enemy between parentheses and ${combatModifier}.\n` +
     "  -> Information that the characters can learn here.\n\n" +
-    `Again, make the rooms and their contents inspired, distinct, and unique.${wackyModifier} ` +
+    "Again, make the rooms and their contents inspired, distinct, and unique. " +
+    `Do not forget to base yourself on the history and current state of the location!${wackyModifier} ` +
     `Number the room entries from 1 to ${options.numRooms}, and place three dashes after each: ---.`
 const { text: roomsText } = await alwaysPromptAsker.ask(THREAD_LORE, messageRooms)
 const rooms = roomsText.split('---').map(room => room.trim())
