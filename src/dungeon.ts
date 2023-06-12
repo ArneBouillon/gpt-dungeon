@@ -14,10 +14,10 @@ const THREAD_MAIN = 'main'
 const THREAD_LORE = 'lore'
 
 const options = {
-    keywords: 'Frozen, Abandoned, Arctic, Crypt, Undead',
+    keywords: 'Banana, Slippery, Jungle, Monkey, Coconut',
     numRooms: 8,
     combatDifficulty: 'high', // 'low', 'medium', 'high'
-    lootValue: 'high', // 'low', 'medium', 'high'
+    lootValue: 'medium', // 'low', 'medium', 'high'
     wackiness: 'high', // 'low', 'medium', 'high'
 }
 

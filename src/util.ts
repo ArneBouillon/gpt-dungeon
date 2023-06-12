@@ -39,6 +39,7 @@ const apis = tokens.split('\n').map(
         apiReverseProxyUrl: 'https://ai.fakeopen.com/api/conversation',
         // apiReverseProxyUrl: 'https://api.pawan.krd/backend-api/conversation',
         debug: true,
+        model: 'text-davinci-003-render-sha',
     })
 )
 
