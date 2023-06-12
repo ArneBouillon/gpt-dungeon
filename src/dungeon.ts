@@ -8,13 +8,14 @@ import { getTempThread } from "./util.js"
 
 const asker = new util.ChatGPTAsker()
 
+const fancyAsker = new util.ChatGPTAsker('gpt-4')
 const alwaysPromptAsker = new util.PromptAsker()
 
 const THREAD_MAIN = 'main'
 const THREAD_LORE = 'lore'
 
 const options = {
-    keywords: 'Banana, Slippery, Jungle, Monkey, Coconut',
+    keywords: 'Pie, Whipped Cream, Cherry, Pastry, Bakery',
     numRooms: 8,
     combatDifficulty: 'high', // 'low', 'medium', 'high'
     lootValue: 'medium', // 'low', 'medium', 'high'
@@ -26,7 +27,7 @@ const combatModifier =
         'make combat fairly easy for level-3 characters' :
         options.combatDifficulty == 'medium' ?
             'keep in mind that the characters are level-3' :
-            'introduce enemies that are HOSTILE AND POWERFUL COMPARED TO LEVEL-3 characters'
+            'introduce enemies that are HOSTILE AND VERY POWERFUL COMPARED TO LEVEL-3 characters'
 
 const lootModifier =
     options.lootValue == 'low' ?
@@ -126,7 +127,8 @@ const messageInterRooms =
     "Inter-room elements can either relate to the descriptions above " +
     "(for example, by identifying a prerequisite to use an item or evade a trap mentioned there), or they can be entirely new.\n\n" +
     "For each inter-room element, mention the following.\n" +
-    "- A summary of the inter-room element. Mention precisely what the element entails and give context. Include precise instructions, text and quotes!\n" +
+    "- A summary of the inter-room element. Mention precisely what the element entails and give context. " +
+        "Make all the requirements and exact mechanics crystal clear! Include precise instructions, text and quotes! Be detailed!\n" +
     "- A precise description of the effects and results when the players figure out the element (these should ONLY BE LOOT OR OPTIONAL EXTRAS, not vital story progression!)\n" +
     "- If present, mention **Physical prerequisites** (such as a key or an object)\n" +
     "  -> Mention the prerequisite and DETAIL EXACTLY where it can be found (only consider the room itself, or lower-numbered rooms!).\n" +

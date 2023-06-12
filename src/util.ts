@@ -32,16 +32,6 @@ const prompt = function(message) {
 
 
 const tokens = fs.readFileSync('.token', 'utf-8')
-const apis = tokens.split('\n').map(
-    token => new ChatGPTUnofficialProxyAPI({
-        accessToken: token,
-        // apiReverseProxyUrl: 'https://bypass.churchless.tech/api/conversation',
-        apiReverseProxyUrl: 'https://ai.fakeopen.com/api/conversation',
-        // apiReverseProxyUrl: 'https://api.pawan.krd/backend-api/conversation',
-        debug: true,
-        model: 'text-davinci-003-render-sha',
-    })
-)
 
 interface Asker {
     ask: (threadID: number, message: string) => Promise<{
@@ -80,7 +70,7 @@ class ChatGPTThread {
 
     public api: ChatGPTUnofficialProxyAPI
 
-    public constructor() {
+    public constructor(apis) {
         this.api = apis[Math.floor(Math.random()*apis.length)]
     }
 
@@ -108,11 +98,25 @@ class ChatGPTThread {
 class ChatGPTAsker implements Asker {
     private count = 0
     private threads = new Map<string, ChatGPTThread>
+    private readonly apis
+
+    public constructor(model = 'text-davinci-003') {
+        this.apis = tokens.split('\n').map(
+            token => new ChatGPTUnofficialProxyAPI({
+                accessToken: token,
+                // apiReverseProxyUrl: 'https://bypass.churchless.tech/api/conversation',
+                apiReverseProxyUrl: 'https://ai.fakeopen.com/api/conversation',
+                // apiReverseProxyUrl: 'https://api.pawan.krd/backend-api/conversation',
+                debug: true,
+                model,
+            })
+        )
+    }
 
     public async ask(threadID, message) {
         ++this.count
 
-        if (!this.threads.has(threadID)) this.threads.set(threadID, new ChatGPTThread)
+        if (!this.threads.has(threadID)) this.threads.set(threadID, new ChatGPTThread(this.apis))
         const thread = this.threads.get(threadID)!
 
         const options = thread.getOptions()
