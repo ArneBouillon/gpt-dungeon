@@ -121,33 +121,36 @@ const roomNamesString = roomNames.map((name, i) => `${name} (Room ${i + 1})`).jo
 
 const messageInterRooms =
     "We will now add a number of \"inter-room elements\". These are story elements that pertain to 2 or 3 rooms. " +
-    "Examples are a lock in room A whose key is in room B, information from room X being required to defeat an enemy " +
-    "in room Y... Everything that pertains to 2 or 3 rooms counts.\n\n" +
-    "Inter-room elements can either relate to the descriptions above (for example, " +
-    "by identifying a prerequisite to use an item or evade a trap mentioned there), " +
-    "or they can be entirely new. Each inter-room element can have any number of\n\n" +
-    "Physical prerequisites (such as a key or an object)\n" +
-    "  -> Mention the prerequisite and DETAIL EXACTLY where it can be found (only consider the room itself, or lower-numbered rooms!).\n\n" +
-    "Information/knowledge prerequisites (such as knowing the solution to a puzzle, or knowing weaknesses of an enemy)\n" +
+    "Examples are a lock in room A whose key is in room B, information from room X being required to defeat an enemy in room Y... " +
+    "Everything that pertains to 2 or 3 rooms counts.\n\n" +
+    "Inter-room elements can either relate to the descriptions above " +
+    "(for example, by identifying a prerequisite to use an item or evade a trap mentioned there), or they can be entirely new.\n\n" +
+    "For each inter-room element, mention the following.\n" +
+    "- A summary of the inter-room element. Mention precisely what the element entails and give context. Include precise instructions, text and quotes!\n" +
+    "- A precise description of the effects and results when the players figure out the element (these should ONLY BE LOOT OR OPTIONAL EXTRAS, not vital story progression!)\n" +
+    "- If present, mention **Physical prerequisites** (such as a key or an object)\n" +
+    "  -> Mention the prerequisite and DETAIL EXACTLY where it can be found (only consider the room itself, or lower-numbered rooms!).\n" +
+    "- Mention **Information/knowledge prerequisites** (such as knowing the solution to a puzzle, or knowing weaknesses of an enemy).\n" +
     "  -> List 3 DIFFERENT ways in which the information could be obtained. Be very SPECIFIC: " +
-        "mention exactly how the information could be obtained and in which rooms this is (only consider the room itself, " +
-        "or lower-numbered rooms!)! Go into a lot of detail! Again, LIST THREE DIFFERENT WAYS! " +
-        "The clues can be creative, but should be fairly obvious and simple. Do not use riddles! Make the clues explicit!\n\n" +
-    "Meta-prerequisites (ways that the characters can know **how** to solve a problem; e.g. " +
-    "knowing that a previous object can help, or knowing that the solution to a puzzle is to say a specific phrase...)\n" +
+        "mention exactly how the information could be obtained and in which rooms this is" +
+        "(only consider the room itself, or lower-numbered rooms!)! Go into a lot of detail! " +
+        "Again, LIST THREE DIFFERENT WAYS! Make them very clear and straightforward!\n" +
+    "- Mention **Meta-prerequisites** (ways that the characters can know **how** to solve a problem; " +
+    "e.g. knowing that a previous object can help, or knowing that the solution to a puzzle is to say a specific phrase...)\n" +
     "  -> As above, give 3 DETAILED ways in which the characters can find this out.\n\n" +
-    "Suggest 1 or 2 large-scope inter-room elements here. Start each entry with a description, " +
-    "continue with a precise description of the effects and results when the players figure out the element " +
-    "(these should only be loot, not vital story progression), and then go over to the prerequisites. " +
-    "Do not over-complicate the inter-room elements! Make them very straightforward, with clear clues and without having to interact with NPCs. " +
-    "When mentioning pieces of information, text or clues the characters can find, give them in detail and verbatim! " +
-    "Do not include riddles or puzzles! Stay clear of music-related themes! Do not make the elements too elaborate! " +
-    "Ensure each inter-room element only related to 2 (or 3 if you must) rooms! Separate the inter-room elements with three dashes: ---."
+    "I do NOT just want vague clues and cryptic hints. The characters will need clear information to proceed. " +
+    "Information can be creative and hidden, but I DO NOT WANT MANY RIDDLES OR PUZZLES, and I DO NOT WANT MUSIC-RELATED THEMES. " +
+    "I DO NOT WANT MAPS! Do not make the elements too elaborate! Focus on PHYSICAL ITEMS instead of vague codes or passwords.\n\n" +
+    "Ensure that the information is reachable for the characters before they need it; that is, " +
+    "DO NOT GIVE INFORMATION ONLY AFTER IT IS NEEDED! Put prerequisites in rooms with a lower number than the one they're needed in. " +
+    "When giving information, always BE VERY PRECISE and INCLUDE DIRECT QUOTES AND EXCERPTS IF POSSIBLE. " +
+    "Ensure each inter-room element only related to 2 (or 3 if you must) rooms! Give 2 unique and distinct inter-room elements. " +
+    "Separate the inter-room elements with three dashes: ---."
 const { text: interRooms1 } = await alwaysPromptAsker.ask(THREAD_LORE, messageInterRooms)
 
 const messageInterRoomsSmall =
     "Now suggest 2 new inter-room elements with a smaller scope. You can add new information to the rooms while doing this. " +
-    "Again, ensure that the needed information is not present in later rooms than the one they're needed in. " +
+    "Again, ENSURE THAT THE NEEDED INFORMATION IS AVAILABLE BEFORE IT IS NEEDED (THAT IS, IN A LOWER-NUMBERED ROOM)! " +
     "These smaller-scope elements should be fun and interesting ways to link the rooms. " +
     "They could be small easter eggs, or objects from some room that turn out to be useful to find some loot in another room. " +
     `Do not include riddles or puzzles!${wackyModifier} Again, the elements should only relate to 2 rooms each. Separate the inter-room elements with three dashes: ---.`
@@ -165,16 +168,25 @@ for (let interRoom of (interRooms1 + '---' + interRooms2).split('---').map(ir =>
     const { text: relevantRoomsText } = await asker.ask(t, messageRelevantRoomsList)
     const relevantRoomNumbers = relevantRoomsText.split(',').map(s => Number(s.trim()))
 
+    asker.rollback(t)
+    const messageInterRoomSummary =
+        "Give a ONE-SENTENCE summary of the inter-room element. Describe the main plot and the locations " +
+        "where the main requirements can be found, but do not include the hints and clues scattered around. " +
+        "DO NOT USE THE WORDS \"inter-room element\" OR \"prerequisite\" IN YOUR REPLY. State your summary factually " +
+        "(\"There is...\") and don't make it seem like a big quest. For everything you mention, " +
+        "mention both the name and the number of the room it's in!"
+    const { text: irSummary } = await asker.ask(t, messageInterRoomSummary)
+    asker.rollback(t)
+
     for (let roomNumber of relevantRoomNumbers) {
-        const t = getTempThread()
         const messageInterRoomRoom =
-            `${interRoom}\n\n----------\n\nWe're designing a D&D dungeon with ${options.numRooms} rooms: ${roomNamesString}\n\n` +
             `List only the information relevant to Room ${roomNumber} (${roomNames[roomNumber - 1]}). In each bullet point, ` +
             `be very clear to what extent the responsibility of Room ${roomNumber}'s designer goes! For instance, ` +
             "when mentioning an object not found in this room, state VERY CLEARLY that it is found somewhere else, and where. " +
             "Combine talking about this responsibility into the bullets themselves where possible.\n\n" +
             "Don't make anything up! Only list what a designer of the room should know ABOUT THIS PARTICULAR INTER-ROOM ELEMENT. " +
-            "Do not use the words \"inter-room element\" or \"prerequisite\" in your answer! " +
+            "When mentioning something located in another room, always mention the room number to make it clear it's not talking " +
+            "about this room! Do not use the words \"inter-room element\" or \"prerequisite\" in your answer! " +
             "When mentioning any other room, include both the name AND THE NUMBER!"
         await asker.ask(t, messageInterRoomRoom)
 
@@ -182,16 +194,13 @@ for (let interRoom of (interRooms1 + '---' + interRooms2).split('---').map(ir =>
             "Compress the above bullet points by removing redundant words. Ensure to keep every piece of information! " +
             "I'd rather the text contains a few too many words than that information is lost. " +
             "Keep names of objects, creatures, rooms... intact! When mentioning a room with a number, always keep both. " +
-            "Keep all details! Do not remove any objects, creatures or clues! Keep the bullet points and their order intact!"
-        await asker.ask(t, messageInterRoomCompress)
+            "Keep mentioning who is responsible! Keep all details, especially literal quotes and passages! " +
+            "Do not remove any objects, creatures or clues! Keep the bullet points and their order intact!"
+        const { text: interRoomRoomText } = await asker.ask(t, messageInterRoomCompress)
+        interRoomTexts[roomNumber - 1] += irSummary + "\n" + interRoomRoomText + "\n"
 
-        const messageInterRoomResp =
-            "Repeat the above compressed form, but ensure any information in the bullets as to whose responsibility " +
-            "the design of certain elements is, was retained! Ensure it remains very clear when it is NOT the " +
-            "current designer's job to provide something (and mention this explicitly: " +
-            "Use the phrase \"Not your responsibility to design this\" literally or paraphrase)!"
-        const { text: interRoomRoomText } = await asker.ask(t, messageInterRoomResp)
-        interRoomTexts[roomNumber - 1] += interRoomRoomText + "\n"
+        asker.rollback(t)
+        asker.rollback(t)
     }
 }
 
@@ -534,8 +543,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
             "This contains elements from the description that have mechanics implications. Be very brief about those elements that will already get their own section. " +
             "Be detailed and specific! The more information you include, the better. This is also the place to talk about " +
             "where objects and creatures can be found in the room. If there more than one of some item or creature, " +
-            "list the amount! The names of objects and creatures, as well as any other loot such as coins, " +
-            "must be printed **in bold**. Most things you want to describe here should also have been mentioned in the Description!\n" +
+            "list the amount! The names of objects and creatures, as well as any other loot such as coins, must be printed **in bold**.\n" +
         "- Add OTHER SECTIONS if you think they are needed for specific mechanics or puzzles that merit their own section. " +
             "This is encouraged, but you should provide A LOT OF DETAILS, more than in the notable features list! " +
             "Ensure a DM has all the information they need. " +
@@ -548,13 +556,14 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
         "what the precise solution to a puzzle is, how concepts translate to in-game mechanics... " +
         "Answer in the style of a Homebrewery Markdown (Brewdown) module. If any text was given verbatim, ensure to include it in the module! " +
         "Any clues given in the bullets above should be PRESERVED IN DETAIL. ENSURE ALL THE BULLET POINTS ABOVE ARE ADDRESSED. " +
-        "Again, include all quotes, texts, and clues verbatim!"
+        "Again, include all quotes, texts, and clues verbatim! Give as many details as you can!"
     finalMessages.push(messageClarifiedRoomFeatures)
     finalLambdas.push(clarifiedRoomFeaturesText => roomTexts.push(clarifiedRoomDescriptionText + '\n\n' + clarifiedRoomFeaturesText.split('\n').slice(1).join('\n') + '\n\n' + extractedItems + '\n\n' + extractedCreatures))
 // }
 //
 // for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
     const { text: clarifiedRoomText } = await alwaysPromptAsker.ask(getTempThread(), finalMessages[roomNumber - 1])
+    console.log(clarifiedRoomText.split('\n')[0])
     finalLambdas[roomNumber - 1](clarifiedRoomText)
 }
 
