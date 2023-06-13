@@ -104,7 +104,7 @@ const messageRooms =
     "  -> Topical items related to the lore but without an impact on the story, if present. These can range from very major to funny trinkets.\n" +
     "  -> Traps, if present. For example, the items above might be trapped.\n" +
     `  -> Topical (major) enemies in this room. Only use this for ${numRoomsEnemy} to ${numRoomsEnemy + 1} rooms. Ensure to give major enemies some weaker minions to spice up combat! ` +
-        `Mention the CR of each enemy between parentheses and ${combatModifier}.\n` +
+        `PRECEDE each enemy with its CR (e.g. a CR X bandit). To determine the DC, ${combatModifier}.\n` +
     "  -> Information that the characters can learn here.\n\n" +
     "Again, make the rooms and their contents inspired, distinct, and unique. " +
     `Do not forget to base yourself on the history and current state of the location!${wackyModifier} ` +
@@ -199,7 +199,7 @@ for (let interRoom of (interRooms1 + '---' + interRooms2).split('---').map(ir =>
             "Keep mentioning who is responsible! Keep all details, especially literal quotes and passages! " +
             "Do not remove any objects, creatures or clues! Keep the bullet points and their order intact!"
         const { text: interRoomRoomText } = await asker.ask(t, messageInterRoomCompress)
-        interRoomTexts[roomNumber - 1] += irSummary + "\n" + interRoomRoomText + "\n"
+        interRoomTexts[roomNumber - 1] += "- " + irSummary + "\n" + interRoomRoomText + "\n"
 
         asker.rollback(t)
         asker.rollback(t)
@@ -522,8 +522,8 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
         "list the amount! The names of objects and creatures, as well as any other loot such as coins, " +
         "must be printed **in bold**. Most things you want to describe here should also have been mentioned in the Description!\n\n" +
         `When mentioning ANY ITEMS (${items.map(i => `**${i}**`).join(', ')}) ` +
-        `OR CREATURES (${creatures.map(c => `**${c}**`).join(', ')}), do not provide any explanation about them, ` +
-        "as that will be done somewhere else. Simply PRINT THE NAMES IN **BOLD**.\n\n" +
+        `OR CREATURES (${creatures.map(c => `**${c}**`).join(', ')}), do not provide any explanation about them ` +
+        "and do not mention stats, as that will be done somewhere else. Simply PRINT THE NAMES IN **BOLD**.\n\n" +
         "Note that this is meant for a DM; BE CONCISE, PRECISE, SPECIFIC AND COMPLETE in anything you say. " +
         "ONLY LIST SPECIFIC IN-GAME INFORMATION, NO GENERALITIES OR DM TIPS. List specifically what loot can be found, " +
         "what the precise solution to a puzzle is, how concepts translate to in-game mechanics... " +
