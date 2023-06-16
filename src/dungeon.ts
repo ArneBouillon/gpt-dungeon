@@ -141,7 +141,7 @@ for (let roomBatch = 1; roomBatch <= Math.ceil(options.numRooms / 3); ++roomBatc
             `Number the room entries from 1 to ${options.numRooms}, and place three dashes after each: ---.` +
             `${options.numRooms > 3 ? ` Give the first 3 out of the ${options.numRooms} rooms.` : ''}`
             :
-            `Now give rooms ${roomBatch * 3 + 1} through ${Math.min(options.numRooms, roomBatch * 3 + 3)} out of ${options.numRooms}.`
+            `Now give rooms ${(roomBatch - 1) * 3 + 1} through ${Math.min(options.numRooms, (roomBatch - 1) * 3 + 3)} out of ${options.numRooms}.`
     let { text: rt } = await fancyAsker.ask(THREAD_LORE, messageRooms)
     roomsText += '---' + rt
 }
