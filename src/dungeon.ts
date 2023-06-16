@@ -9,18 +9,45 @@ import { getTempThread } from "./util.js"
 const asker = new util.ChatGPTAsker()
 
 const fancyAsker = new util.ChatGPTAsker('gpt-4')
-const alwaysPromptAsker = new util.PromptAsker()
 
 const THREAD_MAIN = 'main'
 const THREAD_LORE = 'lore'
 
-const options = {
-    keywords: 'Pie, Whipped Cream, Cherry, Pastry, Bakery',
-    numRooms: 8,
-    combatDifficulty: 'high', // 'low', 'medium', 'high'
-    lootValue: 'medium', // 'low', 'medium', 'high'
-    wackiness: 'high', // 'low', 'medium', 'high'
+function onlyBullets(text) {
+    let res = text.trim()
+    let lines = res.split('\n')
+    if (res.includes('- ') && res[0] != '-') {
+        res = lines.slice(1).join('\n').trim()
+        lines = res.split('\n')
+    }
+    if (lines[lines.length - 2].trim() == '' && lines[lines.length - 1].trim()[0] != '-') {
+        res = lines.slice(0, -2).join('\n').trim()
+    }
+
+    return res
 }
+
+function parseOptions(argv) {
+    if (argv.length > 2) {
+        const keywords = argv[2].split(',').join(', ')
+        const numRooms = Number(argv[3])
+        const combatDifficulty = argv[4] // 'low', 'medium', 'high'
+        const lootValue = argv[5] // 'low', 'medium', 'high'
+        const wackiness = argv[6] // 'low', 'medium', 'high'
+
+        return { keywords, numRooms, combatDifficulty, lootValue, wackiness }
+    }
+
+    return {
+        keywords: 'Pie, Whipped Cream, Cherry, Pastry, Bakery',
+        numRooms: 8,
+        combatDifficulty: 'high', // 'low', 'medium', 'high'
+        lootValue: 'medium', // 'low', 'medium', 'high'
+        wackiness: 'high', // 'low', 'medium', 'high'
+    }
+}
+
+const options = parseOptions(process.argv)
 
 const combatModifier =
     options.combatDifficulty == 'low' ?
@@ -69,8 +96,8 @@ const messageLore =
     "Develop a full lore about this location. Focus primarily on the current state of the location, " +
     "its potential inhabitants, and the secrets hidden within. Be very information-dense! " +
     `Do not overcomplicate things and keep everything self-contained.${wackyModifier} ` +
-    "Ensure to include 1 secret that visiting adventurers could discover."
-const { text: lore } = await alwaysPromptAsker.ask(THREAD_LORE, messageLore)
+    "Ensure to include 1 secret that visiting adventurers could discover. Write densely."
+const { text: lore } = await fancyAsker.ask(THREAD_LORE, messageLore)
 
 const missionThread = util.getTempThread()
 const messageMission =
@@ -92,12 +119,14 @@ const { text: motivations } = await asker.ask(missionThread, messageMotivations)
 const numRoomsEnemy = (options.combatDifficulty == 'medium' ? 1 : 0)
     + (options.combatDifficulty == 'high' ? 2 : 0)
     + (options.numRooms - options.numRooms % 4) / 4
+if (options.numRooms > 8) throw Error("More than 8 rooms are not currently supported.")
+
 const messageRooms =
     "The above location is used as a D&D dungeon. " +
     `The characters' mission is the following. ${mission}\n\n` +
     `Propose ${options.numRooms} distinct and unique rooms in which to divide the dungeon. They should culminate in an opportunity to complete the above mission. ` +
     "For each room, discuss\n" +
-    "- The general setting and atmosphere of the room.\n" +
+    "- The general setting and atmosphere of the room. Also briefly describe the main features or distinctive elements.\n" +
     "- Anything present in the room that relates to the lore of the location and/or the story of the adventure. Be detailed and specific!\n" +
     "  -> Story-related items, if present.\n" +
     `  -> Major loot items, if present.${lootModifier}` +
@@ -108,10 +137,21 @@ const messageRooms =
     "  -> Information that the characters can learn here.\n\n" +
     "Again, make the rooms and their contents inspired, distinct, and unique. " +
     `Do not forget to base yourself on the history and current state of the location!${wackyModifier} ` +
-    `Number the room entries from 1 to ${options.numRooms}, and place three dashes after each: ---.`
-const { text: roomsText } = await alwaysPromptAsker.ask(THREAD_LORE, messageRooms)
-const rooms = roomsText.split('---').map(room => room.trim())
-assert(rooms.length >= options.numRooms)
+    `Number the room entries from 1 to ${options.numRooms}, and place three dashes after each: ---.` +
+    `${options.numRooms > 4 ? ` Give the first ${options.numRooms / 2 + (options.numRooms / 2) % 1} out of the ${options.numRooms} rooms.` : ''}`
+let { text: roomsText } = await fancyAsker.ask(THREAD_LORE, messageRooms)
+
+if (options.numRooms > 4) {
+    let { text: roomsText2 } = await fancyAsker.ask(THREAD_LORE, "And now the rest.")
+    roomsText += '---' + roomsText2
+}
+
+const rooms = roomsText.split('---').map(room => room.trim()).filter(room => room)
+if (rooms.length != options.numRooms) {
+    console.log(rooms.length, options.numRooms)
+    console.log(roomsText)
+    assert(false)
+}
 
 const messageRoomNames =
     `${roomsText}\n\n----------\n\nExtract the names of the ${options.numRooms} rooms. I want a list of ${options.numRooms} items, each on their own line, ` +
@@ -148,7 +188,7 @@ const messageInterRooms =
     "When giving information, always BE VERY PRECISE and INCLUDE DIRECT QUOTES AND EXCERPTS IF POSSIBLE. " +
     "Ensure each inter-room element only related to 2 (or 3 if you must) rooms! Give 2 unique and distinct inter-room elements. " +
     "Separate the inter-room elements with three dashes: ---."
-const { text: interRooms1 } = await alwaysPromptAsker.ask(THREAD_LORE, messageInterRooms)
+const { text: interRooms1 } = await fancyAsker.ask(THREAD_LORE, messageInterRooms)
 
 const messageInterRoomsSmall =
     "Now suggest 2 new inter-room elements with a smaller scope. You can add new information to the rooms while doing this. " +
@@ -156,7 +196,7 @@ const messageInterRoomsSmall =
     "These smaller-scope elements should be fun and interesting ways to link the rooms. " +
     "They could be small easter eggs, or objects from some room that turn out to be useful to find some loot in another room. " +
     `Do not include riddles or puzzles!${wackyModifier} Again, the elements should only relate to 2 rooms each. Separate the inter-room elements with three dashes: ---.`
-const { text: interRooms2 } = await alwaysPromptAsker.ask(THREAD_LORE, messageInterRoomsSmall)
+const { text: interRooms2 } = await fancyAsker.ask(THREAD_LORE, messageInterRoomsSmall)
 
 const interRoomTexts: string[] = []; for (let i = 1; i <= options.numRooms; ++i) interRoomTexts.push("")
 for (let interRoom of (interRooms1 + '---' + interRooms2).split('---').map(ir => ir.trim()).filter(s => s.length != 0)) {
@@ -188,7 +228,8 @@ for (let interRoom of (interRooms1 + '---' + interRooms2).split('---').map(ir =>
             "Combine talking about this responsibility into the bullets themselves where possible.\n\n" +
             "Don't make anything up! Only list what a designer of the room should know ABOUT THIS PARTICULAR INTER-ROOM ELEMENT. " +
             "When mentioning something located in another room, always mention the room number to make it clear it's not talking " +
-            "about this room! Do not use the words \"inter-room element\" or \"prerequisite\" in your answer! " +
+            "about this room! When the description contains literal quotes, clues or pieces of text, copy those VERBATIM! " +
+            "Do not use the words \"inter-room element\" or \"prerequisite\" in your answer! " +
             "When mentioning any other room, include both the name AND THE NUMBER!"
         await asker.ask(t, messageInterRoomRoom)
 
@@ -199,7 +240,7 @@ for (let interRoom of (interRooms1 + '---' + interRooms2).split('---').map(ir =>
             "Keep mentioning who is responsible! Keep all details, especially literal quotes and passages! " +
             "Do not remove any objects, creatures or clues! Keep the bullet points and their order intact!"
         const { text: interRoomRoomText } = await asker.ask(t, messageInterRoomCompress)
-        interRoomTexts[roomNumber - 1] += "- " + irSummary + "\n" + interRoomRoomText + "\n"
+        interRoomTexts[roomNumber - 1] += "- " + irSummary + "\n" + onlyBullets(interRoomRoomText) + "\n"
 
         asker.rollback(t)
         asker.rollback(t)
@@ -209,7 +250,7 @@ for (let interRoom of (interRooms1 + '---' + interRooms2).split('---').map(ir =>
 const messageRoomsCheck =
     "Think long and hard: are there any plot holes or pieces of information the characters can't reasonably be expected to find? " +
     "If so, list it here and propose solutions that require the least amount of alterations to the rooms above."
-await alwaysPromptAsker.ask(THREAD_LORE, messageRoomsCheck)
+await fancyAsker.ask(THREAD_LORE, messageRoomsCheck)
 
 const roomSummariesList: string[] = []
 for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
@@ -234,8 +275,8 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
         "When talking about clues, texts, or quotes, ensure to give the entire one verbatim! " +
         "Keep in mind that each room's text will go to a different designer! " +
         "Thus, if an object has relevance to another room, this should be specified very explicitly. Remember to be detailed!"
-    const { text: roomSummary } = await alwaysPromptAsker.ask(THREAD_LORE, messageRoomSummary)
-    alwaysPromptAsker.rollback(THREAD_LORE)
+    const { text: roomSummary } = await fancyAsker.ask(THREAD_LORE, messageRoomSummary)
+    fancyAsker.rollback(THREAD_LORE)
     roomSummariesList.push(
         roomSummary.split('---')
                    .map(s => s.trim())
@@ -257,7 +298,7 @@ const messageTexts =
         "What are the consequences? What happens to the location? What can they use the objects they found for?\n\n" +
     "Answer with these three pieces of text, AND NOTHING ELSE. No accompanying introduction or conclusion. " +
     "Separate the three pieces of text with three dashes: ---."
-const { text: texts } = await alwaysPromptAsker.ask(THREAD_LORE, messageTexts)
+const { text: texts } = await fancyAsker.ask(THREAD_LORE, messageTexts)
 const textsList = texts.split('---').map(text => text.trim())
 const intro = textsList[0], outsideDescription = '*' + textsList[1] + '*', conclusion = textsList[2]
 
@@ -336,30 +377,6 @@ let allItems: string[] = []
 for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
     let clarifications = ''
     for (let clarificationIteration = 1; clarificationIteration <= 2; ++clarificationIteration) {
-        const thread = `room${roomNumber}_c_it_${clarificationIteration}`
-
-        // const messageRoomText =
-        //     `We are designing a D&D dungeon. The context is as follows. ${context}\n\n----------\n\n` +
-        //     `The room I would like to design in more detail is the following:\n${roomSummariesList[roomNumber - 1]}\n${clarifications}\n\n----------\n\n` +
-        //     "The ideas above are very interesting, but the text is not yet suited for an entry in a D&D module. " +
-        //     "Overhaul the text to be concise and informative, containing all the information needed for the DM to run the session, " +
-        //     "AND NOTHING MORE. If the room contains enemies, do not describe them in any detail. WRITE IN THE STYLE OF A D&D MODULE!\n" +
-        //     "- START WITH A DESCRIPTION FOR THE PLAYERS, *given entirely in italics*, describing what they see, and the ambiance of the room.\n" +
-        //     "- THEN GIVE A FULL DESCRIPTION OF THE ROOM FOR THE DM. Be complete and visual: describe the lay-out of the room and detail what is present.\n" +
-        //     "- GIVE A LIST OF NOTABLE FEATURES. This contains elements from the description that have mechanics implications. " +
-        //     "Be very explicit yet concise about these mechanical implications! " +
-        //     "This is also the place to talk about where objects and creatures can be found in the room. " +
-        //     "Be very explicit yet concise about the location of everything! The names of objects and creatures, " +
-        //     "as well as any other loot such as coins, must be printed **in bold**. Most things you want to describe here " +
-        //     "should also have been mentioned in the Description!\n" +
-        //     "- DO NOT ADD ANY OTHER SECTIONS. STOP THE TEXT IMMEDIATELY AFTER THE NOTABLE FEATURES.\n" +
-        //     "\n" +
-        //     "Note that this is meant for a DM; BE CONCISE, PRECISE, SPECIFIC AND COMPLETE in anything you say. " +
-        //     "ONLY LIST SPECIFIC IN-GAME INFORMATION, NO GENERALITIES OR DM TIPS. List specifically what loot can be found, " +
-        //     "what the precise solution to a puzzle is, how concepts translate to in-game mechanics... " +
-        //     "Add no sections that I haven't described above. Answer in the style of a Homebrewery Markdown (Brewdown) module."
-        // const { text: roomText1 } = await asker.ask(thread, messageRoomText)
-
         const clarificationThread = `room${roomNumber}_c_c_it_${clarificationIteration}`
 
         const messageUnclear =
@@ -400,7 +417,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
             "Keep names of objects, creatures, rooms... intact! When mentioning a room with a number, always keep both. " +
             "Keep all details! Do not remove any objects, creatures or clues! Answer in unstructured bullet points."
         const { text: c } = await asker.ask(clarificationThread, messageClarifyConcise)
-        clarifications += c + '\n'
+        clarifications += onlyBullets(c) + '\n'
     }
 
     const extractionThreadItems = `room${roomNumber}_extract_i`
@@ -504,9 +521,12 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
     // const { text: locationsText } = await asker.ask(locationThread, messageLocations)
     const locationsText = ''
 
+    const fullDescription = `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n${locationsText}`
+        .replace(/\(?CR\s*\d+\s*\)?/gi, '')
+
     const messageClarifiedRoomDescription =
         `We are designing a D&D dungeon. The room I would like to design in more detail is Room ${roomNumber} (${roomNames[roomNumber - 1]}):\n` +
-        `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n${locationsText}\n\n----------\n\n` +
+        `${fullDescription}\n\n----------\n\n` +
         "The ideas above are very interesting, but the text is not yet suited for an entry in a D&D module. " +
         "Overhaul the text to be concise and informative, containing all the information needed for the DM to run the session, " +
         "AND NOTHING MORE. If the room contains enemies, do not describe them in any detail. WRITE IN THE STYLE OF A D&D MODULE!\n" +
@@ -531,17 +551,17 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
         "for the players and for the DM, and then to include a Notable Features section! Ensure to make the " +
         "description detailed and visual! Limit the description to 1 or 2 paragraphs!"
     let { text: clarifiedRoomDescriptionText } = await asker.ask(getTempThread(), messageClarifiedRoomDescription)
-    clarifiedRoomDescriptionText = clarifiedRoomDescriptionText.split(/#* *Notable Features/i)[0]
+    clarifiedRoomDescriptionText = clarifiedRoomDescriptionText.split(/(#*|\**) *Notable Features/i)[0]
 
     const messageClarifiedRoomFeatures =
         `We are designing a D&D dungeon. The room I would like to design in more detail is room ${roomNumber} (${roomNames[roomNumber - 1]}):\n` +
-        `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n${locationsText}\n\n----------\n\n` +
+        `${fullDescription}\n\n----------\n\n` +
         "The ideas above are very interesting, but the text is not yet suited for an entry in a D&D module. " +
         "Overhaul the text to be concise and informative, containing all the information needed for the DM to run the session, " +
         "AND NOTHING MORE. If the room contains enemies, do not describe them in any detail. WRITE IN THE STYLE OF A D&D MODULE!\n" +
         `- State the title: ## Room ${roomNumber}: room_name\n` +
         "- Do not provide a description, as that will be done elsewhere. Instead, continue immediately to the notable features.\n" +
-        "- GIVE A LIST OF NOTABLE FEATURES. Name this section ### Notable Features. Note that this means decor elements and features of the room, not items. " +
+        "- GIVE A LIST OF NOTABLE FEATURES, using bullet points. Name this section ### Notable Features. Note that this means decor elements and features of the room, not items. " +
             "This contains elements from the description that have mechanics implications. Be very brief about those elements that will already get their own section. " +
             "Be detailed and specific! The more information you include, the better. This is also the place to talk about " +
             "where objects and creatures can be found in the room. If there more than one of some item or creature, " +
@@ -564,7 +584,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
 // }
 //
 // for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
-    const { text: clarifiedRoomText } = await alwaysPromptAsker.ask(getTempThread(), finalMessages[roomNumber - 1])
+    const { text: clarifiedRoomText } = await fancyAsker.ask(getTempThread(), finalMessages[roomNumber - 1])
     console.log(clarifiedRoomText.split('\n')[0])
     finalLambdas[roomNumber - 1](clarifiedRoomText)
 }
@@ -604,4 +624,4 @@ console.log(hbText)
 fs.writeFileSync('output.txt', hbText)
 
 asker.finalize()
-alwaysPromptAsker.finalize()
+fancyAsker.finalize()
