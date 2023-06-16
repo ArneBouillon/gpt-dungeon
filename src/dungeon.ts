@@ -117,31 +117,33 @@ const { text: motivations } = await asker.ask(missionThread, messageMotivations)
 const numRoomsEnemy = (options.combatDifficulty == 'medium' ? 1 : 0)
     + (options.combatDifficulty == 'high' ? 2 : 0)
     + (options.numRooms - options.numRooms % 4) / 4
-if (options.numRooms > 8) throw Error("More than 8 rooms are not currently supported.")
 
-const messageRooms =
-    "The above location is used as a D&D dungeon. " +
-    `The characters' mission is the following. ${mission}\n\n` +
-    `Propose ${options.numRooms} distinct and unique rooms in which to divide the dungeon. They should culminate in an opportunity to complete the above mission. ` +
-    "For each room, discuss\n" +
-    "- The general setting and atmosphere of the room. Also briefly describe the main features or distinctive elements.\n" +
-    "- Anything present in the room that relates to the lore of the location and/or the story of the adventure. Be detailed and specific!\n" +
-    "  -> Story-related items, if present.\n" +
-    `  -> Major loot items, if present.${lootModifier}` +
-    "  -> Topical items related to the lore but without an impact on the story, if present. These can range from very major to funny trinkets.\n" +
-    "  -> Traps, if present. For example, the items above might be trapped.\n" +
-    `  -> Topical (major) enemies in this room. Only use this for ${numRoomsEnemy} to ${numRoomsEnemy + 1} rooms. Ensure to give major enemies some weaker minions to spice up combat! ` +
-        `PRECEDE each enemy with its CR (e.g. a CR X bandit). To determine the DC, ${combatModifier}.\n` +
-    "  -> Information that the characters can learn here.\n\n" +
-    "Again, make the rooms and their contents inspired, distinct, and unique. " +
-    `Do not forget to base yourself on the history and current state of the location!${wackyModifier} ` +
-    `Number the room entries from 1 to ${options.numRooms}, and place three dashes after each: ---.` +
-    `${options.numRooms > 4 ? ` Give the first ${options.numRooms / 2 + (options.numRooms / 2) % 1} out of the ${options.numRooms} rooms.` : ''}`
-let { text: roomsText } = await fancyAsker.ask(THREAD_LORE, messageRooms)
-
-if (options.numRooms > 4) {
-    let { text: roomsText2 } = await fancyAsker.ask(THREAD_LORE, "And now the rest.")
-    roomsText += '---' + roomsText2
+let roomsText = ''
+for (let roomBatch = 1; roomBatch <= Math.ceil(options.numRooms / 3); ++roomBatch) {
+    const messageRooms =
+        roomBatch == 1
+            ?
+            "The above location is used as a D&D dungeon. " +
+            `The characters' mission is the following. ${mission}\n\n` +
+            `Propose ${options.numRooms} distinct and unique rooms in which to divide the dungeon. They should culminate in an opportunity to complete the above mission. ` +
+            "For each room, discuss\n" +
+            "- The general setting and atmosphere of the room. Also briefly describe the main features or distinctive elements.\n" +
+            "- Anything present in the room that relates to the lore of the location and/or the story of the adventure. Be detailed and specific!\n" +
+            "  -> Story-related items, if present.\n" +
+            `  -> Major loot items, if present.${lootModifier}` +
+            "  -> Topical items related to the lore but without an impact on the story, if present. These can range from very major to funny trinkets.\n" +
+            "  -> Traps, if present. For example, the items above might be trapped.\n" +
+            `  -> Topical (major) enemies in this room. Only use this for ${numRoomsEnemy} to ${numRoomsEnemy + 1} rooms. Ensure to give major enemies some weaker minions to spice up combat! ` +
+            `PRECEDE each enemy with its CR (e.g. a CR X bandit). To determine the DC, ${combatModifier}.\n` +
+            "  -> Information that the characters can learn here.\n\n" +
+            "Again, make the rooms and their contents inspired, distinct, and unique. " +
+            `Do not forget to base yourself on the history and current state of the location!${wackyModifier} ` +
+            `Number the room entries from 1 to ${options.numRooms}, and place three dashes after each: ---.` +
+            `${options.numRooms > 3 ? ` Give the first 3 out of the ${options.numRooms} rooms.` : ''}`
+            :
+            `Now give rooms ${roomBatch * 3 + 1} through ${Math.min(options.numRooms, roomBatch * 3 + 3)} out of ${options.numRooms}.`
+    let { text: rt } = await fancyAsker.ask(THREAD_LORE, messageRooms)
+    roomsText += '---' + rt
 }
 
 const rooms = roomsText.split('---').map(room => room.trim()).filter(room => room)
