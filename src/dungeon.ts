@@ -34,8 +34,9 @@ function parseOptions(argv) {
         const combatDifficulty = argv[4] // 'low', 'medium', 'high'
         const lootValue = argv[5] // 'low', 'medium', 'high'
         const wackiness = argv[6] // 'low', 'medium', 'high'
+        const outputName = argv[7]
 
-        return { keywords, numRooms, combatDifficulty, lootValue, wackiness }
+        return { keywords, numRooms, combatDifficulty, lootValue, wackiness, outputName }
     }
 
     return {
@@ -44,6 +45,7 @@ function parseOptions(argv) {
         combatDifficulty: 'high', // 'low', 'medium', 'high'
         lootValue: 'medium', // 'low', 'medium', 'high'
         wackiness: 'high', // 'low', 'medium', 'high'
+        outputName: 'output.txt',
     }
 }
 
@@ -69,10 +71,6 @@ const wackyModifier =
         options.wackiness == 'medium' ?
             '' :
             ' Some of the things you introduce should be somewhat weird, funny, or wacky.'
-
-function preprocessName(str) {
-    return str.toLowerCase().replaceAll(/(the|a|an|\(.+\))/g, '').trim()
-}
 
 const messageDungeon =
     "We are going to design a D&D dungeon (not necessarily a literal dungeon) for third-level characters. " +
@@ -621,7 +619,7 @@ const sections = [
 ]
 const hbText = hb.getMD(title, intro, sections)
 console.log(hbText)
-fs.writeFileSync('output.txt', hbText)
+fs.writeFileSync(options.outputName, hbText)
 
 asker.finalize()
 fancyAsker.finalize()
