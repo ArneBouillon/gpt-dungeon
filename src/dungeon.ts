@@ -40,7 +40,7 @@ function parseOptions(argv) {
     }
 
     return {
-        keywords: 'Pie, Whipped Cream, Cherry, Pastry, Bakery',
+        keywords: 'Circus, Old, Swords, Animals, Kobolds',
         numRooms: 8,
         combatDifficulty: 'high', // 'low', 'medium', 'high'
         lootValue: 'medium', // 'low', 'medium', 'high'
@@ -204,7 +204,7 @@ const messageInterRoomsGlobal =
     "to not be a part of the rooms, but still to apply to them. This could, for example, " +
     "be a hidden network of shafts to move through, an environmental mechanic, " +
     "a timer that triggers something if the characters wait too long... Truly anything qualifies. " +
-    "Be sure to incorporate the effect of this inter-room element on all the separate rooms."
+    "Be sure to incorporate the effect of this inter-room element on all the separate rooms. Make the element unique and impactful."
 const { text: interRooms3 } = await fancyAsker.ask(THREAD_LORE, messageInterRoomsGlobal)
 fancyAsker.rollback(THREAD_LORE)
 
@@ -297,9 +297,9 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
 }
 
 const titleMessage =
-    options.wackiness == 'low'
-        ? 'A title for the dungeon module.'
-        : options.wackiness == 'medium' ?
+    options.wackiness == 'low' ?
+        'A title for the dungeon module.' :
+        options.wackiness == 'medium' ?
             'A unique and creative title for the dungeon module.' :
             'A creative and unique title for the dungeon module. You can make it a bit funny or wacky.'
 const messageTexts =
@@ -365,6 +365,105 @@ const title = textsList[0].replaceAll(/["'.*]/g, ''), intro = textsList[1], outs
 //     )
 // graph.makeUndirectedGraph([1, 2, 3, 4, 5, ...], numberConnections)
 
+async function clarify(asker, thread, text, it) {
+    const messageUnclear =
+        `${text}\n\n----------\n\n` +
+        "The above section is meant to feature in a D&D module, and the DM uses the text to run the module. " +
+        "However, the text is not yet specific enough, often giving examples instead of citing what exactly the characters encounter. " +
+        "Identify all the elements that are not yet specific enough for a DM to properly run the adventure. " +
+        "Pay special attention to whether the characters have all the information and clues needed to progress. " +
+        "Also make sure everything is named, and described effects are specified on a mechanical level. " +
+        "DO NOT PROPOSE TO ADD NEW ELEMENTS! ONLY ELABORATE ON EXISTING ELEMENTS. BE CONCISE. " +
+        `Give a list of AS MANY UNCLEAR ELEMENTS AS YOU CAN FIND${it == 1 ? " (at least 10, and the more, the better!)" : ""}.`
+    await asker.ask(thread, messageUnclear)
+    const messageUnclearFilter =
+        "Repeat the unclear elements, but leave out those relating to the overarching story or to interaction between the rooms," +
+        " instead of to this specific room in the dungeon."
+    await asker.ask(thread, messageUnclearFilter)
+
+    const messageClarify =
+        "Please fill in the specifics of the points left unclear. Do not introduce new content or NPCs by doing this, " +
+        "but just ensure the story is concrete and logical. Add a lot of details. " +
+        "Make sure it is abundantly clear how the characters should acquire any potential clues! " +
+        "When mentioning text, riddles, clues..., GIVE THE PRECISE TEXT VERBATIM THAT THE CHARACTERS ENCOUNTER. " +
+        "DO NOT MAKE UP ANY INFORMATION ABOUT OTHER ROOMS IN THE DUNGEON, INCLUDING ANY EFFECTS OBJECTS IN " +
+        "THIS ROOM MIGHT HAVE THERE. Do not introduce new objects that don't have a purpose, such as new keys or maps. " +
+        "When you have to make up rewards, keep it simple and give an object or coins. " +
+        "Do not provide examples of anything, but choose a specific suggestion. " +
+        "Answer with just an unstructured bullet list, nothing else. I repeat, DO NOT MENTION OTHER ROOMS."
+    await asker.ask(thread, messageClarify)
+
+    const messageClarifyCorrect =
+        "Did you make anything up about other rooms in the dungeon? Repeat your specifics from above VERBATIM, " +
+        "but LEAVE OUT ANYTHING YOU MADE UP ABOUT OTHER ROOMS."
+    await asker.ask(thread, messageClarifyCorrect)
+
+    const messageClarifyConcise =
+        "Repeat your answer from above, but compress the text by removing redundant words. " +
+        "Ensure to keep every piece of information! I'd rather the text contains a few too many words than that information is lost. " +
+        "Keep names of objects, creatures, rooms... intact! When mentioning a room with a number, always keep both. " +
+        "Keep all details! Do not remove any objects, creatures or clues! Answer in unstructured bullet points."
+    const { text: c } = await asker.ask(thread, messageClarifyConcise)
+
+    return c
+}
+
+async function detailElement(asker, thread, text, _it) {
+    const messageDetailedElement =
+        `${text}\n\nThe above section is meant to feature in a D&D module, and the DM uses the text to run the module. ` +
+        "However, the text is not yet specific enough, often giving examples instead of citing what exactly the characters encounter. " +
+        "Please identify one single element of the room to go into a lot of detail about. The element might seem minor at first, " +
+        "but by adding depth to it, we want to provide the players with a cool and unexpected experience.\n\n" +
+        "State 3 suggested elements. Do not yet propose your additions, but explain why they " +
+        "would be good candidates for this purpose. Be creative! Be concise in your response. " +
+        "I'm not necessarily looking to suddenly make a small item very powerful, for example; " +
+        "it's more a question of providing either mechanics or a lot of details " +
+        "(the precise contents of a book, personal effects, a detailed list of stuff...) about something, " +
+        "making the room feel like an alive place with a real background behind it. PICK AN ELEMENT THAT IS " +
+        "MINOR IN THE DESCRIPTION ABOVE AND THAT DOES NOT LINK TO ANY BROADER STORY ELEMENTS OR TO OTHER ROOMS! " +
+        "DO NOT PICK ITEMS RELEVANT TO THE STORY!"
+    await asker.ask(thread, messageDetailedElement)
+
+    const messageDetailedElementsDetails =
+        "Choose the best out of the three elements.\n\n" +
+        "Then, describe (concisely, but specifically) the additions you propose to make. Be as specific as possible, " +
+        "add D&D mechanical effects where appropriate (but don't add any if they would be ridiculous) and add depth all-round. " +
+        "Do not make it too roleplay-ey and do not add vague, non-specific descriptions. Be concrete and grounded. " +
+        "Make your additions significant and ensure the characters get something out of interacting with it! " +
+        "Do not make it too far-fetched! Do not add riddles, secret phrases, puzzles... Do not add anything " +
+        "(such as keys) purportedly \"for later use\" in the dungeon! Keep it self-contained! " +
+        "Giving lists of a set of similar things (names, techniques, items...) is always cool and a good way to " +
+        "flesh something out, but don't feel like you have to. DO NOT TRY TO WEAVE THIS ELEMENT INTO THE STORY; " +
+        "simply treat it as a free-standing element in the room."
+    await asker.ask(thread, messageDetailedElementsDetails)
+
+    const messageDetailedElementBullets =
+        "Reformat your answer above into unstructured bullet points that together capture your additions."
+    const { text: c } = await asker.ask(thread, messageDetailedElementBullets)
+
+    return c
+}
+
+async function locations(asker, thread, text, _it) {
+    const messageLocations =
+        "The above text is meant to feature in a D&D module, and the DM uses the text to run the module. " +
+        "However, many elements within the room have not yet been given an exact location. " +
+        "Propose locations for the most important elements in the room: decor elements, items the characters can find, enemies... " +
+        "Answer in a concise bullet list. BE CONCISE! Each bullet point should concisely detail the location " +
+        "in the room of a single item, creature, element... Ensure your locations are consistent. " +
+        "Only add locations that aren't yet mentioned above. Add 8 locations."
+    const { text: c } = await asker.ask(thread, messageLocations)
+    return c
+}
+
+const clarifications = [
+    clarify,
+    clarify,
+    detailElement,
+    locations,
+    clarify,
+]
+
 const finalMessages: string[] = []
 const finalLambdas: Function[] = []
 
@@ -372,49 +471,13 @@ const roomTexts: string[] = []
 let allCreatures: string[] = []
 let allItems: string[] = []
 for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
-    let clarifications = ''
-    for (let clarificationIteration = 1; clarificationIteration <= 2; ++clarificationIteration) {
-        const clarificationThread = `room${roomNumber}_c_c_it_${clarificationIteration}`
+    let text = roomSummariesList[roomNumber - 1]
+    for (let clarificationIteration = 1; clarificationIteration <= clarifications.length; ++clarificationIteration) {
+        const clarificationThread = `room${roomNumber}_c_it_${clarificationIteration}`
+        const c = await clarifications[clarificationIteration - 1](asker, clarificationThread, text, clarificationIteration)
+        text += '\n' + onlyBullets(c)
 
-        const messageUnclear =
-            `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n\n----------\n\n` +
-            "The above section is meant to feature in a D&D module, and the DM uses the text to run the module. " +
-            "However, the text is not yet specific enough, often giving examples instead of citing what exactly the characters encounter. " +
-            "Identify all the elements that are not yet specific enough for a DM to properly run the adventure. " +
-            "Pay special attention to whether the characters have all the information and clues needed to progress. " +
-            "Also make sure everything is named, and described effects are specified on a mechanical level. " +
-            "DO NOT PROPOSE TO ADD NEW ELEMENTS! ONLY ELABORATE ON EXISTING ELEMENTS. BE CONCISE. " +
-            `Give a list of AS MANY UNCLEAR ELEMENTS AS YOU CAN FIND${clarificationIteration == 1 ? " (at least 10, and the more, the better!)" : ""}.`
-        await asker.ask(clarificationThread, messageUnclear)
-        const messageUnclearFilter =
-            "Repeat the unclear elements, but leave out those relating to the overarching story or to interaction between the rooms," +
-            " instead of to this specific room in the dungeon."
-        await asker.ask(clarificationThread, messageUnclearFilter)
-
-        const messageClarify =
-            "Please fill in the specifics of the points left unclear. Do not introduce new content or NPCs by doing this, " +
-            "but just ensure the story is concrete and logical. Add a lot of details. " +
-            "Make sure it is abundantly clear how the characters should acquire any potential clues! " +
-            "When mentioning text, riddles, clues..., GIVE THE PRECISE TEXT VERBATIM THAT THE CHARACTERS ENCOUNTER. " +
-            "DO NOT MAKE UP ANY INFORMATION ABOUT OTHER ROOMS IN THE DUNGEON, INCLUDING ANY EFFECTS OBJECTS IN " +
-            "THIS ROOM MIGHT HAVE THERE. Do not introduce new objects that don't have a purpose, such as new keys or maps. " +
-            "When you have to make up rewards, keep it simple and give an object or coins. " +
-            "Do not provide examples of anything, but choose a specific suggestion. " +
-            "Answer with just an unstructured bullet list, nothing else. I repeat, DO NOT MENTION OTHER ROOMS."
-        await asker.ask(clarificationThread, messageClarify)
-
-        const messageClarifyCorrect =
-            "Did you make anything up about other rooms in the dungeon? Repeat your specifics from above VERBATIM, " +
-            "but LEAVE OUT ANYTHING YOU MADE UP ABOUT OTHER ROOMS."
-        await asker.ask(clarificationThread, messageClarifyCorrect)
-
-        const messageClarifyConcise =
-            "Repeat your answer from above, but compress the text by removing redundant words. " +
-            "Ensure to keep every piece of information! I'd rather the text contains a few too many words than that information is lost. " +
-            "Keep names of objects, creatures, rooms... intact! When mentioning a room with a number, always keep both. " +
-            "Keep all details! Do not remove any objects, creatures or clues! Answer in unstructured bullet points."
-        const { text: c } = await asker.ask(clarificationThread, messageClarifyConcise)
-        clarifications += onlyBullets(c) + '\n'
+        if (clarificationIteration >= 2 && text.length > 10_000) break
     }
 
     const extractionThreadItems = `room${roomNumber}_extract_i`
@@ -519,7 +582,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
     const locationsText = ''
 
     const fullDescription = `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n${locationsText}`
-        .replace(/\(?CR\s*\d+\s*\)?/gi, '')
+        .replace(/\(?CR\s*\d+(\/\d+)?\s*\)?/gi, '')
 
     const messageClarifiedRoomDescription =
         `We are designing a D&D dungeon. The room I would like to design in more detail is Room ${roomNumber} (${roomNames[roomNumber - 1]}):\n` +
