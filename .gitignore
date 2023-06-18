@@ -3,6 +3,5 @@ dist
 node_modules
 
 .token
-output.txt
-graph.txt
-
+*.txt
+*.png

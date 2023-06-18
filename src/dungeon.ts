@@ -45,7 +45,7 @@ function parseOptions(argv) {
         combatDifficulty: 'high', // 'low', 'medium', 'high'
         lootValue: 'medium', // 'low', 'medium', 'high'
         wackiness: 'high', // 'low', 'medium', 'high'
-        outputName: 'output.txt',
+        outputName: 'dungeon17.txt',
     }
 }
 
@@ -638,7 +638,7 @@ const conclusionSection =
     `## Conclusion\n${conclusion}`
 
 const creditsSection =
-    `{{descriptive\nThis module was generated using a script based on artificial intelligence, with the following parameters.\n:\n${Object.keys(options).map(k => `${k}: ${options[k]}`).join('\n:\n')}.\n}}`
+    `{{descriptive\nThis module was generated using a script based on artificial intelligence, with the following parameters.\n:\n${Object.keys(options).filter(k => k !== 'outputName').map(k => `${k}: ${options[k]}`).join('\n:\n')}.\n}}`
 
 const layoutSection =
     `## Dungeon layout\nThe dungeon's rooms are laid out as follows.\n\n![layout](TODO) {height:280px,mix-blend-mode:multiply}`
