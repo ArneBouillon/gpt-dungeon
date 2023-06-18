@@ -584,11 +584,11 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
             "Pay special attention to the locations and descriptions of general areas in the room. Be extensive! " +
             "Ensure a DM reading this section gets a good idea of what the room looks like on first sight!\n" +
         "- GIVE A LIST OF NOTABLE FEATURES. Name this section ### Notable Features. Note that this means decor elements and features of the room, not items. " +
-        "This contains elements from the description that have mechanics implications. Be very brief about those elements that will already get their own section. " +
-        "Be detailed and specific! The more information you include, the better. This is also the place to talk about " +
-        "where objects and creatures can be found in the room. If there more than one of some item or creature, " +
-        "list the amount! The names of objects and creatures, as well as any other loot such as coins, " +
-        "must be printed **in bold**. Most things you want to describe here should also have been mentioned in the Description!\n\n" +
+            "This contains elements from the description that have mechanics implications. Be very brief about those elements that will already get their own section. " +
+            "Be detailed and specific! The more information you include, the better. This is also the place to talk about " +
+            "where objects and creatures can be found in the room. If there more than one of some item or creature, " +
+            "list the amount! The names of objects and creatures, as well as any other loot such as coins, " +
+            "must be printed **in bold**. Most things you want to describe here should also have been mentioned in the Description!\n\n" +
         `When mentioning ANY ITEMS (${items.map(i => `**${i}**`).join(', ')}) ` +
         `OR CREATURES (${creatures.map(c => `**${c}**`).join(', ')}), do not provide any explanation about them ` +
         "and do not mention stats, as that will be done somewhere else. Simply PRINT THE NAMES IN **BOLD**.\n\n" +
