@@ -286,8 +286,15 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
     )
 }
 
+const titleMessage =
+    options.wackiness == 'low'
+        ? 'A title for the dungeon module.'
+        : options.wackiness == 'medium' ?
+            'A unique and creative title for the dungeon module.' :
+            'A creative and unique title for the dungeon module. You can make it a bit funny or wacky.'
 const messageTexts =
-    "I need three more pieces of text.\n" +
+    "I need four more pieces of text.\n" +
+    `- ${titleMessage}\n` +
     "- An introduction to the dungeon module for the DM. Make this a nicely readable and relatively short " +
         "text that conveys the main challenges and draws of the module. Do not try to sell the dungeon; " +
         "simply summarize what happens. Do not address the DM directly.\n" +
@@ -296,11 +303,11 @@ const messageTexts =
         "How do they get into Room 1? Do not make this a challenge gameplay-wise; this is purely for flavor.\n" +
     "- A text that tells the DM about what happens when the characters complete their mission. " +
         "What are the consequences? What happens to the location? What can they use the objects they found for?\n\n" +
-    "Answer with these three pieces of text, AND NOTHING ELSE. No accompanying introduction or conclusion. " +
-    "Separate the three pieces of text with three dashes: ---."
+    "Answer with these four pieces of text, AND NOTHING ELSE. No accompanying introduction or conclusion. " +
+    "Separate the four pieces of text with three dashes: ---."
 const { text: texts } = await fancyAsker.ask(THREAD_LORE, messageTexts)
 const textsList = texts.split('---').map(text => text.trim())
-const intro = textsList[0], outsideDescription = '*' + textsList[1] + '*', conclusion = textsList[2]
+const title = textsList[0].replaceAll(/["'.*]/g, ''), intro = textsList[1], outsideDescription = '*' + textsList[2] + '*', conclusion = textsList[3]
 
 // const roomsList: string[] = rooms.split('\n').map((room) => room.match(/\s*\d\d?.?\s*(.*)\s*/)?.[1]).filter(room => room).map(room => room!)
 // console.log(roomsList)
@@ -588,11 +595,6 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
     console.log(clarifiedRoomText.split('\n')[0])
     finalLambdas[roomNumber - 1](clarifiedRoomText)
 }
-
-const titleText =
-    "Propose a title for this adventure. STATE ONLY THE TITLE ITSELF, NO EXTRA TEXT."
-const { text: rawTitle } = await asker.ask(THREAD_MAIN, titleText)
-const title = rawTitle.replaceAll(/["'.]/g, '')
 
 const roomSections = roomTexts
 
