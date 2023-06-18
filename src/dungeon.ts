@@ -186,7 +186,7 @@ const messageInterRooms =
     "Ensure that the information is reachable for the characters before they need it; that is, " +
     "DO NOT GIVE INFORMATION ONLY AFTER IT IS NEEDED! Put prerequisites in rooms with a lower number than the one they're needed in. " +
     "When giving information, always BE VERY PRECISE and INCLUDE DIRECT QUOTES AND EXCERPTS IF POSSIBLE. " +
-    "Ensure each inter-room element only related to 2 (or 3 if you must) rooms! Give 2 unique and distinct inter-room elements. " +
+    "Ensure each inter-room element only relates to 2 (or 3 if you must) rooms! Give 2 unique and distinct inter-room elements. " +
     "Separate the inter-room elements with three dashes: ---."
 const { text: interRooms1 } = await fancyAsker.ask(THREAD_LORE, messageInterRooms)
 
@@ -197,9 +197,19 @@ const messageInterRoomsSmall =
     "They could be small easter eggs, or objects from some room that turn out to be useful to find some loot in another room. " +
     `Do not include riddles or puzzles!${wackyModifier} Again, the elements should only relate to 2 rooms each. Separate the inter-room elements with three dashes: ---.`
 const { text: interRooms2 } = await fancyAsker.ask(THREAD_LORE, messageInterRoomsSmall)
+fancyAsker.rollback(THREAD_LORE)
+
+const messageInterRoomsGlobal =
+    "Now suggest 1 slightly different inter-room element. I want this one to be sort of \"global\" among the entire dungeon; " +
+    "to not be a part of the rooms, but still to apply to them. This could, for example, " +
+    "be a hidden network of shafts to move through, an environmental mechanic, " +
+    "a timer that triggers something if the characters wait too long... Truly anything qualifies. " +
+    "Be sure to incorporate the effect of this inter-room element on all the separate rooms."
+const { text: interRooms3 } = await fancyAsker.ask(THREAD_LORE, messageInterRoomsGlobal)
+fancyAsker.rollback(THREAD_LORE)
 
 const interRoomTexts: string[] = []; for (let i = 1; i <= options.numRooms; ++i) interRoomTexts.push("")
-for (let interRoom of (interRooms1 + '---' + interRooms2).split('---').map(ir => ir.trim()).filter(s => s.length != 0)) {
+for (let interRoom of (interRooms1 + '---' + interRooms2 + '---' + interRooms3).split('---').map(ir => ir.trim()).filter(s => s.length != 0)) {
     const t = getTempThread()
     const messageRelevantRooms =
         `${interRoom}\n\n----------\n\nWe're designing a D&D dungeon with ${options.numRooms} rooms: ${roomNamesString}\n\n` +
@@ -309,14 +319,6 @@ const { text: texts } = await fancyAsker.ask(THREAD_LORE, messageTexts)
 const textsList = texts.split('---').map(text => text.trim())
 const title = textsList[0].replaceAll(/["'.*]/g, ''), intro = textsList[1], outsideDescription = '*' + textsList[2] + '*', conclusion = textsList[3]
 
-// const roomsList: string[] = rooms.split('\n').map((room) => room.match(/\s*\d\d?.?\s*(.*)\s*/)?.[1]).filter(room => room).map(room => room!)
-// console.log(roomsList)
-// assert(roomsList.length == options.numRooms)
-//
-// const rawRoomNames = roomsList.map(room => room.match(/^(.+?):/)?.[1])
-// const roomNames = rawRoomNames.map(room => preprocessName(room))
-// console.log(roomNames)
-//
 // const messageLayout =
 //     "What should be the layout of these rooms? The layout must serve two goals: " +
 //     "it should provide an exciting adventure with well-paced action and excitement building, " +
@@ -362,18 +364,6 @@ const title = textsList[0].replaceAll(/["'.*]/g, ''), intro = textsList[1], outs
 //         }
 //     )
 // graph.makeUndirectedGraph([1, 2, 3, 4, 5, ...], numberConnections)
-
-// const messageRoomSummaries =
-//     `${roomsList.join('\n')}\n\nRecall these rooms. Now state for each room:\n` +
-//     "- The overall amount of content in this room (low/medium/high). Ensure a good mix of this.\n" +
-//     "- The types of content present in this room (loot/combat/social/...)\n" +
-//     "- A bit more detail about the content. Keep it at the conceptual level; conciseness is important.\n\n" +
-//     `Separate each room's text with three dashes: ---. Reply with ONLY THE ${options.numRooms} ROOMS. ` +
-//     "I'm looking for a dungeon light on puzzles, medium on combat and high on loot." // TODO: Temporary
-// const { text: roomSummaries } = await asker.ask(THREAD_MAIN2, messageRoomSummaries)
-// const roomSummariesList = roomSummaries.split('---').map(room => room.trim()).filter(room => room)
-// console.log(roomSummariesList)
-// assert(roomSummariesList.length >= options.numRooms) // TODO: Check that if it's more, it's just bc some note was put after it
 
 const finalMessages: string[] = []
 const finalLambdas: Function[] = []
