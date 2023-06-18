@@ -130,8 +130,8 @@ class ChatGPTAsker implements Asker {
             } catch(err) {
                 console.log(err)
                 attempts++
-                if (attempts >= 1000) {
-                    console.log("Error keeps coming, I'm going to stop retrying now!")
+                if (attempts >= 100 || (attempts >= 10 && err.toString().includes('non-whitespace'))) {
+                    console.log("Errors keep coming, I'm going to stop retrying now!")
                     throw err
                 } else {
                     console.log(`Errored; attempt ${attempts + 1} coming up`)
