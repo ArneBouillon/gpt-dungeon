@@ -2,7 +2,7 @@ import fs from "fs";
 
 export { makeUndirectedGraph }
 
-function makeUndirectedGraph(all, connections) {
+function makeUndirectedGraph(all, connections, filename) {
     connections = connections.map(conn => conn.sort())
                              .sort()
                              .filter((conn, i, a) => i == 0 || conn.toString() != a[i-1].toString())
@@ -17,5 +17,5 @@ function makeUndirectedGraph(all, connections) {
         `
 
     console.log(instructions)
-    fs.writeFileSync('graph.txt', instructions)
+    fs.writeFileSync(filename, instructions)
 }

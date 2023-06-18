@@ -160,6 +160,41 @@ const { text: roomNamesText } = await asker.ask(getTempThread(), messageRoomName
 const roomNames = roomNamesText.split('\n').slice(-options.numRooms).map(t => t.split(':')[1].trim())
 const roomNamesString = roomNames.map((name, i) => `${name} (Room ${i + 1})`).join(', ')
 
+const messageConnections =
+    "What should be the layout of these rooms? The layout must serve two goals: " +
+    "it should provide an exciting adventure with well-paced action and excitement building, " +
+    "but it should not feel railroaded. Please suggest how the 8 rooms mentioned earlier could be connected. " +
+    "Where possible, give the characters the freedom to choose multiple paths, " +
+    "although you should not sacrifice the story for that. Be concise in your answer and do not repeat the room descriptions. " +
+    "Feel free to make the layout either quite traditional or more unorthodox. " +
+    "When there is something noteworthy about a connection, mention this as well. " +
+    "USE SECRET PASSAGES ONLY VERY RARELY! When you do use something secret, " +
+    "detail exactly how it is hidden and how it can be discovered. " +
+    "At the end, fix any mistakes or inconsistencies you might spot."
+const { text: connectionsDescription } = await fancyAsker.ask(THREAD_LORE, messageConnections)
+
+const connectionsThread = getTempThread()
+const messageConnectionsMarks =
+    `${connectionsDescription}\n\n----------\n\nWe are designing a D&D dungeon with ${options.numRooms} rooms: ${roomNamesString}.\n\n` +
+    "Repeat the description of the room connections above VERBATIM. " +
+    "Anytime a connection between two rooms is introduced, mark it with [Connection: X-Y] where X and Y are ROOM NUMBERS. " +
+    "Start a new mark for each connection (that is, do not combine different connections into the same mark!). " +
+    `Only use this mark with the ${options.numRooms} rooms described above and MAKE SURE ALL CONNECTIONS ARE MARKED!`
+const { text: marksText } = await asker.ask(connectionsThread, messageConnectionsMarks)
+
+const connections = [...marksText.matchAll(/\[Connection:\s?(\d+)\s?-\s?(\d+)\s?]/gi)].map(match => [match[1], match[2]])
+graph.makeUndirectedGraph([...Array(options.numRooms).keys()].map(i => i + 1), connections, `graph-${options.outputName}`)
+
+const connectionTexts: string[] = []
+for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
+    const messageRoomConnections =
+        `Now, for ${roomNames[roomNumber - 1]} (Room ${roomNumber}), give a list of bullet points, each describing a connection EITHER FROM OR TO Room ${roomNumber}. ` +
+        "Include all details you have on the connection, such as the type of connection, locations, potential requirements... DO NOT USE THE [Connection] notation anymore!"
+    const { text: roomConnections } = await asker.ask(connectionsThread, messageRoomConnections)
+    asker.rollback(connectionsThread)
+    connectionTexts.push(onlyBullets(roomConnections))
+}
+
 const messageInterRooms =
     "We will now add a number of \"inter-room elements\". These are story elements that pertain to 2 or 3 rooms. " +
     "Examples are a lock in room A whose key is in room B, information from room X being required to defeat an enemy in room Y... " +
@@ -185,7 +220,7 @@ const messageInterRooms =
     "I DO NOT WANT MAPS! Do not make the elements too elaborate! Focus on PHYSICAL ITEMS instead of vague codes or passwords.\n\n" +
     "Ensure that the information is reachable for the characters before they need it; that is, " +
     "DO NOT GIVE INFORMATION ONLY AFTER IT IS NEEDED! Put prerequisites in rooms with a lower number than the one they're needed in. " +
-    "When giving information, always BE VERY PRECISE and INCLUDE DIRECT QUOTES AND EXCERPTS IF POSSIBLE. " +
+    "DO NOT ADD NEW ROOM CONNECTIONS! When giving information, always BE VERY PRECISE and INCLUDE DIRECT QUOTES AND EXCERPTS IF POSSIBLE. " +
     "Ensure each inter-room element only relates to 2 (or 3 if you must) rooms! Give 2 unique and distinct inter-room elements. " +
     "Separate the inter-room elements with three dashes: ---."
 const { text: interRooms1 } = await fancyAsker.ask(THREAD_LORE, messageInterRooms)
@@ -292,7 +327,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
                    .map(s => s.trim())
                    .join('\n')
                    .replace(/inter-room /ig, '')
-        + "\n" + interRoomTexts[roomNumber - 1]
+        + "\n" + connectionTexts[roomNumber - 1] + "\n" + interRoomTexts[roomNumber - 1]
     )
 }
 
@@ -318,52 +353,6 @@ const messageTexts =
 const { text: texts } = await fancyAsker.ask(THREAD_LORE, messageTexts)
 const textsList = texts.split('---').map(text => text.trim())
 const title = textsList[0].replaceAll(/["'.*]/g, ''), intro = textsList[1], outsideDescription = '*' + textsList[2] + '*', conclusion = textsList[3]
-
-// const messageLayout =
-//     "What should be the layout of these rooms? The layout must serve two goals: " +
-//     "it should provide an exciting adventure with well-paced action and excitement building, " +
-//     `but it should not feel railroaded. Please suggest how the ${options.numRooms} rooms mentioned earlier could be connected. ` +
-//     "Where possible, give the characters the freedom to choose multiple paths, although you should not sacrifice the story for that. " +
-//     `Be concise in your answer and do not repeat the room descriptions. Instead, REFER TO THE ROOMS ABOVE (${rawRoomNames.join(', ')}) BY NAME. ` +
-//     "ENSURE EVERYTHING MAKES LOGICAL SENSE AND THE CHARACTERS CAN EXPLORE THE ENTIRE DUNGEON WITHOUT GETTING STUCK! " +
-//     "ONLY MENTION THE LAYOUT."
-// const { text: layout } = await asker.ask(THREAD_MAIN2, messageLayout)
-//
-// const messageConnections =
-//     "Repeat your full last message, but anytime you introduce a connection between two rooms, " +
-//     `mark it with [Connection: Room 1 <-> Room 2]. Start a new mark for each connection. ` +
-//     `Only use this mark with the ${options.numRooms} rooms you proposed above (${rawRoomNames.join(', ')}), ` +
-//     `and MAKE SURE ALL CONNECTIONS ARE MARKED! ONLY ADD MARKS FOR THE ${options.numRooms} ROOMS!`
-// const { text: connections } = await asker.ask(THREAD_MAIN2, messageConnections)
-//
-// const messageConnectionsMissed =
-//     "Are there any marks you missed? Give them here. Again, give a SEPARATE mark for each connection! " +
-//     `ONLY add marks for the rooms ${rawRoomNames.join(', ')}.` // TODO: It still sometimes misses some... It might help to state explicitly here that it should NOT repeat the rest of the text, as that might be linked.
-// const { text: connectionsMissed } = await asker.ask(THREAD_MAIN2, messageConnectionsMissed)
-//
-// const numberConnections = [...(connections + connectionsMissed)
-//     .matchAll(/\[[cC]onnection:\s?(.+?)\s?<?->\s?(.+?)\s?]/g)]
-//     .filter(
-//         match => match[1].toLowerCase() != "room 1"
-//     ).map(
-//         match => {
-//             const numbers = [roomNames.indexOf(preprocessName(match[1])) + 1, roomNames.indexOf(preprocessName(match[2])) + 1]
-//             console.log(preprocessName(match[1]))
-//             console.log(preprocessName(match[2]))
-//             // assert(numbers[0] >= 1 && numbers[1] >= 1)
-//             return numbers
-//         }
-//     ).filter(
-//         numbers => {
-//             if (numbers[0] < 0 || numbers[1] < 0) {
-//                 console.log("WARNING: Incorrect mark")
-//                 return false
-//             }
-//
-//             return true
-//         }
-//     )
-// graph.makeUndirectedGraph([1, 2, 3, 4, 5, ...], numberConnections)
 
 async function clarify(asker, thread, text, it) {
     const messageUnclear =
@@ -651,13 +640,13 @@ const conclusionSection =
 const creditsSection =
     `{{descriptive\nThis module was generated using a script based on artificial intelligence, with the following parameters.\n:\n${Object.keys(options).map(k => `${k}: ${options[k]}`).join('\n:\n')}.\n}}`
 
-// const layoutSection =
-//     `## Dungeon layout\nThe dungeon's rooms are laid out as follows.\n\n![layout](TODO) {height:280px,mix-blend-mode:multiply}`
+const layoutSection =
+    `## Dungeon layout\nThe dungeon's rooms are laid out as follows.\n\n![layout](TODO) {height:280px,mix-blend-mode:multiply}`
 
 const sections = [
     motivationSection,
     arrivalSection,
-    // layoutSection,
+    layoutSection,
     ...roomSections,
     conclusionSection,
     creditsSection,
