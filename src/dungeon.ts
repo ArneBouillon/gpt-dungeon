@@ -485,7 +485,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
     let extractionTextItems = ''
     while (true) {
         const messageExtractItems =
-            `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n\n----------\n\n` +
+            `${text}\n\n----------\n\n` +
             'From this text, extract all items, weapons and harvestables that would benefit from a separate entry ' +
             '(e.g. due to a magic effect or some other unusual quality). Normal coins or chests should not be mentioned.\n\n' +
             'Answer in a single line, containing a concise comma-separated list. ' +
@@ -529,7 +529,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
     let extractionTextCreatures = ''
     while (true) {
         const messageExtractCreatures =
-            `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n\n----------\n\n` +
+            `${text}\n\n----------\n\n` +
             'From this text, extract all creatures and enemies that are mentioned, that occur in this room, ' +
             'and that the characters could possibly end up fighting against.\n' +
             'Answer in a single line, containing a concise comma-separated list. ' +
@@ -570,19 +570,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
         extractedCreatures += "\n\n{{monster,frame\n" + ec + "\n}}"
     }
 
-    // const locationThread = `room${roomNumber}_loc`
-    //
-    // const messageLocations =
-    //     `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n\n----------\n\n` +
-    //     "The above text is meant to feature in a D&D module, and the DM uses the text to run the module. " +
-    //     "However, many elements within the room have not yet been given an exact location. " +
-    //     "Propose locations for the most important elements in the room: decor elements, " +
-    //     "items the characters can find, enemies... Answer in a concise bullet list. BE CONCISE!"
-    // const { text: locationsText } = await asker.ask(locationThread, messageLocations)
-    const locationsText = ''
-
-    const fullDescription = `${roomSummariesList[roomNumber - 1]}\n${clarifications}\n${locationsText}`
-        .replace(/\(?CR\s*\d+(\/\d+)?\s*\)?/gi, '')
+    const fullDescription = text.replace(/\(?CR\s*\d+(\/\d+)?\s*\)?/gi, '')
 
     const messageClarifiedRoomDescription =
         `We are designing a D&D dungeon. The room I would like to design in more detail is Room ${roomNumber} (${roomNames[roomNumber - 1]}):\n` +
