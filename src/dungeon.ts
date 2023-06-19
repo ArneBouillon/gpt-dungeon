@@ -10,6 +10,7 @@ import process from 'node:process';
 
 process.on('exit', (code) => {
     console.log(`About to exit with code: ${code}`);
+    console.log(new Error().stack)
 });
 
 const asker = new util.ChatGPTAsker()
@@ -628,7 +629,6 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
 //
 // for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
     const { text: clarifiedRoomText } = await fancyAsker.ask(getTempThread(), finalMessages[roomNumber - 1])
-    console.log(clarifiedRoomText.split('\n')[0])
     finalLambdas[roomNumber - 1](clarifiedRoomText)
 }
 
