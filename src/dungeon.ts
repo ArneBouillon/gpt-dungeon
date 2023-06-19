@@ -442,7 +442,7 @@ async function detailElement(asker, thread, text, _it) {
 
 async function locations(asker, thread, text, _it) {
     const messageLocations =
-        "The above text is meant to feature in a D&D module, and the DM uses the text to run the module. " +
+        `${text}\n\nThe above text is meant to feature in a D&D module, and the DM uses the text to run the module. ` +
         "However, many elements within the room have not yet been given an exact location. " +
         "Propose locations for the most important elements in the room: decor elements, items the characters can find, enemies... " +
         "Answer in a concise bullet list. BE CONCISE! Each bullet point should concisely detail the location " +
@@ -473,7 +473,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
         const c = await clarifications[clarificationIteration - 1](asker, clarificationThread, text, clarificationIteration)
         text += '\n' + onlyBullets(c)
 
-        if (clarificationIteration >= 2 && text.length > 10_000) break
+        if (clarificationIteration >= 2 && text.length > 8_000) break
     }
 
     const extractionThreadItems = `room${roomNumber}_extract_i`
