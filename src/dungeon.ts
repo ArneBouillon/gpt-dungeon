@@ -6,10 +6,15 @@ import assert from 'assert'
 import * as fs from 'fs'
 import { getTempThread } from "./util.js"
 
-import process from 'node:process';
+import process from 'node:process'
 
 process.on('exit', (code) => {
     console.log(`About to exit with code: ${code}`)
+    console.log(new Error().stack)
+})
+
+process.on('unhandledRejection', (reason, promise) => {
+    console.log('Unhandled rejection at:', promise, 'reason:', reason)
     console.log(new Error().stack)
 })
 
@@ -574,7 +579,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
             "Update the creature's stat block with these improvements. " +
             "Ensure element of the stat block is in the correct place, and information is not repeated. " +
             "Do not add notes talking about how you updated the stat block!"
-        const { text: ec } = asker.ask(extractionThreadCreatures, messageCreatureUpdated)
+        const { text: ec } = await asker.ask(extractionThreadCreatures, messageCreatureUpdated)
         asker.rollback(extractionThreadCreatures)
         asker.rollback(extractionThreadCreatures)
         extractedCreatures += "\n\n{{monster,frame\n" + ec + "\n}}"

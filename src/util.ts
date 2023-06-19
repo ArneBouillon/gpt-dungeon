@@ -2,7 +2,7 @@ import {ChatGPTUnofficialProxyAPI, ChatMessage} from 'chatgpt'
 import * as fs from 'fs'
 import clipboard from 'clipboardy'
 
-export { ChatGPTAsker, PromptAsker, getTempThread }
+export { ChatGPTAsker, PromptAsker, getTempThread, sleep }
 
 let stdin = fs.openSync("/dev/stdin","rs");
 
@@ -124,7 +124,7 @@ class ChatGPTAsker implements Asker {
         let attempts = 0
         while (true) {
             try {
-                await sleep(3000)
+                await sleep(10000)
                 res = await thread.api.sendMessage(message, options)
                 break
             } catch(err) {
