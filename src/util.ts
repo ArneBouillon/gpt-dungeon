@@ -120,11 +120,11 @@ class ChatGPTAsker implements Asker {
         const thread = this.threads.get(threadID)!
 
         const options = thread.getOptions()
-        let res;
-        let attempts = 0;
+        let res
+        let attempts = 0
         while (true) {
             try {
-                await sleep(1000)
+                await sleep(3000)
                 res = await thread.api.sendMessage(message, options)
                 break
             } catch(err) {
@@ -132,7 +132,11 @@ class ChatGPTAsker implements Asker {
                 attempts++
                 if (attempts >= 100 || (attempts >= 10 && !`${err}`.includes('non-whitespace'))) {
                     console.log("Errors keep coming, I'm going to stop retrying now!")
-                    throw err
+                    const retry = prompt("Do you want to keep going anyway? [y/n]\n")
+                    if (retry.includes('y'))
+                        attempts = 0
+                    else
+                        throw err
                 } else {
                     console.log(`Errored; attempt ${attempts + 1} coming up`)
                 }

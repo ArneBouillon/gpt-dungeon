@@ -9,9 +9,9 @@ import { getTempThread } from "./util.js"
 import process from 'node:process';
 
 process.on('exit', (code) => {
-    console.log(`About to exit with code: ${code}`);
+    console.log(`About to exit with code: ${code}`)
     console.log(new Error().stack)
-});
+})
 
 const asker = new util.ChatGPTAsker()
 
@@ -557,12 +557,26 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
             `For the ${creature} above, provide a STANDARD D&D module entry in Markdown (Brewdown) style. ` +
             "Use ## for the title (which should probably be singular, unless the creature is a swarm). " +
             "Give a stat block (be concise! Avoid giving information that is unlikely to be needed. " +
-            "Don't include a description!) and include a table of ability stats. " +
+            "Don't include a description!) and include a table that only contains the 6 ability stats. " +
             "The party is level 3; the combination of creatures in this room (pay attention to their amounts!) " +
             "should be very challenging, but of course not completely deadly to a level-3 party. " +
             "GENERATE STATS AND CHALLENGE RATINGS THAT REFLECT THIS (and potentially generate cool abilities to offset low stats). " +
             "REPLY ONLY WITH THE ENTRY! NO OTHER TEXT!"
-        const { text: ec } = await asker.ask(extractionThreadCreatures, messageExtractedCreatures)
+        await asker.ask(extractionThreadCreatures, messageExtractedCreatures)
+
+        const messageCreatureImprovements =
+            "Do you see any major flaws to this creature? Think both mechanically and in terms of the module text. " +
+            "Keep the creature's CR, and ensure its power level corresponds to that CR. " +
+            "Just list potential improvements, don't give me an updated version yet. Be very specific!"
+        await asker.ask(extractionThreadCreatures, messageCreatureImprovements)
+
+        const messageCreatureUpdated =
+            "Update the creature's stat block with these improvements. " +
+            "Ensure element of the stat block is in the correct place, and information is not repeated. " +
+            "Do not add notes talking about how you updated the stat block!"
+        const { text: ec } = asker.ask(extractionThreadCreatures, messageCreatureUpdated)
+        asker.rollback(extractionThreadCreatures)
+        asker.rollback(extractionThreadCreatures)
         extractedCreatures += "\n\n{{monster,frame\n" + ec + "\n}}"
     }
 
