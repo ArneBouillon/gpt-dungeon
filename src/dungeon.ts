@@ -6,6 +6,12 @@ import assert from 'assert'
 import * as fs from 'fs'
 import { getTempThread } from "./util.js"
 
+import process from 'node:process';
+
+process.on('exit', (code) => {
+    console.log(`About to exit with code: ${code}`);
+});
+
 const asker = new util.ChatGPTAsker()
 
 const fancyAsker = new util.ChatGPTAsker('gpt-4')
@@ -20,7 +26,7 @@ function onlyBullets(text) {
         res = lines.slice(1).join('\n').trim()
         lines = res.split('\n')
     }
-    if (lines[lines.length - 2].trim() == '' && lines[lines.length - 1].trim()[0] != '-') {
+    if (lines.length > 1 && lines[lines.length - 2].trim() == '' && lines[lines.length - 1].trim()[0] != '-') {
         res = lines.slice(0, -2).join('\n').trim()
     }
 
@@ -40,12 +46,12 @@ function parseOptions(argv) {
     }
 
     return {
-        keywords: 'Circus, Old, Swords, Animals, Kobolds',
+        keywords: 'Stables, Eccentric, Golem, Rocks, Armadillo',
         numRooms: 8,
         combatDifficulty: 'high', // 'low', 'medium', 'high'
-        lootValue: 'medium', // 'low', 'medium', 'high'
-        wackiness: 'high', // 'low', 'medium', 'high'
-        outputName: 'dungeon17.txt',
+        lootValue: 'high', // 'low', 'medium', 'high'
+        wackiness: 'low', // 'low', 'medium', 'high'
+        outputName: 'dungeon18.txt',
     }
 }
 
