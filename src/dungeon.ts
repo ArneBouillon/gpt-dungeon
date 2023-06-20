@@ -526,7 +526,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
         filteredItems = []
     } else {
         items = extractionTextItems.split(',').map(s => s.trim())
-        filteredItems = items.filter(item => !allItems.map(s => s.toLowerCase()).includes(item.toLowerCase()))
+        filteredItems = items.filter(item => !allItems.map(s => s.toLowerCase().replace(/s/g, '')).includes(item.toLowerCase().replace(/s/g, '')))
         allItems = allItems.concat(filteredItems)
     }
 
@@ -570,7 +570,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
         filteredCreatures = []
     } else {
         creatures = extractionTextCreatures.split(',').map(s => s.replace(/\(?CR\s*\d+(\/\d+)?\s*\)?/gi, '').trim())
-        filteredCreatures = creatures.filter(creature => !allCreatures.map(s => s.toLowerCase()).includes(creature.toLowerCase()))
+        filteredCreatures = creatures.filter(creature => !allCreatures.map(s => s.toLowerCase().replace(/s/g, '')).includes(creature.toLowerCase().replace(/s/g, '')))
         allCreatures = allCreatures.concat(filteredCreatures)
     }
 
