@@ -414,8 +414,8 @@ async function clarify(asker, thread, text, it) {
     await asker.ask(thread, messageClarify)
 
     const messageClarifyCorrect =
-        "Did you make anything up about other rooms in the dungeon? Repeat your specifics from above VERBATIM, " +
-        "but LEAVE OUT ANYTHING YOU MADE UP ABOUT OTHER ROOMS."
+        "Did you make anything up about other rooms in the dungeon? Repeat your filled-in specific suggestions " +
+        "from your last answer VERBATIM, but LEAVE OUT ANYTHING YOU MADE UP ABOUT OTHER ROOMS."
     await asker.ask(thread, messageClarifyCorrect)
 
     const messageClarifyConcise =
