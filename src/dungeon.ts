@@ -20,7 +20,7 @@ process.on('unhandledRejection', (reason, promise) => {
 
 const asker = new util.ChatGPTAsker()
 
-const fancyAsker = new util.ChatGPTAsker('gpt-4')
+const fancyAsker = new util.PromptAsker() // new util.ChatGPTAsker('gpt-4')
 
 const THREAD_MAIN = 'main'
 const THREAD_LORE = 'lore'
@@ -551,7 +551,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
         creatures = []
         filteredCreatures = []
     } else {
-        creatures = extractionTextCreatures.split(',').map(s => s.trim())
+        creatures = extractionTextCreatures.split(',').map(s => s.replace(/\(?CR\s*\d+(\/\d+)?\s*\)?/gi, '').trim())
         filteredCreatures = creatures.filter(creature => !allCreatures.map(s => s.toLowerCase()).includes(creature.toLowerCase()))
         allCreatures = allCreatures.concat(filteredCreatures)
     }
@@ -643,7 +643,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
         "Any clues given in the bullets above should be PRESERVED IN DETAIL. ENSURE ALL THE BULLET POINTS ABOVE ARE ADDRESSED. " +
         "Again, include all quotes, texts, and clues verbatim! Give as many details as you can!"
     finalMessages.push(messageClarifiedRoomFeatures)
-    finalLambdas.push(clarifiedRoomFeaturesText => roomTexts.push(clarifiedRoomDescriptionText + '\n\n' + clarifiedRoomFeaturesText.split('\n').slice(1).join('\n') + '\n\n' + extractedItems + '\n\n' + extractedCreatures))
+    finalLambdas.push(clarifiedRoomFeaturesText => roomTexts.push(clarifiedRoomDescriptionText + '\n\n' + clarifiedRoomFeaturesText.trim().split('\n').slice(1).join('\n') + '\n\n' + extractedItems + '\n\n' + extractedCreatures))
 // }
 //
 // for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {

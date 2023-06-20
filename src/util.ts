@@ -114,6 +114,7 @@ class ChatGPTAsker implements Asker {
     }
 
     public async ask(threadID, message) {
+	console.log("Starting ask!")
         ++this.count
 
         if (!this.threads.has(threadID)) this.threads.set(threadID, new ChatGPTThread(this.apis))
@@ -143,6 +144,7 @@ class ChatGPTAsker implements Asker {
             }
         }
         thread.add(message, res)
+	console.log("Ending ask!")
         return {
             text: res.text,
         }
