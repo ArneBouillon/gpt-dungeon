@@ -123,7 +123,7 @@ const { text: context } = await asker.ask(missionThread, messageContext)
 
 const messageMotivations =
     "Now suggest a few interesting potential motivations for the characters to accept and complete this mission. " +
-    "Don't propose too many. ANSWER ONLY WITH A NUMBERED LIST OF MOTIVATIONS; NO OTHER TEXT."
+    `Make them very specific and concrete!${wackyModifier} Don't propose too many. ANSWER ONLY WITH A NUMBERED LIST OF MOTIVATIONS; NO OTHER TEXT.`
 const { text: motivations } = await asker.ask(missionThread, messageMotivations)
 
 const numRoomsEnemy = (options.combatDifficulty == 'medium' ? 1 : 0)
@@ -251,12 +251,14 @@ const messageInterRoomsGlobal =
     "to not be a part of the rooms, but still to apply to them. This could, for example, " +
     "be a hidden network of shafts to move through, an environmental mechanic, " +
     "a timer that triggers something if the characters wait too long... Truly anything qualifies. " +
-    "Be sure to incorporate the effect of this inter-room element on all the separate rooms. Make the element unique and impactful."
+    "Be sure to incorporate the effect of this inter-room element on all the separate rooms. " +
+    "Ensure the mechanics are completely fleshed out! Make the element unique, varied, and impactful."
 const { text: interRooms3 } = await fancyAsker.ask(THREAD_LORE, messageInterRoomsGlobal)
 fancyAsker.rollback(THREAD_LORE)
 
 const interRoomTexts: string[] = []; for (let i = 1; i <= options.numRooms; ++i) interRoomTexts.push("")
-for (let interRoom of (interRooms1 + '---' + interRooms2 + '---' + interRooms3).split('---').map(ir => ir.trim()).filter(s => s.length != 0)) {
+const interRooms = (interRooms1 + '---' + interRooms2 + '---' + interRooms3).split('---').map(ir => ir.trim()).filter(s => s.length != 0)
+for (let interRoom of interRooms) {
     const t = getTempThread()
     const messageRelevantRooms =
         `${interRoom}\n\n----------\n\nWe're designing a D&D dungeon with ${options.numRooms} rooms: ${roomNamesString}\n\n` +
@@ -265,7 +267,7 @@ for (let interRoom of (interRooms1 + '---' + interRooms2 + '---' + interRooms3).
     const messageRelevantRoomsList =
         "Give me the relevant rooms again, but JUST THEIR NUMBERS, COMMA-SEPARATED. NOTHING ELSE."
     const { text: relevantRoomsText } = await asker.ask(t, messageRelevantRoomsList)
-    const relevantRoomNumbers = relevantRoomsText.split(',').map(s => Number(s.trim()))
+    const relevantRoomNumbers = relevantRoomsText.split(',').map(s => Number(s.trim())).sort()
 
     asker.rollback(t)
     const messageInterRoomSummary =
@@ -278,6 +280,22 @@ for (let interRoom of (interRooms1 + '---' + interRooms2 + '---' + interRooms3).
     asker.rollback(t)
 
     for (let roomNumber of relevantRoomNumbers) {
+        let summary
+        if (roomNumber === relevantRoomNumbers[0] && interRoom === interRooms[0]) {
+            const messageInterRoomDetails =
+                "Give a detailed mechanical explanation of the inter-room element, in CONCISE BULLET POINTS. " +
+                "INCLUDE ALL THE MECHANICS. DO NOT GIVE AN OVERVIEW FOR INDIVIDUAL ROOMS!\n\n" +
+                "For everything you mention, mention both the name and the number of the room it's in! However, " +
+                "not a single bullet should be dedicated to just a single room. Instead, you should have one (1!) " +
+                "bullet that gives a high-level summary of the kinds of effects the inter-room element can have in the rooms.\n\n" +
+                "DO NOT USE THE WORDS \"inter-room element\" OR \"prerequisite\" IN YOUR REPLY."
+            const { text: detailedSummary } = await asker.ask(t, messageInterRoomDetails)
+            asker.rollback(t)
+            summary = detailedSummary
+        } else {
+            summary = irSummary
+        }
+
         const messageInterRoomRoom =
             `List only the information relevant to Room ${roomNumber} (${roomNames[roomNumber - 1]}). In each bullet point, ` +
             `be very clear to what extent the responsibility of Room ${roomNumber}'s designer goes! For instance, ` +
@@ -297,7 +315,7 @@ for (let interRoom of (interRooms1 + '---' + interRooms2 + '---' + interRooms3).
             "Keep mentioning who is responsible! Keep all details, especially literal quotes and passages! " +
             "Do not remove any objects, creatures or clues! Keep the bullet points and their order intact!"
         const { text: interRoomRoomText } = await asker.ask(t, messageInterRoomCompress)
-        interRoomTexts[roomNumber - 1] += "- " + irSummary + "\n" + onlyBullets(interRoomRoomText) + "\n"
+        interRoomTexts[roomNumber - 1] += "- " + summary + "\n" + onlyBullets(interRoomRoomText) + "\n"
 
         asker.rollback(t)
         asker.rollback(t)

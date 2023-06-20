@@ -4,7 +4,7 @@ import clipboard from 'clipboardy'
 
 export { ChatGPTAsker, PromptAsker, getTempThread, sleep }
 
-let stdin = fs.openSync("/dev/stdin","rs");
+let stdin = fs.openSync("/dev/stdin","rs")
 
 let tempThreadCount = 0
 function getTempThread() {
@@ -14,20 +14,20 @@ function getTempThread() {
 
 function sleep(ms) {
     return new Promise((resolve) => {
-        setTimeout(resolve, ms);
-    });
+        setTimeout(resolve, ms)
+    })
 }
 
 const prompt = function(message) {
-    fs.writeSync(process.stdout.fd, message);
-    let s = '';
-    let buf = Buffer.alloc(1);
-    fs.readSync(stdin,buf,0,1,null);
-    while (buf[0] != 92) { // Stop parsing input at a backslash character
-        s += buf;
-        fs.readSync(stdin,buf,0,1,null);
+    fs.writeSync(process.stdout.fd, message)
+    let s = ''
+    let buf = Buffer.alloc(1)
+    fs.readSync(stdin,buf,0,1,null)
+    while (buf[0] !== 92) { // Stop parsing input at a backslash character
+        s += buf
+        fs.readSync(stdin,buf,0,1,null)
     }
-    return s;
+    return s
 }
 
 
