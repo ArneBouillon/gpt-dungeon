@@ -591,11 +591,12 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
         const messageCreatureImprovements =
             "Do you see any major flaws to this creature? Think both mechanically and in terms of the module text. " +
             "Keep the creature's CR, and ensure its power level corresponds to that CR. " +
-            "Just list potential improvements, don't give me an updated version yet. Be very specific!"
+            "Just list potential improvements, don't give me an updated version yet. Be very specific! " +
+            "Suggest specific and concrete improvements, no vague generalities such as \"Consider adding more abilities\"."
         await asker.ask(extractionThreadCreatures, messageCreatureImprovements)
 
         const messageCreatureUpdated =
-            "Update the creature's stat block with these improvements. " +
+            "Update the creature's stat block, adding in these improvements. " +
             "Ensure element of the stat block is in the correct place, and information is not repeated. " +
             "Do not add notes talking about how you updated the stat block! Do not add any notes to the stat block, " +
             "do not add DM tips, do not add a message saying the design can still be adapted by the DM. No notes!"
