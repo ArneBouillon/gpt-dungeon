@@ -495,7 +495,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
     for (let clarificationIteration = 1; clarificationIteration <= clarifications.length; ++clarificationIteration) {
         const clarificationThread = `room${roomNumber}_c_it_${clarificationIteration}`
         const c = await clarifications[clarificationIteration - 1](asker, clarificationThread, text, clarificationIteration)
-        text += '\n' + onlyBullets(c)
+        text += '\n' + onlyBullets(c).replace(/^\d+[.:]/gm, '-')
 
         if (clarificationIteration >= 2 && text.length > 8_000) break
     }
