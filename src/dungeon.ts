@@ -20,7 +20,8 @@ process.on('unhandledRejection', (reason, promise) => {
 
 const asker = new util.ChatGPTAsker()
 
-const fancyAsker = new util.PromptAsker() // new util.ChatGPTAsker('gpt-4')
+// const fancyAsker = new util.PromptAsker()
+const fancyAsker = new util.ChatGPTAsker('gpt-4')
 
 const THREAD_MAIN = 'main'
 const THREAD_LORE = 'lore'
@@ -52,12 +53,12 @@ function parseOptions(argv) {
     }
 
     return {
-        keywords: 'Stables, Eccentric, Golem, Rocks, Armadillo',
+        keywords: 'Stables, Eccentric, Exotic animals, Collector, Parts',
         numRooms: 8,
         combatDifficulty: 'high', // 'low', 'medium', 'high'
-        lootValue: 'high', // 'low', 'medium', 'high'
+        lootValue: 'medium', // 'low', 'medium', 'high'
         wackiness: 'low', // 'low', 'medium', 'high'
-        outputName: 'dungeon18.txt',
+        outputName: 'dungeon19.txt',
     }
 }
 
@@ -281,7 +282,7 @@ for (let interRoom of interRooms) {
 
     for (let roomNumber of relevantRoomNumbers) {
         let summary
-        if (roomNumber === relevantRoomNumbers[0] && interRoom === interRooms[0]) {
+        if (roomNumber === relevantRoomNumbers[0] && interRoom === interRooms[interRooms.length - 1]) {
             const messageInterRoomDetails =
                 "Give a detailed mechanical explanation of the inter-room element, in CONCISE BULLET POINTS. " +
                 "INCLUDE ALL THE MECHANICS. DO NOT GIVE AN OVERVIEW FOR INDIVIDUAL ROOMS!\n\n" +
