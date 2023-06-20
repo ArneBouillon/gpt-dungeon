@@ -394,7 +394,7 @@ async function clarify(asker, thread, text, it) {
         "Pay special attention to whether the characters have all the information and clues needed to progress. " +
         "Also make sure everything is named, and described effects are specified on a mechanical level. " +
         "DO NOT PROPOSE TO ADD NEW ELEMENTS! ONLY ELABORATE ON EXISTING ELEMENTS. BE CONCISE. " +
-        `Give a list of AS MANY UNCLEAR ELEMENTS AS YOU CAN FIND${it == 1 ? " (at least 10, and the more, the better!)" : ""}.`
+        `Give a list of THE 8 MOST IMPORTANT UNCLEAR ELEMENTS YOU CAN FIND.`
     await asker.ask(thread, messageUnclear)
     const messageUnclearFilter =
         "Repeat the unclear elements, but leave out those relating to the overarching story or to interaction between the rooms," +
