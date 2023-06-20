@@ -580,7 +580,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
             `For the ${creature} above, provide a STANDARD D&D module entry in Markdown (Brewdown) style. ` +
             "Use ## for the title (which should probably be singular, unless the creature is a swarm). " +
             "Give a stat block (be concise! Avoid giving information that is unlikely to be needed. " +
-            "Don't include a description!) and include a table that only contains the 6 ability stats. " +
+            "Don't include a description!) and include a table with the 6 ability stats (put nothing else in tables!). " +
             "The party is level 3; the combination of creatures in this room (pay attention to their amounts!) " +
             "should be very challenging, but of course not completely deadly to a level-3 party. " +
             "GENERATE STATS AND CHALLENGE RATINGS THAT REFLECT THIS (and potentially generate cool abilities to offset low stats). " +
@@ -596,7 +596,8 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
         const messageCreatureUpdated =
             "Update the creature's stat block with these improvements. " +
             "Ensure element of the stat block is in the correct place, and information is not repeated. " +
-            "Do not add notes talking about how you updated the stat block!"
+            "Do not add notes talking about how you updated the stat block! Do not add any notes to the stat block, " +
+            "do not add DM tips, do not add a message saying the design can still be adapted by the DM. No notes!"
         const { text: ec } = await asker.ask(extractionThreadCreatures, messageCreatureUpdated)
         asker.rollback(extractionThreadCreatures)
         asker.rollback(extractionThreadCreatures)
