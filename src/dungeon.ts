@@ -615,8 +615,8 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
         "Overhaul the text to be concise and informative, containing all the information needed for the DM to run the session, " +
         "AND NOTHING MORE. If the room contains enemies, do not describe them in any detail. WRITE IN THE STYLE OF A D&D MODULE!\n" +
         `- State the title: ## Room ${roomNumber}: room_name\n` +
-        "- START WITH A DESCRIPTION FOR THE PLAYERS, *given in italics*, describing what they see, and the ambiance of the room.\n" +
-        "- THEN GIVE A FULL DESCRIPTION OF THE ROOM. Be complete and visual: describe the lay-out of the room and detail what is present. " +
+        "- START WITH A DESCRIPTION FOR THE PLAYERS, *given in italics*, describing what they see, and the ambiance of the room. Use the second person: \"you\".\n" +
+        "- THEN GIVE A FULL DESCRIPTION OF THE ROOM. Be complete and visual: describe the lay-out of the room and detail what is present. Do not use second person here; be descriptive instead! " +
             "Pay special attention to the locations and descriptions of general areas in the room. Be extensive! " +
             "Ensure a DM reading this section gets a good idea of what the room looks like on first sight!\n" +
         "- GIVE A LIST OF NOTABLE FEATURES. Name this section ### Notable Features. Note that this means decor elements and features of the room, not items. " +
