@@ -580,7 +580,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
             `For the ${creature} above, provide a STANDARD D&D module entry in Markdown (Brewdown) style. ` +
             "Use ## for the title (which should probably be singular, unless the creature is a swarm). " +
             "Give a stat block (be concise! Avoid giving information that is unlikely to be needed. " +
-            "Don't include a description!) and include a table with the 6 ability stats (put nothing else in tables!). " +
+            "Don't include a description!) and include a table with the 6 ability stats (put all other things outside of tables). " +
             "The party is level 3; the combination of creatures in this room (pay attention to their amounts!) " +
             "should be very challenging, but of course not completely deadly to a level-3 party. " +
             "GENERATE STATS AND CHALLENGE RATINGS THAT REFLECT THIS (and potentially generate cool abilities to offset low stats). " +
