@@ -125,7 +125,7 @@ class ChatGPTAsker implements Asker {
         let attempts = 0
         while (true) {
             try {
-                await sleep(10000)
+                await sleep(3000)
                 res = await thread.api.sendMessage(message, options)
                 break
             } catch(err) {

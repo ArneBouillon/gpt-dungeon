@@ -668,7 +668,13 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
 // }
 //
 // for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
-    const { text: clarifiedRoomText } = await fancyAsker.ask(getTempThread(), finalMessages[roomNumber - 1])
+    const thread = getTempThread()
+    let { text: clarifiedRoomText } = await fancyAsker.ask(thread, finalMessages[roomNumber - 1])
+    clarifiedRoomText = clarifiedRoomText.trim()
+    if (!".!?\"'”“".includes(clarifiedRoomText[clarifiedRoomText.length - 1])) {
+        const { text: addition } = await fancyAsker.ask(thread, "Continue")
+        clarifiedRoomText += " " + addition.trim()
+    }
     finalLambdas[roomNumber - 1](clarifiedRoomText)
 }
 
