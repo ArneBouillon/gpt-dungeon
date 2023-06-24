@@ -7,6 +7,7 @@ import * as fs from 'fs'
 import { getTempThread } from "./util.js"
 
 import process from 'node:process'
+import { parseArgs } from 'node:util'
 
 process.on('exit', (code) => {
     console.log(`About to exit with code: ${code}`)
@@ -26,6 +27,10 @@ const fancyAsker = new util.ChatGPTAsker('gpt-4')
 const THREAD_MAIN = 'main'
 const THREAD_LORE = 'lore'
 
+function randomChoice(arr) {
+    return arr[Math.floor(arr.length * Math.random())];
+}
+
 function onlyBullets(text) {
     let res = text.trim()
     let lines = res.split('\n')
@@ -40,29 +45,40 @@ function onlyBullets(text) {
     return res
 }
 
-function parseOptions(argv) {
-    if (argv.length > 2) {
-        const keywords = argv[2].split(',').join(', ')
-        const numRooms = Number(argv[3])
-        const combatDifficulty = argv[4] // 'low', 'medium', 'high'
-        const lootValue = argv[5] // 'low', 'medium', 'high'
-        const wackiness = argv[6] // 'low', 'medium', 'high'
-        const outputName = argv[7]
-
-        return { keywords, numRooms, combatDifficulty, lootValue, wackiness, outputName }
-    }
-
-    return {
-        keywords: 'Stables, Eccentric, Exotic animals, Collector, Parts',
-        numRooms: 8,
-        combatDifficulty: 'high', // 'low', 'medium', 'high'
-        lootValue: 'medium', // 'low', 'medium', 'high'
-        wackiness: 'low', // 'low', 'medium', 'high'
-        outputName: 'dungeon19.txt',
-    }
+const { values: givenOptions } = parseArgs({ args: process.argv.slice(2), options: {
+    keywords: {
+        type: "string",
+        short: "k",
+    },
+    numRooms: {
+        type: "string",
+        short: "r",
+    },
+    combatDifficulty: {
+        type: "string",
+        short: "c",
+    },
+    lootValue: {
+        type: "string",
+        short: "l",
+    },
+    wackiness: {
+        type: "string",
+        short: "w",
+    },
+    outputName: {
+        type: "string",
+        short: "o",
+    },
+} })
+const options = {
+    keywords: givenOptions.keywords || 'Stables, Eccentric, Exotic animals, Collector, Parts',
+    numRooms: Number(givenOptions.numRooms) || 8,
+    combatDifficulty: givenOptions.combatDifficulty || randomChoice(["low", "medium", "high"]),
+    lootValue: givenOptions.lootValue || randomChoice(["low", "medium", "high"]),
+    wackiness: givenOptions.wackiness || randomChoice(["low", "medium", "high"]),
+    outputName: givenOptions.outputName || new Date().toISOString().replaceAll(/:T/g, '-').replace(/\..+/, '')
 }
-
-const options = parseOptions(process.argv)
 
 const combatModifier =
     options.combatDifficulty == 'low' ?
@@ -150,7 +166,8 @@ for (let roomBatch = 1; roomBatch <= Math.ceil(options.numRooms / 3); ++roomBatc
             `PRECEDE each enemy with its CR (e.g. a CR X bandit). To determine the DC, ${combatModifier}.\n` +
             "  -> Information that the characters can learn here.\n\n" +
             "Again, make the rooms and their contents inspired, distinct, and unique. " +
-            `Do not forget to base yourself on the history and current state of the location!${wackyModifier} ` +
+            "Do not forget to base yourself on the history and current state of the location! " +
+            `If you mentioned current inhabitants, ensure to include them in the rooms!${wackyModifier} ` +
             `Number the room entries from 1 to ${options.numRooms}, and place three dashes after each: ---.` +
             `${options.numRooms > 3 ? ` Give the first 3 out of the ${options.numRooms} rooms.` : ''}`
             :
