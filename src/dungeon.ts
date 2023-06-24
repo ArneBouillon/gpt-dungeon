@@ -195,7 +195,15 @@ const messageConnectionsMarks =
     `Only use this mark with the ${options.numRooms} rooms described above and MAKE SURE ALL CONNECTIONS ARE MARKED!`
 const { text: marksText } = await asker.ask(connectionsThread, messageConnectionsMarks)
 
-const connections = [...marksText.matchAll(/\[Connection:\s?(\d+)\s?-\s?(\d+)\s?]/gi)].map(match => [match[1], match[2]])
+const messageConnectionsMarksCheck =
+    "Repeat your answer, but this time, pay extra close attention that you mark all the connections that the text describes! " +
+    "Every path, connection, door, route, secret exit... must be marked!"
+const { text: marksTextChecked } = await asker.ask(connectionsThread, messageConnectionsMarksCheck)
+asker.rollback(connectionsThread)
+
+const connections = [...(marksText + marksTextChecked).matchAll(/\[Connections?:\s?(,?\s?\d+\s?-+\s?\d+)+\s?]/gi)].flatMap(
+    match => [...match[0].matchAll(/(\d+)\s?-+\s?(\d+)/g)].map(range => [range[1], range[2]])
+)
 graph.makeUndirectedGraph([...Array(options.numRooms).keys()].map(i => i + 1), connections, `graph-${options.outputName}`)
 
 const connectionTexts: string[] = []
