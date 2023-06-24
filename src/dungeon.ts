@@ -508,50 +508,6 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
         if (clarificationIteration >= 2 && text.length > 8_000) break
     }
 
-    const extractionThreadItems = `room${roomNumber}_extract_i`
-
-    let extractionTextItems = ''
-    while (true) {
-        const messageExtractItems =
-            `${text}\n\n----------\n\n` +
-            'From this text, extract all items, weapons and harvestables that would benefit from a separate entry ' +
-            '(e.g. due to a magic effect or some other unusual quality). Normal coins or chests should not be mentioned.\n\n' +
-            'Answer in a single line, containing a concise comma-separated list. ' +
-            'Only include names, no details. If nothing matches the given category, put "None" instead.'
-        let { text: eti } = await asker.ask(extractionThreadItems, messageExtractItems)
-
-        if ((eti.includes('None') || eti.includes('none')) && eti.includes(',')) {
-            asker.rollback(extractionThreadItems)
-        } else {
-            extractionTextItems = eti
-            break
-        }
-    }
-
-    let items: string[] = []
-    let filteredItems: string[] = []
-    if (extractionTextItems.includes('None') || extractionTextItems.includes('none')) {
-        items = []
-        filteredItems = []
-    } else {
-        items = extractionTextItems.split(',').map(s => s.trim())
-        filteredItems = items.filter(item => !allItems.map(s => s.toLowerCase().replace(/s/g, '')).includes(item.toLowerCase().replace(/s/g, '')))
-        allItems = allItems.concat(filteredItems)
-    }
-
-    let extractedItems = ''
-    for (let item of filteredItems) {
-        const messageExtractedItems =
-            `For the ${item}, provide a STANDARD D&D module entry in Markdown (Brewdown) style, ` +
-            "using #### for the title (which should probably be singular). " +
-            "First list the weight and value; then describe the properties in a single, concise text (no bullet points!). " +
-            "Be concise yet specific and include PRECISE D&D MECHANICS WHEREVER POSSIBLE! " +
-            `If the object is minor within the scope of the room, do not give it too many properties.${lootModifier} ` +
-            "REPLY ONLY WITH THE ENTRY! NO OTHER TEXT!"
-        const { text: ei } = await asker.ask(extractionThreadItems, messageExtractedItems)
-        extractedItems += "\n\n" + ei
-    }
-
     const extractionThreadCreatures = `room${roomNumber}_extract_c`
 
     let extractionTextCreatures = ''
@@ -612,6 +568,51 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
         asker.rollback(extractionThreadCreatures)
         asker.rollback(extractionThreadCreatures)
         extractedCreatures += "\n\n{{monster,frame\n" + ec + "\n}}"
+    }
+
+
+    const extractionThreadItems = `room${roomNumber}_extract_i`
+
+    let extractionTextItems = ''
+    while (true) {
+        const messageExtractItems =
+            `${text}\n\n----------\n\n` +
+            'From this text, extract all items, weapons and harvestables that would benefit from a separate entry ' +
+            '(e.g. due to a magic effect or some other unusual quality). Normal coins or chests should not be mentioned.\n\n' +
+            'Answer in a single line, containing a concise comma-separated list. ' +
+            'Only include names, no details. If nothing matches the given category, put "None" instead.'
+        let { text: eti } = await asker.ask(extractionThreadItems, messageExtractItems)
+
+        if ((eti.includes('None') || eti.includes('none')) && eti.includes(',')) {
+            asker.rollback(extractionThreadItems)
+        } else {
+            extractionTextItems = eti
+            break
+        }
+    }
+
+    let items: string[] = []
+    let filteredItems: string[] = []
+    if (extractionTextItems.includes('None') || extractionTextItems.includes('none')) {
+        items = []
+        filteredItems = []
+    } else {
+        items = extractionTextItems.split(',').map(s => s.trim())
+        filteredItems = items.filter(item => !(allItems.concat(allCreatures)).map(s => s.toLowerCase().replace(/s/g, '')).includes(item.toLowerCase().replace(/s/g, '')))
+        allItems = allItems.concat(filteredItems)
+    }
+
+    let extractedItems = ''
+    for (let item of filteredItems) {
+        const messageExtractedItems =
+            `For the ${item}, provide a STANDARD D&D module entry in Markdown (Brewdown) style, ` +
+            "using #### for the title (which should probably be singular). " +
+            "First list the weight and value; then describe the properties in a single, concise text (no bullet points!). " +
+            "Be concise yet specific and include PRECISE D&D MECHANICS WHEREVER POSSIBLE! " +
+            `If the object is minor within the scope of the room, do not give it too many properties.${lootModifier} ` +
+            "REPLY ONLY WITH THE ENTRY! NO OTHER TEXT!"
+        const { text: ei } = await asker.ask(extractionThreadItems, messageExtractedItems)
+        extractedItems += "\n\n" + ei
     }
 
     const fullDescription = text.replace(/\(?CR\s*\d+(\/\d+)?\s*\)?/gi, '')
