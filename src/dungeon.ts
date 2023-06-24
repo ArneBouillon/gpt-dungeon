@@ -46,33 +46,15 @@ function onlyBullets(text) {
 }
 
 const { values: givenOptions } = parseArgs({ args: process.argv.slice(2), options: {
-    keywords: {
-        type: "string",
-        short: "k",
-    },
-    numRooms: {
-        type: "string",
-        short: "r",
-    },
-    combatDifficulty: {
-        type: "string",
-        short: "c",
-    },
-    lootValue: {
-        type: "string",
-        short: "l",
-    },
-    wackiness: {
-        type: "string",
-        short: "w",
-    },
-    outputName: {
-        type: "string",
-        short: "o",
-    },
+    keywords: { type: "string", short: "k" },
+    numRooms: { type: "string", short: "r" },
+    combatDifficulty: { type: "string", short: "c" },
+    lootValue: { type: "string", short: "l" },
+    wackiness: { type: "string", short: "w" },
+    outputName: { type: "string", short: "o" },
 } })
 const options = {
-    keywords: givenOptions.keywords || 'Stables, Eccentric, Exotic animals, Collector, Parts',
+    keywords: givenOptions.keywords || null,
     numRooms: Number(givenOptions.numRooms) || 8,
     combatDifficulty: givenOptions.combatDifficulty || randomChoice(["low", "medium", "high"]),
     lootValue: givenOptions.lootValue || randomChoice(["low", "medium", "high"]),
@@ -109,8 +91,8 @@ const messageDungeon =
     "Include the location/building the characters will explore and a brief description of the setting " +
     "(inhabitants, context, positioning) of the place. Ensure to keep the scope very limited. " +
     "The less larger narrative there is to the story, the better. " +
-    "BE CREATIVE AND DON'T STICK TO CLICHES! ANSWER IN A SINGLE SENTENCE. " +
-    `Use the following keywords: ${options.keywords}`
+    "BE CREATIVE AND DON'T STICK TO CLICHES! ANSWER IN A SINGLE SENTENCE." +
+    (options.keywords ? ` Use the following keywords: ${options.keywords}` : '')
 const { text: dungeon } = await asker.ask(THREAD_MAIN, messageDungeon)
 
 const messageHistory =
