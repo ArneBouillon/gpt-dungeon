@@ -691,7 +691,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
     let { text: clarifiedRoomText } = await fancyAsker.ask(thread, finalMessages[roomNumber - 1])
     clarifiedRoomText = clarifiedRoomText.trim()
     if (!".!?\"'”“".includes(clarifiedRoomText[clarifiedRoomText.length - 1])) {
-        const { text: addition } = await fancyAsker.ask(thread, "Continue")
+        const { text: addition } = await fancyAsker.ask(thread, "", "continue")
         clarifiedRoomText += " " + addition.trim()
     }
     finalLambdas[roomNumber - 1](clarifiedRoomText)

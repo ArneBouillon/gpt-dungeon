@@ -3,7 +3,7 @@ import clipboard from 'clipboardy'
 
 import { execFileSync } from 'child_process'
 
-export { ChatGPTAsker, PromptAsker, getTempThread, sleep }
+export { ChatGPTAsker, PromptAsker, getTempThread }
 
 let stdin = fs.openSync("/dev/stdin","rs")
 
@@ -11,12 +11,6 @@ let tempThreadCount = 0
 function getTempThread() {
     tempThreadCount++
     return `temp_${tempThreadCount}`
-}
-
-function sleep(ms) {
-    return new Promise((resolve) => {
-        setTimeout(resolve, ms)
-    })
 }
 
 const prompt = function(message) {
@@ -95,7 +89,7 @@ class ChatGPTAsker implements Asker {
         this.model = model
     }
 
-    public async ask(threadID, message) {
+    public async ask(threadID, message, action: string | null = null) {
 	    console.log("Starting ask!")
         ++this.count
 
@@ -112,6 +106,7 @@ class ChatGPTAsker implements Asker {
                 fs.writeFileSync('new-conversation-id.txt', '')
                 fs.writeFileSync('new-parent-message-id.txt', '')
                 fs.writeFileSync('model.txt', this.model)
+                fs.writeFileSync('action.txt', action || "")
 
                 fs.writeFileSync('message.txt', message)
                 fs.writeFileSync('conversation-id.txt', options.conversationId || '')

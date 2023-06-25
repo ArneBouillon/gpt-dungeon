@@ -4,6 +4,7 @@ import { ChatGPTUnofficialProxyAPI } from "chatgpt"
 const token = fs.readFileSync('.token', 'utf-8').trim()
 const model = fs.readFileSync('model.txt', 'utf-8').trim()
 const message = fs.readFileSync('message.txt', 'utf-8').trim()
+const action = fs.readFileSync('action.txt', 'utf-8').trim()
 const parentMessageId = fs.readFileSync('parent-message-id.txt', 'utf-8').trim()
 const conversationId = fs.readFileSync('conversation-id.txt', 'utf-8').trim()
 
@@ -16,9 +17,11 @@ const api = new ChatGPTUnofficialProxyAPI({
     model,
 })
 
-const options = parentMessageId ? { parentMessageId, conversationId } : {}
+const options = parentMessageId ? { parentMessageId, conversationId, ...(action ? { action } : {}) } : {}
+
 const res = await api.sendMessage(message, options)
 
 fs.writeFileSync('output.txt', res.text)
 fs.writeFileSync('new-parent-message-id.txt', res.id!)
 fs.writeFileSync('new-conversation-id.txt', res.conversationId!)
+
