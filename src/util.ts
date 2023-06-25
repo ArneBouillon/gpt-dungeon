@@ -107,24 +107,26 @@ class ChatGPTAsker implements Asker {
         let output, newConversationId, newParentMessageId
         let attempts = 0
         while (true) {
-            fs.writeFileSync('output.txt', '')
-            fs.writeFileSync('new-conversation-id.txt', '')
-            fs.writeFileSync('new-parent-message-id.txt', '')
-            fs.writeFileSync('model.txt', this.model)
+            try {
+                fs.writeFileSync('output.txt', '')
+                fs.writeFileSync('new-conversation-id.txt', '')
+                fs.writeFileSync('new-parent-message-id.txt', '')
+                fs.writeFileSync('model.txt', this.model)
 
-            fs.writeFileSync('message.txt', message)
-            fs.writeFileSync('conversation-id.txt', options.conversationId || '')
-            fs.writeFileSync('parent-message-id.txt', options.parentMessageId || '')
+                fs.writeFileSync('message.txt', message)
+                fs.writeFileSync('conversation-id.txt', options.conversationId || '')
+                fs.writeFileSync('parent-message-id.txt', options.parentMessageId || '')
 
-            execFileSync('./src/ask_chat_gpt.sh')
+                execFileSync('./src/ask_chat_gpt.sh')
 
-            output = fs.readFileSync('output.txt', 'utf-8').trim()
-            if (output) {
-                newConversationId = fs.readFileSync('new-conversation-id.txt', 'utf-8').trim()
-                newParentMessageId = fs.readFileSync('new-parent-message-id.txt', 'utf-8').trim()
+                output = fs.readFileSync('output.txt', 'utf-8').trim()
+                if (output) {
+                    newConversationId = fs.readFileSync('new-conversation-id.txt', 'utf-8').trim()
+                    newParentMessageId = fs.readFileSync('new-parent-message-id.txt', 'utf-8').trim()
 
-                break
-            } else {
+                    break
+                } else throw Error()
+            } catch {
                 attempts++
                 if (attempts >= 20) {
                     console.log("Errors keep coming, I'm going to stop retrying now!")

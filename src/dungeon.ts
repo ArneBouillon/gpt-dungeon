@@ -94,6 +94,8 @@ if (!options.keywords) {
     options.keywords = keywordsText.split('\n')[6].split(' ').slice(1).join(' ')
 }
 
+console.log(options)
+
 const messageDungeon =
     "We are going to design a D&D dungeon (not necessarily a literal dungeon) for third-level characters. " +
     "We will take things step-by-step, going from a high abstraction level to a lower one. " +
@@ -197,7 +199,7 @@ const { text: connectionsDescription } = await fancyAsker.ask(THREAD_LORE, messa
 
 const connectionsThread = getTempThread()
 const messageConnectionsMarks =
-    `${connectionsDescription}\n\n----------\n\nWe are designing a D&D dungeon with ${options.numRooms} rooms: ${roomNamesString}.\n\n` +
+    `${connectionsDescription.replace(/^\d+.?/gm, '-')}\n\n----------\n\nWe are designing a D&D dungeon with ${options.numRooms} rooms: ${roomNamesString}.\n\n` +
     "Repeat the description of the room connections above VERBATIM. " +
     "Anytime a connection between two rooms is introduced, mark it with [Connection: X-Y] where X and Y are ROOM NUMBERS. " +
     "Start a new mark for each connection (that is, do not combine different connections into the same mark!). " +
