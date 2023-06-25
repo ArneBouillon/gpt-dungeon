@@ -20,5 +20,5 @@ const options = parentMessageId ? { parentMessageId, conversationId } : {}
 const res = await api.sendMessage(message, options)
 
 fs.writeFileSync('output.txt', res.text)
-fs.writeFileSync('new-parent-message-id.txt', res.parentMessageId!)
+fs.writeFileSync('new-parent-message-id.txt', res.id!)
 fs.writeFileSync('new-conversation-id.txt', res.conversationId!)
