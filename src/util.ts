@@ -1,6 +1,7 @@
-import {ChatGPTUnofficialProxyAPI, ChatMessage} from 'chatgpt'
 import * as fs from 'fs'
 import clipboard from 'clipboardy'
+
+import { execFileSync } from 'child_process'
 
 export { ChatGPTAsker, PromptAsker, getTempThread, sleep }
 
@@ -29,9 +30,6 @@ const prompt = function(message) {
     }
     return s
 }
-
-
-const tokens = fs.readFileSync('.token', 'utf-8')
 
 interface Asker {
     ask: (threadID: number, message: string) => Promise<{
@@ -65,32 +63,25 @@ class PromptAsker implements Asker {
 
 class ChatGPTThread {
     private messages: string[] = []
-    private ress: ChatMessage[] = []
-    private lastRes: ChatMessage | null = null
+    private conversationId: string | null = null
+    private messageIds: string[] = []
 
-    public api: ChatGPTUnofficialProxyAPI
-
-    public constructor(apis) {
-        this.api = apis[Math.floor(Math.random()*apis.length)]
-    }
-
-    public add(message: string, res: ChatMessage) {
-        this.messages.push(message, res.text)
-        this.ress.push(res)
-        this.lastRes = res
+    public add(message: string, output: string, newConversationId: string, newParentMessageId: string) {
+        this.messages.push(message, output)
+        this.conversationId = newConversationId
+        this.messageIds.push(newParentMessageId)
         console.log(message + "\n\n---------\n\n")
-        console.log(res.text + "\n\n---------\n\n")
+        console.log(output + "\n\n---------\n\n")
     }
 
     public rollback() {
-        this.ress.pop()
-        this.lastRes = this.ress.length > 0 ? this.ress[this.ress.length - 1] : null
+        this.messageIds.pop()
     }
 
     public getOptions() {
-        return this.lastRes ? {
-            conversationId: this.lastRes.conversationId,
-            parentMessageId: this.lastRes.id,
+        return this.conversationId ? {
+            conversationId: this.conversationId,
+            parentMessageId: this.messageIds[this.messageIds.length - 1],
         } : {}
     }
 }
@@ -98,56 +89,58 @@ class ChatGPTThread {
 class ChatGPTAsker implements Asker {
     private count = 0
     private threads = new Map<string, ChatGPTThread>
-    private readonly apis
+    private readonly model
 
     public constructor(model = 'text-davinci-003') {
-        this.apis = tokens.split('\n').map(
-            token => new ChatGPTUnofficialProxyAPI({
-                accessToken: token,
-                // apiReverseProxyUrl: 'https://bypass.churchless.tech/api/conversation',
-                apiReverseProxyUrl: 'https://ai.fakeopen.com/api/conversation',
-                // apiReverseProxyUrl: 'https://api.pawan.krd/backend-api/conversation',
-                debug: true,
-                model,
-            })
-        )
+        this.model = model
     }
 
     public async ask(threadID, message) {
-	console.log("Starting ask!")
+	    console.log("Starting ask!")
         ++this.count
 
-        if (!this.threads.has(threadID)) this.threads.set(threadID, new ChatGPTThread(this.apis))
+        if (!this.threads.has(threadID)) this.threads.set(threadID, new ChatGPTThread())
         const thread = this.threads.get(threadID)!
 
         const options = thread.getOptions()
-        let res
+
+        let output, newConversationId, newParentMessageId
         let attempts = 0
         while (true) {
-            try {
-                await sleep(1000)
-                res = await thread.api.sendMessage(message, options)
+            fs.writeFileSync('output.txt', '')
+            fs.writeFileSync('new-conversation-id.txt', '')
+            fs.writeFileSync('new-parent-message-id.txt', '')
+            fs.writeFileSync('model.txt', this.model)
+
+            fs.writeFileSync('message.txt', message)
+            fs.writeFileSync('conversation-id.txt', options.conversationId || '')
+            fs.writeFileSync('parent-message-id.txt', options.parentMessageId || '')
+
+            execFileSync('./src/ask_chat_gpt.sh')
+
+            output = fs.readFileSync('output.txt', 'utf-8').trim()
+            if (output) {
+                newConversationId = fs.readFileSync('new-conversation-id.txt', 'utf-8').trim()
+                newParentMessageId = fs.readFileSync('new-parent-message-id.txt', 'utf-8').trim()
+
                 break
-            } catch(err) {
-                console.log(err)
+            } else {
                 attempts++
-                if (attempts >= 100 || (attempts >= 10 && !`${err}`.includes('non-whitespace'))) {
+                if (attempts >= 20) {
                     console.log("Errors keep coming, I'm going to stop retrying now!")
                     const retry = prompt("Do you want to keep going anyway? [y/n]\n")
                     if (retry.includes('y'))
                         attempts = 0
                     else
-                        throw err
+                        throw Error()
                 } else {
                     console.log(`Errored; attempt ${attempts + 1} coming up`)
                 }
             }
         }
-        thread.add(message, res)
-	console.log("Ending ask!")
-        return {
-            text: res.text,
-        }
+        thread.add(message, output, newConversationId, newParentMessageId)
+	    console.log("Ending ask!")
+        return { text: output }
     }
 
     public rollback(threadID) {
