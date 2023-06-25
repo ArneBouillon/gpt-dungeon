@@ -59,7 +59,7 @@ const options = {
     combatDifficulty: givenOptions.combatDifficulty || randomChoice(["low", "medium", "high"]),
     lootValue: givenOptions.lootValue || randomChoice(["low", "medium", "high"]),
     wackiness: givenOptions.wackiness || randomChoice(["low", "medium", "high"]),
-    outputName: givenOptions.outputName || new Date().toISOString().replaceAll(/:T/g, '-').replace(/\..+/, '')
+    outputName: givenOptions.outputName || new Date().toISOString().replaceAll(/[:T]/g, '-').replace(/\..+/, '') + '.txt'
 }
 
 const combatModifier =
@@ -83,6 +83,17 @@ const wackyModifier =
             '' :
             ' Some of the things you introduce should be somewhat weird, funny, or wacky.'
 
+if (!options.keywords) {
+    const messageKeywords =
+        "I want to design a D&D dungeon based on a set of 3 to 5 keywords. " +
+        "Can you give me 10 suggestions of such sets? Make your suggestions characterful and interesting. " +
+        "Do not make the scope too large; simple is often nice! Do not make them too one-dimensional -- " +
+        "always include at least 1 keyword that seemingly does not have much to do with the others. " +
+        "ANSWER WITH ONLY THE 10 SUGGESTIONS, ONE BULLET POINT EACH."
+    const { text: keywordsText } = await asker.ask(getTempThread(), messageKeywords)
+    options.keywords = keywordsText.split('\n')[6].split(' ').slice(1).join(' ')
+}
+
 const messageDungeon =
     "We are going to design a D&D dungeon (not necessarily a literal dungeon) for third-level characters. " +
     "We will take things step-by-step, going from a high abstraction level to a lower one. " +
@@ -91,8 +102,8 @@ const messageDungeon =
     "Include the location/building the characters will explore and a brief description of the setting " +
     "(inhabitants, context, positioning) of the place. Ensure to keep the scope very limited. " +
     "The less larger narrative there is to the story, the better. " +
-    "BE CREATIVE AND DON'T STICK TO CLICHES! ANSWER IN A SINGLE SENTENCE." +
-    (options.keywords ? ` Use the following keywords: ${options.keywords}` : '')
+    "BE CREATIVE AND DON'T STICK TO CLICHES! ANSWER IN A SINGLE SENTENCE. " +
+    `Use the following keywords: ${options.keywords}.`
 const { text: dungeon } = await asker.ask(THREAD_MAIN, messageDungeon)
 
 const messageHistory =
@@ -108,22 +119,20 @@ const messageLore =
     "Ensure to include 1 secret that visiting adventurers could discover. Write densely."
 const { text: lore } = await fancyAsker.ask(THREAD_LORE, messageLore)
 
-const missionThread = util.getTempThread()
 const messageMission =
-    `${lore}\n\n---------\n\nI want to use this location as a D&D dungeon for level-3 characters. ` +
-    "Propose a high-level mission for characters venturing into the above location. " +
-    "Suggest a BRIEF, SELF-CONTAINED goal that can be managed in a single session. " +
-    "Do not yet mention their motivation for this goal. Use elements from the above lore! Answer with a single sentence."
-const { text: mission } = await asker.ask(missionThread, messageMission)
-
-const messageContext =
-    "Summarize both the lore above and the mission statement into a short background text that would be helpful for designers of the dungeon."
-const { text: context } = await asker.ask(missionThread, messageContext)
+    "The above location is used as a D&D dungeon. We will now decide the style of game and the overall mission for the characters.\n\n" +
+    "First, I want suggestions for the style of the session. Are the characters pulling off a sneaky heist, " +
+    "or are they entering a deserted location? What will be the type of challenges they face?" +
+    `${wackyModifier.replace("Some of the things", "The style")} Take inspiration from the following keywords: ${options.keywords}. ` +
+    "End this section with a new line with three dashes: ---.\n\n" +
+    "Then, propose a concrete, high-level mission for the characters. What is their end goal? Which challenges will they need to overcome?"
+const { text: mission } = await fancyAsker.ask(THREAD_LORE, messageMission)
 
 const messageMotivations =
-    "Now suggest a few interesting potential motivations for the characters to accept and complete this mission. " +
+    `${lore}\n\n----------\n\n${mission}\n\n----------\n\n` +
+    "Now suggest a few interesting potential motivations for D&D characters to accept and complete this mission. " +
     `Make them very specific and concrete!${wackyModifier} Don't propose too many. ANSWER ONLY WITH A NUMBERED LIST OF MOTIVATIONS; NO OTHER TEXT.`
-const { text: motivations } = await asker.ask(missionThread, messageMotivations)
+const { text: motivations } = await asker.ask(getTempThread(), messageMotivations)
 
 const numRoomsEnemy = (options.combatDifficulty == 'medium' ? 1 : 0)
     + (options.combatDifficulty == 'high' ? 2 : 0)
@@ -141,8 +150,9 @@ for (let roomBatch = 1; roomBatch <= Math.ceil(options.numRooms / 3); ++roomBatc
             "- The general setting and atmosphere of the room. Also briefly describe the main features or distinctive elements.\n" +
             "- Anything present in the room that relates to the lore of the location and/or the story of the adventure. Be detailed and specific!\n" +
             "  -> Story-related items, if present.\n" +
-            `  -> Major loot items, if present.${lootModifier}` +
+            `  -> Major loot items, if present.${lootModifier}\n` +
             "  -> Topical items related to the lore but without an impact on the story, if present. These can range from very major to funny trinkets.\n" +
+            "  -> A miscellaneous challenge or encounter, if present. Only use 2 of these! Give a lot of details when including this. Do not use puzzles!\n" +
             "  -> Traps, if present. For example, the items above might be trapped.\n" +
             `  -> Topical (major) enemies in this room. Only use this for ${numRoomsEnemy} to ${numRoomsEnemy + 1} rooms. Ensure to give major enemies some weaker minions to spice up combat! ` +
             `PRECEDE each enemy with its CR (e.g. a CR X bandit). To determine the DC, ${combatModifier}.\n` +
