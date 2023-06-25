@@ -130,7 +130,7 @@ const { text: mission } = await fancyAsker.ask(THREAD_LORE, messageMission)
 
 const messageMotivations =
     `${lore}\n\n----------\n\n${mission}\n\n----------\n\n` +
-    "Now suggest a few interesting potential motivations for D&D characters to accept and complete this mission. " +
+    "Now suggest a few interesting potential motivations for a party of D&D characters to accept and complete this mission. " +
     `Make them very specific and concrete!${wackyModifier} Don't propose too many. ANSWER ONLY WITH A NUMBERED LIST OF MOTIVATIONS; NO OTHER TEXT.`
 const { text: motivations } = await asker.ask(getTempThread(), messageMotivations)
 
