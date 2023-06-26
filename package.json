@@ -7,7 +7,7 @@
     "build": "tsc"
   },
   "dependencies": {
-    "chatgpt": "ArneBouillon/chatgpt-api",
+    "chatgpt": "^5.2.5",
     "clipboardy": "^3.0.0",
     "events": "^3.3.0"
   },

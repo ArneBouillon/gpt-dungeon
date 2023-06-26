@@ -7,6 +7,12 @@ export { ChatGPTAsker, PromptAsker, getTempThread }
 
 let stdin = fs.openSync("/dev/stdin","rs")
 
+function sleep(ms) {
+    return new Promise((resolve) => {
+        setTimeout(resolve, ms)
+    })
+}
+
 let tempThreadCount = 0
 function getTempThread() {
     tempThreadCount++
@@ -91,6 +97,7 @@ class ChatGPTAsker implements Asker {
 
     public async ask(threadID, message, action: string | null = null) {
 	    console.log("Starting ask!")
+        if (action === 'continue') console.log("\n\n----------\n\nDOING A CONTINUE!\n\n----------\n\n")
         ++this.count
 
         if (!this.threads.has(threadID)) this.threads.set(threadID, new ChatGPTThread())
@@ -101,6 +108,8 @@ class ChatGPTAsker implements Asker {
         let output, newConversationId, newParentMessageId
         let attempts = 0
         while (true) {
+            await sleep(3000)
+
             try {
                 fs.writeFileSync('output.txt', '')
                 fs.writeFileSync('new-conversation-id.txt', '')
@@ -112,7 +121,9 @@ class ChatGPTAsker implements Asker {
                 fs.writeFileSync('conversation-id.txt', options.conversationId || '')
                 fs.writeFileSync('parent-message-id.txt', options.parentMessageId || '')
 
+                console.log('Execing')
                 execFileSync('./src/ask_chat_gpt.sh')
+                console.log('Ending exec')
 
                 output = fs.readFileSync('output.txt', 'utf-8').trim()
                 if (output) {
