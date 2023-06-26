@@ -516,7 +516,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
         const c = await clarifications[clarificationIteration - 1](asker, clarificationThread, text, clarificationIteration)
         text += '\n' + onlyBullets(c).replace(/^\d+[.:]/gm, '-')
 
-        if (clarificationIteration >= 2 && text.length > 8_000) break
+        if (text.length > 8_000) break
     }
 
     const extractionThreadCreatures = `room${roomNumber}_extract_c`
