@@ -11,8 +11,8 @@ const conversationId = fs.readFileSync('conversation-id.txt', 'utf-8').trim()
 const api = new ChatGPTUnofficialProxyAPI({
     accessToken: token,
     // apiReverseProxyUrl: 'https://bypass.churchless.tech/api/conversation',
-    apiReverseProxyUrl: 'https://ai.fakeopen.com/api/conversation',
-    // apiReverseProxyUrl: 'https://api.pawan.krd/backend-api/conversation',
+    // apiReverseProxyUrl: 'https://ai.fakeopen.com/api/conversation',
+    apiReverseProxyUrl: 'https://api.pawan.krd/backend-api/conversation',
     debug: true,
     model,
 })
