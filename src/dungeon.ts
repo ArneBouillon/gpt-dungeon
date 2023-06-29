@@ -185,6 +185,12 @@ const { text: roomNamesText } = await asker.ask(getTempThread(), messageRoomName
 const roomNames = roomNamesText.split('\n').slice(-options.numRooms).map(t => t.split(':')[1].trim())
 const roomNamesString = roomNames.map((name, i) => `${name} (Room ${i + 1})`).join(', ')
 
+const messageBackground =
+    "Write a brief background section for the DM. Mention the necessary lore of the location and its inhabitants, " +
+    "as well as crucial information that the characters will only discover gradually. Do not give your section a title or introduction!"
+const { text: background } = await fancyAsker.ask(THREAD_LORE, messageBackground)
+fancyAsker.rollback(THREAD_LORE)
+
 const messageConnections =
     "What should be the layout of these rooms? The layout must serve two goals: " +
     "it should provide an exciting adventure with well-paced action and excitement building, " +
@@ -705,6 +711,9 @@ const motivationSection =
 const arrivalSection =
     `## Arrival\n${outsideDescription}`
 
+const backgroundSection =
+    `## Background\n${background}`
+
 const conclusionSection =
     `## Conclusion\n${conclusion}`
 
@@ -716,6 +725,7 @@ const layoutSection =
 
 const sections = [
     motivationSection,
+    backgroundSection,
     arrivalSection,
     layoutSection,
     ...roomSections,
