@@ -156,8 +156,9 @@ for (let roomBatch = 1; roomBatch <= Math.ceil(options.numRooms / 3); ++roomBatc
             "  -> Topical items related to the lore but without an impact on the story, if present. These can range from very major to funny trinkets.\n" +
             "  -> A miscellaneous challenge or encounter, if present. Only use 2 of these! Give a lot of details when including this. Do not use puzzles!\n" +
             "  -> Traps, if present. For example, the items above might be trapped.\n" +
-            `  -> Topical (major) enemies in this room. Only use this for ${numRoomsEnemy} to ${numRoomsEnemy + 1} rooms. Ensure to give major enemies some weaker minions to spice up combat! ` +
-            `PRECEDE each enemy with its CR (e.g. a CR X bandit). To determine the DC, ${combatModifier}.\n` +
+            `  -> Topical (major) enemies in this room. Only use this for ${numRoomsEnemy} to ${numRoomsEnemy + 1} rooms. ` + "" +
+                 "Ensure to give major enemies some weaker minions to spice up combat! Specify whether these creatures are hostile, and what causes them to attack. " +
+                 `PRECEDE each enemy with its CR (e.g. a CR X bandit). To determine the DC, ${combatModifier}.\n` +
             "  -> Information that the characters can learn here.\n\n" +
             "Again, make the rooms and their contents inspired, distinct, and unique. " +
             "Do not forget to base yourself on the history and current state of the location! " +
@@ -572,14 +573,12 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
         const messageCreatureUpdated =
             "Update the creature's stat block, adding in these improvements. " +
             "Ensure element of the stat block is in the correct place, and information is not repeated. " +
-            "Do not add notes talking about how you updated the stat block! Do not add any notes to the stat block, " +
-            "do not add DM tips, do not add a message saying the design can still be adapted by the DM. No notes!"
+            "End the part of the stat block that should be used in the module with two right braces: }}."
         const { text: ec } = await asker.ask(extractionThreadCreatures, messageCreatureUpdated)
         asker.rollback(extractionThreadCreatures)
         asker.rollback(extractionThreadCreatures)
-        extractedCreatures += "\n\n{{monster,frame\n" + ec + "\n}}"
+        extractedCreatures += "\n\n{{monster,frame\n" + ec.replace(/}}.*/, '') + "\n}}"
     }
-
 
     const extractionThreadItems = `room${roomNumber}_extract_i`
 
@@ -635,7 +634,8 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
         "AND NOTHING MORE. If the room contains enemies, do not describe them in any detail. WRITE IN THE STYLE OF A D&D MODULE!\n" +
         `- State the title: ## Room ${roomNumber}: room_name\n` +
         "- START WITH A DESCRIPTION FOR THE PLAYERS, *given in italics*, describing what they see, and the ambiance of the room. Use the second person: \"you\".\n" +
-        "- THEN GIVE A FULL DESCRIPTION OF THE ROOM. Be complete and visual: describe the lay-out of the room and detail what is present. Do not use second person here; be descriptive instead! " +
+        "- THEN GIVE A FULL DESCRIPTION OF THE ROOM. Name this section ### Description. Do not use the second person here! Be complete and visual: " +
+            "describe the lay-out of the room and detail what is present. Do not use second person here; be descriptive instead! " +
             "Pay special attention to the locations and descriptions of general areas in the room. Be extensive! " +
             "Ensure a DM reading this section gets a good idea of what the room looks like on first sight!\n" +
         "- GIVE A LIST OF NOTABLE FEATURES. Name this section ### Notable Features. Note that this means decor elements and features of the room, not items. " +
