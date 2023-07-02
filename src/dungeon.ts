@@ -583,7 +583,7 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
             "End the part of the stat block that should be used in the module with \"END STAT BLOCK\"."
         let { text: ec } = await asker.ask(extractionThreadCreatures, messageCreatureUpdated)
         ec = ec.trim()
-        if (!".!?\"'”“}".includes(ec[ec.length - 1])) {
+        if (!".!?\"'”“}".includes(ec[ec.length - 1]) && !ec.includes('END')) {
             const { text: addition } = await asker.ask(extractionThreadCreatures, "", "continue")
             ec += " " + addition.trim()
             asker.rollback(extractionThreadCreatures)
