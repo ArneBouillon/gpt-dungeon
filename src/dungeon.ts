@@ -231,7 +231,7 @@ const connectionTexts: string[] = []
 for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
     const messageRoomConnections =
         `Now, for ${roomNames[roomNumber - 1]} (Room ${roomNumber}), give a list of bullet points, each describing a connection EITHER FROM OR TO Room ${roomNumber}. ` +
-        `According to your marks above, there are connections to ${connections.filter(c => c.includes(roomNumber)).map(c => c[0] == roomNumber ? c[1] : c[0]).map(c => `Room ${c}`).join(', ')}. ` +
+        `According to your marks above, there are connections to ${connections.filter(c => c.includes(roomNumber - 1)).map(c => c[0] == roomNumber - 1 ? c[1] : c[0]).map(c => `Room ${c + 1}`).join(', ')}. ` +
         "Include all details you have on the connection, such as the type of connection, locations, potential requirements... DO NOT USE THE [Connection] notation anymore!"
     const { text: roomConnections } = await asker.ask(connectionsThread, messageRoomConnections)
     asker.rollback(connectionsThread)
