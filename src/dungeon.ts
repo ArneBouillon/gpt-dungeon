@@ -583,11 +583,11 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
         const messageCreatureUpdated =
             "Update the creature's stat block, adding in these improvements. " +
             "Ensure element of the stat block is in the correct place, and information is not repeated. " +
-            "End the part of the stat block that should be used in the module with two right braces: }}."
+            "End the part of the stat block that should be used in the module with \"END STAT BLOCK\"."
         const { text: ec } = await asker.ask(extractionThreadCreatures, messageCreatureUpdated)
         asker.rollback(extractionThreadCreatures)
         asker.rollback(extractionThreadCreatures)
-        extractedCreatures += "\n\n{{monster,frame\n" + ec.replace(/}}.*/, '') + "\n}}"
+        extractedCreatures += "\n\n{{monster,frame\n" + ec.replace(/"?END.*/, '').trim() + "\n}}"
     }
 
     const extractionThreadItems = `room${roomNumber}_extract_i`
