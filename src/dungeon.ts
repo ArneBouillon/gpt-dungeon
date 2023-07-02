@@ -219,15 +219,19 @@ const messageConnectionsMarksCheck =
 const { text: marksTextChecked } = await asker.ask(connectionsThread, messageConnectionsMarksCheck)
 asker.rollback(connectionsThread)
 
-const connections = [...(marksText + marksTextChecked).matchAll(/\[Connections?:\s?(,?\s?\d+\s?-+\s?\d+)+\s?]/gi)].flatMap(
+let connections = [...(marksText + marksTextChecked).matchAll(/\[Connections?:\s?(,?\s?\d+\s?-+\s?\d+)+\s?]/gi)].flatMap(
     match => [...match[0].matchAll(/(\d+)\s?-+\s?(\d+)/g)].map(range => [range[1], range[2]])
 )
+connections = connections.map(conn => conn.sort())
+    .sort()
+    .filter((conn, i, a) => i == 0 || conn.toString() != a[i-1].toString())
 graph.makeUndirectedGraph([...Array(options.numRooms).keys()].map(i => i + 1), connections, `graph-${options.outputName}`)
 
 const connectionTexts: string[] = []
 for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
     const messageRoomConnections =
         `Now, for ${roomNames[roomNumber - 1]} (Room ${roomNumber}), give a list of bullet points, each describing a connection EITHER FROM OR TO Room ${roomNumber}. ` +
+        `According to your marks above, there are connections to ${connections.filter(c => c.includes(roomNumber)).map(c => c[0] == roomNumber ? c[1] : c[0]).map(c => `Room ${c}`).join(', ')}. ` +
         "Include all details you have on the connection, such as the type of connection, locations, potential requirements... DO NOT USE THE [Connection] notation anymore!"
     const { text: roomConnections } = await asker.ask(connectionsThread, messageRoomConnections)
     asker.rollback(connectionsThread)
@@ -276,7 +280,7 @@ fancyAsker.rollback(THREAD_LORE)
 const messageInterRoomsGlobal =
     "Now suggest 1 slightly different inter-room element. I want this one to be sort of \"global\" among the entire dungeon; " +
     "to not be a part of the rooms, but still to apply to them. This could, for example, " +
-    "be a hidden network of shafts to move through, an environmental mechanic, " +
+    "be a hidden network of shafts to move through, an environmental mechanic, a terrain feature, " +
     "a timer that triggers something if the characters wait too long... Truly anything qualifies. " +
     "Be sure to incorporate the effect of this inter-room element on all the separate rooms. " +
     "Ensure the mechanics are completely fleshed out! Make the element unique, varied, and impactful."
