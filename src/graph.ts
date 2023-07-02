@@ -1,4 +1,5 @@
-import fs from "fs";
+import fs from "fs"
+import { execSync } from 'child_process'
 
 export { makeUndirectedGraph }
 
@@ -15,4 +16,5 @@ function makeUndirectedGraph(all, connections, filename) {
 
     console.log(instructions)
     fs.writeFileSync(filename, instructions)
+    execSync(`cat ${filename} | dot -Tpng > ${filename.replace('.txt', '.png')}`)
 }
