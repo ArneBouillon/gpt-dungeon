@@ -266,7 +266,12 @@ const messageInterRooms =
     "DO NOT ADD NEW ROOM CONNECTIONS! When giving information, always BE VERY PRECISE and INCLUDE DIRECT QUOTES AND EXCERPTS IF POSSIBLE. " +
     "Ensure each inter-room element only relates to 2 (or 3 if you must) rooms! Give 2 unique and distinct inter-room elements. " +
     "Separate the inter-room elements with three dashes: ---."
-const { text: interRooms1 } = await fancyAsker.ask(THREAD_LORE, messageInterRooms)
+let { text: interRooms1 } = await fancyAsker.ask(THREAD_LORE, messageInterRooms)
+interRooms1 = interRooms1.trim()
+if (!".!?\"'”“".includes(interRooms1[interRooms1.length - 1])) {
+    const { text: addition } = await fancyAsker.ask(THREAD_LORE, "", "continue")
+    interRooms1 += " " + addition.trim()
+}
 
 const messageInterRoomsSmall =
     "Now suggest 2 new inter-room elements with a smaller scope. You can add new information to the rooms while doing this. " +
