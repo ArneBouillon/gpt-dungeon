@@ -141,7 +141,7 @@ const numRoomsEnemy = (options.combatDifficulty == 'medium' ? 1 : 0)
     + (options.numRooms - options.numRooms % 4) / 4
 
 let roomsText = ''
-for (let roomBatch = 1; roomBatch <= Math.ceil(options.numRooms / 3); ++roomBatch) {
+for (let roomBatch = 1; roomBatch <= Math.ceil(options.numRooms / 2); ++roomBatch) {
     const messageRooms =
         roomBatch == 1
             ?
@@ -164,9 +164,9 @@ for (let roomBatch = 1; roomBatch <= Math.ceil(options.numRooms / 3); ++roomBatc
             "Do not forget to base yourself on the history and current state of the location! " +
             `If you mentioned current inhabitants, ensure to include them in the rooms!${wackyModifier} ` +
             `Number the room entries from 1 to ${options.numRooms}, and place three dashes after each: ---.` +
-            `${options.numRooms > 3 ? ` Give the first 3 out of the ${options.numRooms} rooms.` : ''}`
+            `${options.numRooms > 2 ? ` Give the first 2 out of the ${options.numRooms} rooms.` : ''}`
             :
-            `Now give rooms ${(roomBatch - 1) * 3 + 1} through ${Math.min(options.numRooms, (roomBatch - 1) * 3 + 3)} out of ${options.numRooms}.`
+            `Now give rooms ${(roomBatch - 1) * 2 + 1} through ${Math.min(options.numRooms, (roomBatch - 1) * 2 + 2)} out of ${options.numRooms}.`
     let { text: rt } = await fancyAsker.ask(THREAD_LORE, messageRooms)
     roomsText += '---' + rt
 }
