@@ -9,16 +9,6 @@ import { getTempThread } from "./util.js"
 import process from 'node:process'
 import { parseArgs } from 'node:util'
 
-process.on('exit', (code) => {
-    console.log(`About to exit with code: ${code}`)
-    console.log(new Error().stack)
-})
-
-process.on('unhandledRejection', (reason, promise) => {
-    console.log('Unhandled rejection at:', promise, 'reason:', reason)
-    console.log(new Error().stack)
-})
-
 const asker = new util.ChatGPTAsker()
 
 // const fancyAsker = new util.PromptAsker()
@@ -86,12 +76,12 @@ const wackyModifier =
 if (!options.keywords) {
     const messageKeywords =
         "I want to design a D&D dungeon based on a set of 3 to 5 keywords. " +
-        "Can you give me 10 suggestions of such sets? Make your suggestions characterful and interesting. " +
+        `Can you give me 30 suggestions of such sets? Make your suggestions characterful and interesting.${wackyModifier} ` +
         "Do not make the scope too large; simple is often nice! Do not make them too one-dimensional -- " +
         "always include at least 1 keyword that seemingly does not have much to do with the others. " +
-        "ANSWER WITH ONLY THE 10 SUGGESTIONS, ONE BULLET POINT EACH."
+        "ANSWER WITH ONLY THE 30 SUGGESTIONS, ONE BULLET POINT EACH."
     const { text: keywordsText } = await asker.ask(getTempThread(), messageKeywords)
-    options.keywords = keywordsText.split('\n')[6].split(' ').slice(1).join(' ')
+    options.keywords = keywordsText.split('\n')[26].split(' ').slice(1).join(' ')
 }
 
 console.log(options)
@@ -231,7 +221,7 @@ const connectionTexts: string[] = []
 for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
     const messageRoomConnections =
         `Now, for ${roomNames[roomNumber - 1]} (Room ${roomNumber}), give a list of bullet points, each describing a connection EITHER FROM OR TO Room ${roomNumber}. ` +
-        `According to your marks above, there are connections to ${connections.filter(c => c.includes(roomNumber - 1)).map(c => c[0] == roomNumber - 1 ? c[1] : c[0]).map(c => `Room ${c + 1}`).join(', ')}. ` +
+        `According to your marks above, there are connections to ${connections.filter(c => c.includes((roomNumber - 1).toString())).map(c => c[0] == (roomNumber - 1).toString() ? c[1] : c[0]).map(c => `Room ${Number(c) + 1}`).join(', ')}. ` +
         "Include all details you have on the connection, such as the type of connection, locations, potential requirements... DO NOT USE THE [Connection] notation anymore!"
     const { text: roomConnections } = await asker.ask(connectionsThread, messageRoomConnections)
     asker.rollback(connectionsThread)
