@@ -567,22 +567,22 @@ for (let roomNumber = 1; roomNumber <= options.numRooms; ++roomNumber) {
             `For the ${creature} above, provide a STANDARD D&D module entry in Markdown (Brewdown) style. ` +
             "Use ## for the title (which should probably be singular, unless the creature is a swarm). " +
             "Give a stat block (be concise! Avoid giving information that is unlikely to be needed. Don't include a description!). " +
-            "The party is level 3; the combination of creatures in this room (pay attention to their amounts!) " +
-            "should be very challenging, but of course not completely deadly to a level-3 party. " +
+            "USE THE CR (CHALLENGE RATING) GIVEN IN THE TEXT ABOVE! The party is level 3; the combination of creatures in this room " +
+            "(pay attention to their amounts!) should be very challenging, but of course not completely deadly to a level-3 party. " +
             "GENERATE STATS AND CHALLENGE RATINGS THAT REFLECT THIS (and potentially generate cool abilities to offset low stats). " +
             "REPLY ONLY WITH THE ENTRY! NO OTHER TEXT!"
         await asker.ask(extractionThreadCreatures, messageExtractedCreatures)
 
         const messageCreatureImprovements =
             "Do you see any major flaws to this creature? Think both mechanically and in terms of the module text. " +
-            "Keep the creature's CR, and ensure its power level corresponds to that CR. " +
-            "Just list potential improvements, don't give me an updated version yet. Be very specific! " +
-            "Suggest specific and concrete improvements, no vague generalities such as \"Consider adding more abilities\"."
+            "Keep the creature's CR, and ensure its power level corresponds to that CR. Just list potential improvements, " +
+            "don't give me an updated version yet. Be very specific! When you want to add things, be very specific and concrete! " +
+            "No \"add additional abilities\"; instead, describe a concrete proposal. GIVE A SPECIFIC PROPOSAL FOR EVERYTHING YOU MENTION!"
         await asker.ask(extractionThreadCreatures, messageCreatureImprovements)
 
         const messageCreatureUpdated =
             "Update the creature's stat block, adding in these improvements. " +
-            "Ensure element of the stat block is in the correct place, and information is not repeated. " +
+            "Ensure each element of the stat block is in the correct place, and information is not repeated. " +
             "End the part of the stat block that should be used in the module with \"END STAT BLOCK\"."
         const { text: ec } = await asker.ask(extractionThreadCreatures, messageCreatureUpdated)
         asker.rollback(extractionThreadCreatures)
