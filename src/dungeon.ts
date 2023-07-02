@@ -9,11 +9,6 @@ import { getTempThread } from "./util.js"
 import process from 'node:process'
 import { parseArgs } from 'node:util'
 
-const asker = new util.ChatGPTAsker()
-
-// const fancyAsker = new util.PromptAsker()
-const fancyAsker = new util.ChatGPTAsker('gpt-4')
-
 const THREAD_MAIN = 'main'
 const THREAD_LORE = 'lore'
 
@@ -42,6 +37,7 @@ const { values: givenOptions } = parseArgs({ args: process.argv.slice(2), option
     lootValue: { type: "string", short: "l" },
     wackiness: { type: "string", short: "w" },
     outputName: { type: "string", short: "o" },
+    abortOnError: { type: "boolean", short: 'a' },
 } })
 const options = {
     keywords: givenOptions.keywords || null,
@@ -49,7 +45,8 @@ const options = {
     combatDifficulty: givenOptions.combatDifficulty || randomChoice(["low", "medium", "high"]),
     lootValue: givenOptions.lootValue || randomChoice(["low", "medium", "high"]),
     wackiness: givenOptions.wackiness || randomChoice(["low", "medium", "high"]),
-    outputName: givenOptions.outputName || new Date().toISOString().replaceAll(/[:T]/g, '-').replace(/\..+/, '') + '.txt'
+    outputName: givenOptions.outputName || new Date().toISOString().replaceAll(/[:T]/g, '-').replace(/\..+/, '') + '.txt',
+    abortOnError: givenOptions.abortOnError || false,
 }
 
 const combatModifier =
@@ -73,13 +70,18 @@ const wackyModifier =
             '' :
             ' Some of the things you introduce should be somewhat weird, funny, or wacky.'
 
+const asker = new util.ChatGPTAsker(options.abortOnError)
+
+// const fancyAsker = new util.PromptAsker()
+const fancyAsker = new util.ChatGPTAsker(options.abortOnError, 'gpt-4')
+
 if (!options.keywords) {
     const messageKeywords =
         "I want to design a D&D dungeon based on a set of 3 to 5 keywords. " +
         `Can you give me 30 suggestions of such sets? Make your suggestions characterful and interesting.${wackyModifier} ` +
         "Do not make the scope too large; simple is often nice! Do not make them too one-dimensional -- " +
         "always include at least 1 keyword that seemingly does not have much to do with the others. " +
-        "ANSWER WITH ONLY THE 30 SUGGESTIONS, ONE BULLET POINT EACH."
+        "Don't stick to D&D cliches! ANSWER WITH ONLY THE 30 SUGGESTIONS, ONE BULLET POINT EACH."
     const { text: keywordsText } = await asker.ask(getTempThread(), messageKeywords)
     options.keywords = keywordsText.split('\n')[26].split(' ').slice(1).join(' ')
 }
@@ -724,7 +726,7 @@ const conclusionSection =
     `## Conclusion\n${conclusion}`
 
 const creditsSection =
-    `{{descriptive\nThis module was generated using a script based on artificial intelligence, with the following parameters.\n:\n${Object.keys(options).filter(k => k !== 'outputName').map(k => `${k}: ${options[k]}`).join('\n:\n')}.\n}}`
+    `{{descriptive\nThis module was generated using a script based on artificial intelligence, with the following parameters.\n:\n${Object.keys(options).filter(k => !['outputName', 'abortOnError'].includes(k)).map(k => `${k}: ${options[k]}`).join('\n:\n')}.\n}}`
 
 const layoutSection =
     `## Dungeon layout\nThe dungeon's rooms are laid out as follows.\n\n![layout](TODO) {height:280px,mix-blend-mode:multiply}`

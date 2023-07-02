@@ -89,14 +89,16 @@ class ChatGPTThread {
 class ChatGPTAsker implements Asker {
     private count = 0
     private threads = new Map<string, ChatGPTThread>
+    private readonly abortOnError
     private readonly model
 
-    public constructor(model = 'text-davinci-003') {
+    public constructor(abortOnError, model = 'text-davinci-003') {
+	this.abortOnError = abortOnError
         this.model = model
     }
 
     public async ask(threadID, message, action: string | null = null) {
-	    console.log("Starting ask!")
+	console.log("Starting ask!")
         if (action === 'continue') console.log("\n\n----------\n\nDOING A CONTINUE!\n\n----------\n\n")
         ++this.count
 
@@ -136,6 +138,7 @@ class ChatGPTAsker implements Asker {
                 attempts++
                 if (attempts >= 20) {
                     console.log("Errors keep coming, I'm going to stop retrying now!")
+		    if (this.abortOnError) throw Error()
                     const retry = prompt("Do you want to keep going anyway? [y/n]\n")
                     if (retry.includes('y'))
                         attempts = 0
