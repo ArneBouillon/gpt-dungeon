@@ -260,7 +260,7 @@ const messageInterRooms =
     "Separate the inter-room elements with three dashes: ---."
 let { text: interRooms1 } = await fancyAsker.ask(THREAD_LORE, messageInterRooms)
 interRooms1 = interRooms1.trim()
-if (!".!?\"'”“".includes(interRooms1[interRooms1.length - 1])) {
+if (!".!?\"'”“-".includes(interRooms1[interRooms1.length - 1])) {
     const { text: addition } = await fancyAsker.ask(THREAD_LORE, "", "continue")
     interRooms1 += " " + addition.trim()
 }
