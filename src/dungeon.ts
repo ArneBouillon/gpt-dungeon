@@ -31,22 +31,22 @@ function onlyBullets(text) {
 }
 
 const { values: givenOptions } = parseArgs({ args: process.argv.slice(2), options: {
-    keywords: { type: "string", short: "k" },
-    numRooms: { type: "string", short: "r" },
-    combatDifficulty: { type: "string", short: "c" },
-    lootValue: { type: "string", short: "l" },
-    wackiness: { type: "string", short: "w" },
-    outputName: { type: "string", short: "o" },
-    abortOnError: { type: "boolean", short: 'a' },
+    "keywords": { type: "string", short: "k" },
+    "num-rooms": { type: "string", short: "r" },
+    "combat-difficulty": { type: "string", short: "c" },
+    "loot-value": { type: "string", short: "l" },
+    "wackiness": { type: "string", short: "w" },
+    "output-name": { type: "string", short: "o" },
+    "abort-on-error": { type: "boolean", short: 'a' },
 } })
 const options = {
-    keywords: givenOptions.keywords || null,
-    numRooms: Number(givenOptions.numRooms) || 8,
-    combatDifficulty: givenOptions.combatDifficulty || randomChoice(["low", "medium", "high"]),
-    lootValue: givenOptions.lootValue || randomChoice(["low", "medium", "high"]),
-    wackiness: givenOptions.wackiness || randomChoice(["low", "medium", "high"]),
-    outputName: givenOptions.outputName || new Date().toISOString().replaceAll(/[:T]/g, '-').replace(/\..+/, '') + '.txt',
-    abortOnError: givenOptions.abortOnError || false,
+    keywords: givenOptions["keywords"] || null,
+    numRooms: Number(givenOptions["numRooms"]) || 8,
+    combatDifficulty: givenOptions.["combat-difficulty"] || randomChoice(["low", "medium", "high"]),
+    lootValue: givenOptions["loot-value"] || randomChoice(["low", "medium", "high"]),
+    wackiness: givenOptions["wackiness"] || randomChoice(["low", "medium", "high"]),
+    outputName: givenOptions["output-name"] || new Date().toISOString().replaceAll(/[:T]/g, '-').replace(/\..+/, '') + '.txt',
+    abortOnError: givenOptions["abort-on-error"] || false,
 }
 
 const combatModifier =

@@ -39,4 +39,9 @@ where the `<options>` can be selected from the following table:
 ## ChatGPT API
 The code uses the `chatgpt-api` NPM package to make API requests to ChatGPT. In `GPTDungeon` code, this is wrapped in an `Asker`. An example is implemented that uses the `ChatGPTUnofficialProxyAPI`; we recommend to instead use the official ChatGPT API, which is both more robust and does not need to rely on a third-party proxy. Implementing an `Asker` for the official API only requires very minor changes to the existing code.
 
+### API token
+The under-the-hood use of the ChatGPT API requires an access token. This can be obtained using any of the methods found [here](https://github.com/transitive-bullshit/chatgpt-api#access-token). It should be placed into a new file, created at the root of `gpt-dungeon`'s file system, named `.token`.
+
+### ChatGPT versions
+Currently, some queries use the GPT4 model to make use of its extended capabilities and context length. However, if you do not have access to that model, you can simply remove the `'gpt-4'` argument from the second asker's instantiation in `src/dungeon.ts`. **No guarantees are given about the tool's performance without GPT4**; I haven't tested this yet...
 
