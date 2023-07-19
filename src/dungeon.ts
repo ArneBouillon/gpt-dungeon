@@ -184,6 +184,7 @@ const { text: background } = await fancyAsker.ask(THREAD_LORE, messageBackground
 fancyAsker.rollback(THREAD_LORE)
 
 const messageConnections =
+    `Recall the rooms: ${roomNamesString}. ` +
     "What should be the layout of these rooms? The layout must serve two goals: " +
     "it should provide an exciting adventure with well-paced action and excitement building, " +
     "but it should not feel railroaded. Please suggest how the 8 rooms mentioned earlier could be connected. " +
