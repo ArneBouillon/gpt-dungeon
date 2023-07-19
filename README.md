@@ -27,7 +27,7 @@ npm run dungeon -- <options>
 ```
 where the `<options>` can be selected from the following table:
 | Full name | Short name | Options | Default | Effect |
-|---|---|---|---|
+|---|---|---|---|---|
 | --keywords | -k |  | Randomly generated | The setting of the dungeon will take these keywords into account. |
 | --numRooms | -r | All numbers (4-8 is recommended) | 8 | This is the number of rooms that will be generated in the dungeon. Currently, all rooms get a lot of content, so using more than 8 rooms is not recommended (both for the dungeon to be runnable in a single session, and for the tool to not get confused due to ChatGPT's limited context size).
 | --combatDifficulty | -c | 'low', 'medium', 'high' | Random | This setting determines the difficulty of the enemies that are generated. This option is not all that effective, but can nudge the tool in the right direction. |
