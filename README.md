@@ -29,12 +29,12 @@ where the `<options>` can be selected from the following table:
 | Full name | Short name | Options | Default | Effect |
 |---|---|---|---|---|
 | --keywords | -k |  | Randomly generated | The setting of the dungeon will take these keywords into account. |
-| --numRooms | -r | All numbers (4-8 is recommended) | 8 | This is the number of rooms that will be generated in the dungeon. Currently, all rooms get a lot of content, so using more than 8 rooms is not recommended (both for the dungeon to be runnable in a single session, and for the tool to not get confused due to ChatGPT's limited context size).
-| --combatDifficulty | -c | 'low', 'medium', 'high' | Random | This setting determines the difficulty of the enemies that are generated. This option is not all that effective, but can nudge the tool in the right direction. |
-| --lootValue | -l | 'low', 'medium', 'high' | Random | This setting determines the value of the items found in the dungeon. The same comments from `combatDifficulty` apply. |
+| --num-rooms | -r | All numbers (4-8 is recommended) | 8 | This is the number of rooms that will be generated in the dungeon. Currently, all rooms get a lot of content, so using more than 8 rooms is not recommended (both for the dungeon to be runnable in a single session, and for the tool to not get confused due to ChatGPT's limited context size).
+| --combat-difficulty | -c | 'low', 'medium', 'high' | Random | This setting determines the difficulty of the enemies that are generated. This option is not all that effective, but can nudge the tool in the right direction. |
+| --loot-value | -l | 'low', 'medium', 'high' | Random | This setting determines the value of the items found in the dungeon. The same comments from `combat-difficulty` apply. |
 | --wackiness | -w | 'low', 'medium', 'high' | Random | This setting determines how funny or wacky the generated content gets. |
-| --outputName | -o | | Timestamp-based | This setting determines the name of the output MD file and the output layout image. |
-| --abortOnError | -a | true, false | false | When set to `true`, the tool will abort after encountering errors a certain number of times in a row. When set to `false`, it prompts the user for whether to continue. |
+| --output-name | -o | | Timestamp-based | This setting determines the name of the output MD file and the output layout image. |
+| --abort-on-error | -a | true, false | false | When set to `true`, the tool will abort after encountering errors a certain number of times in a row. When set to `false`, it prompts the user for whether to continue. |
 
 ## ChatGPT API
 The code uses the `chatgpt-api` NPM package to make API requests to ChatGPT. In `GPTDungeon` code, this is wrapped in an `Asker`. An example is implemented that uses the `ChatGPTUnofficialProxyAPI`; we recommend to instead use the official ChatGPT API, which is both more robust and does not need to rely on a third-party proxy. Implementing an `Asker` for the official API only requires very minor changes to the existing code.
