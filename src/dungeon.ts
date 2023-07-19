@@ -258,6 +258,7 @@ const messageInterRooms =
     "DO NOT GIVE INFORMATION ONLY AFTER IT IS NEEDED! Put prerequisites in rooms with a lower number than the one they're needed in. " +
     "DO NOT ADD NEW ROOM CONNECTIONS! When giving information, always BE VERY PRECISE and INCLUDE DIRECT QUOTES AND EXCERPTS IF POSSIBLE. " +
     "Ensure each inter-room element only relates to 2 (or 3 if you must) rooms! Give 2 unique and distinct inter-room elements. " +
+    "Objects mentioned in the descriptions above that have implications for multiple rooms, should become an inter-room element! " +
     "Separate the inter-room elements with three dashes: ---."
 let { text: interRooms1 } = await fancyAsker.ask(THREAD_LORE, messageInterRooms)
 interRooms1 = interRooms1.trim()
