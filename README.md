@@ -41,6 +41,9 @@ where the `<options>` can be selected from the following table:
 | `--output-name` | `-o` | | Timestamp-based | This setting determines the name of the output MD file and the output layout image. |
 | `--abort-on-error` | `-a` | `true`, `false` | `false` | When set to `true`, the tool will abort after encountering errors a certain number of times in a row. When set to `false`, it prompts the user for whether to continue. |
 
+### Output
+Running the code generates two output files: `<output-name>.txt` and `<output-name>.png`. The latter contains a diagram of the room layout of the dungeon. The `.txt` file contains the module in the Brewdown flavour of Markdown, suited to paste into [Homebrewery](https://homebrewery.naturalcrit.com/) to get a nicely formatted module text. Page breaks must be inserted manually, but other than that, text formatting should require minimal manual intervention.
+
 ## ChatGPT API
 The code uses the `chatgpt-api` NPM package to make API requests to ChatGPT. In `GPTDungeon` code, this is wrapped in an `Asker`. An example is implemented that uses the `ChatGPTUnofficialProxyAPI`; we recommend to instead use the official ChatGPT API, which is both more robust and does not need to rely on a third-party proxy. Implementing an `Asker` for the official API only requires very minor changes to the existing code.
 
