@@ -1,5 +1,7 @@
 # GPTDungeon
-The goal of this project is to investigate how to generate a consistent, structured, long-form D&D dungeon module using only the free-form chat functionality of a tool like ChatGPT.
+The goal of this project is to investigate how to generate a consistent, structured, long-form D&D dungeon module using only the free-form chat functionality of a tool like ChatGPT. As far as I have been able to find, it is the first project to attempt this.
+
+The techniques used here might also be useful outside the -- admittedly fun -- application area of D&D modules! [Below](#Design-challenges) I go into more detail about the main challenges in this project, which would equally pop up in other applications, and how I tried to tackle them.
 
 ## Installation
 Unfortunately, I have had to patch the library used for sending API requests to ChatGPT to support the `continue` action.
@@ -44,4 +46,7 @@ The under-the-hood use of the ChatGPT API requires an access token. This can be 
 
 ### ChatGPT versions
 Currently, some queries use the GPT4 model to make use of its extended capabilities and context length. However, if you do not have access to that model, you can simply remove the `'gpt-4'` argument from the second asker's instantiation in `src/dungeon.ts`. **No guarantees are given about the tool's performance without GPT4**; I haven't tested this yet...
+
+## Design challenges
+Lorem ipsum
 

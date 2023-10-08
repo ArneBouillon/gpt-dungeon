@@ -42,7 +42,7 @@ const { values: givenOptions } = parseArgs({ args: process.argv.slice(2), option
 const options = {
     keywords: givenOptions["keywords"] || null,
     numRooms: Number(givenOptions["numRooms"]) || 8,
-    combatDifficulty: givenOptions.["combat-difficulty"] || randomChoice(["low", "medium", "high"]),
+    combatDifficulty: givenOptions["combat-difficulty"] || randomChoice(["low", "medium", "high"]),
     lootValue: givenOptions["loot-value"] || randomChoice(["low", "medium", "high"]),
     wackiness: givenOptions["wackiness"] || randomChoice(["low", "medium", "high"]),
     outputName: givenOptions["output-name"] || new Date().toISOString().replaceAll(/[:T]/g, '-').replace(/\..+/, '') + '.txt',
