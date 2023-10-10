@@ -41,7 +41,7 @@ const { values: givenOptions } = parseArgs({ args: process.argv.slice(2), option
 } })
 const options = {
     keywords: givenOptions["keywords"] || null,
-    numRooms: Number(givenOptions["numRooms"]) || 8,
+    numRooms: Number(givenOptions["num-rooms"]) || 8,
     combatDifficulty: givenOptions["combat-difficulty"] || randomChoice(["low", "medium", "high"]),
     lootValue: givenOptions["loot-value"] || randomChoice(["low", "medium", "high"]),
     wackiness: givenOptions["wackiness"] || randomChoice(["low", "medium", "high"]),
