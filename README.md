@@ -15,6 +15,8 @@ The repository includes various examples of generated modules.
 - (4 rooms) [Quacking Under Pressure: The Whimsical Waterway Adventure!](/examples/quack/quack.pdf): *Deep within an otherworldly forest, the "Rubber Duck Rapids" awaits adventurers brave enough to navigate its glistening waterslides, elude the mischievous Giggling Goblins, and harmonize with the Singing Snails.*
 - (4 rooms) [Mycelium Mirrors: The Celestial Spore Quest](/examples/mycelium/mycelium.pdf): *Deep within an ancient, subterranean mushroom forest lies the enigmatic Mushroom Observatory. Here, towering Mycelium Telescopes stand sentinel, allowing scholarly mycologists to study Fungal Constellations and the cosmos through Cosmic Spore Bursts.*
 
+These great-looking PDFs were made using the [Homebrewery](https://homebrewery.naturalcrit.com/)!
+
 ## Installation
 Unfortunately, I have had to patch the library used for sending API requests to ChatGPT to support the `continue` action.
 
