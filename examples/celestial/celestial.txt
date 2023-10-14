@@ -1,0 +1,1427 @@
+# Celestial Descent: Reclaiming the Starlight Medallion
+
+In the heart of the ethereal Phantom Marshes lies the Crystal Cathedral, a beacon of celestial wonder. Here, the characters embark on a quest to reclaim the Starlight Medallion, a potent artifact threatened by a rogue celestial faction. As they navigate the luminous maze of the cathedral and the surrounding marshes, they'll face ethereal puzzles, spirits, and guardians of light. The challenges demand not just combat prowess but wisdom, intelligence, and the power of collaboration.
+
+## Motivation
+There are many reasons why the PCs might embark on this quest. Some examples are given.
+
+1. A member of the party has a personal connection to Seraphina Starlight's legacy and wishes to honor her memory by safeguarding the Starlight Medallion.
+
+2. The party seeks to gain favor with the Celestial Choir in hopes of receiving their assistance in a larger quest or gaining access to the Nexus of Souls' power.
+
+3. A rival faction within the Celestial Choir is threatening to misuse the Starlight Medallion, and the party wants to prevent their rise to power and restore balance.
+
+4. The party believes that the Starlight Medallion's ethereal powers could be the key to solving a different pressing issue or mystery in their own storyline.
+
+## Background
+In the heart of the Phantom Marshes stands the Crystal Cathedral, an ethereal structure suspended above a labyrinth of luminescent waterways. Forged by the archmage Seraphina Starlight and her disciples, the Cathedral serves as a refuge for the Nexus of Souls. This powerful artifact, drawing energy from the Celestial Plane, was hidden here to preserve the souls of those lost in a great war against the Arcane Tyrant, Zephyrion.
+
+The Cathedral is inhabited by the Celestial Choir, a harmonious assembly dedicated to maintaining the balance between life and death. The Celestial Choir's primary duty is to perform haunting rituals, aided by the Nexus's power, to prevent souls from being lost to oblivion. Their song, known as the Fragmented Melody, is a powerful tool in maintaining this delicate balance.
+
+However, not all is harmonious within these walls. A rogue faction within the Celestial Choir, swayed by the allure of power, has discovered the existence and potential of the Starlight Medallion—a pendant imbued with a piece of the Nexus's power. They seek to harness its might for personal gain, which could destabilize the ethereal realm and bring about untold consequences.
+
+The Crystal Cathedral, with its otherworldly architecture and luminous veins beneath, holds many secrets. From hidden chambers containing celestial treasures to intricate puzzles that guard these secrets, the Cathedral is a maze of both wonder and danger.
+
+As the characters navigate the Cathedral, they will encounter the ethereal guardians known as the Luminal Sentinels. These spectral beings, formed from the essence of brave warriors who fought alongside Seraphina, protect the Cathedral and its secrets. Some of them may assist the characters, while others, bound by their duty, might stand in their way.
+
+It's crucial for the characters to understand the significance of the Nexus of Souls, the looming threat of the rogue faction, and the importance of the Starlight Medallion. Only with this knowledge can they hope to navigate the challenges ahead, reclaim the Medallion, and ensure the ethereal realm's balance is preserved.
+
+## Arrival
+*As the characters approach, the Crystal Cathedral rises majestically from the misty Phantom Marshes. Its shimmering walls refract the light in a myriad of colors, creating an aura of serenity and mystery. Surrounding the cathedral, the marshes stretch infinitely, with patches of silvery water reflecting the luminous structure. The gentle hum of celestial chorales can be faintly heard, beckoning the travelers. A grand, open archway, framed with intricately carved celestial motifs, stands as the entrance, inviting them into the Echoing Entrance Hall.*
+
+## Dungeon layout
+The dungeon's rooms are laid out as follows.
+
+![layout](TODO) {height:280px,mix-blend-mode:multiply}
+
+## Room 1: Echoing Entrance Hall
+
+*As you step into the Echoing Entrance Hall, you find yourself in a vast, luminous chamber. The walls are adorned with intricate crystal columns, and the floor reflects the patterns of light that emanate from these columns. An immense crystal chandelier hangs overhead, casting an otherworldly glow across the hall. Two statues of ethereal beings, each holding a lyre, flank the entrance, symbolizing the importance of music in this place.*
+
+### Description
+The Echoing Entrance Hall is a grand, open space with a tranquil atmosphere. The most striking feature is the intricate crystal columns that adorn the walls, their surfaces catching and reflecting the ambient light. In the center of the room lies a shimmering pond filled with glowing celestial fish, their movements casting dancing shadows along the walls. Small luminous gemstones are embedded at various heights within the walls, offering moderate loot for those who take the time to collect them. Several hovering orbs of light move about, serving as guides for newcomers, leading them deeper into the Cathedral.
+
+A hidden alcove can be found behind a semi-transparent curtain, offering a quiet space for meditation and attunement to the Cathedral's energy. Inscriptions on the columns read, "In devotion to the celestial order, this Cathedral was birthed by the hands of Seraphina and her loyal disciples."
+
+
+
+
+### Notable Features
+- **Intricate crystal columns**: Six in total, with one containing a **hidden compartment** with the **Scroll of Etherealness**. Touching this without playing **Seraphina's Anthem** releases an ethereal gust (STR save DC 15 or be pushed 10 ft. back and become prone).
+- **Crystal chandelier**: Illuminates the hall with otherworldly light.
+- **Two statues of ethereal beings**: Both hold a lyre, signifying the musical nature of the Cathedral.
+- **Shimmering Pond**: Centrally located. Contains celestial fish: 3 **Opaline Angels**, 2 **Stellar Sirens**, and 4 **Ethereal Guardians**.
+- **Luminous gemstones**: Twelve in total, embedded in walls. Can be prized out (each valued at 50 gold).
+- **Hovering orbs of light**: Five orbs. Act as guides leading deeper into the Cathedral.
+- **Silvery mist**: At the entrance. No immediate threat, but touching gives a brief sensation of weightlessness.
+- **Starlit Lute**: On a pedestal. Playing in tandem with **Seraphina's Anthem** reveals hidden compartments in the columns containing minor healing potions.
+- **Ethereal Sprite (CR 1/4)**: One sprite present, known for leading adventurers astray and pilfering trinkets.
+- **Hidden alcove**: Behind a curtain (Perception DC 15 to find). Contains a bench for meditation.
+- **Constellation pattern on the floor**: Following the pattern releases a calming melody. When **Seraphina's Anthem** is played on the **Starlit Lute**, it reveals the sequence.
+- **Connections**: Main path leading to Luminous Library (Room 2) and a side passage obscured by vines to Chamber of Celestial Reflections (Room 3).
+
+### Shimmering Pond Mechanics
+The celestial fish in the pond provide various boons when observed:
+- **Opaline Angels**: Observing grants advantage on one saving throw (once per long rest).
+- **Stellar Sirens**: Observing allows recovery of 1d6 + Wisdom modifier hit points as a bonus action (once per long rest).
+- **Ethereal Guardians**: Observing adds +2 to passive Perception for one hour (once per long rest).
+
+### Ethereal Sprite Mischief
+- Leads adventurers with illusions of fake passages (Investigation DC 12 to reveal).
+- Pilfers small trinkets (Dexterity saving throw DC 10 to avoid losing an item).
+
+### Celestial Convergence
+During Celestial Convergence, the realm's alignment causes the whispers to become clearer. Whispers hint: "To reveal the path, play 'Seraphina's Anthem' at **Starlit Lute**, follow constellation floor pattern in sequence."
+
+### Whispers of Guidance
+Whispers occasionally heard, guiding adventurers: "Play 'Seraphina's Anthem' at **Starlit Lute**, observe **Opaline Angels**, **Stellar Sirens**, **Ethereal Guardians** for guidance."
+
+
+
+#### Scroll of Etherealness
+*Wondrous Item (scroll), rare*
+
+* Weight: 1 pound
+* Value: 1,000 gold pieces
+
+This scroll contains the *Etherealness* spell, allowing the caster to become ethereal for up to 8 hours when cast.
+
+#### Luminal Lantern
+*Wondrous Item (lantern), uncommon*
+
+* Weight: 2 pounds
+* Value: 250 gold pieces
+
+This handheld lantern emits a soft luminescent glow. In the presence of spirits, the lantern's light brightens, providing advantage on Wisdom (Perception) checks to detect invisible or hidden spirits within 30 feet of the lantern.
+
+#### Starlit Lute
+*Wondrous Item (instrument), rare*
+
+* Weight: 3 pounds
+* Value: 750 gold pieces
+
+This beautifully crafted lute, when played with the melody of *Seraphina's Anthem*, reveals hidden compartments within the crystal columns of the Echoing Entrance Hall containing minor healing potions.
+
+#### Ethereal Sprite
+*Tiny celestial, neutral*
+
+* Weight: None
+* Value: None
+
+This playful spirit darts about, mimicking faint whispers, leading astray with illusions of fake passages (Investigation DC 12 to reveal), and may pilfer small trinkets (Dexterity saving throw DC 10 to catch).
+
+#### Luminal Resonator
+*Wondrous Item (instrument), uncommon*
+
+* Weight: 4 pounds
+* Value: 350 gold pieces
+
+This large crystal instrument resonates with the crystal columns in the Echoing Entrance Hall. Extended play may cause disorientation (Wisdom saving throw DC 12).
+
+#### Opaline Angels
+*Wondrous Fish (consumable), rare*
+
+* Weight: None
+* Value: 500 gold pieces each
+
+These celestial fish, when observed in the shimmering pond within the Echoing Entrance Hall, grant advantage on a single saving throw of the observer's choice. Consumed upon use.
+
+#### Stellar Siren
+*Wondrous Fish (consumable), rare*
+
+* Weight: None
+* Value: 750 gold pieces each
+
+These fish, when observed in the shimmering pond within the Echoing Entrance Hall, allow characters to regain 1d6+Wisdom modifier hit points as a bonus action. Consumed upon use.
+
+#### Ethereal Guardian
+*Wondrous Fish (consumable), rare*
+
+* Weight: None
+* Value: 600 gold pieces each
+
+These silver fish, when observed in the shimmering pond within the Echoing Entrance Hall, add +2 to the observer's passive Perception for one hour after observation. Consumed upon use.
+
+
+
+{{monster,frame
+## Ethereal Sprite (CR 1/4)
+*Tiny celestial, neutral*
+
+**Armor Class** 14  
+**Hit Points** 14 (4d4 + 4)  
+**Speed** 30 ft., fly 60 ft.
+
+**STR** 3 (-4)  
+**DEX** 16 (+3)  
+**CON** 10 (+0)  
+**INT** 8 (-1)  
+**WIS** 12 (+1)  
+**CHA** 14 (+2)
+
+**Skills** Stealth +5  
+**Senses** darkvision 60 ft., passive Perception 11  
+**Languages** understands Celestial but can't speak  
+**Challenge** 1/4 (50 XP)
+
+**Innate Spellcasting.** The sprite's innate spellcasting ability is Charisma (spell save DC 12). It can cast *minor illusion* at will, requiring no material components.
+
+**Ethereal Jaunt (1/Short Rest).** As a bonus action, the sprite can magically shift from the Material Plane to the Ethereal Plane, or vice versa.
+
+**Mischievous Illusions.** When hiding, the sprite can create minor illusions to distract or mislead. It can mimic faint whispers and create illusions of fake passages.
+
+**Evasion.** If the sprite is subjected to an effect that allows it to make a Dexterity saving throw to take half damage, it takes no damage on a successful save and half damage on a failed save.
+
+**Actions**
+**Dart.** *Ranged Weapon Attack:* +5 to hit, range 30/120 ft., one target. *Hit:* 1 piercing damage plus 3 (1d6) poison damage.
+
+**Ethereal Mischief (Recharge 5-6).** The sprite can create minor environmental effects or illusory distractions within 30 feet, causing brief disturbances. This can include flickering lights, moving objects, or faint sounds. Creatures in the area must succeed on a DC 12 Wisdom saving throw or become momentarily distracted, granting the sprite advantage on its next attack against them.
+}}
+
+## Room 2: Luminous Library
+
+*As you enter Room 2, the Luminous Library, you find yourself in a circular chamber bathed in soft, radiant light. Tall, translucent bookshelves line the walls, filled with ethereal books that occasionally float and rearrange themselves. The atmosphere is calm and studious, with faint whispers of spirits discussing lore in hushed tones. Spirits move about, reading, writing, and teaching younger spirits. The room is furnished with ethereal cushions, inviting you to sit and read in several reading nooks. In the center, a grand otherworldly chandelier illuminates the room.*
+
+### Description
+
+The circular chamber is filled with tall, translucent bookshelves that stretch from floor to ceiling. These bookshelves are ethereal in nature, and the books they hold are made of the same material, giving them an otherworldly appearance. Faint outlines of spirits can be seen moving about, engaged in various scholarly activities.
+
+In one corner, you spot a main reading table with a concealed drawer. On the table rests a rotating globe depicting various celestial realms, dotted with glowing markers indicating places of significance. A specific shelf holds a beautifully inscribed scroll titled "Ballad of the Ethereal Voyager," detailing an ancient hero's journey through celestial realms.
+
+In another corner, you notice a pedestal with a **Glowing Quill**, a silver quill that allows you to write or draw in mid-air with luminescent ink, which fades after an hour. Nearby, a small jar labeled *Celestial Dust Jar* contains glittering dust that can outline invisible entities for a short duration, with three uses.
+
+A faded painting depicting a grand council of spirits decorates one section of the room. And near the entrance, you see a bookshelf labeled "Celestial Instruments," which catches your eye with a label that reads, "Tools for celestial realms."
+
+
+
+
+### Notable Features
+- **Circular chamber** filled with tall, translucent bookshelves. 
+- Ethereal books float and occasionally rearrange themselves. 
+- **Annals of the Celestial Choir**: located on the 3rd shelf from the entrance.
+- **Tome of Celestial Navigation**: positioned on a lectern near the center.
+- **Zephyrion's Fall**: placed on the top shelf on the left.
+- **Phantom Marsh Vials**: four vials displayed on a crystal pedestal by the eastern wall.
+- **Distressed spirit librarian**: floats near the main reading table.
+- Forceful or incorrect handling of a book triggers a **spectral alarm**.
+- **Spectral alarm** alerts one **Spectral Sentinel** and four **Ethereal Wisps** near a restricted section.
+- Multiple reading nooks with ethereal cushions are scattered about the room.
+- Faint outlines of spirits roam the library, engaging in scholarly tasks.
+- A grand chandelier hangs centrally, emitting soft, radiant light.
+- **Ballad of the Ethereal Voyager**: located on a stand near a southern reading nook.
+- A rotating globe displaying various celestial realms stands by the northwestern corner.
+- **Glowing Quill**: rests on a pedestal in the center.
+- **Celestial Dust Jar**: positioned on the "Celestial Instruments" bookshelf.
+- A faded painting depicting a council of spirits adorns the western wall.
+- **Arcane Magnifier**: placed beside the **Tome of Celestial Navigation**.
+- A **Mischievous spirit**: hides behind the bookshelves near the back.
+- Ghostly inkwells and ethereal parchments scatter on various tables.
+- **Chronicle of Ethereal Beasts**: situated on a shelf near the distressed librarian.
+- **Gossamer Cloak**: concealed behind the **Zephyrion's Fall** tome.
+- Direct path from **Echoing Entrance Hall (Room 1)**.
+- Grand archway leading to **Hall of Harmonic Echoes (Room 4)**.
+- Discreet doorway connecting to **Sanctuary of Silent Spirits (Room 6)**.
+- Main reading table with a concealed drawer housing the **Ethereal Lens**.
+- "Instruments of the Heavens" tome mentions the **Ethereal Lens** and sits on the "Celestial Instruments" bookshelf.
+- Bookshelf labeled "Celestial Instruments" contains tools such as a brass astrolabe and vial of starlight essence.
+- Fragmented note reads: "To breach Seraphina's defenses, harmonize with her creation. Seek her melody in echoes."
+- Sketch of a **Mystical Crystal Chalice** with the note: "Filled under celestial gaze, truths are revealed."
+- Footnote in a book hints that objects reveal their true nature when combined.
+- During the "Celestial Convergence," certain books, including the celestial navigation book, glow with hints: "In celestial dance, seek ethereal threads."
+
+### Celestial Convergence Mechanic
+- Upon the celestial alignment, specific books in the library glow brighter. 
+- Interacting with the glowing books grants bonus information.
+- The "Cycles of the Celestial" tome explains the mechanics and effects of the Convergence, located on the second shelf from the entrance.
+
+
+
+#### Tome of Celestial Navigation
+* *Weight*: 2 pounds
+* *Value*: 500 gold pieces
+
+This valuable tome grants advantage on all navigation checks made within celestial or ethereal realms.
+
+#### Glowing Quill
+* *Weight*: Negligible
+* *Value*: 50 gold pieces
+
+This silver quill allows the user to write or draw in mid-air with luminescent ink, which fades after one hour of use.
+
+#### Celestial Dust Jar
+* *Weight*: 1 pound
+* *Value*: 100 gold pieces
+
+This small jar contains glittering dust that, when thrown, outlines invisible entities for one minute, providing three uses.
+
+#### Gossamer Cloak
+* *Weight*: 1 pound
+* *Value*: 250 gold pieces
+
+This ethereal cloak provides advantage on stealth checks in ethereal or ghostly surroundings.
+
+#### Arcane Magnifier
+* *Weight*: 2 pounds
+* *Value*: 300 gold pieces
+
+This hand-held device allows the user to magnify objects or text, providing advantage on checks to read tiny inscriptions or examine intricate items closely.
+
+#### Mystical Crystal Chalice
+* *Weight*: 2 pounds
+* *Value*: 400 gold pieces
+
+This delicate crystal chalice, when filled with glowing water from the Chamber of Celestial Reflections (Room 3), reveals an ancient celestial inscription, granting advantage on negotiations with Spectral Sentinels.
+
+#### Crystal Chalice (mentioned for prerequisite)
+* *Weight*: 2 pounds
+* *Value*: 50 gold pieces
+
+This crystal chalice is essential for using the information found in the Luminous Library (Room 2) to access the mystical crystal chalice's hidden inscription in the Sanctuary of Silent Spirits (Room 6).
+
+#### Cycles of the Celestial
+* *Weight*: 3 pounds
+* *Value*: 300 gold pieces
+
+This ancient tome found in the Luminous Library (Room 2) provides valuable insights into the recurring celestial alignments that enhance or modify specific aspects of various rooms within the dungeon during the Celestial Convergence, offering mechanics and effects for each room.
+
+
+
+{{monster,frame
+## Distressed Spirit Librarian
+*Medium undead, neutral*
+
+**Armor Class** 12 (Spectral Robes)
+
+**Hit Points** 30 (6d8)
+
+**Speed** 0 ft., fly 30 ft. (hover)
+
+**STR** 3 (-4)
+**DEX** 10 (+0)
+**CON** 10 (+0)
+**INT** 12 (+1)
+**WIS** 11 (+0)
+**CHA** 16 (+3)
+
+**Skills** Persuasion +5
+
+**Damage Resistances** necrotic, bludgeoning, piercing, and slashing from nonmagical attacks
+
+**Senses** darkvision 60 ft., passive Perception 10
+
+**Languages** understands Common and Celestial but can't speak
+
+**Challenge** 1/2 (100 XP)
+
+**Incorporeal Movement.** The librarian can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+
+**Ethereal Whispers.** The librarian can telepathically communicate with creatures within 30 feet of it.
+
+**Legendary Resistance (1/Day).** If the librarian fails a saving throw, it can choose to succeed instead.
+
+**Actions**
+
+**Gentle Touch.** *Melee Spell Attack:* +5 to hit, reach 5 ft., one creature. *Hit:* 10 (2d6 + 3) necrotic damage, and the target must succeed on a DC 13 Wisdom saving throw or become frightened until the end of its next turn and have its speed reduced by half for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the frightened condition on a success.
+
+**Seeking Guidance.** The librarian gestures to a bookshelf, guiding a creature to specific information. The target gains advantage on their next Intelligence (Investigation) check in the library.
+}}
+
+{{monster,frame
+## Spectral Sentinel
+*Medium undead, neutral*
+
+**Armor Class** 12 (Spectral Armor)
+
+**Hit Points** 45 (7d8 + 14)
+
+**Speed** 0 ft., fly 30 ft. (hover)
+
+**STR** 12 (+1)
+**DEX** 10 (+0)
+**CON** 12 (+1)
+**INT** 8 (-1)
+**WIS** 10 (+0)
+**CHA** 10 (+0)
+
+**Skills** Perception +2
+
+**Damage Resistances** necrotic, bludgeoning, piercing, and slashing from nonmagical attacks
+
+**Senses** darkvision 60 ft., passive Perception 12
+
+**Languages** understands Common and Celestial but can't speak
+
+**Challenge** 2 (450 XP)
+
+**Incorporeal Movement.** The sentinel can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+
+**Ethereal Sight.** The sentinel can see 60 feet into the Ethereal Plane when it is on the Material Plane and vice versa.
+
+**Multiattack.** The sentinel makes two spectral glaive attacks.
+
+**Spectral Glaive.** *Melee Weapon Attack:* +4 to hit, reach 10 ft., one target. *Hit:* 10 (2d6 + 1) slashing damage.
+
+**Ethereal Bolt (Recharge 5-6).** The sentinel emits a bolt of ethereal energy in a 30-foot line that is 5 feet wide. Each creature in that line must make a DC 11 Dexterity saving throw, taking 14 (4d6) force damage on a failed save and becoming frightened for 1 minute on a failed save. A frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on a success.
+
+**Legendary Resistance (1/Day).** If the sentinel fails a saving throw, it can choose to succeed instead.
+
+**
+}}
+
+{{monster,frame
+## Ethereal Wisp
+*Tiny undead, neutral*
+
+**Armor Class** 13 (Ethereal Form)
+
+**Hit Points** 12 (3d4 + 3)
+
+**Speed** 0 ft., fly 30 ft. (hover)
+
+**STR** 3 (-4)
+**DEX** 16 (+3)
+**CON** 14 (+2)
+**INT** 2 (-4)
+**WIS** 10 (+0)
+**CHA** 6 (-2)
+
+**Damage Resistances** necrotic, bludgeoning, piercing, and slashing from nonmagical attacks
+
+**Condition Immunities** charmed, frightened, grappled, paralyzed, petrified, prone, restrained
+
+**Senses** darkvision 60 ft., passive Perception 10
+
+**Languages** understands Common and Celestial but can't speak
+
+**Challenge** 1/2 (100 XP)
+
+**Incorporeal Movement.** The wisp can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+
+**Ethereal Flight.** The wisp can hover in place or move vertically without expending extra movement.
+
+**Ethereal Touch.** *Melee Spell Attack:* +5 to hit, reach 5 ft., one creature. *Hit:* 9 (2d8) necrotic damage. The wisp flickers in and out of the Ethereal Plane during this attack, making it challenging to predict.
+
+**Ethereal Vanish.** The wisp can use its bonus action to become invisible until it takes an action or moves. When it reappears, it appears with an eerie shimmer.
+
+**Ethereal Shield (Recharge 5-6).** The wisp surrounds itself with ethereal energy, gaining a +2 bonus to AC for 1 minute. During this time, it can pass through solid objects without taking damage.
+}}
+
+{{monster,frame
+Here's the updated stat block for the Mischievous Spirit with the improvements:
+
+```markdown
+## Mischievous Spirit
+*Tiny undead, neutral*
+
+**Armor Class** 11 (Ethereal Form)
+
+**Hit Points** 7 (2d4 + 2)
+
+**Speed** 0 ft., fly 30 ft. (hover)
+
+**STR** 3 (-4)
+**DEX** 16 (+3)
+**CON** 12 (+1)
+**INT** 8 (-1)
+**WIS** 10 (+0)
+**CHA** 14 (+2)
+
+**Damage Resistances** necrotic, bludgeoning, piercing, and slashing from nonmagical attacks
+
+**Condition Immunities** charmed, frightened, grappled, paralyzed, petrified, prone, restrained
+
+**Senses** darkvision 60 ft., passive Perception 10
+
+**Languages** understands Common and Celestial but can't speak
+
+**Challenge** 1/4 (50 XP)
+
+**Incorporeal Movement.** The spirit can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+
+**Ethereal Trickster.** The spirit can use its bonus action to become invisible until it takes an action or uses a reaction. While invisible, it can't be targeted by attacks or spells.
+
+**Playful Prank.** The spirit can use its action to playfully rearrange books on a bookshelf, potentially revealing hidden items or passages. The module text specifies the possible outcomes of this action.
+
+**Ethereal Evasion.** When hit by an attack, the spirit can use its reaction to become ethereal until the start of its next turn. While ethereal, it gains resistance to all damage.
+
+
+```
+
+The improvements are incorporated into the stat block, and the information is organized appropriately.
+}}
+
+## Room 3: Chamber of Celestial Reflections
+
+*As you step into the Chamber of Celestial Reflections, you're greeted by a serene and ethereal ambiance. The majority of the room is occupied by a large, luminescent pool of water that seems to glow with a soft, otherworldly light. Above, the ceiling mirrors the pool's surface, adorned with shimmering constellations that appear to float and dance, casting a gentle radiance.*
+
+### Description
+The room is spacious and circular, with the luminescent pool taking up most of the floor space. The walls are adorned with intricate silver inlays depicting stars, moons, and celestial bodies. Delicate, silver lanterns hang from the ceiling, casting a soft, blueish glow that accentuates the pool's luminescence.
+
+In one corner of the room, you notice a small pile of precious gemstones, likely offerings from spirits or travelers of the past. Near the exit, there's an inscription that reads, "To witness the past, offer gratitude to the present." A statue of a celestial maiden stands on one side, her hands cupped as if offering water, holding a crystal vial. The alcoves in the walls contain various artifacts from the celestial order, including a silver diadem, a small harp that plays itself, and scrolls with songs of the past.
+
+
+
+
+### Notable Features
+- Large pool of luminescent water:
+  - Filled with cool, inviting water.
+  - Reflects images of spirits.
+  - Diving without an offering activates **ethereal chains** that pull the character under.
+- Ceiling:
+  - Mirrors the pool with shimmering constellations.
+  - Gazing at specific constellations can show past events.
+- **Pendant of Spirit Sight**: 
+  - Located on a stone pedestal next to the pool.
+- **Spiritual Offerings**:
+  - Scattered throughout the room.
+  - Appear as spectral feathers, ethereal flowers.
+- **Constellation Codex**:
+  - Book placed at the pool's edge.
+  - Details the significance of each constellation.
+- Walls:
+  - Adorned with intricate silver inlays of celestial bodies.
+- Lighting:
+  - Silver lanterns hang from the ceiling.
+  - Produce a soft, blueish glow.
+- Statue of a celestial maiden:
+  - Stands to one side.
+  - Holds a **Potion of Celestial Sight** in her hands.
+- Ethereal music:
+  - Faint lullaby can occasionally be heard.
+- **Celestial Wisps** (x3):
+  - Float near the pool.
+  - Become defensive if attacked or if pool is disturbed without an offering.
+- **Celestial inkwell**:
+  - Next to the **Constellation Codex**.
+  - Makes creations appear as starlight for a few minutes.
+- **Celestial robe**:
+  - Folded near the pool.
+  - Grants resistance to cold damage for 1 hour.
+- Alcoves:
+  - Contain celestial artifacts including a silver diadem, self-playing harp, and scrolls.
+- Whispers:
+  - Spirits discussing memories and sharing tales.
+- **Gemstones**:
+  - Small pile located in a corner of the room.
+- Inscription near the exit: 
+  - "To witness the past, offer gratitude to the present."
+- Pathways:
+  - Ornate bridge of luminescent crystal to **Observatory of Ethereal Skies (Room 5)** activates with a specific melody.
+  - Path to **Hall of Harmonic Echoes (Room 4)**.
+
+### The Pool's Glimpse into the Past
+- When characters focus on a specific constellation, they witness past events.
+- These insights are related to the celestial order's history and the motivations/actions of key figures.
+- During the **Celestial Convergence**, the pool offers glimpses of potential futures. 
+- Quote visible during the **Celestial Convergence**: "In this moment of celestial alignment, the pool reveals glimpses of destiny. What you see may shape your path."
+
+### The Luminal Resonator Clue
+- A spirit near the pool provides a vision of Seraphina using the **Luminal Resonator**.
+- Inscription related to the **Luminal Resonator**: "What harmonizes, also unlocks."
+
+### The Spirit's Offering and Crystal Chalice
+- **Glowing water** occasionally forms a chalice outline.
+- When filled with the pool's water, the **Spirit's Offering (Crystal Chalice)** reveals an inscription: "In gratitude, seek harmony."
+
+### Fragmented Melody's Clue
+- Sheet music is hidden in an alcove near the self-playing celestial harp.
+- The melody hints at activating the bridge to the **Observatory of Ethereal Skies (Room 5)**.
+
+
+
+#### Pendant of Spirit Sight
+
+*Wondrous Item (pendant), uncommon*
+
+- **Weight:** 0.1 lb.
+- **Value:** 100 gp
+
+This pendant allows the wearer to see and interact with spirits more clearly for 1 hour when worn.
+
+#### Potion of Celestial Sight
+
+*Potion, uncommon*
+
+- **Weight:** 0.5 lb.
+- **Value:** 50 gp
+
+Upon consumption, this potion grants the user dark vision for 1 hour.
+
+#### Starlight Medallion
+
+*Wondrous Item (medallion), rare*
+
+- **Weight:** 0.5 lb.
+- **Value:** 500 gp
+
+This medallion, when worn, grants its wearer advantage on saving throws against cold damage.
+
+#### Spirit's Offering (Crystal Chalice)
+
+*Wondrous Item (chalice), uncommon*
+
+- **Weight:** 0.5 lb.
+- **Value:** 50 gp
+
+This crystal chalice, when filled with glowing water from the Chamber of Celestial Reflections, reveals hidden celestial inscriptions, aiding negotiations with Spectral Sentinels in the Sanctuary of Silent Spirits.
+
+#### Ethereal Lens
+
+*Wondrous Item (wand), uncommon*
+
+- **Weight:** 0.1 lb.
+- **Value:** 100 gp
+
+This delicate crystal wand, when used correctly, temporarily disables an ethereal barrier protecting the Starlight Medallion in Seraphina's Sequester.
+
+
+
+{{monster,frame
+Certainly, here's the updated stat block for the Celestial Wisp with the proposed improvements:
+
+```markdown
+## Celestial Wisp (CR 1/2)
+*Tiny celestial, neutral*
+___
+- **Armor Class** 12
+- **Hit Points** 10 (4d4)
+- **Speed** 0 ft., fly 30 ft.
+___
+- **Skills** Perception +3
+- **Senses** Darkvision 60 ft., passive Perception 13
+- **Languages** understands Celestial but can't speak
+- **Challenge** 1/2 (100 XP)
+___
+**Incorporeal Movement.** The wisp can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+
+**Ethereal Chains.** When a character dives into the pool without making an offering, ethereal chains emanate from the pool. The chains target one creature in the water within 10 feet of the Wisp and make a melee spell attack (+3 to hit) against it, dealing 4 (1d8) force damage on a hit.
+
+**Ethereal Presence.** The wisp can become invisible until it attacks or until its concentration ends (as if concentrating on a spell).
+
+**Radiant and Force Attacks.** The wisp's attacks deal both radiant and force damage.
+
+**Water Manipulation.** The wisp can manipulate the luminescent water in the chamber. Once per turn, it can create a minor water-based hazard within 10 feet of itself, such as a small whirlpool or a water barrier. Creatures in or near these hazards must make a DC 12 Strength saving throw or be restrained until the end of their next turn.
+
+**Healing Light (1/Day).** As an action, the wisp can emit a healing aura in a 10-foot radius. All allied creatures in the area regain 4 (1d8) hit points.
+
+**Ethereal Blink.** As a reaction when targeted by an attack, the wisp can teleport to an unoccupied space within 30 feet. 
+
+
+```
+
+These improvements should make the Celestial Wisp a more engaging and challenging encounter for a level-3 party while aligning with its CR of 1/2.
+}}
+
+## Room 4: Hall of Harmonic Echoes
+
+*As you enter Room 4, the Hall of Harmonic Echoes, you find yourself in a long corridor lined with towering crystal formations. Each crystal resonates with its own unique tone, filling the air with harmonious echoes when struck. The soft, ever-changing lighting reflects the colors of the crystals, casting shimmering patterns on the smooth marble floor etched with sound wave-like patterns. Occasionally, a gentle breeze causes some crystals to resonate on their own, creating an ethereal choir-like ambiance.*
+
+### Description
+The Hall of Harmonic Echoes stretches before you, its crystalline walls reaching high into the ceiling. The corridor is divided into three sections:
+
+1. **Crystal Corridor**: The initial section of the hall, containing the majority of the crystal formations. They vary in size and color, creating a mesmerizing visual display.
+
+2. **Maestro Crystal**: Near the entrance, a larger crystal stands out, known as the "Maestro Crystal." When touched, it emits a resonant tone and displays an inscription: "In harmony, secrets resonate."
+
+3. **Pool of Reflection**: At the far end of the corridor, a shallow pool of water reflects the light from the crystals, casting intricate patterns on the ceiling. This area provides a serene and beautiful contrast to the crystals.
+
+
+
+
+### Notable Features
+
+- Large crystal formations lining the corridor. Some are etched with **Luminal Sentinels' Sigils**. Some crystals float, shattered at their base, due to celestial magic.
+- Soft, ever-changing lighting from the resonating crystals.
+- Smooth marble floor with sound wave-like patterns.
+- An ethereal, ghostly choir sound permeates the hall.
+- Soft winds occasionally blow, causing some crystals to resonate on their own.
+- A large, standout crystal known as the **Maestro Crystal** is embedded in a wall.
+- **Golden Harp** situated in the hall releases an echoing sound.
+- Hidden beneath a cluster of crystals is the **Silver Lyre**.
+- In a crevice, a diary detailing a Luminal Sentinel's connection to Seraphina can be discovered.
+- At the hall's end, a shallow reflecting pool projects shimmering patterns on the ceiling.
+- **Sound Mites** (about 20) can be spotted near certain crystals, feeding off their energy.
+- **Spectral musician** stands poised in the hall, ready to challenge adventurers.
+- Striking crystals dissonantly thrice triggers a trap summoning the **Harmonic Guardian** and two **Melodic Wisps**.
+- **Luminal Resonator** is suspended mid-air, held by harmonic vibrations.
+- Near the entrance, an inscription hints at the **Luminal Feather**: "A feather that guides".
+- Occasional soft murmur whispers: "Seek harmony in echoes, find the key."
+
+#### Maestro Crystal Interaction
+- Touching the **Maestro Crystal** causes a harmonious sound to resonate throughout the hall.
+- An inscription appears upon touch: "In harmony, secrets resonate."
+
+#### Golden Harp Riddle
+- When played, the **Golden Harp** illuminates the room.
+- A riddle is revealed on the floor: "Strike crystals in sequence to unlock Seraphina's song."
+
+#### Luminal Resonator Use
+- Striking the **Luminal Resonator** emits a unique harmonic frequency.
+- It bears an inscription: "Harmonize with Seraphina's echoes."
+- In this room, using it produces a faint echo, suggesting its importance in accessing the Starlight Medallion.
+
+#### Dissonant Crystal Trap
+- Striking any crystal dissonantly three times releases a sonic burst, dealing 2d4 thunder damage in a 20-foot radius and potentially deafening characters for 1 minute (Constitution save DC 15 to resist deafening).
+
+#### Connections
+- A grand archway leads to the **Luminous Library (Room 2)**.
+- A secret passage, revealed by pressing an almost imperceptible indentation in a wall, connects to the **Sanctuary of Silent Spirits (Room 6)** after deciphering hints from the Luminous Library's texts.
+- The hall also connects to the **Hall of Luminal Legacy (Room 7)**, serving as a prelude to the final challenges.
+- Adventurers from the **Chamber of Celestial Reflections (Room 3)** can enter the hall to regroup or change course.
+
+#### Sound Mite Aggression
+- If provoked, **Sound Mites** release a dissonant screech, dealing 2d4 thunder damage in a 10-foot radius.
+
+
+
+#### Golden Harp
+*Weight*: 10 lbs, *Value*: 500 gold pieces
+
+This intricately crafted harp, when played, illuminates the room. It can reveal a riddle on the floor when played, which, when solved, may unlock hidden secrets.
+
+#### Silver Lyre
+*Weight*: 5 lbs, *Value*: 100 gold pieces
+
+This exquisite lyre, found beneath crystals, is a valuable piece worth 100 gold coins. It serves as a musical instrument, capable of replicating any sound it has previously heard when played.
+
+#### Crystalline Scarab
+*Weight*: 1 lb, *Value*: 50 gold pieces
+
+This small decorative scarab emits comforting light when held, granting advantage on the next saving throw made by the character who carries it.
+
+#### Luminal Feather
+*Weight*: Negligible, *Value*: 200 gold pieces
+
+This delicate feather, when placed on a bird's depiction in the Observatory of Ethereal Skies, reveals a Celestial Compass, aiding navigation in the Phantom Marshes.
+
+#### Maestro Crystal
+*Weight*: 5 lbs, *Value*: 300 gold pieces
+
+This large crystal, when touched, emits a resonant tone and displays an inscription: "In harmony, secrets resonate." It appears to have a mysterious purpose, possibly related to unlocking hidden aspects of the surroundings.
+
+
+
+{{monster,frame
+**Spectral Musician (CR 1/2)**
+*Medium undead, neutral*
+
+**Armor Class** 12 (natural armor)
+
+**Hit Points** 18 (4d8)
+
+**Speed** 30 ft.
+
+**Skills** Performance +4
+
+**Damage Resistances** necrotic
+
+**Senses** darkvision 60 ft., passive Perception 14
+
+**Languages** understands Common but can't speak
+
+**Challenge** 1/2 (100 XP)
+
+**Ethereal Sight.** The spectral musician can see 60 feet into the Ethereal Plane when it is on the Material Plane, and vice versa.
+
+**Ethereal Passage.** The spectral musician can use its Ethereal Passage ability once every other round as a bonus action. When it enters the Ethereal Plane, it gains resistance to all damage until the start of its next turn.
+
+**Dissonant Notes.** The spectral musician targets one creature it can see within 60 feet of it. If the target can hear the spectral musician, the target must succeed on a DC 12 Wisdom saving throw or take 2d6 necrotic damage and be frightened until the end of its next turn. If the target succeeds on the saving throw, it takes half as much damage and isn't frightened.
+
+**Musical Insight.** The spectral musician has an innate connection to music and sound. It can use its bonus action to produce a harmonious note, revealing a cryptic clue or piece of information related to the module's storyline.
+
+**
+}}
+
+{{monster,frame
+## Sound Mite (CR 1/8)
+*Tiny beast, unaligned*
+
+**Armor Class** 12
+
+**Hit Points** 14 (4d4 + 4)
+
+**Speed** 5 ft., fly 30 ft.
+
+**Skills** Stealth +4
+
+**Senses** darkvision 60 ft., passive Perception 10
+
+**Languages** understands Common but can't speak
+
+**Challenge** 1/8 (25 XP)
+
+**Sound Burst.** When provoked, a group of sound mites can emit a dissonant screech as an action, creating a 10-foot radius sphere centered on themselves. Each creature in that area must make a DC 10 + 2 for each additional Sound Mite beyond the first Constitution saving throw, taking 2d4 thunder damage per Sound Mite on a failed save, or half as much damage on a successful one. The sound mites can't use this ability again until they finish a short rest.
+
+**Actions**
+**Bite.** Melee Weapon Attack: +0 to hit, reach 5 ft., one target. Hit: 1 piercing damage.
+
+**Swarm.** The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny sound mite. The swarm can't regain hit points or gain temporary hit points.
+}}
+
+{{monster,frame
+Certainly, here's the updated stat block for the Harmonic Guardian:
+
+```markdown
+## Harmonic Guardian (CR 2)
+*Medium construct, neutral*
+
+**Armor Class** 14 (natural armor)
+
+**Hit Points** 45 (6d8 + 18)
+
+**Speed** 30 ft.
+
+**Skills** Performance +3
+
+**Damage Resistances** bludgeoning, piercing, and slashing damage from nonmagical attacks
+
+**Senses** darkvision 60 ft., passive Perception 11
+
+**Languages** understands Common but can't speak
+
+**Challenge** 2 (450 XP)
+
+**Harmonious Aura.** The Harmonic Guardian emits an aura of harmony in a 20-foot radius. While in the aura, creatures have advantage on saving throws against being frightened, and they can't be charmed or frightened as long as they remain in the aura.
+
+**Actions**
+**Sonic Resonance.** The Harmonic Guardian targets one creature it can see within 60 feet of it. The target must succeed on a DC 13 Wisdom saving throw or take 20 (4d8) thunder damage and be deafened for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the deafened condition on a success.
+
+**Multiattack.** The Harmonic Guardian makes two Sonic Resonance attacks.
+
+**Harmonious Strike.** Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) bludgeoning damage plus 3 (1d6) thunder damage.
+
+**Legendary Actions**
+**Harmonic Surge (Costs 2 Actions).** The Harmonic Guardian releases a burst of resonating energy. All creatures within 10 feet of it must succeed on a DC 13 Constitution saving throw or be pushed 10 feet away and take 5 (2d4) thunder damage on a failed save, or half as much damage and no push on a successful one.
+
+**Resonate with Crystals (Costs 1 Action).** The Harmonic Guardian resonates with nearby crystals, causing them to emit a harmonious tone. This can interact with environmental elements or puzzles in the room.
+
+
+```
+
+This updated stat block incorporates the improvements mentioned, including the clarification of the Harmonious Aura's effects, increased damage output, the addition of legendary actions, and the potential for environmental interaction.
+}}
+
+{{monster,frame
+## Melodic Wisp (CR 1/4)
+*Tiny undead, neutral*
+
+**Armor Class** 10
+
+**Hit Points** 8 (3d4 + 1)
+
+**Speed** 0 ft., fly 40 ft. (hover)
+
+**Skills** Perception +4
+
+**Senses** darkvision 60 ft., passive Perception 14
+
+**Languages** understands Common but can't speak
+
+**Challenge** 1/4 (50 XP)
+
+**Ethereal Form.** The melodic wisp can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+
+**Melodic Distraction.** When a creature starts its turn within 10 feet of the melodic wisp, it must succeed on a DC 11 Wisdom saving throw or be charmed until the start of its next turn. If the creature succeeds on the saving throw or the effect ends for it, it is immune to the melodic wisp's Melodic Distraction for the next 24 hours.
+
+**Actions**
+**Ethereal Touch.** Melee Spell Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) force damage.
+
+**Disruptive Tune.** Ranged Spell Attack: +2 to hit, range 30 ft., one target. Hit: 2 (1d4) force damage.
+}}
+
+## Room 5: Observatory of Ethereal Skies
+
+*As you enter the Observatory of Ethereal Skies, you find yourself in an elevated circular chamber with a transparent dome. The breathtaking view of the Celestial Plane surrounds you, featuring star clusters, nebulous formations, and ethereal comets streaking across the sky. Multiple telescopes and astral instruments are scattered around, and the floor is adorned with inlaid designs resembling constellations, with luminous stones representing the stars.*
+
+### Description
+The circular chamber offers a panoramic view of the Celestial Plane through a transparent dome. Telescopes and astral instruments are scattered throughout the room, with a prominent Celestial Map annotated by Seraphina Starlight. On one side, a polished marble statue of Seraphina gazes at the celestial map. The floor is covered in intricate constellations, and a suspended ornate chandelier mimics a shooting star's trajectory from the dome's peak. Ethereal wisps gently float around, and hovering orbs of light can be captured for temporary light sources. A corner of the room holds an ethereal harp, and scattered ethereal feathers can be found.
+
+
+
+
+### Notable Features
+- Elevated circular chamber with a transparent dome offering a view of the **Celestial Plane**.
+- Multiple **telescopes** and astral instruments positioned around the room.
+  - Incorrect manipulation of a telescope may result in temporary blindness.
+- The chamber's floor has designs resembling constellations with luminous stones as stars. Some contain hidden symbols.
+- **Starlight Prism** resting on a pedestal.
+- **Celestial Map** on the western wall, annotated by Seraphina Starlight.
+- **Luminal Hourglass** located on a side table.
+- **Celestial Clock** near the entrance, inscribed: "Countdown to Celestial Convergence."
+- Chandelier resembling a shooting star hangs from the dome's peak.
+- Marble statue of **Seraphina** stands beside the **Celestial Map**.
+- Ancient tome titled **"Histories of the Stars"** placed on a wooden stand.
+- Hovering orbs of light (12 total) float about, lasting an hour if captured.
+- **Celestial Compass** hidden within a mural depicting a bird.
+- A display of bottled nebulae (8 bottles) on a shelf.
+- **Ethereal harp** located in the southeast corner.
+- Ethereal wisps (6 total) drift about.
+- Ethereal feathers (9 total) scattered about.
+- Grand staircase leading down to the Hall of Luminal Legacy.
+- Bridge from Chamber of Celestial Reflections extends upon playing a specific melody.
+- Staircase from Sanctuary of Silent Spirits spirals up to this room.
+  
+### Ethereal Lens Use
+- Players using the **Ethereal Lens** on the floor will reveal glowing circular symbols.
+- The symbols form a pattern corresponding to the Stellar Codex in Room 7.
+  
+### Celestial Alignment Effects
+- During a celestial alignment:
+  - Telescopes have enhanced vision.
+  - Ethereal wisps become more active and emit whispers about Celestial Convergence and alignment synchronization.
+
+### Celestial Map Insights
+- Map annotations include:
+  - "Walk starry path under Lunar Serpent's tail."
+  - "Telescopes grant celestial vision."
+
+### Luminal Feather Mechanic
+- Mural depicts a bird with an empty slot. Inscription reads: "Restore plumage to reveal the way."
+- Placing the **Luminal Feather** on the mural unlocks a compartment, revealing the **Celestial Compass**.
+
+
+
+#### Starlight Prism
+* *Weight:* 1 lb.
+* *Value:* 500 gp
+
+This small handheld device allows the user to reveal hidden celestial pathways and alignments within the Cathedral when gazed through. As an action, the user can activate the Starlight Prism, which grants them the ability to see hidden celestial symbols and alignments within a 60-foot cone for 1 minute. This ability can be used once per short rest.
+
+#### Celestial Map
+* *Weight:* 2 lbs.
+* *Value:* 750 gp
+
+This detailed chart of observable celestial bodies and phenomena, annotated by Seraphina Starlight, offers insights into the precise timing required to access specific chambers in the Cathedral during certain celestial alignments. While studying the map, you can spend 1 hour to gain advantage on Intelligence (Arcana) checks related to the Cathedral's celestial puzzles and timing-based challenges.
+
+#### Luminal Hourglass
+* *Weight:* 3 lbs.
+* *Value:* 1,000 gp
+
+This ornamental timekeeping artifact, filled with stardust, symbolizes the passage of time in the ethereal realm. It functions as a magical hourglass that can be used once per long rest. When activated, it can slow time for creatures in a 30-foot radius for 1 minute. Affected creatures must succeed on a DC 15 Wisdom saving throw or be affected as if by the "Slow" spell.
+
+#### Celestial Compass
+* *Weight:* 1 lb.
+* *Value:* 1,500 gp
+
+This valuable navigation tool always points to the brightest star in the sky. When carried, the Celestial Compass grants its holder advantage on Survival checks made during the night or in environments where the stars are visible, aiding in navigation.
+
+#### Celestial Clock
+* *Weight:* 5 lbs.
+* *Value:* 2,000 gp
+
+This mechanical device, located near the entrance of the observatory, counts down the time until the next Celestial Convergence. The Celestial Clock provides valuable information to players about the alignment's timing, allowing them to prepare for events related to the Celestial Convergence, as detailed in the Echoing Entrance Hall (Room 1).
+
+#### Celestial Alignment Effects
+
+When the celestial alignment occurs, various room-specific effects enhance or modify aspects of the dungeon's rooms. In the Observatory of Ethereal Skies (Room 5), during alignment, the telescopes grant enhanced vision, allowing users to see celestial wonders in greater detail, and ethereal wisps become more active, providing information about the Celestial Convergence and alignment synchronization when approached peacefully.
+
+#### Celestial Map Insights
+* *Weight:* 0.5 lbs.
+* *Value:* 250 gp
+
+The annotations on this map provide valuable insights for adventurers exploring the Cathedral during celestial alignments. It includes instructions such as "Walk the starry path under the Lunar Serpent's tail" and reveals that telescopes in the observatory grant celestial vision. When used, the Celestial Map can grant advantage on Intelligence (Arcana) or Wisdom (Survival) checks related to navigating the Cathedral during celestial alignments, aiding adventurers in their quest.
+
+
+
+## Room 6: Sanctuary of Silent Spirits
+
+*As you enter Room 6, the Sanctuary of Silent Spirits, you find yourself in a serene, dimly lit chamber. The air is filled with a soft, soothing hum, and the room is adorned with floating orbs of light, each gently glowing. Faint whispers of memories drift through the air, creating an atmosphere of reverence and reflection. Stone benches carved with delicate ethereal patterns offer resting spots, and a gentle cascading water feature provides a soothing background hum. A holographic depiction of the Cathedral's construction phase is visible, showing workers and mages collaborating.*
+
+### Description
+The Sanctuary is spacious with a high ceiling, its walls adorned with holographic scenes of the Cathedral's construction. Floating orbs of light are scattered throughout the room, casting a gentle, ambient glow. Stone benches with ethereal carvings line the walls, and a central water feature glistens softly.
+
+To the left, a mural on the floor depicts Seraphina, surrounded by her Luminal Sentinels, paying tribute to their bravery. A small, discreet doorway leads to the Luminous Library (Room 2), while a barely noticeable indentation in the wall, when pressed, reveals a narrow corridor to the Hall of Harmonic Echoes (Room 4). A spiraling staircase on the far side ascends to the Observatory of Ethereal Skies (Room 5).
+
+
+
+
+### Notable Features
+- Floating orbs of light (represents souls).
+  - Disturbing multiple orbs releases mournful wail, imposing disadvantage on Wisdom saving throws for 10 minutes.
+  - **Spirit Warden** with two **Soul Wisps** confronts those causing disturbances.
+- **Seraphina's Diary** on a stone pedestal, alongside **Memory Crystals** (7 in total).
+  - Each **Memory Crystal**, when touched, plays a whispered memory.
+- Restless spirit (1) communicates with characters, asking for a symbolic gesture.
+- Stone benches (4) carved with ethereal patterns.
+  - Hidden compartment beneath one bench containing a **Lunar Dagger**.
+- Gentle cascading water feature.
+- Holographic depiction of the Cathedral's construction.
+- **Moonshade Flower** (1) planted near water feature.
+- Whispering cloaks (3) hanging on the walls.
+- **Luminal Specter** (benign entity) floats near the center of the room.
+- Mural depicting Seraphina and her Luminal Sentinels.
+- Doorway connecting to **Luminous Library (Room 2)**: Small and discreet.
+- Secret corridor leading to **Hall of Harmonic Echoes (Room 4)**.
+  - Activated by pressing an indentation in the wall.
+- Staircase spiraling upwards to **Observatory of Ethereal Skies (Room 5)**.
+- Spectral figure holding a **Mystical Crystal Chalice**, gesturing towards **Chamber of Celestial Reflections (Room 3)**.
+
+#### Spirit's Regret
+The restless spirit seeks a lullaby sung in its honor. Success grants a spectral blessing, granting advantage on the next Charisma saving throw.
+
+#### Celestial Mural
+Depicts an alignment event. Inscription: "During Celestial Convergence, tangible spirits offer gifts to the reverent."
+
+#### Orb Interactions
+Orbs react when near **Soulbound Locket** or **Mystical Crystal Chalice** filled with glowing water. Glowing intensifies, revealing path to **Hall of Luminal Legacy (Room 7)**.
+
+#### Room Clues
+- **Seraphina's Diary** Excerpt: *"The weight of the Nexus burdens my heart. But in this sacred sanctuary, I find solace. May those who read this understand the gravity of our sacrifice."*
+- Plaque near **Soulbound Locket**: *"Unlock final chamber. Place Locket in Luminal Sentinel's hand hollow near entrance. Speak oath: 'In light, unite; in memory, fight.'"*
+- Each **Memory Crystal** inscription: *"Touch gently to reveal lost soul's memory."*
+- Text near **Phantom Quill**: *"Using quill writes, 'In this chamber, I seek...' followed by profound emotion."*
+- Plaque referencing **Luminal Resonator**: *"Disable Hall of Harmonic Echoes' ethereal barrier. Strike resonator in tune with harmonic echoes. Three strikes, spaced by heartbeats, break barrier."*
+- Inscription on **Mystical Crystal Chalice**: *"Fill with water from Chamber of Celestial Reflections to reveal ancient celestial inscription."*
+- Beside bird mural, hint for **Luminal Feather**: *"Place Luminal Feather on depicted bird's wing in Observatory of Ethereal Skies to unveil Celestial Compass."* This room offers the characters a place of reflection and mystery, introducing them to Seraphina's lore, celestial events, and her connection to the Nexus. Combining collected artifacts and knowledge from previous rooms can help unveil hidden paths and lore, providing advantages in upcoming challenges.
+
+
+
+#### Soulbound Locket
+*Wondrous Item (necklace), rare (requires attunement)*
+
+- **Weight:** 0.1 lb.
+- **Value:** 1,000 gp
+
+This intricately crafted pendant contains a fragment of a Luminal Sentinel's essence. When attuned, it can unlock the final chamber when placed in a Luminal Sentinel's hand hollow near the entrance, and the oath "In light, unite; in memory, fight" is spoken.
+
+#### Memory Crystal
+*Wondrous Item (crystal), uncommon*
+
+- **Weight:** 0.05 lb.
+- **Value:** 100 gp
+
+These tiny crystal shards, when touched, reveal snippets of the lives of those whose souls are kept in the Sanctuary. When activated, they provide a brief mental image or memory, allowing the user to experience a moment from the past.
+
+#### Seraphina's Diary
+*Wondrous Item (journal), rare*
+
+- **Weight:** 1 lb.
+- **Value:** 500 gp
+
+This personal journal, detailing Seraphina’s emotions, dreams, fears during the Cathedral's construction, and the war against Zephyrion, can be used to transcribe profound emotions using the Phantom Quill.
+
+#### Phantom Quill
+*Wondrous Item (pen), uncommon*
+
+- **Weight:** 0.1 lb.
+- **Value:** 250 gp
+
+This pen, when used to write, transcribes the deepest emotion of the writer at that moment, allowing one to express their innermost feelings in writing.
+
+#### Moonshade Flower
+*Wondrous Item (plant), uncommon*
+
+- **Weight:** 0.05 lb.
+- **Value:** 50 gp
+
+This rare glowing plant is both decorative and has minor healing properties when ingested. When consumed, it restores 1d4 hit points.
+
+#### Celestial Alignment
+*Wondrous Item (mural), unique*
+
+- **Weight:** N/A
+- **Value:** N/A
+
+This mural in the chamber depicts a celestial alignment, enhancing or modifying specific aspects of various rooms within the dungeon during a Celestial Convergence. When the alignment occurs, tangible spirits offer gifts or blessings if approached with respect.
+
+
+
+## Room 7: Hall of Luminal Legacy
+
+*As you enter the Hall of Luminal Legacy, you are met with a grand spectacle. The hall is adorned with statues of Luminal Sentinels in majestic poses, each placed on a pedestal emitting an ethereal flame. The room hums with an underlying power, as if the essence of the Sentinels is present. The polished blue marble floor reflects the ethereal flames, and a large ornate chandelier hangs from the ceiling, glowing with the same ethereal light. You hear whispering sounds, remnants of the Luminal Sentinels' conversations and battles. A mural on one side of the hall depicts the Sentinels' oath-taking ceremony with Seraphina Starlight.*
+
+### Description
+The Hall of Luminal Legacy is a spacious grand hall with a high ceiling. It is dominated by the statues of Luminal Sentinels, each on its own pedestal. The statues are crafted with intricate detail and depict the Sentinels in various heroic poses, their faces stern with determination. The ethereal flames beneath them cast a soft, eerie light throughout the room. Polished blue marble covers the floor, and the walls are adorned with murals depicting the Sentinels' dedication to Seraphina.
+
+A central fountain filled with clear water sits in the room's center, and a small altar is tucked in one corner where offerings to the Luminal Sentinels can be made. There is also a plinth that holds a Silver Flute and a celestial crest pin known as the Crest of Luminal Legacy.
+
+
+
+
+### Notable Features
+- Grand hall with **Luminal Sentinels** statues, each on a pedestal with an ethereal flame.
+- Statues: Disturbing without paying respects triggers ethereal snare, binding character temporarily.
+- **Sentinel Tomes** (x7): At statue bases, narrating Sentinel tales and hinting about the Resonator.
+- Floor: Polished blue marble reflecting ethereal flames.
+- Sounds: Whispered remnants of Sentinel conversations and battles.
+- Ornate chandelier: Glowing with ethereal light.
+- Mural: Depicting Sentinels' oath-taking ceremony with Seraphina.
+- **Shadow Lurker**: Hidden in shadows, may ambush players.
+- **Silver Flute**: In a corner, on a plinth.
+- Altar: Offering valuable items may result in minor blessings.
+- Ethereal wisps: Float randomly, observing adventurers.
+- Fountain: Center of the room, drinking restores minor health.
+- **Celestial Sigil**: Seal signifying unity between Sentinels and Seraphina.
+- Connection to Room 4: Direct, with a secret corridor revealed by pressing an indentation.
+- Connection to Room 5: Allows descent from the Observatory to this hall.
+- Connection to Room 8: Serves as the final gateway, **Sentinel's Key** required.
+- **Stellar Codex**: Located on a raised platform, shimmering translucent pages.
+
+### Stellar Codex and Celestial Convergence
+- **Ethereal Lens** (found in Room 2) reveals "Seraphina's Grace" symbols, required to activate Codex.
+- During Celestial Convergence, align Codex under "The Guiding Star" (specific time/date found on plaque near chandelier).
+- Activation: Beam of light reveals hidden compartment.
+- Hidden Compartment Reward: **Celestial Charm**, granting wearer ethereal damage resistance.
+- Clues on plinth beside Codex: "Seek Celestial Harmony in heavens."
+- **Ethereal Protector**: Phases upon hall desecration, alongside **Luminal Shades** (x4) minions.
+- Loot: **15 silver coins** and a **vial of spectral essence**.
+- Loot (additional): **Crest of Luminal Legacy** near the mural.
+
+
+
+#### Sentinel's Key
+* *Weight:* 0.5 lbs
+* *Value:* 250 gp
+* This intricately forged celestial key is imbued with the essence of the Luminal Sentinels. It is used to unlock the seal guarding Seraphina's Sequester.
+
+#### Bracer of Ethereal Warding
+* *Weight:* 1 lb
+* *Value:* 750 gp
+* These arm guards grant resistance to ethereal and spectral damage, reducing such damage taken by half.
+
+#### Sentinel Tome
+* *Weight:* 2 lbs
+* *Value:* 100 gp
+* These scrolls at the base of Luminal Sentinel statues narrate tales of valor, wisdom, and sacrifice. Reading one grants insight into the Luminal Sentinels' dedication, their bond with Seraphina, and provides hints about the Nexus of Souls' hidden properties.
+
+#### Celestial Sigil
+* *Weight:* 0.1 lb
+* *Value:* 500 gp
+* This seal signifies the unity of the Luminal Sentinels and their pact with Seraphina Starlight. It holds no intrinsic magical properties but may have significance or value in certain contexts or quests.
+
+#### Silver Flute
+* *Weight:* 1 lb
+* *Value:* 150 gp
+* When played, this haunting flute produces a calming melody that can soothe aggressive spirits in the vicinity, potentially defusing tense situations or easing encounters with ethereal entities.
+
+#### Celestial Charm
+* *Weight:* 0.1 lb
+* *Value:* 1000 gp
+* This celestial charm, when worn, grants the wearer resistance to ethereal and spectral damage, reducing such damage taken by half.
+
+
+
+{{monster,frame
+```markdown
+## Ethereal Protector
+*Large celestial, neutral*
+
+**Armor Class** 14 (ethereal shield)
+
+**Hit Points** 80 (10d10 + 20)
+
+**Speed** 30 ft., fly 60 ft.
+
+**STR** 14 (+2)
+**DEX** 10 (+0)
+**CON** 14 (+2)
+**INT** 6 (-2)
+**WIS** 10 (+0)
+**CHA** 8 (-1)
+
+**Skills** Perception +2
+
+**Damage Resistances** acid, fire, lightning, thunder; bludgeoning, piercing, and slashing from nonmagical attacks
+
+**Damage Immunities** cold, necrotic, poison
+
+**Condition Immunities** charmed, exhaustion, frightened, grappled, paralyzed, petrified, poisoned, prone, restrained
+
+**Senses** darkvision 60 ft., passive Perception 12
+
+**Languages** Celestial, understands Common but can't speak
+
+**Challenge** 3 (700 XP)
+
+***Ethereal Phasing.*** The ethereal protector can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+
+***Ethereal Shield.*** The ethereal protector has resistance to ethereal and spectral damage.
+
+***Ethereal Strike.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 10 (2d6 + 2) force damage.
+
+***Ethereal Barrier.*** When hit by a melee attack, the ethereal protector can use its reaction to reduce the damage by 1d10 + 2. If this reduces the damage to 0, the attacker takes 5 (1d10) force damage.
+
+***Ethereal Manifestation (1/Day).*** The ethereal protector can become corporeal for 1 minute. During this time, it loses its ethereal phasing ability but gains resistance to all damage. It can use this ability once per long rest.
+
+***Summon Luminal Shades (1/Day).*** The ethereal protector can summon 2d4 luminal shades to aid it. 
+
+### Actions
+
+***Multiattack.*** The ethereal protector makes two ethereal strike attacks.
+
+***Ethereal Burst (Recharge 5-6).*** The ethereal protector releases a burst of ethereal energy in a 15-foot radius. Each creature in that area must make a DC 13 Dexterity saving throw, taking 18 (4d8) force damage on a failed save, or half as much damage on a successful one. The area becomes difficult terrain for 1 minute.
+
+### Legendary Actions
+The ethereal protector can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The ethereal protector regains spent legendary actions at the start of its turn.
+
+***Ethereal Strike.*** The ethereal protector makes one ethereal strike attack.
+
+***Ethereal Defense (Costs 2 Actions).*** The ethereal protector uses its ethereal barrier reaction.
+
+***Summon Luminal Shades (Costs 2 Actions).*** The ethereal protector summons 2d4 luminal shades.
+
+
+```
+
+*Note: Adjust hit points, damage, and abilities as needed to suit your campaign and party's strength. This updated stat block includes the improvements mentioned earlier.*
+}}
+
+{{monster,frame
+## Luminal Shade
+*Medium celestial, neutral*
+
+**Armor Class** 12
+
+**Hit Points** 30 (5d8 + 5)
+
+**Speed** 30 ft., fly 30 ft.
+
+**STR** 6 (-2)
+**DEX** 16 (+3)
+**CON** 12 (+1)
+**INT** 6 (-2)
+**WIS** 10 (+0)
+**CHA** 8 (-1)
+
+**Skills** Stealth +5
+
+**Damage Resistances** acid, fire, lightning, thunder; bludgeoning, piercing, and slashing from nonmagical attacks
+
+**Damage Immunities** cold, necrotic, poison
+
+**Condition Immunities** charmed, exhaustion, frightened, grappled, paralyzed, petrified, poisoned, prone, restrained
+
+**Senses** darkvision 60 ft., passive Perception 10
+
+**Languages** Celestial, understands Common but can't speak
+
+**Challenge** 1/2 (100 XP)
+
+***Ethereal Phasing.*** The luminal shade can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+
+***Ethereal Strike.*** Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) force damage.
+
+***Ethereal Beckoning.*** As a bonus action, the luminal shade can draw a creature it can see within 30 feet of it closer. The target must succeed on a DC 12 Strength saving throw or be pulled 10 feet toward the luminal shade. On a failed save, the target is also restrained until the start of its next turn.
+
+***Ethereal Disperse.*** When the luminal shade takes damage, it can use its reaction to disperse into mist, becoming immune to all damage until the start of its next turn. While dispersed, it can't take actions, but it can move without provoking opportunity attacks.
+}}
+
+{{monster,frame
+Certainly, here's the updated stat block for the Shadow Lurker with the proposed improvements:
+
+## Shadow Lurker
+*Small undead, chaotic evil*
+
+**Armor Class** 13
+
+**Hit Points** 45 (7d8 + 14)
+
+**Speed** 30 ft.
+
+**STR** 8 (-1)
+**DEX** 16 (+3)
+**CON** 12 (+1)
+**INT** 6 (-2)
+**WIS** 10 (+0)
+**CHA** 6 (-2)
+
+**Skills** Stealth +5
+
+**Damage Resistances** necrotic; bludgeoning, piercing, and slashing from nonmagical attacks
+
+**Damage Vulnerabilities** radiant
+
+**Condition Immunities** frightened
+
+**Senses** darkvision 60 ft., passive Perception 10
+
+**Languages** understands Common but can't speak
+
+**Challenge** 1 (200 XP)
+
+***Shadow Blend.*** The shadow lurker can take the Hide action as a bonus action in dim light or darkness.
+
+***Shadow Step (1/round).*** The shadow lurker can use Shadow Step as a bonus action to teleport up to 30 feet to an unoccupied space it can see that is in dim light or darkness.
+
+***Umbral Form.*** The shadow lurker can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+
+***Invisibility (1/Day).*** The shadow lurker magically turns invisible until it attacks or uses Shadow Step.
+
+***Surprise Strike.*** If the shadow lurker successfully hides from a target and then attacks it, the attack is a surprise attack, and the target has disadvantage on its first saving throw or attack roll in the ensuing combat.
+}}
+
+## Room 8: Seraphina's Sequester
+
+*As you step into Room 8, a profound sense of serenity and celestial power washes over you. At its center stands an ornate pedestal, and atop it rests the radiant **Starlight Medallion**, surrounded by ethereal barriers. The chamber's walls are adorned with intricate engravings depicting Seraphina's life, her alliance with the Luminal Sentinels, and her defiance against Zephyrion. The azure-tiled floor sparkles like a starry night, and orbs hanging from the ceiling emit a gentle, cool light, mimicking the phases of the moon. A celestial mural on the north wall showcases constellations, with the "Serpent's Scepter" constellation hidden within.*
+
+### Description
+
+Room 8 is a chamber of celestial significance, exuding tranquility and power. Its central feature is the ornate pedestal holding the **Starlight Medallion**, protected by swirling ethereal barriers. Engravings on the walls narrate Seraphina's history and the importance of safeguarding the Nexus of Souls.
+
+The floor is paved with gleaming azure tiles, and soft moonlight orbs hang from the ceiling. In the west, an alcove holds **Seraphina’s Journal** and the **Seraphina’s Lunar Locket**, while to the east stands an armor stand displaying **Seraphina's Celestial Robes**. Ethereal vases are scattered throughout the room, each containing a trapped spirit.
+
+In the southeast corner, a small chest holds the **Lunar Pendant**, which emits a dim light and enhances night vision. To the south, a set of chimes can be played in sequence to calm the **Ethereal Sentinels** for a short duration.
+
+
+
+
+### Notable Features
+- **Ornate pedestal** in the room's center holds the **Starlight Medallion**, surrounded by swirling ethereal barriers.
+- Walls depict engravings of **Seraphina's life**, her alliance with the Luminal Sentinels, and her defiance against Zephyrion.
+- Floor is paved with gleaming azure tiles, each embedded with star-like points.
+- Ceiling orbs emulate the moon's phases, illuminating the room with soft light.
+- Celestial mural on the north wall, highlighting the **Serpent's Scepter constellation**.
+- Alcove to the west contains **Seraphina’s Journal** and **Seraphina’s Lunar Locket**.
+- Armor stand against the east wall displays **Seraphina's Celestial Robes**.
+- Southeast corner houses a small chest with a **Lunar Pendant**.
+- Star-shaped tokens, worth 10 gold each, are scattered throughout.
+- **Ethereal Vases** are sporadically placed around the room, each containing a trapped ethereal spirit.
+- **Guardian of the Medallion** stands vigilant near the pedestal, assisted by 4 **Ethereal Sentinels**.
+- To the south, **Harmonious Chimes** hang, swaying gently.
+- Runes of protection at the pedestal's base hint at harmony.
+
+### The Serpent's Scepter Constellation
+- This constellation within the celestial mural consists of seven gem-like stones.
+- Represents elemental aspects: fire, water, earth, air, light, darkness, and spirit.
+- Characters with Arcana proficiency can decipher its significance, gaining advantage on future elemental-related challenges or puzzles.
+- Touching a star grants resistance to its corresponding elemental damage for 1 hour.
+
+### Ethereal Barriers and Celestial Convergence
+- The **Starlight Medallion** is protected by swirling ethereal barriers.
+- Barriers can be dispelled using the **Soulbound Locket** and **Fragmented Melody**.
+- "Combine Locket with Fragmented Melody" is written within **Seraphina’s Journal**.
+- The **Fragmented Melody** found in the journal can be played on the **Seraphina's Lunar Locket**.
+- Every 24 in-game hours, during the 10-minute Celestial Convergence, the barrier becomes momentarily permeable, allowing objects/spells through but heightening the alertness of the rogue faction.
+
+### Harmonious Chimes Mechanic
+- Plucking the chimes in a High, Low, High, Low sequence calms the **Ethereal Sentinels** for 5 minutes.
+
+
+
+#### Seraphina’s Staff of Celestial Command
+* *Weight*: 4 pounds
+* *Value*: 5,000 gold
+
+This silver staff with intricate celestial patterns grants its wielder the ability to cast the *Guiding Bolt* spell at 3rd level once per day, using the wielder's spellcasting ability for the attack roll and damage. Additionally, it provides advantage on Arcana checks related to celestial magic.
+
+#### Chronicle Crystal
+* *Weight*: 1 pound
+* *Value*: 1,000 gold
+
+This clear crystal, when activated, projects recorded messages from Seraphina. It can be used once per day to cast the *Message* spell, allowing the user to send a message of up to 25 words to a recipient of their choice, regardless of distance, as long as the sender knows the recipient's name and appearance.
+
+#### Arcane Blueprint
+* *Weight*: 2 pounds
+* *Value*: 1,500 gold
+
+This detailed schematic of the Cathedral's construction and protective enchantments upon it grants the possessor proficiency in Intelligence (Arcana) checks related to the Cathedral. Additionally, it reveals the alignment of rooms and their importance in the grand design, providing advantage on Intelligence (Investigation) checks when navigating the dungeon.
+
+#### Seraphina's Celestial Robes
+* *Weight*: 2 pounds
+* *Value*: 3,500 gold
+
+These shimmering garments provide resistance to elemental attacks. While wearing these robes, the wearer gains resistance to one type of elemental damage (fire, cold, lightning, acid, or thunder) of their choice. The resistance can be changed during a short rest.
+
+#### Seraphina’s Journal
+* *Weight*: 1 pound
+* *Value*: 500 gold
+
+This journal details Seraphina's journeys across realms and the allies she made. Reading it grants the reader advantage on Intelligence (History) checks related to Seraphina's adventures and the knowledge of her allies, potentially providing useful information in the campaign.
+
+#### Seraphina’s Lunar Locket
+* *Weight*: 0.5 pounds
+* *Value*: 2,000 gold
+
+This silver locket emits a faint moonlight when opened. When worn, it grants the wearer night vision for 1 hour, allowing them to see in complete darkness as if it were dim light. The locket can be used once per long rest.
+
+#### Lunar Pendant
+* *Weight*: 0.1 pounds
+* *Value*: 150 gold
+
+This pendant glows brighter in complete darkness, providing dim light in a 10-foot radius. Additionally, the wearer gains night vision for 1 hour while wearing it, allowing them to see in complete darkness as if it were dim light. The pendant can be activated once per long rest.
+
+#### Harmonious Chimes
+* *Weight*: 0.5 pounds
+* *Value*: 200 gold
+
+Plucking these chimes in the sequence (High, Low, High, Low) produces a harmonious sound that calms Ethereal Sentinels for 5 minutes when activated. During this time, Ethereal Sentinels are less aggressive and are less likely to engage intruders. The chimes can be used once per short rest.
+
+#### Celestial Mural (Serpent's Scepter constellation)
+* *Weight*: N/A
+* *Value*: N/A
+
+Hidden within the mural on the north wall, this depiction of the Serpent's Scepter constellation represents elemental aspects. Characters proficient in Arcana can decipher its significance, gaining advantage on future elemental-related challenges or puzzles. Touching one of the stars activates a celestial vision, granting temporary resistance to one elemental damage type (fire, water, earth, air, light, darkness, or spirit) for the next hour.
+
+
+
+{{monster,frame
+## Guardian of the Medallion (CR 4)
+- AC: 18
+- HP: 75
+- Speed: 30 ft
+
+**Actions**
+- Greatsword: +6 to hit, reach 5 ft., one target. Hit: 2d6+3 slashing damage.
+
+**Luminous Aura**
+- The Guardian of the Medallion emits a 15-foot radius aura of radiant energy. The aura dispels darkness, and creatures within it have advantage on saving throws against fear effects.
+
+**Luminous Strike (3/Day)**
+- The Guardian can make a special Greatsword attack with a +6 to hit, dealing an extra 1d8 radiant damage on a hit.
+
+**Legendary Resistance (1/Day)**
+- If the Guardian fails a saving throw, it can choose to succeed instead.
+
+**Legendary Actions**
+- The Guardian can take 2 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The Guardian regains spent legendary actions at the start of its turn.
+
+    - **Radiant Burst:** The Guardian makes a Luminous Strike attack.
+    - **Aura Pulse (Costs 2 Actions):** The Guardian strengthens its aura. Creatures within the aura take 1d6 radiant damage (no saving throw required).
+    - **Retaliate (Costs 2 Actions):** If a creature makes a melee attack against the Guardian, it can make a Greatsword attack against that creature as a reaction.
+
+**Reactive Abilities**
+- **Guardian's Counter:** If a ranged attack misses the Guardian, it can immediately make a ranged attack in response.
+
+**
+}}
+
+{{monster,frame
+## Ethereal Sentinel (CR 2)
+- AC: 13
+- HP: 40
+- Speed: 0 ft (hover)
+
+**Abilities:**
+- Ethereal Weapon: +3 to hit, 1d10+1 force damage.
+- Ethereal Phase: As a bonus action, the Ethereal Sentinel can phase out, becoming immune to damage and effects until the start of its next turn. It cannot attack during this phase.
+- Ethereal Visage: Advantage on Dexterity saving throws against spells and effects that would impose the restrained condition.
+
+**Tactics:**
+The Ethereal Sentinel uses hit-and-run tactics, phasing out when in danger to evade attacks and then reengaging in combat.
+}}
+
+{{monster,frame
+## Ethereal Vase (CR 1)
+- AC: 12
+- HP: 30
+- Speed: 0 ft
+- Damage Immunities: Ethereal
+- Ethereal Burst: When broken, it releases a forceful explosion, dealing 1d6 force damage per turn in a 10-foot radius to creatures within the area. A successful DC 12 Dexterity saving throw halves the damage. If the Ethereal Vase is destroyed by an attack, spell, or ability that specifically targets objects or has area-effect damage, it automatically triggers the Ethereal Burst. This burst damages both creatures and the vase itself. The Ethereal Vase is immune to its own Ethereal Burst.
+}}
+
+## Conclusion
+Upon successfully reclaiming the Starlight Medallion, the ethereal energy of the cathedral stabilizes. The rogue celestial elements retreat, their plans thwarted. The Luminous Veins glow even brighter, and the celestial chorales sing in harmony once more. The Luminal Sentinel, now in possession of the medallion, ensures the balance of the ethereal realm is preserved. The Starlight Medallion, if kept by the characters, can serve as a beacon to call upon the guidance of celestial spirits in future endeavors, granting them insight and wisdom in moments of need.
+
+{{descriptive
+This module was generated using a script based on artificial intelligence, with the following parameters.
+:
+keywords: Crystal Cathedral, Phantom Marshes, Celestial Descent
+:
+numRooms: 8
+:
+combatDifficulty: low
+:
+lootValue: low
+:
+wackiness: low.
+}}

@@ -1,0 +1,1546 @@
+# Whispers of the Verdant Spire
+
+In the heart of an otherworldly jungle stands the Verdant Spire, an ancient colossal tree that houses the Elemental Forge. Crafted eons ago by the Eladrin artisan, Ellindra Starshaper, the forge has long been a haven for the arcane crafting of legendary weapons and armor. However, recent disturbances have caused its elemental energies to fluctuate, risking the Spire and even the realm itself. As the arcane harmonies waver, the Elemental Forge scrambles its Molten Runes, the Ancestral Smith struggles with forgotten duties, and Primal Flames rage uncontrollably. Adventurers are drawn to the Spire's challenges: elemental puzzles, spectral interrogations, and the need to restore elemental balance to the forge.
+
+## Motivation
+There are many reasons why the PCs might embark on this quest. Some examples are given.
+
+1. The characters seek to obtain a legendary elemental weapon forged by the Elemental Forge to aid in a larger quest.
+
+2. One of the characters has a personal connection to Ellindra's legacy and seeks to honor her memory.
+
+3. The Pixie Court of Lumenshade promises the characters access to ancient and rare magical knowledge in exchange for their assistance.
+
+4. The unstable elemental energies threaten the characters' homeland, and they must stabilize the forge to prevent a catastrophe.
+
+5. A powerful faction or organization offers a significant reward or political influence to the characters upon successfully restoring the Elemental Forge's balance.
+
+## Background
+The Verdant Spire, a massive tree hidden deep within an otherworldly jungle, is the secret haven for the arcane crafting of legendary weapons and armor. This colossal tree is not just a marvel of nature but a focal point of elemental magic in the realm. It houses the Elemental Forge, a creation of the enigmatic Eladrin artisan, Ellindra Starshaper, and is revered by the Pixie Court of Lumenshade, who regard it as both a sacred and historical monument.
+
+Centuries ago, Ellindra devised a method to harness the raw energy of the Primal Flames to craft items of immense power. However, she also foresaw the potential danger of such power and ensured that only those with true intent and understanding could access the forge.
+\column
+To this end, she placed the Ancestral Smith, a spectral guardian, to oversee and protect the forge. His spirit is bound to the forge, making him an eternal protector and guide to those who seek to use it.
+
+The current instability within the forge is due to a combination of time and neglect. Over the years, the balance of elemental forces started to wane, and without Ellindra's presence or someone of her caliber to recalibrate it, the forge began to destabilize. This imbalance resulted in the birth of a rogue elemental, further complicating the situation.
+
+The Pixie Court of Lumenshade is gravely concerned, as the Spire's destruction could spell disaster for them and the surrounding territories. However, their understanding of the forge's intricate workings is limited, and they lack the expertise to restore the balance.
+
+To complicate matters further, the Ancestral Smith, after eons of service, has started to forget some of his duties. His spectral form drifts between lucidity and confusion. While he is still a formidable guardian, his fading memory can make him both an invaluable ally and a potential hindrance.
+
+Throughout the Verdant Spire, various artifacts and remnants of Ellindra's time provide clues to restoring the forge's balance. However, these are guarded by challenges, both arcane and elemental, ensuring that only the worthy can access the forge's true power.
+
+The ultimate goal within the Verdant Spire is to restore the Elemental Balance of the Forge. By seeking Ellindra's Echo, forging the Elemental Keystone, and confronting the rogue elemental, adventurers have the chance not only to save the Verdant Spire but also to be part of a legacy that spans eons.
+
+## Arrival
+*As the party approaches the Verdant Spire, they find themselves in a lush and enchanting jungle, where colossal, ancient trees stretch high into the sky, their canopies filtering the sunlight into a dappled, green glow. The atmosphere is thick with moisture and the melodious chirps of unseen creatures. Before them stands the Spire, a tree so immense it dwarfs its neighbors, its bark rich and deep green, adorned with bioluminescent flora that casts a serene glow. A grand entrance at the base of the Spire, flanked by two intricately carved statues of pixies, stands ajar, beckoning adventurers inward. Gentle whispers float from the entrance, hinting at the mysteries within.*
+
+\page
+## Dungeon layout
+The dungeon's rooms are laid out as follows.
+
+![layout](https://i.ibb.co/GQrb4Fr/graph-spire.png) {height:280px,mix-blend-mode:multiply}
+
+## Room 1: The Luminescent Antechamber
+
+*As you step into the chamber, you are bathed in a soft luminescent glow that emanates from enchanted fungi and bioluminescent vines. The air has an ethereal quality, causing every sound to echo faintly. The floor is embedded with crystal shards that emit a faint elemental humming, and scattered Molten Runes hint at destabilized elemental energies. The walls are adorned with ancient carvings depicting elemental spirits dancing around a large spire.*
+
+### Description
+The Luminescent Antechamber is a spacious chamber with an otherworldly ambiance. The floor is covered in crystal shards that softly illuminate the room. Enchanted fungi, concentrated near the entrance, can release mesmerizing spore clouds if disturbed. Bioluminescent vines cover the walls and react to touch, dimming if disturbed excessively. A small pool of water in one corner houses luminescent fish that shy away when approached. In the upper corner, a suspended nest houses a watchful Luminescent Owl.
+
+
+
+
+### Notable Features
+- Enchanted fungi and bioluminescent vines cast soft, luminescent glow.
+- Ethereal quality makes sounds echo.
+- Crystal shards embedded in floor resonate with elemental humming.
+- Molten Runes hint at elemental energies.
+- **Luminescent Vial** placed among the fungi.
+- **Pixie's Whistle** on a fungi pedestal.
+- Bioluminescent vines (dim on touch). 
+- A cluster of enchanted fungi near the entrance releases mesmerizing spore cloud (DC 13 Constitution save or charmed for 1 minute).
+- **Lumenshade Sentinel** and three **Lumenshade Acolytes** reside near the fungi. They turn hostile if fungi disturbed.
+- Wall carvings depict elemental spirits around a spire.
+- Small water pool with **Moonlight Koi** and **Opal-Flecked Minnows** is in a corner. Above it, a crystal formation drips water.
+- **Luminous Crawlers** (x6) feed on fungi.
+- Suspended nest houses a **Luminescent Owl** high in an upper corner.
+- **Crystaline Dagger** hidden beneath a luminescent vine.
+- Several semi-transparent butterflies flutter, especially near chamber's center.
+- A **Luminescent Spider** web in a dark corner opposite the entrance.
+- Hollowed-out fungi (x5) contain elemental crystals.
+- Elemental whispers near ancient wall carvings.
+- Planting plot with tree engraving at chamber center.
+- Standard entrances to **Whispering Grove (Room 2)** and **Hall of Echoes (Room 3)** on left and right walls respectively.
+- Exit to **Chamber of the Elemental Forge (Room 6)** via a spiral staircase.
+- Pixie Court clue: "Old seeds from the grove find new life here, revealing wonders you'll hold dear."
+- Elemental Flux, determined by a d4 roll, affects the room with various bonuses.
+
+### Elemental Flux Effects
+- **Earth**: Moss brightens, providing steady light.
+- **Air**: Shimmering moss reveals pixie paths.
+- **Fire**: Moss emits warm glow, granting +1 to initiative.
+- **Water**: Moss turns damp, granting +5 temporary hit points.
+
+### Planting the Seed
+- The designated plot vibrates when a petrified seed is near.
+- Planting seed from **Whispering Grove (Room 2)** here yields **Luminescent Bloom**. Crushing it grants advantage on one save against elemental effects.
+
+### Pixie Court Clue
+- A pixie hints: "Old seeds from the grove find new life here, revealing wonders you'll hold dear."
+
+\page
+### Spider's Web and Insects
+- **Luminescent Spider** web disturbed can be pacified with a gentle gust cantrip or careful navigation.
+- Web contains gem-like insects (x4) that can be collected as valuables.
+
+### Luminescent Fish Pond 
+- **Moonlight Koi** grants a soothing aura with advantage on Wisdom saves against being frightened for 1 hour when released (once).
+- **Opal-Flecked Minnows** charm creatures in a 15-foot radius (DC 12 Wisdom save) when released as a bonus action (once).
+
+### The Whispering Echoes
+- Near ancient wall carvings, elemental energies whisper hints about the spire's significance.
+
+
+#### Glowing Vial
+
+*Weight:* 1 lb.
+*Value:* 50 gp
+
+This glass vial contains luminescent spores. When broken, it illuminates a 20-foot radius with dim light for 1 hour. Additionally, it can be used as a component in spells requiring light, eliminating the need for material components.
+
+#### Pixie's Whistle
+
+*Weight:* 0.5 lb.
+*Value:* 100 gp
+
+This intricately carved whistle is made from a shard of the spire. When blown, it emits a sound only pixies can hear, making them friendly and willing to provide information or assistance for 1 hour. Can be used once per day.
+
+#### Crystaline Dagger
+
+*Weight:* 1 lb.
+*Value:* 250 gp
+
+This dagger glows in the dark and grants a +1 bonus to spell attack rolls when used as a spellcasting focus.
+
+#### Ring of Luminescence
+
+*Weight:* 0.1 lb.
+*Value:* 300 gp
+
+This ring allows the wearer to emit a soft, glowing light at will, illuminating a 10-foot radius with dim light. Activation and deactivation are a bonus action.
+
+#### Luminescent Bloom
+
+*Weight:* 0.1 lb.
+*Value:* 150 gp
+
+This magical bloom can be obtained by planting a petrified seed from the Whispering Grove within the Luminescent Antechamber. When crushed, it grants advantage on a single saving throw against elemental effects.
+
+#### Luminescent Companion
+
+*Weight:* 0.5 lb.
+*Value:* 75 gp
+
+Catching a Moonlight Koi or Opal-Flecked Minnow grants a Luminescent Companion. Releasing a Moonlight Koi grants a temporary soothing aura, granting advantage on Wisdom saving throws against being frightened for 1 hour. Releasing Opal-Flecked Minnows can charm creatures within 15 feet on a failed DC 12 Wisdom saving throw for 1 minute. Each ability can be used once.
+
+#### Moonlight Koi
+
+*Weight:* 1 lb.
+*Value:* 50 gp
+
+This luminescent fish can be caught from the small pond in the chamber. Releasing a Moonlight Koi grants a temporary soothing aura, granting advantage on Wisdom saving throws against being frightened for 1 hour. The aura can only be activated once.
+
+#### Opal-Flecked Minnows
+
+*Weight:* 0.1 lb.
+*Value:* 25 gp
+
+These mesmerizing fish can be caught from the small pond in the chamber. Releasing Opal-Flecked Minnows causes them to perform a mesmerizing dance that distracts hostile creatures. As a bonus action, the character can release the Minnows into the air, causing creatures within 15 feet to make a DC 12 Wisdom saving throw or be charmed for 1 minute. This ability can be used once.
+
+{{monster,frame
+## Luminescent Spider
+*Tiny beast, unaligned*
+
+**Armor Class** 12  
+**Hit Points** 7 (2d4 + 1)  
+**Speed** 20 ft., climb 20 ft.
+
+**STR** 8 (-1)  
+**DEX** 14 (+2)  
+**CON** 12 (+1)  
+**INT** 1 (-5)  
+**WIS** 10 (+0)  
+**CHA** 3 (-4)  
+
+**Skills** Stealth +4  
+**Senses** darkvision 60 ft., passive Perception 10  
+**Languages** understands Sylvan but can't speak  
+
+**Challenge** 1/2 (100 XP)
+
+**Actions**
+**Bite.** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 3 (1d6 - 1) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 3 (1d6) poison damage. If the saving throw fails by 5 or more, the target is also poisoned for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+}}
+
+\page
+
+{{monster,frame
+## Lumenshade Sentinel
+*Medium fey, neutral*
+
+**Armor Class** 14 (natural armor)  
+**Hit Points** 70 (10d8 + 20)  
+**Speed** 30 ft., fly 60 ft.
+
+**STR** 12 (+1)  
+**DEX** 16 (+3)  
+**CON** 14 (+2)  
+**INT** 12 (+1)  
+**WIS** 14 (+2)  
+**CHA** 16 (+3)  
+
+**Skills** Perception +4, Stealth +5  
+**Senses** darkvision 60 ft., passive Perception 14  
+**Languages** Sylvan  
+**Challenge** 2 (450 XP)
+
+**Fey Ancestry.** The sentinel has advantage on saving throws against being charmed, and magic can't put it to sleep.
+
+**Spellcasting.** The sentinel is a 4th-level spellcaster. Its spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). It has the following spells prepared:
+
+- **1st level (4 slots):** charm person, enthrall, protection from energy (fire)
+- **2nd level (3 slots):** invisibility, misty step
+- **3rd level (2 slots):** blink, counterspell
+
+**Pixie Resilience.** The sentinel has resistance to radiant damage.
+
+**Luminous Glare (Recharge 5-6).** The sentinel emits a blinding light in a 20-foot cone. Each creature in that area must make a DC 13 Constitution saving throw, taking 18 (4d8) radiant damage and becoming blinded for 1 minute on a failed save, or half as much damage and not blinded on a successful one. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+
+**Legendary Actions (2/round).** The sentinel can take 2 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The sentinel regains spent legendary actions at the start of its turn.
+
+- **Fey Step (Costs 2 Actions).** The sentinel teleports up to 60 feet to an unoccupied space it can see.
+}}
+
+{{monster,frame
+## Lumenshade Acolyte
+*Tiny fey, neutral*
+
+**Armor Class** 13 (natural armor)  
+**Hit Points** 20 (4d4 + 8)
+**Speed** 20 ft., fly 40 ft.
+
+**STR** 5 (-3)  
+**DEX** 16 (+3)  
+**CON** 14 (+2)  
+**INT** 10 (+0)  
+**WIS** 12 (+1)  
+**CHA** 15 (+2)  
+
+**Skills** Perception +3  
+**Senses** darkvision 60 ft., passive Perception 13  
+**Languages** Sylvan  
+**Challenge** 1/2 (100 XP)
+
+**Fey Ancestry.** The acolyte has advantage on saving throws against being charmed, and magic can't put it to sleep.
+
+**Spellcasting.** The acolyte is a 1st-level spellcaster. Its spellcasting ability is Charisma (spell save DC 12, +4 to hit with spell attacks). It has the following spells prepared:
+
+- **Cantrips (at will):** minor illusion, prestidigitation
+- **1st level (2 slots):** sleep
+
+**Fey Charm (Revised).** The acolyte targets up to two creatures it can see within a 10-foot radius of it. If the targets can see the acolyte, they must succeed on a DC 12 Wisdom saving throw or be magically charmed for 1 minute. The charmed targets regard the acolyte as a trusted friend to be heeded and protected. The charmed targets can repeat the saving throw at the end of each of their turns, ending the effect on themselves on a success. If a target's saving throw is successful or the effect ends for it, the creature is immune to the acolyte's Fey Charm for the next 24 hours. The acolyte can have only two targets charmed at a time. If it charms more, the effect on the previous targets ends.
+
+**Fey Essence (New).** As a reaction when targeted by an attack, the acolyte can turn briefly invisible until the start of its next turn or teleport up to 30 feet to an unoccupied space it can see. It can use this ability once per short rest.
+}}
+
+\page
+{{monster,frame
+## Luminous Crawler
+*Tiny beast, unaligned*
+
+**Armor Class** 12  
+**Hit Points** 11 (2d4 + 6)  
+**Speed** 20 ft., climb 20 ft.
+
+**STR** 6 (-2)  
+**DEX** 14 (+2)  
+**CON** 14 (+2)  
+**INT** 1 (-5)  
+**WIS** 10 (+0)  
+**CHA** 3 (-4)  
+
+**Skills** Stealth +4  
+**Senses** darkvision 60 ft., passive Perception 10  
+**Challenge** 1 (200 XP)
+
+**Climbing.** The crawler can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+
+**Keen Smell.** The crawler has advantage on Wisdom (Perception) checks that rely on smell. It can also track scents with advantage.
+
+**Web Spin (New Ability).** The Luminous Crawler can spin a bioluminescent web as an action. This web covers a 10-foot square area and remains illuminated for 1 hour. Creatures that start their turn in the web must succeed on a DC 12 Dexterity saving throw or be restrained. The web can be destroyed with 5 or more slashing damage.
+
+**Actions**
+**Bite.** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 5 (1d6 + 2) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or be poisoned for 1 minute. If the saving throw fails by 5 or more, the target is also paralyzed while poisoned in this way. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+}}
+
+{{monster,frame
+## Luminescent Owl
+*Tiny beast, neutral*
+
+**Armor Class** 13  
+**Hit Points** 18 (4d4 + 4)  
+**Speed** 10 ft., fly 60 ft.
+
+**STR** 3 (-4)  
+**DEX** 16 (+3)  
+**CON** 12 (+1)  
+**INT** 2 (-4)  
+**WIS** 14 (+2)  
+**CHA** 5 (-3)  
+
+**Skills** Perception +4, Stealth +5  
+**Senses** darkvision 60 ft., passive Perception 14  
+**Languages** understands Sylvan but can't speak  
+
+**Challenge** 1 (200 XP)
+
+**Keen Hearing and Sight.** The owl has advantage on Wisdom (Perception) checks that rely on hearing or sight.
+
+**Flyby.** The owl doesn't provoke opportunity attacks when it flies out of an enemy's reach.
+
+**Glowing Distraction (Recharge 5-6).** When the owl uses its Flyby ability, it can emit a blinding flash of light. Each creature within 10 feet of the owl must make a DC 13 Dexterity saving throw or be blinded until the end of its next turn.
+
+**Talons.** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 4 (1d4 + 2) slashing damage.
+}}
+
+
+
+## Room 2: Whispering Grove
+
+*As you step into the Whispering Grove within the Verdant Spire, you are enveloped by a serene, indoor setting. The room is alive with the soft whispering sounds of the Verdant Spire itself, as if the very tree is communicating with you. Roots hang down from above, resembling ancient drapes, and the floor is covered in old leaves, moss, and small plants, creating a cushiony terrain.*
+
+### Description
+
+The Whispering Grove is a tranquil space with luminescent mushrooms casting a dim, bioluminescent glow. Luminescent mushrooms grow in some corners, providing temporary light when plucked. A small, clear pond reflects fleeting images of the grove's history.
+
+
+
+
+### Notable Features:
+- Hanging roots surround the room, some of which are ancient traps. Touching them releases a gust of wind that pushes characters towards vines covered in thorns. A DC 12 Dexterity saving throw is required to avoid the trap.
+- A **Root of Resonance** stands prominently in the room, granting fragmented visions upon touch.
+- **Leaf of the Verdant Spire**: 3-4 leaves available.
+- **Ancient Acorn** hidden in an alcove; requires a DC 15 Wisdom (Perception) check to locate.
+- **Rootbound Elemental** roams the area. Turns aggressive if grove or inhabitants are harmed.
+- Four **Whispering Wisps** float throughout the grove. They share "*The Smith of old, bound by tree and mold. In flames primal, lies the key so vital.*"
+- The ground is covered with a cushiony layer of leaves, moss, and plants.
+- Luminescent corners adorned with **Luminescent Mushrooms**, providing light for 1 hour when picked.
+- A small pond with a resident **Water Nymph**. In its reflection, fleeting images of the grove from ages past can occasionally be seen.
+- **Resonant Stone** hidden among roots. Inscription reads: "*Soothe tempest with roots' song.*" Requires a DC 12 Wisdom (Investigation) check to find.
+- **Elemental Berries** scattered around: 2-3 of each type (Fire, Ice, Lightning); picking them requires a DC 10 Dexterity check.
+- **Amulet of Whispered Secrets** dangles from a low tree branch.
+- An ancient tree stump with elvish runes reading: "*Honor the grove, and it shall bestow its grace.*"
+- **Celestial Birds** nests are situated high among the roots.
+- Direct path to **The Luminescent Antechamber (Room 1)**
+\page
+- Another path extends deeper, leading to **Elemental Nexus (Room 4)**. As players move deeper, they might hear hints or misleading whispers about the Elemental Nexus.
+- **Petrified seed** glowing with elemental energy rests at a tree's base. Soft rumbles occasionally reveal its presence.
+
+### Elemental Flux Effects:
+- **Earth**: Tree roots grow more pronounced, potentially revealing hidden objects or pathways.
+- **Air**: Whispers become clearer, offering specific hints.
+- **Fire**: A warm wind carries the melody of the Ancestral Smith's song, hinting at the forge.
+- **Water**: The grove becomes misty, revealing ethereal bridges and obscuring vision.
+
+### Water Nymph's Riddle:
+The Water Nymph offers the riddle "*Seek roots of oldest tale.*" Successful solution rewards adventurers with an item worth 50gp or valuable information.
+
+
+
+#### Root of Resonance
+- **Weight:** 5 lbs.
+- **Value:** 150 gp
+This root, when touched, grants characters fragmented visions of Ellindra Starshaper working at the Elemental Forge.
+
+#### Leaf of the Verdant Spire
+- **Weight:** -
+- **Value:** 50 gp
+This enchanted leaf, when consumed, can heal minor wounds or neutralize poisons. Characters can carry up to 3-4 of these leaves for potential healing or antidote effects.
+
+#### Ancient Acorn
+- **Weight:** 1 lb.
+- **Value:** 100 gp
+This non-magical trinket from the early days of the Verdant Spire holds high value to collectors, worth 100 gold pieces.
+
+#### Resonant Stone
+- **Weight:** 2 lbs.
+- **Value:** 75 gp
+When struck, this stone emanates a calming sound that soothes creatures within a 30-foot radius, potentially making hostile entities neutral for 1 minute.
+
+#### Amulet of Whispered Secrets
+- **Weight:** 0.1 lb.
+- **Value:** 200 gp
+This amulet allows the wearer to understand and communicate with plants in a basic manner. It whispers "*Speak to the green, hear what's unseen.*"
+
+\column
+
+#### Luminescent Mushroom
+- **Weight:** 0.1 lb.
+- **Value:** 10 gp
+When picked, these mushrooms emit a dim, bioluminescent glow for 1 hour, providing temporary light in dark areas.
+
+#### Elemental Berry
+- **Weight:** -
+- **Value:** 20 gp each
+When consumed, these berries grant the eater resistance to a particular elemental damage type (fire, ice, lightning) for 1 hour. Multiple types are available (2-3 of each), providing versatile elemental protection.
+
+{{monster,frame
+## Whispering Wisp
+- **Armor Class** 13
+- **Hit Points** 18 (4d8)
+- **Speed** 0 ft., Fly 30 ft. (hover)
+- **STR** 1 (-5)
+- **DEX** 15 (+2)
+- **CON** 10 (+0)
+- **INT** 10 (+0)
+- **WIS** 10 (+0)
+- **CHA** 12 (+1)
+- **Skills** Perception +2
+- **Senses** Darkvision 60 ft., passive Perception 12
+- **Languages** understands Common and Sylvan but can't speak
+- **Challenge** 1/4 (50 XP)
+
+**Ethereal Form.** The Whispering Wisp can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+
+**Ethereal Whispers.** The Whispering Wisp can communicate telepathically with creatures within 30 feet of it. This communication can be heard as soft whispers in the target's mind.
+
+**Ethereal Retreat (Recharge 4-6).** The Whispering Wisp becomes ethereal and can move through other creatures and objects without provoking opportunity attacks. It then becomes invisible until the start of its next turn.
+
+**Defensive Tactics.** When the Whispering Wisp is hit by an attack, it can use its reaction to attempt to dodge the attack. The attacker must make a DC 11 Dexterity saving throw. On a failed save, the attack misses.
+
+**Whispering Touch.** *Melee Spell Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 5 (1d6 + 1) psychic damage. If the target is hit by this attack, it must succeed on a DC 11 Wisdom saving throw or be frightened until the end of its next turn.
+
+**Environmental Manipulation.** As an action, the Whispering Wisp can create an illusory barrier in a 10-foot radius around it, obscuring vision and creating difficult terrain. The barrier lasts for 1 minute.
+
+}}
+\page
+{{monster,frame
+## Rootbound Elemental
+- **Armor Class** 14 (natural armor)
+- **Hit Points** 68 (8d10 + 24)
+- **Speed** 30 ft.
+- **STR** 16 (+3)
+- **DEX** 8 (-1)
+- **CON** 16 (+3)
+- **INT** 5 (-3)
+- **WIS** 10 (+0)
+- **CHA** 5 (-3)
+- **Skills** Perception +2
+- **Damage Resistances** Bludgeoning, Piercing, and Slashing from non-magical attacks
+- **Senses** Darkvision 60 ft., Tremorsense 30 ft., passive Perception 12
+- **Languages** understands Common and Sylvan but can't speak
+- **Challenge** 2 (450 XP)
+
+**Root Grapple.** The Rootbound Elemental can use its roots to grapple a creature it hits with a slam attack. The target is grappled (escape DC 14) and restrained, and the elemental can't use the same root to grapple another target. The elemental has eight roots, each of which can grapple a creature.
+
+**Rooted Defenders.** As long as the Whispering Grove is unharmed, the Rootbound Elemental has advantage on saving throws against being frightened or charmed. Additionally, it can't be forced to move against its will.
+
+**Lore Integration.** The Rootbound Elemental becomes aggressive if the Whispering Grove is harmed by the players, defending it vigorously.
+
+**Tactics.** The Rootbound Elemental prefers to use its Earthquake Tremor ability when multiple characters are clustered together to maximize its effectiveness.
+
+**Environmental Interaction.** It can manipulate the grove to create difficult terrain by using its Earthquake Tremor ability strategically.
+
+**Counterplay.** Players might pacify the Rootbound Elemental by finding non-harmful ways to address their concerns or needs, potentially avoiding combat.
+
+**Actions**
+- **Multiattack.** The Rootbound Elemental makes two slam attacks.
+- **Slam.** *Melee Weapon Attack:* +5 to hit, reach 10 ft., one target. *Hit:* 16 (2d8 + 3) bludgeoning damage.
+- **Earthquake Tremor (Recharge 5-6).** The Rootbound Elemental sends shockwaves through the ground. Each creature on the ground within 30 feet of the elemental must make a DC 14 Strength saving throw or be knocked prone. The area becomes difficult terrain for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on a success.
+}}
+
+
+
+{{monster,frame
+## Water Nymph
+- **Armor Class** 13 (natural armor)
+- **Hit Points** 55 (10d8 + 10)
+- **Speed** 30 ft., Swim 60 ft.
+- **STR** 12 (+1)
+- **DEX** 16 (+3)
+- **CON** 12 (+1)
+- **INT** 10 (+0)
+- **WIS** 14 (+2)
+- **CHA** 16 (+3)
+- **Skills** Perception +4
+- **Senses** Darkvision 60 ft., passive Perception 14
+- **Languages** Aquan, Sylvan
+- **Challenge** 1/2 (100 XP)
+
+**Aquatic Camouflage.** The Water Nymph has advantage on Dexterity (Stealth) checks made while submerged in water.
+
+**Ethereal Beauty.** Hostile creatures have disadvantage on Wisdom (Perception) checks to notice the Water Nymph.
+
+**Water's Embrace.** When submerged in water, the Water Nymph gains a +2 bonus to AC, its speed increases to 60 feet, and it can breathe underwater. It also has advantage on saving throws against being grappled or restrained.
+
+**Actions**
+- **Charm.** *Target:* One creature the nymph can see within 30 feet. *Saving Throw:* DC 13 Wisdom saving throw. *Effect:* On a failed save, the target is magically charmed for 1 minute. While charmed, the target is incapacitated, and the nymph can communicate telepathically with it. The charm ends if the nymph or its allies harm the charmed target or if the charmed target takes damage.
+
+**Legendary Actions**
+- The Water Nymph can take 1 legendary action at the end of another creature's turn. It regains spent legendary actions at the start of its turn.
+- **Water Blast (Costs 2 Actions).** The Water Nymph targets one creature it can see within 60 feet with a ranged water attack. *Ranged Spell Attack:* +5 to hit, range 60/120 ft., one target. *Hit:* 10 (2d6 + 3) bludgeoning damage.
+  
+**Reactions**
+- **Water's Shield.** When the Water Nymph is targeted by an attack, it can create a watery shield as a reaction. The shield grants the nymph temporary hit points equal to the damage taken. If this causes the nymph to exceed its maximum hit points, the excess hit points are lost when the shield dissipates.
+  
+**Lair Actions (Optional)**
+- If the encounter takes place within the Whispering Grove, consider adding lair actions related to water and plant life.
+
+**Resistances (Optional)**
+- The Water Nymph has resistance to cold damage.
+}}
+
+\page
+
+{{monster,frame
+
+## Celestial Bird
+- **Armor Class** 12
+- **Hit Points** 10 (2d6 + 2)
+- **Speed** 10 ft., Fly 40 ft. (hover)
+- **STR** 2 (-4)
+- **DEX** 14 (+2)
+- **CON** 12 (+1)
+- **INT** 3 (-4)
+- **WIS** 12 (+1)
+- **CHA** 10 (+0)
+- **Skills** Perception +3
+- **Senses** Darkvision 60 ft., passive Perception 13
+- **Languages** understands Celestial but can't speak
+- **Challenge** 1/8 (25 XP)
+
+**Flight.** The Celestial Bird can hover and fly.
+
+**Mystic Delivery.** The Celestial Bird can carry a small item or message and deliver it to a location within 1 mile that it has seen before.
+
+**Elemental Sensing.** The Celestial Bird has an innate connection to the Elemental Flux within the Verdant Spire. It can sense disturbances in the elemental balance, providing hints or warnings to the players about impending changes in the environment.
+
+**Elemental Resistance.** The Celestial Bird has resistance to lightning damage.
+}}
+
+## Room 3: Hall of Echoes
+
+*As you step into the Hall of Echoes, you find yourself surrounded by walls made of reflecting crystals. The room stretches infinitely due to the countless reflections, creating a vast, otherworldly ambiance. Faint echoes of murmuring voices and arcane chants fill the air, and the reflections occasionally show the Ancestral Smith at work, forging with methodical precision.*
+
+### Description
+The Hall of Echoes is a seemingly endless hall with reflective crystal walls that create an illusion of boundless space. Echoes of past craftsmen's voices fill the air, and reflections occasionally reveal the Ancestral Smith at his forge. The room is filled with
+
+
+### Notable Features
+- Walls made of **reflecting crystals** create an illusion of infinite space.
+- **Ellindra’s Fragmented Journal** pages scattered around the room near the perimeter; includes the snippet: "The Keystone requires the unity of primal flames, stabilized under the harmony of elemental essence. The echo of my voice will guide those who are worthy."
+- The **Crystal of Clarity**, atop a pedestal in the room's center.
+- The **Artisan’s Spectral Chisel**, propped against a crystal pillar in the northwest corner.
+- Hidden chasms masked by illusionary crystal walls, particularly in the southeast corner; DC 14 Perception check to perceive.
+- One **Mirror Wraith** roams the hall, accompanied by several **Shimmering Shades**.
+- Intermittent reflections of the Ancestral Smith, hinting at the Elemental Forge's location and approach method.
+- A hidden alcove contains an ancient brazier with the inscription: "Unite flames, seek forge heart."
+- **Luminous Shard** hidden beneath a loose crystal panel near the eastern wall.
+- **Ephemeral Robe** hung on a crystal protrusion in the southwest corner.
+- **Crystal Guardian** near the entrance to Room 5, blending with the walls.
+- **Phantom Quill** atop a pedestal near the north wall.
+- **Elemental Symbols** are embedded within the crystal mosaic.
+- **Elemental Beasts** depicted on various crystals.
+- **Ellindra's Journey**, depicted along the western wall.
+- Elemental Flux effects, dependent on dominant element:
+  - **Earth**: Echoing tales from the stone surfaces.
+  - **Air**: Air currents pointing towards areas of interest.
+  - **Fire**: Illuminated inscriptions on the central crystal wall reading: "Primal flames unite under elemental essence."
+  - **Water**: Puddles forming, one of which reflects a figure pouring **Elemental Elixir** into a hidden groove.
+- Connection to Room 1 (Luminescent Antechamber) via a door on the right.
+- Hidden door to Room 5 (Sanctum of the Ancestral Smith) discoverable with a DC 16 Perception check, identified by a distinct reflective pattern.
+
+### Elemental Elixir Pathway
+- Upon consuming the **Elemental Elixir** from Room 2, shimmering elemental pathways become visible, leading directly to the hidden entrance of Room 5. 
+
+### Unity of Primal Flames Alcove
+- Lighting the brazier in the alcove reveals shadows on the crystal walls indicating the Elemental Forge's entrance.
+
+
+
+#### Crystal of Clarity
+*Weight:* 2 pounds  
+*Value:* 500 gold pieces  
+
+This crystal amplifies spellcasting, granting a one-time advantage on a spell attack roll or increasing the spell's DC when used as a focus.
+
+\page
+
+#### Artisan’s Spectral Chisel
+*Weight:* 1 pound  
+*Value:* 100 gold pieces  
+
+This spectral chisel holds sentimental value but lacks magical properties.
+
+#### Luminous Shard
+*Weight:* 0.5 pounds  
+*Value:* 50 gold pieces  
+
+This shard, when touched, provides a soft glow, illuminating a 10-foot radius for 1 hour. It can be sold for a good price.
+
+#### Ephemeral Robe
+*Weight:* 3 pounds  
+*Value:* 150 gold pieces  
+
+When worn, this robe shimmers and reflects light, granting the wearer advantage on Stealth checks in illuminated areas. However, it's delicate and will tear if treated roughly.
+
+#### Phantom Quill
+*Weight:* 0.1 pounds  
+*Value:* 25 gold pieces  
+
+This quill can temporarily inscribe on any surface, but the inscription fades after an hour. Useful for leaving messages or drawing temporary markings.
+
+#### Elemental Elixir
+*Weight:* 0.5 pounds  
+*Value:* 75 gold pieces  
+
+When consumed, this elixir allows the character to see hidden elemental pathways in the Hall of Echoes, leading to the hidden entrance in the Sanctum of the Ancestral Smith.
+
+#### Unity of Primal Flames
+*Weight:* 5 pounds  
+*Value:* 200 gold pieces  
+
+Lighting this brazier with the inscription "Unite flames, seek forge heart" reveals the entrance to the Elemental Forge hidden in the shadows on the crystal walls.
+
+#### Elemental Symbol
+*Weight:* 0.2 pounds  
+*Value:* 30 gold pieces  
+
+Interacting with one of these symbols within the mosaic grants temporary knowledge related to that element, granting advantage on the next relevant roll (lasts 1 hour).
+
+#### Elemental Beast Carving
+*Weight:* 0.5 pounds  
+*Value:* 40 gold pieces  
+
+Studying one of these carvings of mythical elemental creatures for 10 minutes grants a +1 bonus to Intelligence (Nature) checks related to elemental creatures (lasts 24 hours).
+
+#### Ellindra's Journey
+*Weight:* 3 pounds  
+*Value:* 300 gold pieces  
+
+Studying this portrayal of Ellindra's progression from apprentice to master craftsman gives inspiration, allowing one reroll of a failed ability check, saving throw, or attack roll within the next 24 hours.
+
+#### Elemental Keystone
+*Weight:* 1 pound  
+*Value:* 500 gold pieces  
+
+This keystone requires the unity of primal flames, stabilized under the harmony of elemental essence. The echo of Ellindra's voice will guide those who are worthy.
+
+#### Elemental Forge
+*Weight:* N/A  
+*Value:* N/A  
+
+The Elemental Forge is a sacred chamber used for crafting elemental artifacts. It requires the Unity of Primal Flames to access, as revealed by the inscription "Unite flames, seek forge heart." Within, skilled artisans can create powerful elemental items, guided by the echoes of Ellindra's wisdom.
+
+\page
+
+{{monster,frame
+## Mirror Wraith
+*Medium undead, chaotic evil*
+___
+- **Armor Class** 12
+- **Hit Points** 27 (6d8)
+- **Speed** 0 ft., fly 30 ft. (hover)
+___
+- **STR** 6 (-2)
+- **DEX** 16 (+3)
+- **CON** 10 (+0)
+- **INT** 6 (-2)
+- **WIS** 10 (+0)
+- **CHA** 14 (+2)
+___
+- **Damage Resistances** necrotic
+- **Damage Immunities** poison
+- **Condition Immunities** exhaustion, poisoned
+- **Senses** darkvision 60 ft., passive Perception 10
+- **Languages** understands Common but can't speak
+- **Challenge** 2 (450 XP)
+___
+- **Incorporeal Movement.** The wraith can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+- **Mirror Echo (Recharge 5-6).** When a creature starts its turn within 10 feet of the wraith, the wraith can force it to make a DC 12 Wisdom saving throw. On a failed save, the creature becomes frightened until the start of its next turn.
+- **Regeneration.** The wraith regains 10 hit points at the start of its turn. If the wraith takes radiant damage or damage from holy water, this trait doesn't function at the start of the wraith's next turn.
+- **Sunlight Sensitivity.** While in direct sunlight, the wraith has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.
+___
+#### Actions
+- **Life Drain.** *Melee Spell Attack:* +5 to hit, reach 5 ft., one creature. *Hit:* 18 (4d8) necrotic damage, and the target must succeed on a DC 13 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.
+___
+}}
+
+{{monster,frame
+## Shimmering Shade
+*Small undead, chaotic evil*
+___
+- **Armor Class** 10
+- **Hit Points** 18 (4d6 + 4)
+- **Speed** 30 ft.
+___
+- **STR** 6 (-2)
+- **DEX** 14 (+2)
+- **CON** 12 (+1)
+- **INT** 3 (-4)
+- **WIS** 6 (-2)
+- **CHA** 5 (-3)
+___
+- **Damage Resistances** necrotic
+- **Damage Immunities** poison
+- **Condition Immunities** exhaustion, poisoned
+- **Senses** darkvision 60 ft., passive Perception 8
+- **Languages** understands Common but can't speak
+- **Challenge** 1/4 (50 XP)
+___
+- **Incorporeal Movement.** The shade can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+- **Ethereal Drift.** Once per round, as a reaction to being targeted by an attack, the shade can become ethereal until the start of its next turn, making the attack miss if it relies on sight.
+- **Ethereal Sight.** The shade can see 60 feet into the Ethereal Plane when it is on the Material Plane.
+- **Sunlight Sensitivity.** While in sunlight, the shade has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.
+
+#### Actions
+- **Ethereal Touch.** Melee Weapon Attack: +2 to hit, reach 5 ft., one creature. Hit: 4 (1d6 + 1) necrotic damage. The target must succeed on a DC 10 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.
+}}
+
+\page
+
+{{monster,frame
+## Crystal Guardian
+*Medium construct, unaligned*
+___
+- **Armor Class** 16 (natural armor)
+- **Hit Points** 37 (5d8 + 15)
+- **Speed** 30 ft.
+___
+- **STR** 16 (+3)
+- **DEX** 12 (+1)
+- **CON** 16 (+3)
+- **INT** 3 (-4)
+- **WIS** 10 (+0)
+- **CHA** 1 (-5)
+___
+- **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks that aren't adamantine
+- **Condition Immunities** charmed, exhaustion, frightened, paralyzed, petrified, poisoned
+- **Senses** darkvision 60 ft., passive Perception 10
+- **Languages** understands Common but can't speak
+- **Challenge** 1 (200 XP)
+___
+- **Immutable Form.** The guardian is immune to any spell or effect that would alter its form.
+- **Shard Shards.** When the guardian is reduced to 0 hit points, it shatters, releasing several shards of crystal. Each shard has 2 hit points and is destroyed if it takes any damage. A creature that starts its turn within 5 feet of a shard takes 1 slashing damage. A shard has a speed of 0 and can't make attacks. The shards last until they are destroyed or until the end of the guardian's next turn, at which point the guardian reforms with half its hit points. It can only reform once during combat.
+- **Multiattack.** The guardian makes two melee attacks or uses Crystal Shard Blast.
+- **Slam.** Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) bludgeoning damage.
+- **Crystal Shard Blast (Recharge 5-6).** The guardian releases a blast of crystal shards in a 15-foot cone. Each creature in that area must make a DC 13 Dexterity saving throw, taking 14 (4d6) piercing damage on a failed save, or half as much damage on a successful one.
+}}
+
+\column
+
+## Room 4: The Elemental Nexus
+
+*As you step into the Elemental Nexus, you find yourself in a circular chamber with pathways leading to four smaller chambers. Each smaller chamber represents one of the elemental domains: Fire, Water, Air, and Earth. The ambient sound of elemental forces fills the air, and you sense the presence of powerful magic.*
+
+### Description
+The Elemental Nexus is a circular chamber with four arched doorways leading to the elemental chambers. In the center stands a raised stone pedestal with four indents, waiting for something to be placed within. Floating elemental orbs circle the pedestal, representing the elements. Vines with glowing tips hang from the ceiling, providing a soft bioluminescent glow, and small elemental creatures playfully move about.
+
+- The Fire chamber is extremely hot, with a blazing brazier at its center.
+- The Water chamber features a serene pool of water in its center.
+- The Air chamber contains floating platforms at different heights.
+- The Earth chamber is filled with rocky alcoves and crevices.
+
+
+
+
+### Notable Features
+- A circular chamber with pathways leading to four smaller chambers for **Fire**, **Water**, **Air**, and **Earth**.
+- A pedestal in the center with indents for placing the **Elemental Sigils**.
+- Floating orbs representing the four elements circle the pedestal. Interaction causes effects: water splashes and fire emits warmth.
+- Vines with glowing tips light the room.
+- A ceiling mural depicts ancient elemental battles.
+- **Elemental Flux** changes conditions based on the dominant element.
+  - **Earth Flux**: Stabilizes chaotic elements.
+  - **Air Flux**: Offers temporary flight capabilities.
+  - **Fire Flux**: Ignites fires, granting cold protection.
+  - **Water Flux**: Shrouds Nexus in mist, granting fire protection.
+- **Fire chamber**: Extremely hot. Contains **Fire Nymph**, three **Molten Sprites**, and the **Fire Sigil** within a blazing brazier. Riddle: "Heart of flames, seek Fire Sigil."
+  - Hidden loot: **Molten Boots**.
+- **Water chamber**: Contains **Water Revenant**, four **Tidal Wisps**, and the **Water Sigil** submerged in a pool. Inscription: "Beneath the waves, find Water Sigil."
+  - Hidden loot: **Tidal Amulet**.
+\page
+- **Air chamber**: Contains floating platforms and the **Air Sigil** hidden amongst them. Carving: "Amongst clouds, Air Sigil waits."
+  - Playful **Air Sprites** whirl around visitors.
+  - Hidden loot: **Elemental Bracers** and **Shimmering Mist**.
+- **Earth chamber**: Contains the **Earth Sigil** concealed in a rocky alcove. Ancient carving: "Amidst earth's embrace, Earth Sigil rests."
+  - Curious **Earth Gnomes** peek out from crevices.
+  - Hidden loot: **Gem of Elemental Affinity**.
+- Ancient inscriptions hint at the sigil order: "Fire's passion, Water's flow, Air's whisper, and Earth's embrace; align their power to open the sacred space."
+- Placing the **Elemental Sigils** on the pedestal illuminates the path to Room 6.
+
+### The Elemental Compass
+- Crafted from the Verdant Spire tree's heartwood.
+- Engraved with **Fire**, **Water**, **Air**, and **Earth** symbols.
+- Mechanical Effect: Attuning to an element grants a boon for 1 hour:
+  - **Fire**: Resistance to fire damage.
+  - **Water**: Breathe underwater.
+  - **Air**: Fly at 30 feet speed.
+  - **Earth**: Temporary hit points equal to character's level.
+- Attunement requires interaction with the corresponding **Elemental Sigil**.
+
+### Elemental Challenges
+- The elemental whistle hums in the Nexus, used to calm chaotic energies.
+- Each elemental chamber houses challenges:
+  - **Fire**: Show respect or face **Fire Nymph** and **Molten Sprites**.
+  - **Water**: Disturb the **Water Sigil** without respect and face **Water Revenant** and **Tidal Wisps**.
+  - **Air**: Navigate floating platforms to find the **Air Sigil**.
+  - **Earth**: Rumbles hint at deeper elemental power. Exploration may yield rare minerals.
+
+### Connections
+- Connection TO Room 2 (Whispering Grove): Standard passage.
+- Connection FROM Room 2 (Whispering Grove): Standard passage.
+- Connection TO Room 6 (Chamber of the Elemental Forge): Elevator mechanism.
+- Connection FROM Room 6 (Chamber of the Elemental Forge): Elevator mechanism.
+
+\column
+
+#### Cloak of Elemental Resistance
+*Wondrous Item (cloak), rare (requires attunement)*
+
+* **Weight:** 2 lbs.
+* **Value:** 1,200 gp
+
+This finely crafted cloak provides resistance to fire damage when worn.
+
+#### Elemental Bracers
+*Wondrous Item (bracers), uncommon*
+
+* **Weight:** 1 lb.
+* **Value:** 400 gp
+
+These enchanted bracers allow the wearer to levitate for up to 5 minutes per day, rising up to 10 feet off the ground during each use.
+
+#### Tidal Amulet
+*Wondrous Item (amulet), uncommon*
+
+* **Weight:** 0.5 lb.
+* **Value:** 600 gp
+
+This amulet, when worn, can create a protective water barrier around the user once per day, granting resistance to moderate fire damage for 1 minute when activated.
+
+#### Molten Boots
+*Wondrous Item (boots), uncommon*
+
+* **Weight:** 2 lbs.
+* **Value:** 500 gp
+
+These magical boots grant the wearer the ability to walk on lava or extremely hot surfaces for 1 minute, recharging after a long rest.
+
+#### Shimmering Mist
+*Consumable Item, common*
+
+* **Weight:** 0.1 lb.
+* **Value:** 20 gp
+
+This mist, when bottled, can be used to create minor illusions or distractions for up to 1 minute.
+
+#### Gem of Elemental Affinity
+*Wondrous Item (gem), uncommon*
+
+* **Weight:** 0.5 lb.
+* **Value:** 400 gp
+
+When held, this gem grants the user the ability to communicate with elemental creatures for 10 minutes, usable once per day.
+
+\page
+
+#### Elemental Sigils
+*Wondrous Items (sigils), common*
+
+* **Weight:** 0.1 lb. each
+* **Value:** 50 gp each
+
+These elemental sigils are required to unlock the path to the Elemental Forge. Each sigil is specific to one of the elemental domains (Fire, Water, Air, and Earth) and is essential to progress through the Verdant Spire.
+
+#### Elemental Compass
+*Wondrous Item (compass), rare (requires attunement)*
+
+* **Weight:** 0.5 lb.
+* **Value:** 1,500 gp
+
+Crafted from the Verdant Spire tree's heartwood, this compass has four engravings representing the elements: Fire, Water, Air, and Earth. Attuning the compass to an element grants a 1-hour boon:
+- Fire Attunement: Resistance to fire damage.
+- Water Attunement: Ability to breathe underwater.
+- Air Attunement: Ability to fly at 30 feet speed.
+- Earth Attunement: Temporary hit points equal to the character's level. Attunement requires interaction with the corresponding Elemental Sigil in the Nexus.
+
+{{monster,frame
+## Molten Sprite
+*Tiny elemental, chaotic neutral*
+___
+**Armor Class** 14
+**Hit Points** 15 (4d4 + 4)
+**Speed** 30 ft., fly 30 ft.
+___
+**STR** 3 (-4)
+**DEX** 18 (+4)
+**CON** 10 (+0)
+**INT** 6 (-2)
+**WIS** 10 (+0)
+**CHA** 14 (+2)
+___
+**Skills** Perception +2
+**Senses** darkvision 60 ft., passive Perception 12
+**Languages** understands Ignan but can't speak
+**Challenge** 1/2 (100 XP)
+___
+**Fire Form.** The sprite can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch wide without squeezing.
+**Fire Immunity.** The sprite is immune to fire damage.
+
+**Evasive Flames.** When a creature makes a melee attack against the sprite and misses, the sprite can use its reaction to move up to 10 feet without provoking opportunity attacks.
+___
+**Multiattack.** The sprite makes two fiery touch attacks.
+
+**Fiery Touch.** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 8 (1d8 + 4) fire damage.
+
+**Fiery Burst (Recharge 5-6).** When the sprite is reduced to 0 hit points, it explodes in a burst of flames. Each creature within 10 feet of it must make a DC 12 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save or half as much damage on a successful one.
+}}
+\column
+
+
+{{monster,frame
+## Water Revenant
+*Medium undead, neutral evil*
+___
+**Armor Class** 12
+**Hit Points** 58 (9d8 + 18)
+**Speed** 30 ft., swim 40 ft.
+___
+**STR** 14 (+2)
+**DEX** 10 (+0)
+**CON** 12 (+1)
+**INT** 6 (-2)
+**WIS** 10 (+0)
+**CHA** 7 (-2)
+___
+**Skills** Stealth +2
+**Damage Resistances** cold
+**Damage Immunities** poison
+**Vulnerability** lightning
+**Condition Immunities** exhaustion, poisoned
+**Senses** darkvision 60 ft., passive Perception 10
+**Languages** understands the languages it knew in life but can't speak
+**Challenge** 2 (450 XP)
+___
+**Amphibious.** The revenant can breathe underwater and on land.
+**Water Form.** The revenant can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch wide without squeezing.
+___
+**Multiattack.** The revenant makes two slam attacks.
+**Slam.** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 10 (2d6 + 2) bludgeoning damage.
+___
+**Drowning Grasp.** When the revenant hits a creature with its slam attack, the target must succeed on a DC 12 Strength saving throw or be grappled (escape DC 12). Until this grapple ends, the target is restrained, and the revenant can't use its slam on another target. If a creature remains grappled for 2 rounds, it begins to suffocate, taking 1d6 damage at the start of its turn until the grapple ends.
+___
+**Water Walk (1/Day).** The revenant magically gains the ability to walk on water for 1 minute. During this time, it can move across any liquid surface as if it were solid ground. It can use this ability as a bonus action.
+___
+**Water Jet (Recharge 5-6).** The revenant sprays a high-pressure jet of water in a 30-foot line that is 5 feet wide. Each creature in that line must make a DC 12 Dexterity saving throw, taking 18 (4d8) bludgeoning damage on a failed save, or half as much damage on a successful one.
+___
+**Tactics.** The revenant can retreat into the water, creating difficult terrain or using it as cover. It can also summon a small pool of water to create obstacles or hazards for the adventurers.
+___
+**Lair Actions.** In its lair, the revenant can summon water elementals or create a vortex that pulls in adventurers. (See module for details.)
+___
+**Legendary Resistance (1/Day).** If the revenant fails a saving throw, it can choose to succeed instead.
+___
+**Reactions.** The revenant can create a water shield as a reaction, granting it temporary hit points equal to the damage taken.
+___
+}}
+
+\page
+
+{{monster,frame
+## Fire Nymph
+*Medium elemental, chaotic neutral*
+___
+**Armor Class** 13 (natural armor)
+**Hit Points** 50 (8d8 + 16)
+**Speed** 30 ft.
+___
+**STR** 10 (+0)
+**DEX** 16 (+3)
+**CON** 14 (+2)
+**INT** 8 (-1)
+**WIS** 12 (+1)
+**CHA** 16 (+3)
+___
+**Skills** Persuasion +5
+**Senses** darkvision 60 ft., passive Perception 11
+**Languages** Ignan, understands Common but can't speak
+**Challenge** 2 (450 XP)
+___
+**Fire Resistance.** The Fire Nymph takes half damage from fire damage.
+**Heated Presence.** Any creature that starts its turn within 10 feet of the nymph takes 7 (2d6) fire damage.
+___
+**Multiattack.** The nymph makes two slam attacks.
+**Slam.** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 7 (2d4 + 3) bludgeoning damage plus 3 (1d6) fire damage.
+___
+**Legendary Resistance (1/Day).** If the nymph fails a saving throw, it can choose to succeed instead.
+**Fiery Aura.** As a bonus action, the Fire Nymph can activate an aura of intense heat, creating a 15-foot-radius zone of flames centered on itself. Creatures that start their turn or enter the area take 7 (2d6) fire damage. The Fire Nymph can use this ability once per round.
+**Fiery Vulnerability.** If the Fire Sigil is taken without following the ritual of respect, the Fire Nymph gains an additional 10 hit points and a +1 bonus to attack and damage rolls. This effect lasts until the end of the encounter. If the sigil is taken with respect, the Fire Nymph loses 10 hit points and the bonus, making it easier to defeat.
+___
+}}
+
+{{monster,frame
+## Tidal Wisp
+*Tiny elemental, neutral*
+___
+**Armor Class** 12
+**Hit Points** 10 (4d4)
+**Speed** 0 ft., fly 60 ft.
+___
+**STR** 1 (-5)
+**DEX** 16 (+3)
+**CON** 10 (+0)
+**INT** 4 (-3)
+**WIS** 8 (-1)
+**CHA** 5 (-3)
+___
+**Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks
+**Damage Immunities** thunder
+**Senses** darkvision 60 ft., passive Perception 9
+**Languages** understands Aquan but can't speak
+**Challenge** 1/4 (50 XP)
+___
+**Ephemeral Form and Incorporeal Movement.** The wisp can move through creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+___
+**Water Surge.** The wisp can unleash a burst of water in a 10-foot radius around itself. Each creature in that area must make a DC 12 Strength saving throw, taking 5 (1d10) bludgeoning damage on a failed save and being pushed 5 feet away, or half as much damage and not pushed on a successful save.
+___
+**Wisp Drain (1/Day).** The wisp can target one creature it can see within 5 feet of it. The target must make a DC 11 Constitution saving throw, taking 6 (2d4) necrotic damage on a failed save and the wisp regains hit points equal to half the damage dealt. After using this ability, the wisp can't use it again until it finishes a short or long rest.
+
+}}
+
+{{monster,frame
+## Air Sprite
+*Tiny elemental, chaotic neutral*
+___
+**Armor Class** 13
+**Hit Points** 9 (3d4 + 2)
+**Speed** 0 ft., fly 60 ft.
+___
+**STR** 3 (-4)
+**DEX** 16 (+3)
+**CON** 12 (+1)
+**INT** 6 (-2)
+**WIS** 10 (+0)
+**CHA** 10 (+0)
+___
+**Damage Immunities** lightning, poison
+**Condition Immunities** poisoned
+**Senses** darkvision 60 ft., passive Perception 10
+**Languages** Auran, understands Common but can't speak
+**Challenge** 1/4 (50 XP)
+___
+**Ephemeral Form.** The sprite can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+___
+**Zephyr Strike.** The sprite can use a bonus action to move up to its flying speed without provoking opportunity attacks. After using Zephyr Strike, the sprite's next melee attack deals an additional 2 (1d4) force damage.
+___
+**Gust (Recharge 5-6).** The sprite exhales a blast of air in a 15-foot cone. Each creature in that area must succeed on a DC 12 Strength saving throw or be pushed 10 feet away from the sprite and knocked prone.
+___
+}}
+\page
+{{monster,frame
+## Earth Gnome
+*Tiny humanoid, neutral*
+___
+**Armor Class** 14 (leather armor)
+**Hit Points** 18 (4d4 + 8)
+**Speed** 20 ft.
+___
+**STR** 8 (-1)
+**DEX** 14 (+2)
+**CON** 14 (+2)
+**INT** 10 (+0)
+**WIS** 12 (+1)
+**CHA** 10 (+0)
+___
+**Skills** Stealth +4
+**Senses** darkvision 60 ft., tremorsense 30 ft., passive Perception 11
+**Languages** Gnomish, understands Terran but can't speak
+**Challenge** 1/4 (50 XP)
+___
+**Stone Camouflage.** The gnome has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.
+___
+**Sling.** *Ranged Weapon Attack:* +4 to hit, range 30/120 ft., one target. *Hit:* 6 (1d6 + 2) bludgeoning damage.
+___
+**Cunning Diversion.** As a bonus action, the gnome can create a minor illusion to distract creatures within 30 feet. This grants advantage on its next attack roll or Dexterity (Stealth) check made to hide.
+___
+**Earth Affinity.** The gnome has resistance to earth-based damage.
+___
+**Ambush Strike.** When hidden in rocky terrain, the gnome can make an Ambush Strike as a bonus action. This attack deals an extra 1d8 damage on a hit.
+___
+**Difficult Terrain Creation.** Once per short rest, the gnome can create a 10-foot square of difficult terrain in a location it can see within 60 feet.
+___
+}}
+
+## Room 5: Sanctum of the Ancestral Smith
+
+*As you step into Room 5, you are engulfed by a grand, cathedral-like chamber bathed in a mysterious blue glow. Molten Runes float in mid-air, casting an ethereal light across the room. Ancient armors and weapons are meticulously displayed, showcasing ages of craftsmanship. In the center, a large anvil takes prominence, with the spectral figure of the Ancestral Smith tirelessly working. Nearby, you spot the **Smith's Arcane Grimoire** on a pedestal, a thick tome bound in leather and iron, detailing the process of harnessing the Primal Flames.*
+
+### Description
+
+The Sanctum of the Ancestral Smith is a vast, cathedral-like chamber with towering ceilings. The room is illuminated by the soft, blue glow of the Molten Runes that hang in the air, creating an otherworldly atmosphere. Along the walls, ancient suits of armor and a diverse array of weapons are artfully displayed, each representing a different era of craftsmanship.
+
+In the center of the room stands a massive anvil, where the spectral figure of the Ancestral Smith tirelessly hammers away at a piece of metal, seemingly unaware of your presence. Nearby, on a raised pedestal, rests the **Smith's Arcane Grimoire**, a substantial tome with glowing runes that detail the process of stabilizing the Elemental Forge. Opposite the anvil, a unique weapon rack holds the **Hammer of Echoing Strikes**, an intricately designed hammer with arcane etchings.
+
+
+
+### Notable Features
+- Grand, cathedral-like ambiance with a pervasive mysterious blue glow.
+- Floating **Molten Runes** around the room. Some occasionally flicker, dropping molten droplets which solidify into **Molten Rune Coins** on the ground.
+- Displays of ancient armors and weapons symbolize ages of craftsmanship. Among them hides the **Dagger of Silenced Steps** and the **Shield of Reflected Fate**.
+- Central anvil with the spectral figure of the Ancestral Smith, continuously working and generally unaware of intruders.
+- **Smith's Arcane Grimoire** is located on a pedestal near the anvil.
+- **Hammer of Echoing Strikes** rests on a unique weapon rack nearby.
+- **Smith's Spectacles** are placed on a small stand near the Grimoire.
+- **Animated Armors** guard the room and will animate if the Smith's items are disturbed without his permission.
+- A mural along one wall depicts a battle between elemental forces and smiths. Adjacent to this mural is the locked **Chest of Echoes** which requires a voice command to open. Whispers occasionally suggest: "In smith's voice, you'll find the choice."
+- The room houses **Spectral Smith Assistants**, generally non-hostile but will defend if provoked.
+- A cauldron containing **Smith's Elixir** stands near the anvil.
+- Scattered are **Rune-etched Plates** that can be placed on weapons or armors for elemental resistances.
+- A small forge corner requires **Elemental Cores** to imbue weapons with elemental properties.
+- **Goblet of Everflow** stands on a pedestal.
+- Hidden door from **Hall of Echoes (Room 3)**, noticeable by a DC 16 Perception check on a different reflective pattern.
+- Grand door to **Chamber of the Elemental Forge (Room 6)**, which opens upon gaining the Smith's trust.
+- Hidden entrance, revealed by elemental traces from the Flask of Elemental Elixir from Room 2. 
+\page
+- **Elemental Whistle** is on another pedestal, guarded by the spectral Smith. Engravings on the pedestal depict the Elemental Nexus. The Smith will clue players with: "In the nexus, a tune from this whistle makes chaos mild."
+- When the unique mirror shard from **Hall of Echoes (Room 3)** is presented, the spectral figure reacts nostalgically, granting a one-time **Smith's Blessing**.
+
+### Elemental Flux Effects
+- **Earth**: The Ancestral Smith's spectral presence solidifies, allowing for clearer communication.
+- **Air**: Winds swirl in the sanctum, potentially revealing hidden inscriptions.
+- **Fire**: The forge brightens, allowing for temporary elemental artifact forging.
+- **Water**: The room exudes serenity, granting players a temporary bonus on persuasion checks.
+
+### The Hidden Entrance 
+The elemental traces, when followed, lead to a concealed section of the wall. When touched, it reacts to the Flask of Elemental Elixir's effect, materializing a portal-like entrance. Inside is a small chamber, bathed in the same blue glow as the Sanctum, and containing an ancient-looking mechanism to activate the hidden door to the main Sanctum. The mechanism requires elemental alignment, achieved by placing the **Molten Rune Coins** in specific slots according to the sequence of elements depicted on the walls. Upon correct placement, the door to the main Sanctum opens.
+
+
+
+#### Smith's Arcane Grimoire
+*Weight:* 3 lbs  
+*Value:* 250 gold
+
+This thick tome bound in leather and iron with glowing runes details the exact process of harnessing the Primal Flames: "To stabilize the Elemental Forge, one must invoke the Primal Flames in a sacred chant, then focus their elemental energies through a Keystone. To craft this Keystone, you'll need Ellindra's guidance and the flames' balance." When read for 1 hour, the reader gains advantage on Intelligence (Arcana) checks related to elemental magic for the next 24 hours.
+
+#### Hammer of Echoing Strikes
+*Weight:* 5 lbs  
+*Value:* 600 gold
+
+This beautifully crafted hammer with arcane etchings, when the command word "Reverberate" is spoken, can strike twice in quick succession. This ability can be used once per long rest and allows the wielder to make two melee weapon attacks with the hammer on the same turn against a single target, with the second attack made at disadvantage.
+
+\column
+
+#### Smith's Spectacles
+*Weight:* 0.5 lbs  
+*Value:* 200 gold
+
+These elegant glasses with fine metal frames allow the wearer to see minute details clearly. While wearing them, you gain advantage on any skill checks that involve examining or discerning small or hidden details, such as investigating traps or deciphering fine inscriptions.
+
+#### Molten Rune Coin
+*Weight:* Negligible  
+*Value:* 10 gold
+
+These small, coin-shaped droplets occasionally flicker and drop from the floating runes in the room. When collected, they can be sold for a decent price, each coin being worth 10 gold pieces.
+
+#### Dagger of Silenced Steps
+*Weight:* 1 lb  
+*Value:* 300 gold
+
+This finely crafted dagger, when held, allows the user to move without making a sound for a short duration. Once per short rest, the wielder can activate the dagger to gain the benefits of the Pass Without Trace spell for 1 minute, granting a +10 bonus to Dexterity (Stealth) checks and making no noise while moving.
+
+#### Chest of Echo
+*Weight:* 30 lbs  
+*Value:* 500 gold
+
+This locked chest requires a voice command to open. Whispers around the room occasionally drop hints: "In the smith's voice, you'll find the choice." Mimicking the Ancestral Smith's voice opens the chest, revealing Gems of Resonance inside. These gems can be used to amplify magical spells, granting a +1 bonus to spell attack rolls or spell save DC when incorporated into a spellcasting focus.
+
+#### Gem of Resonance
+*Weight:* Negligible  
+*Value:* 50 gold
+
+These small, finely-cut gems can be used to amplify magical spells. When incorporated into a spellcasting focus, they grant a +1 bonus to spell attack rolls or spell save DC for spells cast through that focus. Each gem can only be used once and is consumed in the process.
+
+
+#### Shield of Reflected Fate
+*Weight:* 6 lbs  
+*Value:* 500 gold
+
+This shield, when used to block an attack, has a chance to reflect a minor spell back at the attacker. Whenever the wielder successfully blocks a spell attack with this shield, there's a 20% chance that the spell is reflected back at the original caster, using the caster's own spell attack bonus or spell save DC, as appropriate. This effect can occur once per short rest.
+
+\page
+
+#### Smith's Elixir
+*Weight:* 0.5 lbs  
+*Value:* 150 gold
+
+Drinking this blue glowing elixir grants temporary resistance to fire and heat for 1 hour. While under the effect of this elixir, the character takes half damage from fire-based attacks and gains advantage on saving throws against effects related to extreme heat or flames.
+
+#### Rune-etched Plate
+*Weight:* Negligible  
+*Value:* 75 gold
+
+These plates, when placed on weapons or armors, grant minor elemental resistances for 1 hour. A single-use item, when attached to a weapon, it grants the wielder's attacks an additional 1d4 damage of a chosen elemental type (fire, cold, lightning, or acid) for the duration. When affixed to armor, it provides resistance to a chosen elemental damage type for the duration.
+
+#### Elemental Core
+*Weight:* 1 lb  
+*Value:* 50 gold
+
+These cores can be used in the small forge in the room to repair or enhance weapons. When used, they imbue the weapon with a temporary elemental property of the wielder's choice (fire, cold, lightning, or acid) for 1 hour. Each core can only be used once and is consumed in the process.
+
+#### Goblet of Everflow
+*Weight:* 0.5 lbs  
+*Value:* 300 gold
+
+This goblet, a favorite of the Ancestral Smith, can hold 1 liter of liquid. It magically refills itself once every day, ensuring the owner always has access to fresh, non-magical beverages.
+
+#### Elemental Whistle
+*Weight:* 0.5 lbs  
+*Value:* 150 gold
+
+This whistle, when used in the Elemental Nexus, briefly calms chaotic elemental patterns to aid in manipulating the nexus. When blown, it grants advantage on any ability checks or skill checks related to controlling or manipulating elemental energies within the Elemental Nexus. This effect lasts for 1 hour and can be used once per long rest.
+
+#### Smith's Blessing
+*Weight:* Negligible  
+*Value:* Priceless
+
+This one-time blessing, triggered by showing a unique mirror shard from the Hall of Echoes to the spectral figure in the Sanctum of the Ancestral Smith, grants the player a +2 bonus on crafting or repair attempts, enhancing their craftsmanship skills for a single crafting or repair action. The blessing expires once used.
+
+
+{{monster,frame
+## Animated Armor
+*Medium construct, unaligned*
+___
+- **Armor Class** 16 (natural armor)
+- **Hit Points** 45 (8d8 + 8)
+- **Speed** 25 ft., climb 20 ft.
+- **STR** 14 (+2)
+- **DEX** 11 (0)
+- **CON** 12 (+1)
+- **INT** 1 (-5)
+- **WIS** 3 (-4)
+- **CHA** 1 (-5)
+- **Damage Immunities** poison, psychic
+- **Condition Immunities** blinded, charmed, deafened, exhaustion, frightened, paralyzed, petrified, poisoned
+- **Senses** darkvision 60 ft., passive Perception 6
+- **Languages** understands the languages of its creator but can't speak
+- **Challenge** 1 (200 XP)
+___
+**Antimagic Susceptibility.** The armor is incapacitated while in the area of an antimagic field. If targeted by dispel magic, the armor must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute.
+
+**False Appearance.** While the armor remains motionless and isn't flying, it is indistinguishable from a normal suit of armor.
+
+**Actions**
+___
+**Multiattack.** The armor makes two slam attacks.
+**Slam.** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 7 (1d8 + 2) bludgeoning damage. 
+**Dodge.** The armor takes the Dodge action on its turn.
+**Rusty Strike (Recharge 5-6).** On a successful hit, the target must make a DC 12 Constitution saving throw or suffer an additional 2d4 damage from corrosion.
+___
+}}
+
+\page
+
+{{monster,frame
+## Spectral Smith Assistant
+*Medium undead, neutral*
+___
+- **Armor Class** 12
+- **Hit Points** 36 (8d8)
+- **Speed** 30 ft.
+- **STR** 10 (0)
+- **DEX** 12 (+1)
+- **CON** 10 (0)
+- **INT** 6 (-2)
+- **WIS** 8 (-1)
+- **CHA** 7 (-2)
+- **Damage Resistances** necrotic
+- **Condition Immunities** charmed, exhaustion, frightened, grappled, paralyzed, petrified, poisoned, prone, restrained
+- **Senses** darkvision 60 ft., passive Perception 9
+- **Languages** understands Common but can't speak
+- **Challenge** 1/2 (100 XP)
+___
+**Incorporeal Movement.** The assistant can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+
+**Ethereal Sight.** The assistant can see 60 feet into the Ethereal Plane when it is on the Material Plane, and vice versa.
+
+**Actions**
+___
+**Ethereal Shift.** The assistant can use a bonus action to become ethereal or return to the Material Plane. While on the Ethereal Plane, the assistant is invisible and can't be targeted or affected by anything on the Material Plane.
+
+**Spectral Touch.** *Melee Spell Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 10 (2d6 + 1) necrotic damage. The target must succeed on a DC 11 Constitution saving throw or have its maximum hit points reduced by an amount equal to the damage taken (half on a successful save). This reduction lasts until the target finishes a long rest. If a creature's hit points are reduced to 0 by this damage, it dies, and its soul is trapped in the spectral assistant until released by magic such as the *dispel evil and good* spell or similar magic.
+___
+}}
+
+## Room 6: Chamber of the Elemental Forge
+
+*As you step into Room 6, the Chamber of the Elemental Forge, a wave of intense heat washes over you. The heart of the Verdant Spire pulses with primal flames, casting flickering light across the chamber. A central forge, alive with elemental energy, dominates the room. On a stone tablet nearby, you spot the **Elemental Keystone's Blueprint**, etched with instructions. Engravings on the forge walls depict blacksmiths working in harmony with elementals.*
+
+### Description
+The chamber is circular with a high, domed ceiling. The Elemental Forge occupies the center, surrounded by ornate, enchanted anvils. Elemental essences in vials line a shelf near the forge. A pulsing crystal is embedded into the floor's center, emitting rhythmic elemental energies. Elemental wisps dart around the crystal. An alcove appears once the forge is stabilized, revealing an enchanted armor set.
+
+
+
+
+### Notable Features:
+- **Elemental Keystone's Blueprint** rests on a stone pedestal near the entrance.
+- A live forge pulsates with elemental energy at the room's center.
+- **Bracers of the Forge** hang on a display beside the main forge.
+- **Ellindra's Original Tongs** lie atop an ornate workbench in the corner.
+- 4 **Elemental Minions** (rocky, watery, fiery, airy) are positioned throughout the room.
+- Several **Elemental Wisps** float near the **Pulsing Crystal** at the room's center.
+- **Jeweled Chalice** stands on a marble pedestal under soft magical light.
+- **Ancient, Elemental-Powered Furnace** is against the far wall, with a plaque detailing its activation phrase.
+- **Ring of the Artisan** is concealed in a hidden drawer within the workbench.
+- **Vials of Elemental Essences** line a shelf near the forge.
+- Engravings on the forge show legendary blacksmiths and elementals.
+- **Books and Scrolls** are found on a shelf by the workbench.
+- Shadows cast by flames occasionally depict past blacksmiths and elementals.
+- Spiral staircase leads up to the **Luminescent Antechamber (Room 1)**.
+- Elevator mechanism descends from **Elemental Nexus (Room 4)**.
+- A grand door leads to **Sanctum of the Ancestral Smith (Room 5)** after certain conditions are met.
+- Elemental Flux affects the environment: Earth (fortified structures), Air (air currents), Fire (guiding flames), Water (navigable streams and hidden alcoves).
+  
+### Elemental Keystone's Blueprint:
+The tablet reads: "To forge Elemental Keystone: Channel Primal Flames, harness Ellindra's wisdom, forge with heart and harmony. Start by igniting Eternal Ember in Verdant Spire's heart." Engravings on the forge show Ellindra holding a radiant ember, hinting at its location.
+
+\page
+
+### Jeweled Chalice:
+Drinking from the chalice grants 1-hour resistance to one element (fire, cold, lightning, or acid). A D20 roll of 1 results in a 1d4-hour curse, taking double damage from the chosen element. The curse can be removed with a Greater Restoration spell or by drinking from the chalice again (1-in-20 chance to reapply curse).
+
+### Ancient, Elemental-Powered Furnace:
+Speak the phrase "By Ellindra's grace, elements align" to activate. It melts metals/materials in exactly 10 minutes with no complications when used correctly.
+
+
+
+#### Bracer of the Forge
+*Wondrous Item (bracers), uncommon*
+- Weight: 1 pound
+- Value: 300 gold pieces
+
+These bracers grant the wearer enhanced crafting abilities, reducing crafting time by half, and provide 50% resistance to fire damage for 1 hour, with a 24-hour cooldown.
+
+#### Ellindra's Original Tongs
+*Wondrous Item (tongs), rare*
+- Weight: 2 pounds
+- Value: 1,000 gold pieces
+
+These ancient tongs, adorned with intricate runes and an elemental gemstone grip, empower the user for 1 hour, granting a temporary +1 bonus to attack and damage rolls when used on a non-magical weapon (usable once per short rest). They can also temporarily add 1d4 elemental damage (fire, cold, lightning, or acid) to a weapon for 1 hour (player's choice based on the gemstone) and provide temporary resistance (fire, cold, lightning, or acid) to armor for 1 hour when used with the appropriate command word.
+
+#### Ring of the Artisan
+*Ring, uncommon*
+- Weight: -
+- Value: 400 gold pieces
+
+This ring, when activated, enhances the wearer's dexterity and craftsmanship for a short duration, providing advantage on Dexterity-based skill checks and tool proficiency checks for 1 hour.
+
+#### Vial of Elemental Essences
+*Wondrous Item (vial), uncommon*
+- Weight: 0.5 pounds
+- Value: 75 gold pieces
+
+These vials contain elemental essences that can be mixed to create temporary enchantments or defenses for a limited number of uses. When consumed, they grant resistance to a chosen elemental damage type (fire, cold, lightning, or acid) for 1 hour. Each vial holds three uses, and they can be refilled with elemental essences found in the room.
+
+#### Jeweled Chalice
+*Wondrous Item (chalice), rare*
+- Weight: 1 pound
+- Value: 500 gold pieces
+
+This jeweled chalice, when drank from, bestows a temporary 1-hour resistance to one chosen elemental damage type (fire, cold, lightning, or acid). However, on a D20 roll of 1, the drinker suffers a 1d4-hour curse, taking double damage from the chosen elemental type. The curse can be removed with a Greater Restoration spell or by drinking from the chalice again, but there's a 1-in-20 chance of reapplying the curse.
+
+#### Elemental Keystone's Blueprint
+*Wondrous Item (blueprint), uncommon*
+- Weight: 0.5 pounds
+- Value: 250 gold pieces
+
+This stone tablet bears the blueprint for forging the Elemental Keystone. It provides the necessary knowledge to use the forge, including the verbatim text: "To forge Elemental Keystone: Channel Primal Flames, harness Ellindra's wisdom, forge with heart and harmony. Start by igniting Eternal Ember in Verdant Spire's heart." It also serves as a clue to the forge's operation.
+
+#### Pulsing Crystal
+*Wondrous Item (crystal), uncommon*
+- Weight: 0.2 pounds
+- Value: 150 gold pieces
+
+This crystal, when touched, grants a brief vision of the Verdant Spire's history, providing valuable lore and clues.
+
+#### Book and Scrolls
+*Wondrous Items (books and scrolls), uncommon*
+- Weight: 2 pounds
+- Value: 300 gold pieces
+
+These charred but legible books and scrolls offer snippets of lore about the elemental world and Ellindra's feats, providing valuable knowledge for historians or scholars when read and studied.
+
+\page
+
+#### Ancient Elemental-Powered Furnace
+*Wondrous Item (furnace), rare*
+- Weight: 500 pounds
+- Value: 1,500 gold pieces
+
+This ancient, elemental-powered furnace, when activated with the phrase "By Ellindra's grace, elements align," can melt metals or other materials rapidly, taking exactly 10 minutes to do so, with no known complications when used correctly.
+
+#### Elemental-Powered Furnace
+*Wondrous Item (furnace), rare*
+- Weight: 1,000 pounds
+- Value: 2,500 gold pieces
+
+This massive, ancient furnace, when activated with the phrase "By Ellindra's grace, elements align," can rapidly melt metals or other materials within 10 minutes, making it a valuable tool for blacksmithing and crafting.
+
+
+
+{{monster,frame
+## Rogue Elemental
+
+*Medium elemental, chaotic neutral*
+___
+- **Armor Class** 14 (natural armor)
+- **Hit Points** 70 (10d8 + 20)
+- **Speed** 30 ft.
+___
+STR | DEX | CON | INT | WIS | CHA
+---|---|---|---|---|---
+16 (+3) | 14 (+2) | 16 (+3) | 8 (-1) | 10 (+0) | 8 (-1)
+___
+- **Skills** Athletics +5
+- **Damage Resistances** fire, lightning; bludgeoning, piercing, and slashing from nonmagical attacks
+- **Damage Immunities** poison
+- **Condition Immunities** exhaustion, paralyzed, petrified, poisoned
+- **Senses** darkvision 60 ft., passive Perception 10
+- **Languages** understands Primordial but can't speak
+- **Challenge** 3 (700 XP)
+___
+
+***Elemental Form.*** The rogue elemental can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the rogue elemental or hits it with a melee attack while within 5 feet of it takes 5 (1d10) fire damage. In addition, the rogue elemental can enter a hostile creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes 5 (1d10) fire damage and catches fire; until someone takes an action to douse the fire, the creature takes 5 (1d10) fire damage at the start of each of its turns.
+
+***Primal Flame Aura.*** At the start of each of its turns, the rogue elemental can cause its flames to erupt in an aura of fiery energy. Each creature within 10 feet of the elemental must make a DC 14 Dexterity saving throw, taking 14 (4d6) fire damage on a failed save, or half as much damage on a successful one.
+
+***Tactical Manipulation.*** The rogue elemental has limited control over the Primal Flames in the Elemental Forge. Once per turn, it can use a bonus action to manipulate the flames in a 10-foot square within 60 feet of it. It can choose to create flames that provide light in the area, obscuring vision for enemies within, or snuff out existing flames to create areas of darkness.
+
+***Multiattack.*** The rogue elemental makes two slam attacks.
+
+***Slam.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 10 (2d6 + 3) bludgeoning damage plus 7 (2d6) fire damage.
+
+***Fiery Burst (Recharge 5-6).*** The rogue elemental releases a burst of intense flames. Each creature in a 15-foot cone must make a DC 14 Dexterity saving throw, taking 21 (6d6) fire damage on a failed save, or half as much damage on a successful one. The area becomes lightly obscured by smoke until the end of the rogue elemental's next turn.
+}}
+
+\page
+
+{{monster,frame
+## Elemental Minion
+
+*Medium elemental, various alignments*
+___
+- **Armor Class** 14 (natural armor)
+- **Hit Points** 24 (4d8 + 4)
+- **Speed** 30 ft.
+___
+STR | DEX | CON | INT | WIS | CHA
+---|---|---|---|---|---
+12 (+1) | 14 (+2) | 14 (+2) | 6 (-2) | 10 (+0) | 6 (-2)
+___
+- **Skills** None
+- **Damage Resistances** Varies by type (fire, cold, or lightning)
+- **Condition Immunities** Exhaustion, Paralyzed, Petrified, Poisoned
+- **Senses** Darkvision 60 ft., passive Perception 10
+- **Languages** Understands Primordial but can't speak
+- **Challenge** 1 (200 XP)
+___
+
+***Elemental Form.*** The elemental minion can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the elemental minion or hits it with a melee attack while within 5 feet of it takes 5 (1d10) damage of the corresponding elemental type (fire, cold, or lightning).
+
+***Elemental Resistance.*** The elemental minion has resistance to the damage type it is associated with (fire, cold, or lightning).
+
+***Multiattack.*** The elemental minion makes two slam attacks.
+
+***Slam.*** *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 8 (2d6 + 1) bludgeoning damage plus 4 (1d8) damage of the corresponding elemental type (fire, cold, or lightning).
+
+***Elemental Type.*** The elemental minion is associated with one of the following damage types: fire, cold, or lightning. Choose the appropriate type for each minion in the encounter.
+}}
+
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+
+
+
+## Conclusion
+With the elemental balance restored, the Verdant Spire's energies harmonize, and the jungle around seems to breathe a sigh of relief. The Primal Flames dance gracefully and predictably, while the Molten Runes take on a stable configuration. The Ancestral Smith, gratitude evident in his spectral form, returns to his eternal vigil, now with a clearer purpose. The Pixie Court of Lumenshade emerges from their hiding, bestowing their gratitude and blessings upon the adventurers. The Elemental Forge, once again, stands as a beacon of arcane craftsmanship. Artifacts retrieved from within the Spire, especially the Elemental Whistle and Elixir, become valuable tools for the adventurers, aiding them in future elemental challenges and enhancing their connection with the arcane.
+
+{{monster,frame
+## Elemental Wisp
+
+*Tiny elemental, various alignments*
+___
+- **Armor Class** 13
+- **Hit Points** 30 (7d4 + 14)
+- **Speed** 30 ft., fly 50 ft.
+___
+STR | DEX | CON | INT | WIS | CHA
+---|---|---|---|---|---
+4 (-3) | 18 (+4) | 14 (+2) | 10 (+0) | 12 (+1) | 14 (+2)
+___
+- **Skills** Perception +3
+- **Damage Resistances** Varies by type (fire, cold, lightning, or bludgeoning, piercing, and slashing from nonmagical attacks)
+- **Damage Immunities** Poison
+- **Condition Immunities** Exhaustion, Paralyzed, Petrified, Poisoned
+- **Senses** Darkvision 60 ft., passive Perception 13
+- **Languages** Primordial
+- **Challenge** 2 (450 XP)
+___
+
+***Elemental Form.*** The elemental wisp can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the elemental wisp or hits it with a melee attack while within 5 feet of it takes 5 (1d10) damage of the corresponding elemental type (fire, cold, or lightning).
+
+***Innate Spellcasting.*** The elemental wisp can cast the *Fire Bolt*, *Ray of Frost*, *Shocking Grasp*, or *Gust* cantrips (spell save DC 12) as innate spellcasting, choosing the appropriate damage type (fire, cold, lightning, or bludgeoning) for the cantrip. It can switch between cantrips as a bonus action on its turn.
+
+***Evasion.*** If the elemental wisp is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage on a successful save.
+
+***Elemental Type.*** The elemental wisp is associated with one of the following damage types: fire, cold, lightning, or bludgeoning. Choose the appropriate type for each wisp in the encounter.
+
+***Blur (1/Day).*** The elemental wisp can cast *Blur* on itself once per day.
+
+***Reaction.*** The elemental wisp can use its reaction to dodge an incoming attack, imposing disadvantage on the attacker's roll.
+
+}}
+
+{{descriptive
+This module was generated using a script based on artificial intelligence, with the following parameters.
+:
+keywords: Elemental Forge, Ancestral Smith, Molten Runes, Primal Flames
+:
+numRooms: 6
+:
+combatDifficulty: medium
+:
+lootValue: high
+:
+wackiness: medium.
+}}

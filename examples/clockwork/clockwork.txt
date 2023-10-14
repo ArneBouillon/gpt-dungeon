@@ -1,0 +1,1515 @@
+# Clockwork Canopy: Quest for the Timeless Bloom
+
+Deep within the heart of an ancient forest lies the Clockwork Jungle, a breathtaking meld of vibrant overgrowth and intricate machinery. Legend speaks of the "Solstice Bloom," a clockwork flower with the power to grant its consumer an extended day. As adventurers traverse the mechanical wilderness, they'll encounter a unique blend of nature and technology, from mechanical wildlife to the ancient guardians known as the Gearshift Druids. Challenges like time-altering flora and druidic traps will test their wit and courage. However, the most significant challenge awaits in the Gearscape Sanctum, where the coveted Solstice Bloom resides.
+
+## Motivation
+There are many reasons why the PCs might embark on this quest. Some examples are given.
+
+1. A terminally ill party member seeks the Solstice Bloom's nectar to extend their life and fulfill a personal quest.
+2. A powerful, time-manipulating artifact is rumored to be hidden within the sanctum, and the characters aim to claim it for their own use.
+3. The characters have been hired by a wealthy collector obsessed with acquiring the rarest and most unique botanical specimens.
+4. A rival adventuring group seeks the Solstice Bloom's power, and the characters accept the mission to prevent their rivals from gaining an advantage.
+5. A local village is suffering from a severe drought, and the characters hope the Solstice Bloom's nectar can restore their withering crops and save the community.
+
+## Background
+Nestled deep within the heart of the Clockwork Jungle, the Gearscape Sanctum stands as a testament to a time where nature, mechanics, and time itself intertwined. Crafted by the brilliant artificer Arvandus in a pact with the Elemental Clock Spirits, this sanctum was meant to preserve the fragile balance of time within the jungle. The ancient tree concealing its entrance is both a guardian and a symbol of the pact.
+
+The reclusive Gearshift Druids, keepers of the sanctum, are descendants of those who've committed their lives to maintaining the harmony between the mechanical and the organic. With the power of both technology and nature at their fingertips, these druids have ensured that the delicate machinery of the jungle ticks in rhythm with the beating heart of its flora and fauna.
+
+Chronarb, the ethereal guardian spirit, stands watch over the sanctum. A fusion of the past and the present, Chronarb knows every secret corridor and chamber of the sanctum and has a deep connection with the Elemental Clock Spirits. His primary duty is to protect the sanctum and its secrets, especially the coveted Solstice Bloom.
+
+The Solstice Bloom is no mere legend. This clockwork flower, with its ability to manipulate the very essence of time, holds immeasurable power. But it's not just the promise of extended days that it offers; the bloom is the very heart of the sanctum, its rhythms synchronizing with the mechanisms that keep the jungle's time in check.
+
+As the adventurers delve deeper into the sanctum, they'll uncover the intricate balance that holds this world together – the dance of gears and roots, the whispers of spirits long gone, and the ever-ticking heart of a jungle where time never truly stands still.
+
+## Arrival
+*As the adventurers approach the entrance to the Clockwork Jungle, the air grows thick with humidity and the faint scent of oil. Vibrant green leaves intertwine with gleaming brass, giving the forest a shimmering, golden hue. Sounds of ticking and the distant hum of gears mesh seamlessly with the chirps of unseen creatures. Before them stands a grand archway, nature and mechanism in perfect harmony. Vines draped with glowing bioluminescent flowers cascade down the sides of the arch, and in the center, an intricate clockwork butterfly hovers. As it flits towards them, the entrance behind the archway slowly grinds open, revealing the Time-Warped Thicket and the beginning of their adventure.*
+
+## Dungeon layout
+The dungeon's rooms are laid out as follows.
+
+![layout](TODO) {height:280px,mix-blend-mode:multiply}
+
+## Room 1: The Time-Warped Thicket
+
+*As you step into Room 1, you find yourself in a dense forested chamber with towering trees, their bark embedded with metal. The leaves on these trees shimmer with bioluminescence, casting the room in perpetual twilight. The occasional glint of a gear or metallic creature catches your eye among the trees. The omnipresent sound of ticking fills the room.*
+
+### Description
+The room is filled with towering trees, their trunks a curious blend of organic wood and metallic elements. Clockwork vines crisscross the forest floor, and streams flow in reverse at times, defying the laws of nature. The ground is uneven, with patches of quicksand-like pits hidden beneath the forest floor. Inscriptions on tree trunks read, "Tales of Druids tending to this thicket, where time bends yet refuses to break."
+
+
+
+
+### Notable Features
+- Towering trees, their bark melded with metal, standing in various stages of organic and mechanical transformation.
+- Leaves shimmering with bioluminescence, bathing the room in a perpetual twilight.
+- Gears and metallic creatures occasionally visible amongst the trees.
+- Constant ticking sound echoes throughout.
+- A massive tree at the room's center holds a **broken gear** at its base.
+- Clockwork vines lurking, able to pull characters into quicksand-like pits.
+- **Gear-Infused Panther** roaming, attended by 5 **Mechanical Serpents**.
+- Trees with inscriptions reading: "Tales of Druids tending to this thicket, where time bends yet refuses to break."
+- Clockwork butterfly, emitting a golden glow, found hidden in dense foliage near a massive tree.
+- Streams flowing in reverse at times, showcasing the room's time-warped nature.
+- Ghostly apparitions of druids fading when approached.
+- A **Chrono Dagger** hidden among the roots of a large tree.
+- Luminous mushrooms that, when consumed, grant vision of trails to significant locations.
+- A **Temporal Phantom** enclosed in a time bubble.
+- Paths leading to Room 2 (Cogwork Clearing) and Room 3 (Gearshift Glade).
+- A painting depicting a stone pillar with a butterfly silhouette.
+- Numerous **Clockwork critters** scuttling across the forest floor.
+
+### Chrono-Echoes Mechanics
+- Scattered shimmering images (Chrono-Echoes) appear sporadically.
+- Touching a Chrono-Echo reveals an event or information.
+- A specific Chrono-Echo displays druids applying a **Chronoleaf herb** to repel mechanical wildlife.
+- This **Chronoleaf herb** can be gathered from plants located near the trunk of the tree displaying the echo.
+  
+### Clockwork Butterfly Sequence
+- Interact with the butterfly in Druidic: It lands with a message reading, "In time's embrace, follow butterfly's grace."
+- A stone pillar in Room 2 (Cogwork Clearing) features a butterfly-shaped indentation. When the butterfly is placed here and its wings are aligned with the pillar's symbols, hidden compartments are unveiled.
+- These compartments contain: 3 gemstones (50 gold pieces each) and a **Magical compass**.
+
+### Clockwork Squirrel
+- Found darting between trees is a **Clockwork Squirrel**, an ornate clockwork creature with intricate brass gears.
+- If captured or befriended, the squirrel reveals a hidden compartment containing:
+  - **Clockwork Nutcracker**: Device that cracks open nuts to unveil gems or edible content.
+  - **Clockwork Companion Blueprint**: Schematics for crafting clockwork animal companions.
+  - **Clockwork Squirrel Token**: Summons a tiny clockwork squirrel to assist the party.
+
+
+
+#### Chrono Dagger
+
+*Weight:* 1 lb., *Value:* 150 gp
+
+This finely crafted dagger allows the wielder to glimpse a few seconds into the future, granting advantage on initiative rolls and a +1 bonus to attack rolls when used in melee combat.
+
+#### Temporal Shard
+
+*Weight:* 0.5 lb., *Value:* 50 gp
+
+This crystallized fragment of time, when shattered, freezes everything in a 20-foot radius for 3 rounds, causing creatures within to be incapacitated.
+
+#### Chrono-Echo
+
+*Weight:* None, *Value:* None
+
+Interacting with this shimmering image of past events, players can gain insights, items, or reveal hidden paths within the dungeon. Each player can interact with one echo, which lasts for 5 minutes before fading.
+
+#### Clockwork Nutcracker
+
+*Weight:* 2 lbs., *Value:* 75 gp
+
+This hand-sized brass device with a winding key can crack open nuts with ease, revealing valuable gems or edible contents. It can be used as a bonus action to crack open a nut within your reach, providing 1d4 gems worth 10 gp each or edible nuts as appropriate to the setting.
+
+#### Clockwork Companion Blueprint
+
+*Weight:* 0.5 lb., *Value:* 100 gp
+
+This detailed set of schematics provides instructions for crafting clockwork animal companions. Possessing this blueprint grants advantage on Intelligence (Tinker's Tools) checks when attempting to construct clockwork animal companions, reducing crafting time by 25%.
+
+#### Clockwork Squirrel Token
+
+*Weight:* 0.1 lb., *Value:* 50 gp
+
+When activated, this brass token summons a tiny clockwork squirrel companion. The squirrel can assist the party by scouting, fetching small items, or creating distractions. It operates under the player's verbal commands and lasts for 1 hour, after which it becomes inert until reactivated with the token.
+
+#### Chronoleaf Herb
+
+*Weight:* Negligible, *Value:* 5 gp
+
+This herb, when used as an action, creates a 5-foot radius aura for 1 hour. Inside the aura, mechanical wildlife avoids hostile actions toward the user.
+
+#### Magical Compass
+
+*Weight:* 0.2 lb., *Value:* 200 gp
+
+This small brass device features a rotating dial that points to the nearest significant item or area within a 1-mile radius when activated as an action. The compass provides no information about the nature of the significant item or area, only its direction and distance.
+
+#### Clockwork Butterfly
+
+*Weight:* Negligible, *Value:* 50 gp
+
+This intricately crafted brass butterfly emits a soft golden glow. When interacted with in Druidic language, it lands on the player's hand and delivers a message: "In time's embrace, follow the butterfly's grace." Placing it on a stone pillar in Room 2 (Cogwork Clearing) aligns its wings to symbols, opening hidden compartments with 3 gemstones (50 gp each) and a magical compass.
+
+
+
+{{monster,frame
+## Gear-Infused Panther
+*Large beast (construct), neutral*
+
+**Armor Class** 14 (natural armor)  
+**Hit Points** 78 (9d10 + 27)  *Increased Hit Points*  
+**Speed** 40 ft., climb 20 ft.
+
+**STR** 16 (+3)  
+**DEX** 14 (+2)  
+**CON** 16 (+3)  
+**INT** 2 (-4)  
+**WIS** 12 (+1)  
+**CHA** 6 (-2)
+
+**Skills** Stealth +6  *Improved Stealth*  
+**Senses** darkvision 60 ft., passive Perception 11  
+**Languages** understands Druidic but can't speak
+
+**Challenge** 4 (1,100 XP)
+
+***Camouflage.*** The panther has advantage on Dexterity (Stealth) checks made to hide in forested terrain.
+
+***Keen Smell.*** The panther has advantage on Wisdom (Perception) checks that rely on smell.
+
+***Pounce.*** If the panther moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 14 Strength saving throw or be knocked prone. If the target is prone, the panther can make one bite attack against it as a bonus action.
+
+***Clockwork Nature.*** The panther has an innate connection to the clockwork-infused environment, granting it an additional ability to manipulate time.
+
+***Environmental Interaction.*** The panther can interact with the clockwork-infused environment as a bonus action, causing nearby clockwork vines or trees to hinder or entangle creatures within a 30-foot radius. This ability recharges after a short or long rest.
+
+***Actions***  
+***Multiattack.*** The panther makes two attacks: one with its bite and one with its claws.
+
+***Bite.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 10 (1d10 + 3) piercing damage.
+
+***Claws.*** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 9 (2d4 + 3) slashing damage.
+
+***Reactive Camouflage (Recharge 5-6).*** When the panther takes damage, it can use its reaction to become invisible until the end of its next turn or until it attacks or uses Pounce.
+
+***Legendary Actions (3/round).*** The panther can take 3 legendary actions, choosing from the options below. Only one legendary action can be used at a time and only at the end of another creature's turn. The panther regains spent legendary actions at the start of its turn.
+
+***Leaping Pounce.*** The panther uses its Pounce ability.
+
+***Temporal Distortion (Costs 2 Actions).*** The panther manipulates time within a 30-foot radius centered on itself. Creatures in the area must make a DC 14 Wisdom saving throw or have their movement speed reduced by half and be unable to take reactions for one round.
+
+***
+}}
+
+{{monster,frame
+## Mechanical Serpent
+*Medium construct, neutral*
+
+**Armor Class** 11  
+**Hit Points** 15 (3d8 + 2)  
+**Speed** 30 ft., climb 30 ft.
+
+**STR** 12 (+1)  
+**DEX** 16 (+3)  
+**CON** 14 (+2)  
+**INT** 1 (-5)  
+**WIS** 10 (+0)  
+**CHA** 1 (-5)
+
+**Skills** Stealth +5  
+**Damage Immunities** poison  
+**Condition Immunities** poisoned  
+**Senses** darkvision 60 ft., passive Perception 10
+
+**Challenge** 1 (200 XP)
+
+***Camouflage.*** The serpent has advantage on Dexterity (Stealth) checks made to hide in forested terrain.
+
+***Innate Spellcasting.*** The serpent's innate spellcasting ability is Wisdom (spell save DC 10). It can innately cast *pass without trace* requiring no material components.
+
+***Coil.*** *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* The target must succeed on a DC 11 Strength saving throw at the end of its turn or be restrained. The serpent can coil around only one target at a time. If the target is Large or smaller, it is grappled (escape DC 11) and restrained until the grapple ends. If the target is Medium or smaller, the serpent can coil around it, but it has disadvantage on attack rolls against other targets.
+
+***Reactive Bite (Recharge 5-6).*** When an adjacent creature misses the serpent with a melee attack, the serpent can make a retaliatory bite attack as a reaction.
+}}
+
+{{monster,frame
+## Clockwork Warden
+*Medium construct, neutral*
+
+**Armor Class** 18 (natural armor)  
+**Hit Points** 100 (10d10 + 40)  
+**Speed** 30 ft.
+
+**STR** 18 (+4)  
+**DEX** 12 (+1)  
+**CON** 22 (+6)  
+**INT** 3 (-4)  
+**WIS** 10 (+0)  
+**CHA** 1 (-5)
+
+**Skills** Perception +2  
+**Senses** darkvision 60 ft., passive Perception 12
+
+**Challenge** 6 (2,300 XP)
+
+***Immutable Form.*** The warden is immune to any spell or effect that would alter its form.
+
+***Keen Smell.*** The warden has advantage on Wisdom (Perception) checks that rely on smell.
+
+***Time Manipulation (Recharge 5-6).*** As a bonus action, the warden can manipulate time in a short burst. Until the end of its next turn, it gains advantage on attack rolls, ability checks, and saving throws. It can use this ability once per day.
+
+***Legendary Resistance (1/Day).*** If the warden fails a saving throw, it can choose to succeed instead.
+
+***Actions***
+***Multiattack.*** The warden makes two slam attacks.
+
+***Slam.*** *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 13 (2d8 + 4) bludgeoning damage. If the target is Medium or smaller, it must succeed on a DC 15 Strength saving throw or be restrained until the end of its next turn.
+
+***Temporal Distortion (Recharge 5-6).*** The warden targets one creature it can see within 60 feet of it. The target must succeed on a DC 15 Wisdom saving throw or be affected by a temporal distortion. While affected, the target's speed is halved, it has disadvantage on Dexterity saving throws, and it can't use reactions. The target can repeat the saving throw at the end of each of its turns, ending the effect on a success.
+
+***Legendary Actions (2 Actions).*** The warden can take 2 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The warden regains spent legendary actions at the start of its turn.
+
+* ***Temporal Strike.*** The warden makes one slam attack.
+* ***Chrono Shield (Costs 2 Actions).*** The warden gains a temporary shield that grants it resistance to all damage types until the start of its next turn.
+
+***
+}}
+
+{{monster,frame
+**Clockwork Critters**  
+*Tiny construct, neutral*
+
+**Armor Class** 12  
+**Hit Points** 13 (5d4)  
+**Speed** 20 ft.
+
+**STR** 4 (-3)  
+**DEX** 14 (+2)  
+**CON** 10 (+0)  
+**INT** 2 (-4)  
+**WIS** 10 (+0)  
+**CHA** 1 (-5)
+
+**Skills** Stealth +4  
+**Damage Immunities** poison, psychic  
+**Condition Immunities** charmed, frightened, poisoned  
+**Senses** darkvision 60 ft., passive Perception 10
+
+***Tiny Construct.*** The critter can occupy another creature's space and vice versa, and the critter can move through any opening large enough for a Tiny construct.
+
+***Innate Spellcasting.*** The critter's innate spellcasting ability is Intelligence (spell save DC 12). It can innately cast *shocking grasp* once per day requiring no material components.
+
+***Actions***
+***Bite.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 2 (1d4) piercing damage.
+
+***Self-Destruct.*** When reduced to 0 hit points, the critter releases a burst of temporal energy in a 10-foot radius. Each creature in that area must make a DC 12 Dexterity saving throw, taking 7 (2d6) force damage on a failed save, or half as much damage on a successful one.
+}}
+
+{{monster,frame
+Here's the updated stat block for the Clockwork Warden:
+
+## Clockwork Warden
+*Medium construct, neutral*
+
+**Armor Class** 18 (natural armor)  
+**Hit Points** 60 (8d8 + 24)  
+**Speed** 30 ft.
+
+**STR** 18 (+4)  
+**DEX** 12 (+1)  
+**CON** 18 (+4)  
+**INT** 3 (-4)  
+**WIS** 10 (+0)  
+**CHA** 1 (-5)
+
+**Skills** Perception +2  
+**Senses** darkvision 60 ft., passive Perception 12  
+**Languages** understands Common and Draconic but can't speak
+
+**Challenge** 6 (2,300 XP)
+
+***Immutable Form.*** The warden is immune to any spell or effect that would alter its form.
+
+***Keen Smell.*** The warden has advantage on Wisdom (Perception) checks that rely on smell.
+
+***Time Manipulation (1/Day).*** As a bonus action, the warden can manipulate time in a short burst, gaining resistance to all damage types except force until the end of its next turn.
+
+***Actions***
+***Multiattack.*** The warden makes two slam attacks.
+
+***Slam.*** *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 13 (2d8 + 4) bludgeoning damage.
+
+***Temporal Distortion (Recharge 5-6).*** The warden targets one creature it can see within 60 feet of it. The target must succeed on a DC 15 Wisdom saving throw or be affected by a temporal distortion. While affected, the target's speed is halved, it has disadvantage on Dexterity saving throws, and it can't use reactions. The target can repeat the saving throw at the end of each of its turns, ending the effect on a success.
+}}
+
+## Room 2: The Cogwork Clearing
+
+*As you enter, you find yourselves in a spacious room where large interlocking gears form the floor, walls, and ceiling. The gears periodically shift, altering the room's layout. Steam rises from random gaps, and the greenish glow of the forest beyond the gears hints at the transition between the forest and the sanctum.*
+
+### Description
+The Cogwork Clearing is a room dominated by massive interlocking gears. The central gear, in particular, stands out, requiring rotation to align with doorways leading to other parts of the sanctum. Beware of unpredictable steam geysers that make the rotation perilous. An Elemental Clock Spirit hovers around the central gear, guarding it aggressively.
+
+
+
+
+### Notable Features
+- Massive interlocking **gears** shape the room, periodically moving to reshape the layout. Steam emanates from gaps between them.
+- The room is illuminated by a greenish glow from the forest outside.
+- A **blueprint** found here shows the sanctum's main gear mechanisms and a path to the Orrery room.
+- The **massive central gear** is pivotal, requiring alignment to access other doorways. Rotation needs strength and timing.
+- **Steam geysers** erupt periodically, corresponding to the ticking of the gears. Players must time their movements to avoid steam bursts.
+- **Elemental Clock Spirit** hovers near the central gear, becoming aggressive if tampered with. Accompanied by three **Steam Sprites**.
+- Etchings of **Chronarb** on some gears hint at his role in the sanctum.
+- Shadowy figures occasionally pass outside the room, dimming the lighting.
+- **Temporal Dagger** embedded in one of the gears, retrieval requires stopping the gear.
+- Between two gears is a nest containing six **Clockwork Scarabs**. Disturbance leads to aggression.
+- Secluded gear bears the etched quote: "The tick precedes the tock, as does the past guide the future."
+- Rusted chest contains the **Robe of Gearing**.
+- Murals on walls depicting time-themed tales.
+- Fading images occasionally appear in the steam, suggesting past events.
+- Overhead, a large **pendulum** swings, which can be climbed to access higher platforms.
+- Connection to **Room 1 (Time-Warped Thicket)** via a left path.
+- Straight path leads to **Room 4 (Chronarb's Chamber)**.
+- Heavy moss-covered door on the right leads to **Room 5 (Orrery of Alignments)**.
+- Large stone pillar stands with an indentation for a **clockwork butterfly**, revealing hidden compartments with gemstones and a **temporal compass**.
+- Gear-embroidered **cloth** concealed in a chest among mechanisms.
+- **Chrono-Echo** displaying past druids building a cogwork bridge, hinting at bridge construction method.
+
+### Central Gear Puzzle
+To access other rooms, players must align the central gear. This requires:
+- Finding large levers hidden behind a wall panel.
+- Timing their actions with the rhythmic steam geysers to avoid injury. Wrong timing can lead to player injuries.
+
+### Clockwork Butterfly Mechanism
+Upon placing the **clockwork butterfly** from Room 1 on the pillar:
+- Hidden compartments open, revealing rare gemstones and a **temporal compass**.
+  
+### Chrono-Echo Bridge Insight
+Observation of the **Chrono-Echo** provides:
+- Knowledge on constructing a bridge using cog mechanisms.
+- Emphasis on the cogwork mechanisms for the bridge.
+  
+### Temporal Tincture Interaction
+The gear-embroidered **cloth** emits a soft glow when near the statue in Room 3. Draping it over reveals a hidden cavity containing the **Temporal Tincture**.
+
+### Crafting Time-Altering Items
+In the room, a workbench with specialized tools allows for:
+- Crafting of items using **Temporal Shards** with gear components. Example: Combining shards with gear components crafts a **Temporal Amulet** allowing a reroll once per long rest.
+
+
+
+#### Artificer's Touch Gloves
+*Weight:* 0.5 pounds
+*Value:* 250 gold pieces
+
+These gloves allow the wearer to momentarily stop a single gear or mechanism upon touch, rendering it immobile for one minute. This feature can be used once per short rest.
+
+#### Temporal Flora
+*Weight:* Negligible
+*Value:* 25 gold pieces
+
+This sprig of temporal flora, when crushed, emits an aroma that allows the user to briefly relive a past memory. The user can choose to experience a specific memory related to their past, gaining insight or information from that moment. This effect can be used once per day and lasts for 1d4 minutes.
+
+#### Robe of Gearing
+*Weight:* 4 pounds
+*Value:* 500 gold pieces
+
+When worn, this robe meshes with the room's interlocking gears, rendering the wearer nearly invisible within the Cogwork Clearing (Room 2). While blending in with the gears, the wearer gains advantage on Dexterity (Stealth) checks and can move through the room without triggering the Steam Sprites' aggression.
+
+#### Temporal Tincture
+*Weight:* 0.5 pounds
+*Value:* 150 gold pieces
+
+This vial of Temporal Tincture, when consumed, allows the user to take an additional turn during their next combat round, immediately after their regular turn. This effect can be used once per long rest.
+
+#### Temporal Amulet
+*Weight:* 0.2 pounds
+*Value:* 350 gold pieces
+
+This amulet, crafted with Temporal Shards and suitable gear components, allows its wearer to reroll one attack roll, saving throw, or ability check once per long rest. The wearer can choose to use this ability after seeing the initial roll but before the outcome is determined.
+
+
+
+{{monster,frame
+Here's the updated stat block for the Elemental Clock Spirit with the suggested improvements:
+
+## Elemental Clock Spirit
+*Medium elemental, neutral*
+___
+- **Armor Class** 14 (natural armor)
+- **Hit Points** 72 (16d8)
+- **Speed** 0 ft., fly 40 ft. (hover)
+___
+- **STR** 12 (+1)
+- **DEX** 15 (+2)
+- **CON** 14 (+2)
+- **INT** 6 (-2)
+- **WIS** 10 (+0)
+- **CHA** 7 (-2)
+___
+- **Damage Resistances** bludgeoning, piercing, and slashing from nonmagical attacks
+- **Damage Immunities** poison
+- **Condition Immunities** exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious
+- **Senses** darkvision 60 ft., passive Perception 10
+- **Languages** understands Common but can't speak
+- **Challenge** 3 (700 XP)
+___
+- **Elemental Magic.** The clock spirit's attacks are considered magical.
+
+#### Actions
+- **Temporal Disruption (Recharge 5-6).** The clock spirit emits a burst of temporal energy. Each creature within 15 feet of the clock spirit must make a DC 12 Constitution saving throw or be affected as if by the *slow* spell for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+
+#### Reactions
+- **Time Warp Defense.** When the clock spirit is targeted by an attack, it can use its reaction to cause the attack to miss. The attacker rolls the attack again, and if the second roll would miss, the attack fails.
+
+#### Legendary Actions (2)
+The clock spirit can take 2 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The clock spirit regains spent legendary actions at the start of its turn.
+
+- **Temporal Strike.** The clock spirit makes one melee attack.
+- **Chrono-Shift.** The clock spirit uses its Temporal Disruption ability.
+- **Clockwork Manipulation (Costs 2 Actions).** The clock spirit manipulates the room's gears, causing one gear within 30 feet of it to rotate, potentially hindering or assisting characters. (See module text for details)
+
+#### Lair Actions
+On initiative count 20 (losing initiative ties), the clock spirit takes a lair action to cause one of the following effects; the clock spirit can't use the same effect two rounds in a row:
+- One steam geyser erupts unpredictably, creating an area of difficult terrain and dealing 2d6 fire damage to creatures within 10 feet. A DC 12 Dexterity saving throw halves the damage and negates the difficult terrain.
+- The clock spirit activates or deactivates a hidden gear mechanism, altering the room's layout.
+- The room's ambient magic distorts time, causing a random creature within 60 feet of the clock spirit to become hasted (as per the *haste* spell) until the start of the clock spirit's next turn.
+
+#### Environmental Interaction
+The clock spirit can use its legendary action, Clockwork Manipulation, to manipulate the room's gears, altering the environment or creating obstacles for characters. (See module text for details)
+}}
+
+{{monster,frame
+## Steam Sprite
+*Tiny elemental, neutral*
+___
+- **Armor Class** 13
+- **Hit Points** 12 (5d4)
+- **Speed** 20 ft., fly 30 ft.
+___
+- **STR** 3 (-4)
+- **DEX** 16 (+3)
+- **CON** 10 (+0)
+- **INT** 5 (-3)
+- **WIS** 10 (+0)
+- **CHA** 6 (-2)
+___
+- **Damage Resistances** fire, poison
+- **Damage Vulnerabilities** cold
+- **Condition Immunities** exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious
+- **Senses** darkvision 60 ft., passive Perception 10
+- **Languages** understands Common but can't speak
+- **Challenge** 2 (450 XP)
+___
+- **Ephemeral Form.** The steam sprite can move through other creatures and objects without taking damage.
+
+#### Actions
+- **Steam Burst.** Ranged Spell Attack: +5 to hit, range 30 ft., one target. Hit: 16 (4d8) fire damage.
+}}
+
+{{monster,frame
+Certainly, here's the updated stat block for the Clockwork Scarab with the proposed improvements:
+
+```markdown
+## Clockwork Scarab
+*Small construct, unaligned*
+___
+- **Armor Class** 14
+- **Hit Points** 28 (8d6)
+- **Speed** 30 ft., climb 20 ft.
+___
+- **STR** 8 (-1)
+- **DEX** 16 (+3)
+- **CON** 11 (+0)
+- **INT** 2 (-4)
+- **WIS** 8 (-1)
+- **CHA** 2 (-4)
+___
+- **Damage Immunities** poison, psychic
+- **Condition Immunities** charmed, exhaustion, frightened, paralyzed, petrified, poisoned
+- **Senses** darkvision 60 ft., passive Perception 9
+- **Languages** understands the languages of its creator but can't speak
+- **Challenge** 3 (700 XP)
+___
+- **Construct Nature.** A clockwork scarab doesn't require air, food, drink, or sleep.
+
+#### Actions
+- **Steam Jet.** The clockwork scarab exhales a burst of superheated steam in a 30-foot line that is 5 feet wide. Each creature in that line must make a DC 13 Dexterity saving throw, taking 14 (4d6) fire damage on a failed save, or half as much damage on a successful one.
+
+#### Reactions
+- **Swarm Tactics.** When the clockwork scarab is within 5 feet of another clockwork scarab, it has advantage on attack rolls, and its Steam Jet attack deals an additional 1d6 fire damage.
+
+#### Environmental Interaction
+- **Gear Infusion.** When a clockwork scarab starts its turn within 10 feet of a large gear mechanism, it gains temporary hit points equal to half the damage it deals with its Steam Jet attack until the start of its next turn.
+
+#### Legendary Action
+- **Legendary Action (1/round).** The clockwork scarab makes one Steam Jet attack.
+
+
+```
+
+This updated stat block includes the proposed improvements while maintaining a Challenge Rating of 3 and eliminating any repeated information.
+}}
+
+{{monster,frame
+## Temporal Dagger
+*Weapon (dagger), rare (requires attunement)*
+___
+- **Damage** 1d4 piercing
+- **Properties** Finesse, light, thrown (range 20/60)
+- **Weight** 1 lb.
+___
+- **Temporal Slice.** When you hit a creature with this dagger, you can use a bonus action to activate its temporal power. The target must make a DC 13 Constitution saving throw or be affected as if by the *slow* spell for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+
+- **Temporal Strike.** The dagger has 3 charges, which replenish after a short rest. You can expend one charge to make a special attack with the temporal dagger. If this attack hits, the target must make a DC 13 Constitution saving throw or be paralyzed for 1 round.
+}}
+
+## Room 3: The Gearshift Glade
+
+*As you enter Room 3, you find yourself in a serene glade bathed in the soft glow of luminescent flora. A central pond reflects the shimmering light of moving gears overhead, creating a tranquil yet mechanical ambiance. The rhythmic sounds of chirping birds blend with the steady ticking of machinery. Statues of Druids are scattered throughout the glade, appearing frozen in time.*
+
+### Description
+The Gearshift Glade is a circular chamber with a radius of 40 feet. The luminescent flora covers the walls, ceiling, and floor, bathing the room in an eerie, shifting light. In the center, a pond of clear water spans 20 feet in diameter, mirroring the mechanical gears above. Druid statues, each about 6 feet tall, are positioned around the room. The medallion with the emblem of the sun, moon, and gear is hanging from a tree near the pond.
+
+A stone bench sits near the pond's edge, offering a resting spot. Hidden among the flora, you spot a rare "Glowing Fern." Mechanical fireflies float around, emitting dim light, and a curious squirrel-like creature made of wood and metal scurries about.
+
+
+
+
+### Notable Features
+- A luminescent flora-covered environment with mechanical components.
+- A central reflective pond underneath moving gears overhead.
+- Sounds of ticking blending with chirping.
+- Scattered statues of **Druid** frozen mid-gesture:
+  - One statue, near the pond, suggests an offering action.
+  - Another holds a **Chain of Binding**.
+  - A worn statue at the room's edge shows wear marks from frequent draping; it conceals a **Temporal Tincture**.
+- Overhead rotating gears casting fleeting shadow patterns hinting at Druidic rituals.
+- An ornate stone bench allowing brief respite.
+- A squirrel-like creature, constructed of wood and metal, scurrying about.
+- **Bronze Sentinel** stationed near the pond.
+- Mechanical fireflies floating throughout the room.
+- "Chrono-Echo" of a past Druidic ritual near the pond's edge.
+- A hidden gear beneath moss.
+- Connection paths:
+  - Overgrown vines lead to the **Time-Warped Thicket** (Room 1).
+  - A portal-like doorway to **Chronarb's Chamber** (Room 4) activates when a small item is cast into the pond.
+  
+### Chrono-Echo Interaction
+- Players witnessing the "Chrono-Echo" see a Druidic ritual. Druids, in the echo, make specific gestures and present offerings to pacify steam-powered creatures.
+- Verbatim phrase from the echo: "By the light of sun and moon, we offered gear and heart, and the creatures stilled." Players learning this ritual can use it in subsequent encounters.
+
+### Pond Mechanics
+- Approaching the pond with genuine intention to offer activates a shimmer in the waters.
+- Randomly discarding an item into the pond or neglecting to offer activates the **Time-Touched Treant**.
+- Casting a small item into the pond activates the portal to **Chronarb's Chamber** (Room 4) for 1 minute.
+
+### Stone Bench Rest
+- Characters resting on the stone bench recover a minor amount of health or spell slots.
+
+### Statue Interaction
+- Draping the **gear-embroidered cloth** from **The Cogwork Clearing** (Room 2) over the worn statue reveals a cavity containing a **Temporal Tincture**.
+- Inscription on the druid statue reads: "Follow the flutter to unveil riches beneath time’s wings."
+
+### Squirrel-like Creature Behavior
+- Depending on its mood, the creature either leads players to minor hidden loot or potential dangers.
+
+### Room Connections and Sequences
+- The shimmering clockwork butterfly from **The Time-Warped Thicket** (Room 1) leads players to **The Cogwork Clearing** (Room 2) to be placed on a stone pillar, revealing hidden compartments. Hints about this sequence are available within **The Gearshift Glade** (Room 3).
+- Conversations overheard among Gearshift Druids, whispers, and rustling leaves provide clues to treasures in the room and the sequence involving the gear-embroidered cloth and the statue.
+
+
+
+#### Druid's Veil
+* Weight: 1 lb
+* Value: 50 gp
+
+This cloak grants its wearer the ability to blend with mechanical flora and fauna, providing advantage on Dexterity (Stealth) checks when in such environments.
+
+#### Medallion of Sun, Moon, and Gear
+* Weight: 0.5 lb
+* Value: 100 gp
+
+This medallion can be used to unlock the orrery's alignment mechanism in another room. When used for this purpose, it grants advantage on Intelligence (Arcana) checks related to aligning the orrery.
+
+#### Moon (from the Medallion of Sun, Moon, and Gear)
+* Weight: 0.1 lb
+* Value: N/A
+
+The moon is a component of the Medallion of Sun, Moon, and Gear and holds no individual properties or value.
+
+#### Gear (from the Medallion of Sun, Moon, and Gear)
+* Weight: 0.1 lb
+* Value: N/A
+
+The gear is a component of the Medallion of Sun, Moon, and Gear and holds no individual properties or value.
+
+#### Glowing Fern
+* Weight: 0.1 lb
+* Value: 25 gp
+
+When crushed, this fern produces a radiant glow, illuminating a 20-foot radius for 1 hour.
+
+#### Chain of Binding
+* Weight: 1 lb
+* Value: 75 gp
+
+When wrapped around an enemy, this chain paralyzes them for 1 minute, requiring a DC 15 Strength saving throw to break free on each of their turns.
+
+
+
+{{monster,frame
+## Time-Touched Treant
+*Huge plant, chaotic neutral*
+
+**Armor Class** 15 (natural armor)
+
+**Hit Points** 90 (12d12 + 12)
+
+**Speed** 30 ft.
+
+**STR** 18 (+4)
+
+**DEX** 10 (+0)
+
+**CON** 13 (+1)
+
+**INT** 6 (-2)
+
+**WIS** 12 (+1)
+
+**CHA** 7 (-2)
+
+**Skills** Perception +3
+
+**Damage Vulnerabilities** Fire
+
+**Damage Resistances** Bludgeoning, Piercing
+
+**Senses** Darkvision 60 ft., passive Perception 13
+
+**Languages** Druidic
+
+**Challenge** 3 (700 XP)
+
+**False Appearance.** While the treant remains motionless, it is indistinguishable from an ordinary tree.
+
+**Multiattack.** The treant makes two slam attacks.
+
+**Slam.** *Melee Weapon Attack:* +6 to hit, reach 10 ft., one target. *Hit:* 16 (2d8 + 4) bludgeoning damage.
+
+**Petrifying Touch.** *Melee Spell Attack:* +3 to hit, reach 5 ft., one creature. *Hit:* The target must make a DC 13 Constitution saving throw. On a failed save, the creature is restrained for 1 minute. The restrained creature can repeat the saving throw at the end of each of its turns, ending the effect on a success.
+
+**Legendary Resistance (3/Day).** If the treant fails a saving throw, it can choose to succeed instead.
+
+**Clockwork Summoning (1/Day).** The treant can use its action to summon 2 Clockwork Sprites to aid it in battle. These sprites follow the treant's mental commands and act on its initiative count. They remain for 1 minute or until dismissed by the treant.
+
+**Environmental Manipulation.** As an action, the treant can manipulate the mechanical flora and fauna in the room, creating an area effect that hinders movement. The area becomes difficult terrain for creatures other than the treant. This effect lasts for 1 minute and can be used once per short or long rest.
+
+**Tactics.** The treant uses its Petrifying Touch against spellcasters or creatures attempting to escape its reach. It targets the most threatening foes with its Slam attacks.
+
+**
+}}
+
+{{monster,frame
+## Clockwork Sprite
+*Tiny construct, neutral*
+
+**Armor Class** 15 (natural armor)
+
+**Hit Points** 24 (5d4 + 10)
+
+**Speed** 30 ft., fly 40 ft.
+
+**STR** 3 (-4)
+
+**DEX** 16 (+3)
+
+**CON** 12 (+1)
+
+**INT** 10 (+0)
+
+**WIS** 12 (+1)
+
+**CHA** 6 (-2)
+
+**Skills** Stealth +5
+
+**Damage Resistances** Bludgeoning from nonmagical attacks
+
+**Senses** Darkvision 60 ft., passive Perception 11
+
+**Languages** Understands Common but can't speak
+
+**Challenge** 1 (200 XP)
+
+**Evasion.** When subjected to an effect that allows it to make a Dexterity saving throw to take half damage on a success, the sprite instead takes no damage on a success.
+
+**Clockwork Disruption.** Once per turn, the sprite can disrupt an opponent's concentration on a spell or effect on a hit. The target must succeed on a DC 12 Constitution saving throw or lose concentration.
+
+**Evasive Maneuvers.** The sprite can use its reaction to impose disadvantage on an attack against it once per round.
+
+**Actions**
+
+**Dart.** *Ranged Weapon Attack:* +5 to hit, range 30/120 ft., one target. *Hit:* 1d6 + 3 piercing damage.
+
+**
+}}
+
+{{monster,frame
+## Bronze Sentinel
+*Large construct, neutral*
+
+**Armor Class** 17 (natural armor)
+
+**Hit Points** 84 (8d10 + 40)
+
+**Speed** 30 ft.
+
+**STR** 18 (+4)
+
+**DEX** 12 (+1)  <!-- Improved Dexterity -->
+
+**CON** 20 (+5)
+
+**INT** 3 (-4)
+
+**WIS** 11 (+0)
+
+**CHA** 1 (-5)
+
+**Skills** Perception +2
+
+**Damage Immunities** Lightning
+
+**Damage Resistances** Bludgeoning <!-- Changed from vulnerability -->
+
+**Condition Immunities** Charmed, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned
+
+**Senses** Darkvision 60 ft., passive Perception 12
+
+**Languages** Understands the language of its creators but can't speak
+
+**Challenge** 6 (2,300 XP)
+
+**Multiattack.** The sentinel makes two slam attacks.
+
+**Slam.** *Melee Weapon Attack:* +7 to hit, reach 5 ft., one target. *Hit:* 16 (2d10 + 4) bludgeoning damage.
+
+**Stone Skin.** The sentinel's body is partially composed of stone, granting it resistance to all non-magical damage.
+
+**Bronze Volley (Recharge 5-6).** The Bronze Sentinel can emit a burst of electrical energy in a 20-foot radius centered on itself. Each creature in that area must make a DC 15 Dexterity saving throw, taking 18 (4d8) lightning damage on a failed save, or half as much on a successful one.
+
+**
+}}
+
+## Room 4: Chronarb's Chamber
+
+*As you step into Chronarb's Chamber, you are greeted by a grand circular room. The massive clock face occupying the ceiling casts a faint, omnipresent hum that resonates with the passage of time. The clock hands slowly rotate, and the walls are adorned with murals depicting the pact between Arvandus and the Elemental Clock Spirits. In the center of the room, a platform holds Chronarb, a fusion of mechanical and organic elements. Hovering orbs representing different time periods surround Chronarb, and echoes of past visitors occasionally materialize as translucent apparitions replaying their moments in the chamber.*
+
+### Description
+
+Chronarb's Chamber is a circular room with a central platform where Chronarb resides. The massive clock face on the ceiling dominates the room, its hands slowly moving. The walls are covered in murals showcasing the pact between Arvandus and the Elemental Clock Spirits. Various small, intricate hourglasses are scattered around the room, some of which can slow or speed up time when flipped. Statues of famed timekeepers and horologists are present, each holding a unique chronometer.
+
+In one corner, there's a pedestal with an "Eon Egg" that briefly shows a potential future version of the holder. Another corner houses a "Clockwork Scarab" defending a stash of "Temporal Coins," which offer glimpses into past or future events. Suspended in mid-air, you'll find a few "Moments in Time" scenarios that provide emotions from past events when touched. A display case contains "Time-Worn Gauntlets" that allow interaction with the "Moments in Time," and a "Chrono-Cloak" grants the wearer an advantage in evading attacks.
+
+
+
+
+### Notable Features
+- Grand **circular room** with a **massive clock face** on the ceiling, hands of which slowly rotate.
+- Walls adorned with murals illustrating the pact between Arvandus and the **Elemental Clock Spirits**.
+- Central platform hosts **Chronarb** and is surrounded by hovering orbs representing various time periods.
+- Shard from the ceiling's clock face present, fitting into the **Orrery's** puzzle in Room 5.
+- **Temporal Treads** lie on the central platform next to Chronarb.
+- A **Mechanical Firefly** encased in a small cage on a pedestal to the left of the entrance.
+- Ethereal winds occasionally distort the room's ambiance, giving a sensation of time displacement.
+- 12 statues of famed timekeepers, one of which depicts **Lysandra Tempus** holding a unique hourglass with a hidden compartment containing **Temporal Sands**.
+- A "Timekeeper's Tome" resting on a stone pedestal beside Lysandra Tempus' statue. An inscription reads, "Heed the lessons of the past, for they are the foundation of the future."
+- A pedestal in the northwest corner holds an **Eon Egg**.
+- A **Clockwork Scarab** protects a stash of **Temporal Coins** in the southeast corner.
+- Faint echoes of past visitors occasionally appear, replaying their moments in the chamber.
+- Five suspended **Moments in Time** around the room.
+- A display case near the southern wall contains **Time-Worn Gauntlets**.
+- **Chrono-Cloak** is draped over the statue next to the display case.
+- Two **Temporal Drakes** guard treasures near the **Moments in Time**.
+- Direct passage straight ahead to Cogwork Clearing (Room 2).
+- Portal-like doorway at the back leading to Gearshift Glade (Room 3), activated by casting a small item into the reflective pond in Gearshift Glade, remains active for 10 minutes.
+- Main exit leading to Orrery of Alignments (Room 5).
+
+### Portal Mechanism
+- Message inscribed on stone beside the portal reads, "Offer token to ever-turning waters."
+- Activated by casting a small item, such as a coin, into the reflective pond in Gearshift Glade.
+- Portal remains active for a duration of 10 minutes.
+
+### Temporal Disturbances
+- Intermittent ethereal winds create auditory distortions, making it difficult to discern sounds. Mechanically, any auditory Perception checks made within the room are at a disadvantage.
+- The **Clockwork Scarab** aggressively protects its stash of **Temporal Coins**. When provoked, it releases an ear-piercing screech, forcing any creature within a 10-foot radius to make a DC 14 Constitution saving throw or be stunned for 1 round.
+- Faded journal beside the scarab's stash mentions, "Beware birds with clocks."
+
+### Moments in Time Interaction
+- The inscription near these moments reads, "Feel echoes of time's emotions, can't alter path."
+- Characters who touch these moments experience emotions from the past, with no direct mechanical effect. However, using the **Time-Worn Gauntlets** allows a character to interact physically with these moments for up to 1 minute. Recharge after a short rest.
+  
+### Temporal Sands
+- Inside the hidden compartment of the hourglass held by Lysandra Tempus' statue, players find a vial of **Temporal Sands**. 
+- Mechanically, these sands enhance time-related spells or items, granting advantages on saving throws or extending the durations of their effects.
+
+
+
+#### Eon Egg
+* Weight: 1 pound
+* Value: 250 gold pieces
+
+This mystical egg, when held, grants the user a brief glimpse of their potential future self, allowing them to see a single, significant future event as if through a brief vision. This effect lasts for 1 minute.
+
+#### Temporal Coin
+* Weight: Negligible
+* Value: 10 gold pieces
+
+When flipped, this coin reveals a brief historical scene related to the past or future. The viewer gains insights into significant events, but these glimpses are limited to 1 minute in duration.
+
+#### Temporal Sand
+* Weight: Negligible
+* Value: 50 gold pieces
+
+Temporal Sand can be used to enhance time-related spells or items, granting advantage on saving throws related to time manipulation and extending the duration of such effects by 1 round.
+
+
+
+{{monster,frame
+Here's the updated stat block for the Temporal Treads with the proposed improvements:
+
+```markdown
+## Temporal Treads
+*Medium construct, neutral*
+
+**Armor Class** 14 (Temporal Weave)
+**Hit Points** 60 (8d8 + 24)
+**Speed** 30 ft.
+
+**STR** 12 (+1)
+**DEX** 16 (+3)
+**CON** 16 (+3)
+**INT** 6 (-2)
+**WIS** 10 (+0)
+**CHA** 6 (-2)
+
+**Skills** Perception +2
+**Damage Immunities** poison, psychic; bludgeoning, piercing, and slashing from nonmagical attacks that aren't adamantine
+**Condition Immunities** charmed, exhaustion, frightened, paralyzed, petrified, poisoned
+**Senses** darkvision 60 ft., passive Perception 12
+**Languages** understands Common but can't speak
+
+**Temporal Manipulation (Recharges on 5-6 at the start of its turn).** The Temporal Treads can use one of the following abilities:
+
+- *Temporal Step.* The Temporal Treads can instantly step a few seconds back in time, reverting immediate harm or missteps, regaining 10 hit points and ending any negative conditions affecting it.
+
+- *Time Distortion (d4 roll).* The Temporal Treads can create a distortion in time within a 10-foot radius sphere centered on itself. Roll a d4 to determine the effect:
+   - 1: Affected creatures repeat their last action on their next turn.
+   - 2: Affected creatures skip their next turn as time briefly accelerates for them.
+   - 3: Affected creatures are slowed, halving their movement and granting advantage on attacks against them until the end of their next turn.
+   - 4: The Time Distortion fails, having no effect this round.
+
+**Actions**
+**Temporal Assault.** Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 9 (1d10 + 3) slashing damage.
+
+**Reactions**
+**Time Warp.** When the Temporal Treads takes damage, it can use its reaction to activate its Temporal Manipulation, using either Temporal Step or Time Distortion.
+
+**Challenge** 3 (700 XP)
+
+```
+
+This updated stat block incorporates the proposed improvements while maintaining the creature's CR at 3.
+}}
+
+{{monster,frame
+## Temporal Warden
+*Small construct, neutral*
+
+**Armor Class** 15 (Temporal Armor)
+**Hit Points** 18 (5d6)
+**Speed** 20 ft., fly 30 ft.
+
+**STR** 6 (-2)
+**DEX** 16 (+3)
+**CON** 10 (+0)
+**INT** 6 (-2)
+**WIS** 12 (+1)
+**CHA** 6 (-2)
+
+**Skills** Perception +3
+**Damage Resistances** force, thunder; bludgeoning, piercing, and slashing from nonmagical attacks that aren't adamantine
+**Condition Immunities** charmed, exhaustion, frightened, paralyzed, petrified, poisoned
+**Senses** darkvision 60 ft., passive Perception 13
+**Languages** understands Common but can't speak
+
+**Temporal Distortion.** When a Temporal Warden takes damage, it can use its reaction to create a brief time loop, allowing it to reroll one attack roll against it. It can use this ability a number of times equal to its proficiency bonus (2), regaining all uses after a long rest.
+
+**Actions**
+**Temporal Burst.** *Ranged Spell Attack:* +5 to hit, range 60 ft., one target. *Hit:* 11 (2d8 + 3) force damage.
+}}
+
+{{monster,frame
+## Chronarb
+*Large construct, neutral*
+
+**Armor Class** 16 (Clockwork Plating)
+**Hit Points** 85 (10d10 + 40)
+**Speed** 30 ft.
+
+**STR** 18 (+4)
+**DEX** 12 (+1)
+**CON** 14 (+2)
+**INT** 12 (+1)
+**WIS** 14 (+2)
+**CHA** 10 (+0)
+
+**Skills** Insight +4, Perception +4
+**Damage Immunities** poison, psychic; bludgeoning, piercing, and slashing from nonmagical attacks that aren't adamantine
+**Condition Immunities** charmed, exhaustion, frightened, paralyzed, petrified, poisoned
+**Senses** darkvision 60 ft., passive Perception 14
+**Languages** understands Common but can't speak
+
+**Temporal Guardian.** Chronarb has advantage on saving throws against spells and other magical effects.
+
+**Legendary Actions.** The Chronarb can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time, and only at the end of another creature's turn. The Chronarb regains spent legendary actions at the start of its turn.
+
+*Clockwork Strike (Costs 1 Action).* The Chronarb makes one Clockwork Strike attack.
+
+*Time Warp (Costs 2 Actions).* The Chronarb teleports to an unoccupied space within 60 feet.
+
+*Temporal Surge (Costs 2 Actions).* The Chronarb targets one creature it can see within 60 feet. The target must make a DC 15 Wisdom saving throw or be affected by the Time Distortion effect for 1 round (as described in the Temporal Warden stat block).
+
+**Temporal Resonance.** When Chronarb takes damage, it can use its reaction to create a temporal resonance field, granting it temporary hit points equal to half the damage taken.
+
+**Actions**
+**Clockwork Strike.** Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) bludgeoning damage.
+
+**
+}}
+
+{{monster,frame
+## Mechanical Firefly
+*Tiny construct, neutral*
+
+**Armor Class** 15 (Clockwork Plating)
+**Hit Points** 10 (2d4 + 2)
+**Speed** 20 ft., fly 60 ft.
+
+**STR** 4 (-3)
+**DEX** 16 (+3)
+**CON** 12 (+1)
+**INT** 2 (-4)
+**WIS** 10 (+0)
+**CHA** 3 (-4)
+
+**Damage Immunities** poison, psychic; bludgeoning, piercing, and slashing from nonmagical attacks that aren't adamantine
+**Condition Immunities** charmed, exhaustion, frightened, paralyzed, petrified, poisoned
+**Senses** darkvision 60 ft., passive Perception 10
+**Languages** understands Common but can't speak
+
+**Illumination.** The Mechanical Firefly emits bright light in a 20-foot radius and dim light for an additional 20 feet.
+
+**Guiding Light.** The Mechanical Firefly can guide the way to areas of temporal stability within 100 feet, using its pulsating light.
+
+**Shocking Spark.** Ranged Spell Attack: +5 to hit, range 30 ft., one target. Hit: 5 (1d6 + 3) lightning damage. On a hit, the target must make a DC 12 Constitution saving throw. On a failed save, the target's mechanical functions are temporarily disrupted, causing it to be stunned for 1 round. This effect has no impact on creatures that are not constructs.
+}}
+
+{{monster,frame
+## Time-Worn Gauntlets
+*Wondrous item (gauntlets), uncommon (requires attunement)*
+
+**Temporal Connection.** While attuned to the Time-Worn Gauntlets, you can touch "Moments in Time" to experience their emotions, gaining insight into past events. You can use this ability a number of times equal to your proficiency bonus, regaining expended uses after a long rest.
+
+**Tactile Link.** The Time-Worn Gauntlets allow you to physically interact with "Moments in Time," offering a tactile connection to the past, granting advantage on related History checks.
+}}
+
+{{monster,frame
+Here's the updated stat block for the Chrono-Cloak, incorporating the improvements:
+
+```markdown
+## Chrono-Cloak
+*Wondrous item (cloak), rare (requires attunement)*
+
+**Armor Class** 12
+**Hit Points** —
+**Speed** —
+
+**STR** —
+**DEX** —
+**CON** —
+**INT** —
+**WIS** —
+**CHA** —
+
+**Skills** —
+**Damage Immunities** —
+**Condition Immunities** —
+
+**Senses** —
+**Languages** —
+
+**Temporal Displacement (Attunement Required).** While attuned to the Chrono-Cloak, you can activate it to appear slightly out of sync with time, granting +2 to Dexterity saving throws for 1 minute (10 rounds).
+
+**Flavor Text:** The Chrono-Cloak, a shimmering garment woven from strands of time itself, is said to have been created by the legendary Chronomancer, Lysandra Tempus. Its threads pulse with the very essence of temporal magic.
+
+
+```
+
+This updated stat block includes the improvements and provides a clear, concise description of the Chrono-Cloak's abilities and flavor text.
+}}
+
+{{monster,frame
+Certainly, here's the updated stat block for the Temporal Drake:
+
+```markdown
+## Temporal Drake
+*Medium dragon, neutral*
+
+**Armor Class** 14 (Natural Armor)
+**Hit Points** 65 (10d8 + 20)
+**Speed** 30 ft., fly 60 ft.
+
+**STR** 16 (+3)
+**DEX** 16 (+3)
+**CON** 15 (+2)
+**INT** 5 (-3)
+**WIS** 12 (+1)
+**CHA** 7 (-2)
+
+**Skills** Perception +3
+**Damage Resistances** force, thunder
+**Condition Immunities** charmed, exhaustion, frightened, paralyzed, petrified, poisoned
+**Senses** darkvision 60 ft., passive Perception 13
+**Languages** understands Draconic but can't speak
+
+**Temporal Phasing (Recharges after a Short or Long Rest).** The Temporal Drake can use its temporal phasing ability to avoid an attack. Once used, it can't use this ability again until it finishes a short or long rest.
+
+**Actions**
+**Temporal Bite.** Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 12 (2d8 + 3) piercing damage.
+
+**Temporal Distortion (Recharge 5-6).** The Temporal Drake creates a brief time distortion in a 10-foot radius sphere centered on itself. All creatures within the area must succeed on a DC 13 Wisdom saving throw or be affected by the time distortion. Affected creatures must repeat their last action on their next turn. This ability lasts for 1 round.
+
+
+```
+
+The updated stat block reflects the improvements mentioned, including increased ability scores, improved damage output, adjustments to the Temporal Phasing ability, and the addition of a special ability called Temporal Distortion.
+}}
+
+{{monster,frame
+Here's the updated stat block for the Mechanical Beetle (Clockwork Scarab) with the suggested improvements:
+
+```markdown
+## Mechanical Beetle (Clockwork Scarab)
+*Tiny construct, neutral*
+
+**Armor Class** 15 (Clockwork Plating)
+**Hit Points** 22 (5d4 + 10)
+**Speed** 20 ft., climb 20 ft., burrow 10 ft.
+
+**STR** 6 (-2)
+**DEX** 14 (+2)
+**CON** 14 (+2)
+**INT** 2 (-4)
+**WIS** 10 (+0)
+**CHA** 6 (-2)
+
+**Damage Immunities** poison, psychic; bludgeoning, piercing, and slashing from nonmagical attacks that aren't adamantine
+**Condition Immunities** charmed, exhaustion, frightened, paralyzed, petrified, poisoned
+**Senses** darkvision 60 ft., passive Perception 10
+**Languages** understands Common but can't speak
+
+**Clockwork Resistance.** The Clockwork Scarab has advantage on saving throws against spells and other magical effects related to clockwork or time manipulation.
+
+**Temporal Disturbance.** On a successful hit with its Clockwork Pincer, the Clockwork Scarab can create a temporal disturbance. The target must succeed on a DC 12 Wisdom saving throw or have its movement speed reduced by 10 feet until the start of the Clockwork Scarab's next turn. A creature can repeat the saving throw at the end of its turn, ending the effect on a success.
+
+**Burrow.** The Clockwork Scarab can burrow through loose soil and sand at a speed of 10 feet.
+
+**Environmental Interaction.** The Clockwork Scarab can manipulate and interact with clockwork mechanisms in its vicinity, potentially providing clues or triggering specific effects related to the room's elements.
+
+
+```
+
+These changes should make the Clockwork Scarab more engaging and thematically relevant to the room while maintaining its CR of 1/2.
+}}
+
+## Room 5: The Orrery of Alignments
+
+*As you step into the vast domed chamber, your eyes are drawn to the center where a complex orrery dominates the space. Clockwork planets revolve around a radiant sun, casting mesmerizing shadows on the walls that emit a soft bioluminescent glow. Consoles with slots, dials, and levers surround the orrery, and an engraved rod rests on one of them. The room is comfortably warm, thanks to the radiant sun's gentle heat. Spectral stardust clusters float through the air, whispering ancient legends when touched.*
+
+### Description
+The Orrery of Alignments is a circular chamber with a high domed ceiling. In the center stands the elaborate orrery, a metallic structure resembling a miniature solar system. The walls are adorned with intricate mosaics depicting celestial events, and small constellations form and dissipate in the bioluminescent glow. A slowly rotating nebula hovers near the celestial mural on the western wall.
+
+Several consoles with various controls are spread around the room. One of them holds an engraved rod instrumental in activating the Solstice Bloom chamber. A hidden compartment in the floor mosaic conceals tiny meteorites. Suspended in the air is a Celestial Compass, softly glowing.
+
+
+
+
+### Notable Features
+- A central, dominating **orrery** depicting the solar system.
+- Bioluminescent walls show constellations forming and dissipating.
+- Several consoles surround the **orrery**, each equipped with dials, levers, and slots. An **engraved rod** is on the console nearest the entrance.
+- Gravitational anomalies when orrery misaligned.
+- Miniature clockwork planet models scatter the room.
+- A **Celestial Gearhound** guards the room. When threatened, it summons four **Orbital Sentinels**.
+- Dome interior patterns suggest the correct **orrery** alignment.
+- Inscription: "Align with the solstice to reveal the path to the Bloom."
+- The **orrery's** radiant sun emits warmth, maintaining a comfortable room temperature.
+- Floating **spectral, shimmering stardust clusters** whisper ancient legends when touched.
+- The floor is adorned with celestial event mosaics. A hidden compartment in these mosaics conceals five **tiny meteorites**.
+- A slowly rotating nebula near the west wall grants visions when touched.
+- A **Celestial Compass** is suspended from the ceiling near the orrery.
+- The **Celestial Observer** hides in the shadows, intervening if the **orrery** is threatened.
+- A tome named **Cosmic Chronicles** lies open on a console with carvings of a steam-powered songbird.
+- A cloak, the **Starweaver's Mantle**, is draped over a nearby console.
+- An echo, or **Temporal Imprint (Chrono-Echo)**, on the north wall, displays the correct alignment for a past solstice.
+
+### Orrery Alignment Puzzle
+- Goal: Turn dials to align planets with past solstice positions.
+- Clue from Inscription: "Align with solstice to reveal path to Bloom."
+- Additional hints:
+  - **Spectral Stardust Clusters**: Whisper: "Align orrery as stars align for path."
+  - **Temporal Imprints (Chrono-Echoes)**: Display past solstice alignments: Sun - Summer Solstice, Mercury - Winter Solstice, Venus - Vernal Equinox, Earth - Autumnal Equinox, Mars - Summer Solstice.
+
+### Meteorite Properties
+- **Tiny Meteorites**: Vary in size and shape.
+- **Unique Meteorite - Stardust Iron**: Fist-sized, metallic with glowing veins. Revealed by Intelligence (Arcana) check. Grants +1 bonus with Smith's Tools.
+- **Flamestone Fragments**: Emit warmth. Grant fire damage resistance for 1 hour when touched.
+- **Frostcrystal Fragments**: Cold to touch. Grant cold damage resistance for 1 hour when touched.
+- **Aerolithite Shards**: Seem weightless. Grant force damage resistance for 1 hour when touched. 
+
+### Celestial Compass Mechanic
+- Always points toward the strongest source of magic in the vicinity.
+
+
+
+#### Globule of Gravitation
+
+*Wondrous Item (jewel), uncommon*
+
+- **Weight:** 1 pound
+- **Value:** 500 gold coins
+
+This jeweled orb allows the user to activate its magic to defy gravity for 1 minute, functioning similarly to the "Feather Fall" spell.
+
+#### Starweaver's Mantle
+
+*Wondrous Item (cloak), uncommon*
+
+- **Weight:** 1 pound
+- **Value:** 300 gold coins
+
+This magical cloak, adorned with constellations, allows its wearer to use the "Misty Step" spell to blink up to 30 feet three times per day.
+
+#### Spectral Stardust Cluster
+
+*Wondrous Item, uncommon*
+
+- **Weight:** Negligible
+- **Value:** 25 gold coins
+
+When touched, these shimmering stardust clusters whisper a clue about aligning the orrery, providing guidance for the puzzle involving the celestial device.
+
+#### Temporal Imprint (Chrono-Echo)
+
+*Wondrous Item, minor*
+
+- **Weight:** Negligible
+- **Value:** None
+
+Interacting with this temporal imprint provides insights into the correct alignment of the orrery during past solstices, assisting players in solving puzzles related to the celestial device.
+
+#### Unique Meteorite - Stardust Iron
+
+*Ore, rare*
+
+- **Weight:** 2 pounds
+- **Value:** 100 gold coins
+
+This fist-sized meteorite, known as Stardust Iron, is a rare celestial ore with glowing veins. An Intelligence (Arcana) check reveals its rarity. Characters proficient with Smith's Tools can craft celestial-themed items using Stardust Iron, granting a +1 bonus to attack rolls and saving throws when used in crafting.
+
+#### Flamestone Fragment
+
+*Wondrous Item (crystal fragment), uncommon*
+
+- **Weight:** Negligible
+- **Value:** 20 gold coins
+
+These fragments, when held, emit warmth and grant temporary fire damage resistance for 1 hour.
+
+#### Frostcrystal Fragment
+
+*Wondrous Item (crystal fragment), uncommon*
+
+- **Weight:** Negligible
+- **Value:** 20 gold coins
+
+These fragments, when held, emanate cold, granting temporary cold damage resistance for 1 hour.
+
+#### Aerolithite Shard
+
+*Wondrous Item (crystal fragment), uncommon*
+
+- **Weight:** Negligible
+- **Value:** 20 gold coins
+
+These shards seem to defy gravity, and when held, they grant temporary force damage resistance for 1 hour.
+
+#### Celestial Compass
+
+*Wondrous Item (compass), uncommon*
+
+- **Weight:** 1 pound
+- **Value:** 150 gold coins
+
+This compass, when carried, always points towards the most potent source of magic nearby, aiding in the detection of magical energy and items.
+
+#### Tiny Meteorite
+
+*Ore, varies*
+
+- **Weight:** Negligible
+- **Value:** Varies
+
+These meteorites vary in size, shape, and composition. Some types include:
+
+- **Stardust Iron:** Grants a +1 bonus to attack rolls and saving throws when used in crafting celestial-themed items.
+- **Flamestone Fragments:** Grant temporary fire damage resistance for 1 hour when held.
+- **Frostcrystal Fragments:** Grant temporary cold damage resistance for 1 hour when held.
+- **Aerolithite Shards:** Grant temporary force damage resistance for 1 hour when held.
+
+
+
+{{monster,frame
+## Celestial Gearhound
+*Medium construct (celestial), neutral*
+___
+- **Armor Class** 16 (natural armor)
+- **Hit Points** 200 (20d10 + 60)
+- **Speed** 40 ft.
+___
+- **STR** 18 (+4)
+- **DEX** 12 (+1)
+- **CON** 16 (+3)
+- **INT** 2 (-4)
+- **WIS** 12 (+1)
+- **CHA** 5 (-3)
+___
+- **Damage Resistances** radiant
+- **Condition Immunities** charmed, exhaustion, frightened, paralyzed, petrified, poisoned
+- **Senses** darkvision 60 ft., passive Perception 11
+- **Languages** understands Common but can't speak
+- **Challenge** 7 (2,900 XP)
+___
+- **Multiattack.** The celestial gearhound makes two Cosmic Beam attacks.
+- **Cosmic Beam.** *Ranged Spell Attack:* +6 to hit, reach 120 ft., one target. *Hit:* 4d8 radiant damage.
+- **Cosmic Barrier (1/Day).** As a reaction, when the celestial gearhound takes damage, it can activate a barrier, gaining resistance to all damage until the start of its next turn.
+- **Call Orbital Sentinels (Recharge 5-6).** When the celestial gearhound's hit points are reduced to half or fewer, it can summon two Orbital Sentinels to aid it in battle.
+___
+- **Actions**
+  - **Bite.** *Melee Weapon Attack:* +6 to hit, reach 5 ft., one target. *Hit:* 8 (1d8 + 4) piercing damage.
+___
+- **Legendary Actions (2/round).** The celestial gearhound can take 2 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The celestial gearhound regains spent legendary actions at the start of its turn.
+  - **Cosmic Beam (Costs 1 Action).** The celestial gearhound makes one Cosmic Beam attack.
+  - **Celestial Surge (Costs 2 Actions).** The celestial gearhound channels celestial energy, restoring 20 hit points to itself.
+___
+}}
+
+{{monster,frame
+Certainly, here's an updated stat block for the Orbital Sentinel with the suggested improvements:
+
+```markdown
+## Orbital Sentinel
+*Small construct (celestial), neutral*
+___
+- **Armor Class** 14 (natural armor)
+- **Hit Points** 30 (6d6 + 6)
+- **Speed** 30 ft., fly 30 ft.
+___
+- **STR** 10 (+0)
+- **DEX** 14 (+2)
+- **CON** 12 (+1)
+- **INT** 2 (-4)
+- **WIS** 12 (+1)
+- **CHA** 5 (-3)
+___
+- **Damage Resistances** force
+- **Condition Immunities** charmed, exhaustion, frightened, paralyzed, petrified, poisoned
+- **Senses** darkvision 60 ft., passive Perception 11
+- **Languages** understands Common but can't speak
+- **Challenge** 2 (450 XP)
+___
+- **Multiattack.** The orbital sentinel makes two attacks: one with its Energy Blasts and one with its Bite.
+- **Energy Blasts.** *Ranged Spell Attack:* +4 to hit, reach 120 ft., one target. *Hit:* 1d6 force damage.
+- **Bite.** *Melee Weapon Attack:* +2 to hit, reach 5 ft., one target. *Hit:* 3 (1d4 + 0) piercing damage.
+- **Hover (Recharge 4-6).** The orbital sentinel gains the ability to hover and fly at twice its normal speed for 1 minute.
+___
+- **Reactions**
+  - **Orbital Shield.** When a ranged spell attack targets the orbital sentinel, it can use its reaction to create a protective shield, granting it resistance to the damage from that attack.
+___
+
+```
+
+These changes provide the Orbital Sentinel with improved combat versatility, mobility, and a reactive ability while keeping its Challenge Rating at 2.
+}}
+
+{{monster,frame
+Here's the updated stat block for the Celestial Observer with the improvements:
+
+```markdown
+## Celestial Observer
+*Large construct (celestial), neutral*
+___
+- **Armor Class** 15 (natural armor)
+- **Hit Points** 120 (16d10 + 32)
+- **Speed** 30 ft., fly 60 ft.
+___
+- **STR** 16 (+3)
+- **DEX** 12 (+1)
+- **CON** 14 (+2)
+- **INT** 2 (-4)
+- **WIS** 14 (+2)
+- **CHA** 5 (-3)
+___
+- **Damage Resistances** radiant
+- **Condition Immunities** charmed, exhaustion, frightened, paralyzed, petrified, poisoned
+- **Senses** darkvision 60 ft., passive Perception 12
+- **Languages** understands Common but can't speak
+- **Challenge** 10 (5,900 XP)
+___
+- **Cosmic Beam.** The celestial observer emits a beam of radiant energy from its eyes. Ranged Spell Attack: +5 to hit, reach 120 ft., one target. *Hit:* 3d8 radiant damage.
+- **Cosmic Shield.** The celestial observer can create a protective shield around itself, gaining resistance to all damage until the start of its next turn.
+- **Multiattack.** The celestial observer makes two Cosmic Beam attacks.
+- **Celestial Knowledge.** The celestial observer has vast knowledge of celestial bodies and can offer hints and guidance to those who seek to align the orrery correctly, provided they make a successful Charisma check (DC 18).
+- **Legendary Actions (2/round).** The celestial observer can take 2 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The celestial observer regains spent legendary actions at the start of its turn.
+  - **Celestial Blast.** The celestial observer makes a ranged attack with its Cosmic Beam.
+  - **Teleport.** The celestial observer magically teleports up to 60 feet to an unoccupied space it can see.
+  - **Counterbeam (Costs 2 Actions).** The celestial observer uses its reaction to redirect a ranged spell attack or ranged weapon attack back at the attacker, reflecting its celestial nature.
+___
+- **
+```
+
+These improvements enhance the Celestial Observer's combat abilities and add more versatility to its interactions with the party.
+}}
+
+## Room 6: Chamber of the Solstice Bloom
+
+*As you enter Room 6, you find yourself in a serene, circular chamber bathed in a soft, golden hue. The room is illuminated by floating luminescent orbs near the ceiling, their colors pulsing brighter as you move. The walls are adorned with intricate gear patterns that move slowly, creating a mesmerizing dance. At the center of the room, on a raised dais, stands the Solstice Bloom, a stunning clockwork flower with petals made of gold and silver. The air is filled with the sound of ticking, reminiscent of a heartbeat, and whispers occasionally recite lines from old tales about time, memories, and dreams.*
+
+### Description
+The circular chamber spans about 30 feet in diameter. The walls are covered in ornate gear patterns that slowly rotate, creating an enchanting display. At the center of the room is a raised circular dais, about 10 feet in diameter, where the Solstice Bloom stands. Small alcoves beside the Solstice Bloom hold vials labeled "Drops of Dilated Dawn."
+
+A lectern near the edge of the room holds an ancient scroll written by Arvandus, providing insight into the pact made with Elemental Clock Spirits and the birth of the Clockwork Jungle. Adjacent to the scroll, in another alcove, is an ornate, feathered quill that writes in shimmering ink. On a plush cushion near a beautifully crafted sundial, you spot a pocket watch that tracks the most significant moment in its holder's life.
+
+In one corner, an unassuming wall slot emits a faint clock-like ticking sound, and tiny clock engravings around it hint at its time-related nature. Lurking in the shadows, a Chrono Wraith remains hidden, ready to protect the sanctity of the chamber if its balance is severely disrupted.
+
+
+
+
+### Notable Features
+- **Raised dais** at the center with the **Solstice Bloom**, a clockwork flower with golden and silver petals. A slot for an **Engraved Rod** is on its pedestal.
+- Walls are decorated with intricate **gear-patterned walls** that move slowly. An inscription reads: "Unlock flower's secret with clock's hand."
+- **Floating luminescent orbs** drift near the ceiling, changing colors in response to nearby beings.
+- **Golden Hourglass** in a corner with sands flowing upward.
+- Whispering voices can be heard, reciting old tales about time and memories.
+- **Sundial** on one side, revealing hidden constellations when light strikes it from a specific angle.
+- Alcoves with vials named **Drops of Dilated Dawn** beside the **Solstice Bloom**.
+- **Ancient Scroll** by Arvandus on a lectern near the edge. Its text: "In the age of alignment, the pact was sealed with the Elemental Clock Spirits. Their essence brought forth the Clockwork Jungle. Remember, traveler, balance in all things keeps the cogs turning. There exist other sanctums and pacts, portals to even more clockwork realms."
+- **Chrono-Echo** depicting a failed attempt to harvest the Solstice Bloom.
+- **Chrono Wraith** lurking in shadows, appearing when the room's balance is disrupted or **Solstice Bloom** is accessed unauthorized.
+- **Feathered quill** in an alcove adjacent to the scroll, with a hidden compartment beneath it containing the **Solstice Bloom Engraved Rod**.
+- **Pocket watch** on a plush cushion near the sundial.
+- **Time-touched gloves** in an ornate box.
+- **Bookstand** with a tome titled "Echoes of Eternity".
+- An **unassuming wall slot** emitting a faint ticking sound.
+- A small antechamber before the primary exit with inscriptions hinting at other sanctums.
+- Hidden compartment accessible with the **Clock Hand Tool** from the Orrery of Alignments (Room 5), containing the **time-dilated quiver**.
+
+### The Golden Hourglass
+- When interacted with, characters are transported into a vision of the past, revealing a crucial ritual that created the chamber.
+- Mechanical Effect: Allows manipulation of time once during the character's stay in the room.
+  - Slowing time: grants advantage on attacks for one minute.
+  - Speeding time: reduces potion cooldowns by half for one minute or can make plants grow instantly.
+
+### The Solstice Bloom Mechanism
+- Inserting the **Solstice Bloom Engraved Rod** allows safe harvesting of the **Solstice Bloom's** nectar.
+- Unauthorized touching resets character's last 10 minutes of actions.
+- Inserting the **Clock Hand Tool** into the dais slot and turning clockwise reveals **time-dilated quiver** (10 arrows, +2 attack). 
+- **Chrono Wraith** appears and attacks if **Solstice Bloom** is accessed without the rod.
+
+### The Chrono-Echo
+- Shows a translucent scene of a figure unsuccessfully attempting to pluck petals from the **Solstice Bloom** without the rod.
+
+
+
+#### Solstice Bloom Engraved Rod
+
+- **Weight:** 1 lb
+- **Value:** 100 gp
+
+This intricately engraved rod, when inserted into the Solstice Bloom, allows for the safe harvesting of its nectar. Without it, touching the Solstice Bloom triggers a temporal trap, resetting the last 10 minutes of actions in the chamber.
+
+#### Drop of Dilated Dawn
+
+- **Weight:** Negligible
+- **Value:** 50 gp
+
+These vials contain a rare elixir that can manipulate the length of rests for the party, either extending or shortening them. When consumed, one vial can either double the effects of a short rest or halve the effects of a long rest for the user.
+
+#### Time-Touched Glove
+
+- **Weight:** Negligible
+- **Value:** 200 gp
+
+These gloves allow the wearer to interact with intangible or out-of-phase objects for one minute once per long rest. During this time, the wearer can touch, manipulate, or activate such objects as if they were tangible.
+
+#### Clock Hand Tool
+
+- **Weight:** Negligible
+- **Value:** 50 gp
+
+This small tool, found in the Orrery of Alignments, fits perfectly into the slot on the dais in the Chamber of the Solstice Bloom. When turned clockwise, it activates the safe access to the Solstice Bloom's nectar, preventing the activation of the temporal trap.
+
+#### Golden Hourglass
+
+- **Weight:** 2 lbs
+- **Value:** 500 gp
+
+Interacting with this hourglass transports characters into a vision of the past, revealing the ritual that created the chamber. Mechanically, it allows manipulation of time in the room once during the character's stay. It can slow down time for one minute, granting advantage on attacks, or speed up time for one minute, making plants grow instantly or reducing potion cooldowns by half.
+
+
+
+{{monster,frame
+## Chrono Wraith (CR 6)
+*Medium undead, neutral*
+
+**Armor Class** 14 (ethereal armor)
+**Hit Points** 54 (12d8)
+**Speed** 0 ft., fly 40 ft. (hover)
+
+**STR** 6 (-2)
+**DEX** 16 (+3)
+**CON** 12 (+1)
+**INT** 10 (0)
+**WIS** 10 (0)
+**CHA** 14 (+2)
+
+**Skills** Perception +2, Stealth +5
+**Damage Resistances** necrotic, psychic; bludgeoning, piercing, and slashing from nonmagical attacks
+**Condition Immunities** exhaustion, frightened, grappled, paralyzed, petrified, poisoned, prone, restrained
+**Senses** darkvision 60 ft., passive Perception 12
+**Languages** understands Common but can't speak
+
+**Ethereal Sight.** The wraith can see 60 feet into the Ethereal Plane when it is on the Material Plane, and vice versa. 
+
+**Incorporeal Movement.** The wraith can move through other creatures and objects as if they were difficult terrain. It takes 10 (2d6) force damage if it ends its turn inside an object.
+
+**Time Manipulation.** Once per turn, as a reaction to being hit by a melee attack, the wraith can briefly freeze time, causing the attacker to make a DC 14 Constitution saving throw. On a failure, the attacker takes 10 (3d6) necrotic damage and is stunned until the end of its next turn. On a success, the attacker takes half damage and isn't stunned. 
+
+**Actions**
+**Life Drain.** *Melee Spell Attack:* +5 to hit, reach 5 ft., one creature. *Hit:* 18 (4d8) necrotic damage. The target must succeed on a DC 13 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.
+
+**
+}}
+
+## Conclusion
+Upon completing their mission, the Clockwork Jungle responds to their success. The machinery, once sporadically active, now synchronizes, causing the entire forest to hum in harmonious rhythm. The once-hostile mechanical wildlife seems more docile, possibly recognizing the adventurers' achievements. As for the Solstice Bloom's nectar, when consumed, it grants the user the sensation of an extended day, experiencing 48 hours in a single day. This can be a boon for spellcasters, allowing them additional time for spell preparations or for those who need the extra hours for crafting and other activities. The Clockwork Jungle, while still holding many mysteries, now respects the adventurers, offering a serene and safe haven should they ever return.
+
+{{descriptive
+This module was generated using a script based on artificial intelligence, with the following parameters.
+:
+keywords: Clockwork Jungle: Gears, Mechanisms, Overgrowth
+:
+numRooms: 6
+:
+combatDifficulty: high
+:
+lootValue: medium
+:
+wackiness: medium.
+}}

@@ -1,0 +1,1635 @@
+# Disco Delve: Groovin in the Eldergrove Groove
+
+In the heart of the bioluminescent Eldergrove jungle lies the enigmatic dungeon known as Eldergrove Groove. A rhythmically charged and magical realm, adventurers face a world where traditional combat takes a backseat, and dance battles rule supreme. Musical puzzles, groovy traps, and mischievous raver elf ghosts pepper their path. Their ultimate goal: to secure DJ Lyraxia's final, unreleased track - a piece of music with power beyond comprehension.
+
+## Motivation
+There are many reasons why the PCs might embark on this quest. Some examples are given.
+
+1. One character's uncle, a legendary raver elf, vanished in Eldergrove Groove years ago. They hope to uncover the truth behind his disappearance and potentially reunite with him.
+
+2. The party's bard has heard rumors of DJ Lyraxia's unreleased track and believes it could be the ultimate masterpiece to boost their own music career.
+
+3. A mischievous trickster deity has promised a character an artifact of immense power in exchange for retrieving DJ Lyraxia's vinyl.
+
+4. A local tavern owner in a nearby town has offered the party a lifetime supply of their famous neon-colored cocktails if they bring back a sample of the Neon Nectar.
+
+5. The party's rogue has a strange fascination with glow-ups and sees consuming the Neon Nectar as the ultimate challenge.
+
+## Background
+Nestled deep within the heart of the bioluminescent jungle lies the forgotten nightclub, Eldergrove Groove. Crafted from pure enchantment and passion, the club was the brainchild of the elf bard, DJ Lyraxia. Combining her love for music with powerful eldritch magics, she tapped into the mystical energies of the jungle to create the ultimate dance experience. Eldergrove Groove was once a beacon of revelry, attracting raver elves and creatures from all over, drawn to the irresistible beats and rhythms pulsating from within its walls.
+\column
+However, as with all tales of great power and allure, the club's popularity was its own undoing. As the legend goes, Lyraxia was working on her magnum opus, a track so enchanting that it held the power to bend wills and alter destinies. Concerned about its potency, Lyraxia vanished, hiding herself and the track deep within the club's confines. The club itself, with its intoxicating energies, began to merge with the very fabric of the jungle, intertwining with its vibrant flora and fauna.
+
+The disco-dancing jaguars, native to the bioluminescent jungle, appointed themselves as the guardians of this legendary establishment. Infused with the club's magic, they became the rhythm-keepers, ensuring that Lyraxia's legacy remained undisturbed. The spirits of the raver elves who once frequented Eldergrove Groove continue their eternal celebration, their luminous forms dancing away, oblivious to the passage of time.
+
+Recent rumors hint at the club's existence and Lyraxia's legendary unreleased track's potential discovery. As these whispers circulate, the allure of Eldergrove Groove is rekindled, beckoning adventurers to uncover its neon-lit secrets.
+
+However, the journey is not for the faint-hearted. While the magical essence of the club welcomes dance and revelry, it fiercely protects its core, ensuring that only those truly worthy can lay their hands on Lyraxia's masterpiece. Intruders can expect to face rhythmic challenges, playful raver elf spirits, and the ever-watchful gaze of the disco-dancing jaguars. But for those who can sync their hearts to the beat of the jungle, the rewards are beyond imagination.
+
+## Arrival
+*As the adventurers approach the entrance, a pulsating, multicolored glow emanates from deep within the foliage, casting dancing shadows on the forest floor. The chirping of distant jungle creatures harmonizes with faint, ethereal beats that seem to beckon them closer. Before them stands a massive, age-worn stone door adorned with intricate musical symbols. The door appears heavy, but as they approach, it slowly starts to shift open, revealing a cavernous opening. Beyond the door, the Glowworm Grotto awaits, illuminating the path forward with its soft, luminescent light.*
+
+\page
+
+## Dungeon layout
+The dungeon's rooms are laid out as follows.
+
+![layout](https://i.ibb.co/93nY052/graph-disco.png) {height:480px,mix-blend-mode:multiply}
+
+## Room 1: Glowworm Grotto
+
+*As you enter Glowworm Grotto, you find yourself in a cavernous, dome-shaped room that stretches endlessly upward. The entire space is bathed in a soft, silvery-blue glow from the countless glowworms that cover the ceiling and walls. In the center of the room, a stone pedestal stands with a basin filled with water, mirroring the glowworm lights above. The air is filled with a soft, harmonious hum, seemingly emanating from the glowworms themselves.*
+
+### Description
+
+Glowworm Grotto is a stunning natural wonder. The dome-shaped room is vast, with the ceiling and walls covered in glowworms that emit a soft, blue illumination. The stone pedestal at the center holds a basin filled with water, creating a mesmerizing reflection of the glowworm lights. Discarded rave flyers are strewn around the room, one of which advertises an event called "Eldor Lunara" under the glowing canopy of Eldergrove Groove.
+
+
+
+
+### Notable Features
+
+- **Ceiling and walls**: Covered with glowworms emitting soft blue light.
+- **Stone pedestal**: Central location, holding a **basin** filled with water. If touched without chanting "Eldor Lunara", glowworms dim, plunging the room into temporary darkness.
+- **Glowworm patterns**: Discernible sequences hinting at dance moves. During the Lunar Luminescence Phase, patterns show: "Twirl, step back, leap, and clap." Additional sequences: "Spin, sway left, high kick," and "Slide, spin, jazz hands."
+- **Ancient luminescent ferns**: Embedded in walls, emitting a pulsating light when there's movement.
+- **Lunar Moth**: Flutters around the glowworms. Quantity: 1.
+- **Glowing Mushroom**: Located near the entrance. Carries an Elvish inscription: "Embrace the dance of light and shadow."
+- **Luminous Pebbles**: Scattered across the floor, especially near the pedestal. Quantity: Numerous.
+- **Glowing Hula Hoop**: In a corner near a mural.
+- **Glowworm Guardian**: Lurking in the shadows, emerges if glowworms are threatened. Quantity: 1.
+- **Glow Blob**: Roams freely in the room. Quantity: 1.
+- **Glowing Crystals**: Scattered across the floor. Quantity: Multiple.
+- **Phosphorescent Flower**: Located in a hidden alcove.
+- **Ancient Holographic Relics**: In a corner, displaying elvish scenes. Quantity: 3.
+- **Mural**: Positioned on the far wall opposite the entrance, it depicts a jaguar with a jewel dancing with raver elves by a luminous lagoon.
+- **Stone sketch**: Etched near the entrance, shows an elf bouncing with boots amidst trees and nests.
+- **Inscription**: "To view the past clearly, seek the lens amid the vinyl sanctuary."
+
+### Lunar Luminescence Phase
+During this phase, the room's ambient light shifts to a soft, silvery-blue hue. The glowworms form specific patterns that can hint towards subsequent rooms.
+
+### Glowworm Dance Puzzle
+Adventurers can discern patterns from the glowworms indicating dance move sequences. Following these sequences in the correct order opens hidden compartments or activates mechanisms in the room.
+
+\page
+
+### Holographic Relics Interaction
+When touched:
+1. **Dance of the Celestial Sphere**: Grants inspiration and advantage on Dexterity-based checks for one hour.
+2. **Harmony of the Groove**: Bestows advantage on Performance checks, allowing the player to play a captivating tune.
+3. **Ritual of Lunar Blessing**: Provides temporary hit points equal to the character's level.
+
+
+
+#### Star Dust
+- **Weight:** 0.1 lb
+- **Value:** 100 gp
+
+This shimmering dust, when sprinkled, causes objects to emit a soft luminescent hue for 1 hour, providing dim light in a 10-foot radius.
+
+#### Lunar Moth
+- **Weight:** Negligible
+- **Value:** 50 gp
+
+This rare moth, when caught, can be kept as a unique pet or sold for a decent price.
+
+#### Glowing Mushroom
+- **Weight:** 0.2 lb
+- **Value:** 75 gp
+
+This bioluminescent cap fungus, when ingested, grants night vision for 1 hour but also induces mild hallucinations, causing everything to appear to "dance."
+
+#### Luminous Pebble
+- **Weight:** Negligible
+- **Value:** 5 gp
+
+These small stones, when struck, emit harmonious notes. Playing a sequence of notes can open a hidden compartment with 50 gold coins.
+
+#### Glowing Hula Hoop
+- **Weight:** 2 lb
+- **Value:** 50 gp
+
+When used, this discarded glowing hula hoop improves a character's dance moves slightly, granting advantage on Performance checks related to dancing or rhythmic movements for 1 hour.
+
+#### Bubbly Boots of Bouncing
+- **Weight:** 3 lb
+- **Value:** 200 gp
+
+These bouncy, inflatable boots, when worn, allow characters to jump exceptionally high, granting them the ability to reach a hidden nest in The Jagged Jaguar Jungle Room (Room 4), containing valuable treasures.
+
+#### Ancient Holographic Relic
+- **Weight:** 0.5 lb each
+- **Value:** 150 gp each
+
+These translucent crystals, when touched, project elvish celebration scenes and grant the following unique benefits when interacted with:
+
+- **Dance of the Celestial Sphere:** Grants inspiration and advantage on Dexterity-based checks for one hour.
+- **Harmony of the Groove:** Bestows advantage on Performance checks and allows the player to play a captivating tune.
+- **Ritual of Lunar Blessing:** Provides temporary hit points equal to the character's level for added protection.
+
+#### Phosphorescent Flower
+- **Weight:** Negligible
+- **Value:** 25 gp
+
+This unique flower, when appreciated for its beauty, bestows a +2 bonus on the next Charisma-based skill check for those who admire it.
+
+
+{{monster,frame
+## Glow Blob
+*Medium ooze, unaligned*
+___
+- **Armor Class** 8
+- **Hit Points** 32 (6d8 + 6)
+- **Speed** 20 ft., climb 20 ft.
+___
+- **STR** 12 (+1)
+- **DEX** 6 (-2)
+- **CON** 12 (+1)
+- **INT** 1 (-5)
+- **WIS** 6 (-2)
+- **CHA** 2 (-4)
+___
+- **Skills** Stealth +4
+- **Senses** blindsight 30 ft. (blind beyond this radius), passive Perception 8
+- **Languages** understands no languages
+- **Challenge** 1 (200 XP)
+___
+- **Translucent Body.** The glow blob is difficult to see in dim light or darkness. A creature that relies on sight must make a successful DC 14 Wisdom (Perception) check to spot the glow blob in these conditions.
+- **Bioluminescent Flash (Recharge 5-6).** The glow blob emits a blinding flash of light in a 20-foot radius. Each creature in that area must make a DC 12 Constitution saving throw. On a failure, they are blinded for 1 minute. On a success, they are dazzled, giving them disadvantage on attack rolls and Perception checks for 1 minute.
+}}
+
+\page
+
+{{monster,frame
+## Glowworm Guardian
+*Medium beast, unaligned*
+___
+- **Armor Class** 14
+- **Hit Points** 45 (6d8 + 18)
+- **Speed** 30 ft., fly 40 ft. (hover)
+___
+- **STR** 14 (+2)
+- **DEX** 16 (+3)
+- **CON** 16 (+3)
+- **INT** 2 (-4)
+- **WIS** 12 (+1)
+- **CHA** 6 (-2)
+___
+- **Skills** Perception +3, Stealth +5
+- **Senses** darkvision 60 ft., passive Perception 13
+- **Languages** understands Common but can't speak
+- **Challenge** 2 (450 XP)
+___
+- **Iridescent Glow.** The guardian's body emits a calming light. Any creature within 10 feet of the guardian has disadvantage on attack rolls against it.
+
+#### Actions
+- **Multiattack.** The guardian makes two stinger attacks.
+- **Stinger.** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 8 (1d6+2) radiant damage.
+- **Luminescent Burst (Recharge 5-6).** The guardian can release a burst of radiant energy, illuminating the room and blinding creatures within 15 feet of it. Affected creatures must make a DC 13 Constitution saving throw or be blinded for 1 minute. A blinded creature can repeat the saving throw at the end of each of its turns, ending the effect on a success.
+
+#### Reactions
+- **Glowworm Resonance.** When the glowworms' patterns are disrupted, the guardian can react instantly. It makes a stinger attack against the creature responsible for the disruption.
+}}
+
+## Room 2: The Neon Nectar Nook
+
+*As you step into Room 2, you find yourself in a lush, verdant chamber bathed in the soft glow of oversized, bioluminescent flora. The air is filled with a sweet, intoxicating aroma, and a gentle buzz emanates from the Mystic Moths fluttering about. In the center of the room, a massive Neon Nectar Flower stands, its dripping nectar forming a luminescent pool. The ambiance is serene and inviting.*
+
+\column
+
+### Description
+The Neon Nectar Nook is a spacious chamber adorned with vibrant neon-colored vines that sway to an unheard rhythm, acting as potential ropes or ladders. The ceiling is adorned with naturally formed crystal chandeliers that softly illuminate the room. A small shrine dedicated to the "God of Groove" can be found here, offering blessings to those who leave dance moves as offerings. Suspended platforms made of leaves provide access to higher areas.
+
+Throughout the chamber, you'll notice tattered banners from past rave events, providing historical context and possible cover. Old rave posters adorn some walls, displaying iconic events and legendary DJ names. Hollowed-out logs emit soft, rhythmic beats when tapped or struck.
+
+In this vibrant space, luminescent flora and symbols hint at the song sequence for DJ Lyraxia, guiding you towards the DJ's beat. Glowing cocoons hang from the bioluminescent flora, concealing trinkets. A mural depicting unity and celebration under the Neon Nectar Flower serves as a centerpiece.
+
+
+
+
+### Notable Features
+- **Neon Nectar Flower**: Large, glowing, dripping nectar pooling in the center of the room.
+- **Mystic Moths** (12 total): Hovering around the **Neon Nectar Flower**. They become hostile when disturbed.
+- **Luminous Lizards** (5 total): Scattered amongst the bioluminescent flora.
+- **Dancing Shadows** (4 total): Lurk on the chamber's edges, mimicking the characters' movements.
+- **Glowing Groove Beetles** (10 total): Roam around, moving rhythmically to an inaudible beat.
+- **Glow Sticks**: Scattered across the floor, some faintly glowing.
+- **Glowworm Grotto (Room 1)** Connection: Main entrance to the dungeon.
+- **Boogie Bridge Crossing (Room 3)** Connection: Accessible via a wooden footbridge over a glowing stream.
+- Luminescent flora with symbols hinting at song sequences. Quote on flora reads: *"Follow the light, step in tune, DJ's beat will guide you soon."*
+- **Luminescent cocoons** (3 total): Hanging from select flora.
+- **Glow-in-the-dark paint pots**: Stashed under a tattered rave banner.
+- Shrine dedicated to the "God of Groove" near the room's rear.
+- **Neon-colored vines**: Acting as ropes/ladders, hang from the ceiling.
+\page
+- Statue of a dancer: Positioned on the western wall; emits a soft note when touched.
+- **Bioluminescent flowers** (6 total): Release sleeping spores when touched, scattered throughout the room.
+- Crystal chandeliers: Dangling from the ceiling, providing soft illumination.
+- Hollowed out logs (3 total): Emit soft beats when tapped, spread across the room's perimeter.
+- **Luminescent Leeches** (8 total): Found near the tiny waterfall.
+- **Glowworm in a jar**: Resting atop a raised platform made of leaves.
+- Bioluminescent puddle: Located near the room's center, sticky when stepped in.
+- Wooden signs: Displaying "Dance Floor," "Chill Zone," and "DJ Booth," leading to various sections of the chamber.
+
+#### Lunar Luminescence Phase Mechanics
+- **Neon Nectar**: Shines brighter, attracting **ghostly lunar moths** that guide to hidden items.
+- **Glowing Goggles** (During Phase): Reveals message on floor, *"Dance in moon's glow to unlock flow."*
+- **Luminescent Leeches**: Repelled by moths during the phase, making them inactive.
+- **Neon Nectar**: Enhancement duration extends to 2 hours, offering +3 Dexterity and 1d6 bonus to dance-related rolls.
+
+#### Raver Elf Ghost Interaction
+The ghostly visage appears sporadically, offering a hint: *"DJ Lyraxia's beats are legendary, but her tales? You'll need the right sight in the Hall of Holograms (Room 7)."*
+
+#### Neon Nectar Extraction Puzzle
+Characters must stealthily or deftly extract nectar without waking the **Mystic Moths**. Successful Stealth or Dexterity check required (DC 15). Failure results in **Moth** hostility.
+
+#### Dance With the Shadows Riddle
+On the eastern wall, an engraved riddle reads: *"Dance with shadows, follow your tune."* Characters must mimic the movements of the **Dancing Shadows** in sequence to reveal a hidden compartment containing treasures.
+
+#### DJ Euphoria's Banner Interaction
+A banner shows DJ Euphoria's iconic rave and signature move, the "Eternal Spin." Characters can gain inspiration for their next dance-related roll from its imagery and listed songs: "Luminous Reverie," "Enchanted Echo," and "Celestial Pulse."
+
+
+
+#### Neon Nectar
+
+* *Weight:* 0.1 lbs
+* *Value:* 100 gp
+
+A vial containing pure Neon Nectar. When consumed, grants +2 to Dexterity and a 1d6 bonus to dance-related rolls for 1 hour. During Lunar Luminescence Phase, enhancement lasts 2 hours, with +3 Dexterity and a 1d6 bonus to dance-related rolls.
+
+#### Glow Stick
+
+* *Weight:* Negligible
+* *Value:* 5 gp
+
+Glow sticks scattered around the chamber. When activated, they emit a soft neon glow, providing dim light in a 10-foot radius for 1 hour.
+
+#### Glowing Goggles
+
+* *Weight:* 0.5 lbs
+* *Value:* 200 gp
+
+A pair of sturdy goggles with a soft leather strap. When worn, they allow the wearer to see hidden luminescent messages or paths.
+
+#### Glow-in-the-Dark Paint Pot
+
+* *Weight:* 0.5 lbs
+* *Value:* 20 gp
+
+A pot of luminescent paint. Can be used to leave messages, mark paths, or decorate gear with glow-in-the-dark designs.
+
+#### Luminous Fungus
+
+* *Weight:* 0.1 lbs
+* *Value:* 10 gp
+
+Luminescent fungi that, when consumed, cause harmless visual hallucinations of dancing figures for a brief time.
+
+#### Neon Nectar Noodles
+
+* *Weight:* 0.5 lbs
+* *Value:* 15 gp
+
+Edible, glow-in-the-dark food that tastes sweet and tangy. No significant effects, but a fun and quirky find for adventurers.
+
+#### Luminous Dancing Shoes
+
+* *Weight:* 1 lb
+* *Value:* 150 gp
+
+A pair of magical shoes that, when worn, leave temporary glowing footprints. The footprints fade after 1 hour.
+
+#### Glowworm in a Jar
+
+* *Weight:* 0.5 lbs
+* *Value:* 30 gp
+
+A small, glowing glowworm captured in a jar. When the jar is opened, the glowworm emits a soft, dim light for 4 hours before it extinguishes.
+
+\page
+
+{{monster,frame
+## Glowing Groove Beetle
+*Tiny beast, unaligned*
+___
+- **Armor Class** 11
+- **Hit Points** 4 (1d4 + 2)
+- **Speed** 20 ft.
+___
+**STR** 2 (-4) | **DEX** 12 (+1) | **CON** 12 (+1) | **INT** 1 (-5) | **WIS** 7 (-2) | **CHA** 1 (-5)
+___
+- **Senses** darkvision 30 ft., passive Perception 8
+- **Challenge** 1/4
+___
+**Groovy Distraction.** The beetle's erratic movements can be distracting. When a creature makes an attack against a target within 5 feet of the beetle, it has disadvantage on the attack roll. On a failed save against Distraction, the creature is also considered under the effect of the "Distracted" condition for the next turn, granting attackers advantage against it.
+___
+**Actions**
+- **Distraction.** The beetle flits about erratically, causing creatures within 5 feet of it to make a DC 10 Wisdom saving throw. On a failed save, the creature's next attack roll has disadvantage.
+}}
+
+{{monster,frame
+## Luminous Lizard
+*Small beast, unaligned*
+___
+- **Armor Class** 13
+- **Hit Points** 18 (4d6 + 4)
+- **Speed** 40 ft., climb 30 ft.
+___
+**STR** 10 (+0) | **DEX** 14 (+2) | **CON** 12 (+1) | **INT** 2 (-4) | **WIS** 10 (+0) | **CHA** 3 (-4)
+___
+- **Senses** darkvision 60 ft., passive Perception 10
+- **Challenge** 1/3
+___
+**Absorb Light.** In dim light or darkness, the lizard has advantage on Dexterity (Stealth) checks.
+
+**Bioluminescent Flash.** When threatened, the lizard can release a blinding flash of light in a 15-foot radius. Each creature in that area must make a DC 12 Dexterity saving throw, taking 5 (1d8) piercing damage and being blinded for 1 minute on a failed save, or half as much damage and not blinded on a successful one. A creature can repeat the saving throw at the end of each of its turns, ending the blindness on a success.
+
+**Light Vulnerability.** While in brightly lit areas, the lizard takes double damage from radiant sources.
+
+**Wall and Ceiling Clinger.** The lizard can cling to walls and ceilings, allowing it to move freely in three dimensions.
+}}
+
+\column
+
+{{monster,frame
+## Dancing Shadow
+*Small undead, neutral evil*
+___
+- **Armor Class** 12
+- **Hit Points** 13 (3d6 + 3)
+- **Speed** 40 ft.
+___
+**STR** 6 (-2) | **DEX** 14 (+2) | **CON** 12 (+1) | **INT** 6 (-2) | **WIS** 8 (-1) | **CHA** 14 (+2)
+___
+- **Senses** darkvision 60 ft., passive Perception 9
+- **Challenge** 1/3
+___
+**Shadow Mimicry.** The shadow can mimic the movements of creatures it can see within 30 feet of it. This mimicry can mislead characters, potentially leading them astray or into traps.
+
+**Sunlight Sensitivity.** While in sunlight, the shadow is incapacitated.
+
+**Multiattack.** The shadow makes two Touch attacks.
+
+**Touch (Necrotic).** *Melee Spell Attack:* +4 to hit, reach 5 ft., one creature. *Hit:* 6 (1d8 + 2) necrotic damage. If the target is a creature, it must succeed on a DC 12 Strength saving throw or have its movement speed reduced by 10 feet until the end of its next turn.
+
+**Touch (Psychic).** *Melee Spell Attack:* +4 to hit, reach 5 ft., one creature. *Hit:* 6 (1d8 + 2) psychic damage. If the target is a creature, it must succeed on a DC 12 Wisdom saving throw or be frightened for 1 minute. The frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on a success.
+
+**Invisibility.** As a reaction to being targeted by an attack, the shadow can become invisible until the end of its next turn or until it attacks or uses its Multiattack.
+
+**Shadow Teleportation.** As a bonus action, the shadow can teleport up to 30 feet to an unoccupied space that is in dim light or darkness.
+}}
+
+\page
+
+{{monster,frame
+## Mystic Moth
+*Medium swarm of tiny beasts, unaligned*
+___
+- **Armor Class** 12
+- **Hit Points** 70 (14d8)
+- **Speed** 10 ft., fly 30 ft.
+___
+**STR** 3 (-4) | **DEX** 14 (+2) | **CON** 11 (+0) | **INT** 1 (-5) | **WIS** 12 (+1) | **CHA** 3 (-4)
+___
+- **Senses** darkvision 60 ft., passive Perception 11
+- **Languages** understands Sylvan but can't speak
+- **Challenge** 1 (200 XP)
+___
+**Swarm.** The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points. *
+
+**Keen Senses.** The swarm has advantage on Wisdom (Perception) checks that rely on sight or smell.
+
+**Mystic Dance.** When the swarm is awakened and hostile, it obstructs vision and movement within its space. A successful DC 12 Wisdom (Performance) check involving a gentle dance can calm the swarm, ending this effect.
+
+**Swarm Tactics.** The Mystic Moths have advantage on an attack roll against a creature if at least one of the Mystic Moths' allies is within 5 feet of the creature and the ally isn't incapacitated.
+
+**Bite.** *Melee Weapon Attack:* +4 to hit, reach 0 ft., one target in the swarm's space. *Hit:* 12 (4d6) piercing damage, or 6 (2d6) piercing damage if the swarm has half of its hit points or fewer.
+}}
+
+{{monster,frame
+## Luminescent Leech
+*Tiny beast, unaligned*
+___
+- **Armor Class** 11
+- **Hit Points** 6 (3d4 - 3)
+- **Speed** 5 ft., swim 15 ft.
+___
+**STR** 2 (-4) | **DEX** 14 (+2) | **CON** 8 (-1) | **INT** 1 (-5) | **WIS** 6 (-2) | **CHA** 2 (-4)
+___
+- **Senses** blindsight 30 ft. (blind beyond this radius), passive Perception 8
+- **Challenge** 1/4
+___
+**Blood Drain.** The leech attaches to a creature and drains its energy, dealing 1 necrotic damage at the start of the target's turn. A grappled creature can attempt to remove the leech with a successful DC 12 Strength check as an action.
+
+**Reactive Attachment.** When a creature attempts to remove the leech, it can use its reaction to resist detachment, requiring the character to make a second DC 12 Strength check to remove it.
+
+**Sunlight Sensitivity.** While in sunlight, the shadow has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.
+}}
+
+
+
+## Room 3: Boogie Bridge Crossing
+
+*As you enter Room 3, you find yourself at the edge of a vast chasm. A series of 12 floating, luminescent stepping stones stretch across the gap, emitting a soft pulsating light to a rhythmic beat. The chasm below is shrouded in darkness, and haunting melodies echo faintly from its depths. Abandoned dance shoes are scattered on the edge of the chasm, some of them tapping or moving slightly on their own, as if eager to dance. An old diary rests on a cushioned bench, and a neon sign hangs midway, flashing intermittently with the words: "Keep Groovin', Keep Movin'."*
+
+### Description
+
+Room 3 is a challenging crossing over a wide chasm filled with floating stepping stones. The stones emit a rhythmic "1-2-3, 1-2-3" beat of soft pulsating light, with 12 stones forming a zigzag pattern. Characters must jump from stone to stone, following the rhythm to cross safely. Stepping out of rhythm causes the stone to dim and become intangible, risking a fall into the abyss.
+
+Throughout the room, you'll find the remnants of raver elves' revelry. Abandoned dance shoes, some with a desire to dance, are scattered on the chasm's edge. The walls are adorned with dance-themed graffiti showcasing raver elves' signatures and doodles, while glowing moss and fungi react to specific musical frequencies. Occasionally, a spectral apparition of a dancing elf follows the rhythm perfectly before vanishing.
+
+Notably, there's a cushioned bench with an old diary that reads, "Day 45: Still can't get the rhythm right. Those shoes sure look tempting, though!" A neon sign flashes with the message: "Keep Groovin', Keep Movin'." Near the entrance, a "Harmonizing Harp" awaits, which, when played, synchronizes the pulse of all stepping stones to a uniform rhythm for 10 minutes. Hidden beneath a loose stone, you can discover a "Rhythmic Ring" that vibrates when the wearer is out of rhythm.
+
+
+
+
+### Notable Features
+- A vast chasm spans the room.
+- 12 **floating stones** arranged in a zigzag pattern span the chasm. These emit a soft pulsating light to the rhythm of "1-2-3, 1-2-3".
+- A sign hanging near the bridge reads: "Remember the rhythm, or take a swim!"
+- Soft, haunting melodies echo from the chasm.
+- Abandoned **dance shoes** scattered near the chasm's edge occasionally tap or move on their own.
+- Dance-themed graffiti, including raver elf signatures, adorns the chasm's edges.
+- Glowing moss and fungi on the walls brighten when specific musical frequencies hit them.
+\page
+- Spectral apparitions of dancing elves sometimes cross the chasm, vanishing upon completion.
+- A **Disco Dusk Sprite** floats near the stepping stones, particularly targeting those out of rhythm.
+- Ethereal fireflies hover in the air, producing melodic hums that align with the stepping stone rhythm.
+- An old, cushioned bench sits on one side of the chasm with an aged diary on it. It reads, "Day 45: Still can't get the rhythm right. Those shoes sure look tempting, though!"
+- An old jukebox near the exit plays melodies mimicking the rhythm of the stepping stones when activated.
+- Bubbles occasionally rise from the abyss. Popping them releases a pleasant aroma and a note reading, "Keep dancing, never stop!"
+- During the Lunar Luminescence Phase, the bridge turns semi-translucent, revealing ancient runes in a concentric circle pattern. Walking this rune pattern grants agility enhancements.
+- A worn-out dance ribbon from Neon Nectar Nook (Room 2) and a small neon sign from midway, reading "Keep Groovin', Keep Movin'," can also be found here.
+
+### Stepping Stone Mechanics
+- Adventurers must jump from stone to stone in the "1-2-3, 1-2-3" rhythm to cross safely.
+- Stones dim and become intangible when stepped on out of rhythm, causing the risk of falling.
+- Using the **Harmonizing Harp** synchronizes all stepping stones to the same pulse for 10 minutes.
+  
+### Lunar Luminescence Phase Rune Pattern
+- The revealed rune pattern during this phase consists of glowing glyphs within concentric circles.
+- Adventurers who walk this rune pattern gain a +2 bonus to Dexterity rolls for one hour.
+
+### Clues and Interactions
+- Observing the bridge during the Lunar Luminescence Phase reveals the rune pattern to adventurers.
+- The note left behind with the **Bubbly Boots of Bouncing** on the bridge reads: "Lost my boots here. Bounced too high near jaguars."
+- The engraved text on the **Rhythmic Ring** reads: "Find your groove or face the abyss."
+- The **Disco Dusk Sprite** has an ability called "Disco Distraction." When used, it creates multiple illusory images of the stepping stones. Adventurers must succeed on a DC 13 Wisdom saving throw or be disoriented.
+- Spectral raver elf apparitions occasionally whisper: "Jive's jewel could reveal more near shimmering waters," hinting at the presence and use of the Jaguar Jewel of Jamming in the dungeon.
+
+
+
+#### Echoing Earmuff
+
+* Weight: 1 lb
+* Value: 500 gp
+
+These earmuffs, when worn, amplify distant or faint sounds, granting the wearer advantage on Perception checks related to hearing.
+
+#### Boogie Boost Boots
+
+* Weight: 3 lbs
+* Value: 1,000 gp
+
+These boots allow the wearer to perform an additional mid-air jump once before needing to touch the ground, effectively granting them an extra jump while airborne.
+
+#### Harmonizing Harp
+
+* Weight: 5 lbs
+* Value: 1,500 gp
+
+When played, this harp temporarily synchronizes the pulse of all stepping stones within earshot to a uniform rhythm for 10 minutes, making it easier for adventurers to cross the stones without falling.
+
+#### Rhythmic Ring
+
+* Weight: 0.1 lb
+* Value: 750 gp
+
+When worn, this ring vibrates slightly to warn the wearer when they are out of rhythm while navigating the floating stepping stones, providing a tactile signal to help them stay in sync and avoid falling.
+
+\page
+
+{{monster,frame
+## Disco Dusk Sprite
+*Small fey, chaotic neutral*
+___
+- **Armor Class** 12
+- **Hit Points** 30 (8d6)
+- **Speed** 30 ft., fly 60 ft.
+___
+- **STR** 8 (-1)
+- **DEX** 16 (+3)
+- **CON** 12 (+1)
+- **INT** 10 (+0)
+- **WIS** 12 (+1)
+- **CHA** 14 (+2)
+___
+- **Skills** Perception +3, Stealth +5
+- **Senses** darkvision 60 ft., passive Perception 13
+- **Languages** Sylvan
+- **Challenge** 2 (450 XP)
+___
+- **Disco Distraction.** As a reaction, when a creature makes an attack against the Disco Dusk Sprite, it can impose disadvantage on the attack roll by creating illusory images of stepping stones. The targeted creature must succeed on a DC 13 Wisdom saving throw or be disoriented and have disadvantage on its next attack roll.
+___
+- **Actions**
+- **Multiattack.** The Disco Dusk Sprite makes two attacks with its Shimmering Dagger.
+- **Shimmering Dagger.** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 6 (1d4 + 3) piercing damage plus 5 (1d10) radiant damage.
+- **Disco Ball (Recharge 5-6).** The Disco Dusk Sprite hurls a glittering disco ball at a point it can see within 60 feet. Each creature in a 10-foot radius sphere centered on that point must make a DC 13 Dexterity saving throw, taking 14 (4d6) radiant damage on a failed save, or half as much damage on a successful one.
+___
+- **Reactions**
+- **Evasion.** If the Disco Dusk Sprite is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage on a successful save.
+___
+}}
+
+\column
+
+## Room 4: The Jagged Jaguar Jungle Room
+
+*As you enter Room 4, you find yourself in a sprawling, mist-covered, bioluminescent forest. The air is filled with the hypnotic sounds of the jungle, and the soft beats of the drums create a mesmerizing ambiance. Glowing vines hang from the trees, and oversized luminescent mushrooms dot the landscape. Occasional shimmering lights resembling jaguar eyes catch your attention.*
+
+### Description
+The room is a lush jungle filled with towering trees and dense undergrowth. The ground is covered in soft moss, making it comfortable to walk on. Glowing vines drape from the trees, illuminating the surroundings with an ethereal green light. Oversized luminescent mushrooms, some as tall as a person, grow sporadically throughout the area.
+
+In one corner of the room, you notice a shimmering pond, its waters reflecting the room's luminescence. There's a small tree trunk table with symbols carved into its surface, representing different dance moves. An abandoned dance floor with imprinted steps sits nearby, possibly used for dance lessons. A neon hammock is strung between two glowing trees, providing a resting spot for weary dancers.
+
+As you explore further, you come across shimmering footprints that appear and vanish, leading you on a whimsical dance pattern across the room. The canopy above hides a cleverly disguised vine ladder, serving as a shortcut to the Hall of Holographic Histories (Room 7), but its presence is currently concealed.
+
+
+
+
+### Notable Features
+- A **bioluminescent forest** shrouded in mist, pulsating with jungle sounds.
+- **Glowing vines**, amid which the **Jungle Jive Scroll** is concealed.
+- Oversized **luminescent mushrooms** (one of which hides the **Jaguar Jive Boots** beneath it).
+- Frequent glimmers of what seem to be a **jaguar's eyes**.
+- **Glowing maracas** resting near a mossy rock.
+- A dance floor section, showing footsteps as a potential dance guide.
+- A **shimmering pond** in a corner. Touching its waters causes a character's fingertips to glow for 10 minutes.
+- **Glow-Toad**: Hops about the space, acting as a potential light source.
+- Broken record player with an accompanying note: "*Broke this during my last dance. Guess I was too enthusiastic! - Raver Elf Randy.*"
+- Small tree trunk table showing carved symbols of various dance steps.
+\page
+- A neon hammock strung between two glowing trees.
+- Glowing footprints that randomly appear and disappear, guiding characters in a dance pattern.
+- "Jive's Dance Diary" concealed behind a tree, which contains a diary entry.
+- **Groove Monkey**: Mischievously copies characters' dance steps.
+- **Disco-Dancing Jaguars**, specifically one named Jive wearing the **Jaguar Jewel of Jamming**.
+- **Glowing Groove Birds** that hover close to the jaguars.
+- Vine ladder leading up, acting as a shortcut to Room 7 (only revealed by observing certain jaguar dance patterns).
+- Bioluminescent flowers that occasionally emit a soft, musical sound.
+- **Luminescent Beetles** crawling around, usable as a temporary light source.
+- A nest hidden in the trees containing 50 gold coins and a funny elf figurine, accessible with the **Bubbly Boots of Bouncing**.
+
+### Dance-Off Challenge
+- To appease the jaguars and gain Jive's cooperation, characters must dance in sync with the jungle beats.
+- Three dance moves required: "Twist and Shout," "Jaguar's Jive," and "Luminescent Leap."
+- **Performance DC 15** needed to impress Jive and potentially obtain the **Jaguar Jewel of Jamming**.
+- If players achieve success, the jaguars will reveal: "*DJ Lyraxia loves the Twist and Shout move. It might come handy in your final bout.*"
+
+### Lunar Luminescence Phase Behavior
+- During this phase, the **Disco-Dancing Jaguars** turn cooperative.
+- They guide characters in deciphering the drumbeat narrative, suggesting the involvement of a jaguar, a jewel, and a lagoon.
+- Jaguars offer hints towards challenges in DJ Lyraxia's Legendary Booth (Room 8).
+- Jaguars purr a cryptic message: "Some tales are distorted, seek clarity with the ancient lens."
+
+### Shimmering Pond Interaction
+- Characters who touch the water have their fingertips illuminated for 10 minutes.
+- This can be used as a minor light source.
+
+\column
+
+### The Hidden Nest
+- Situated within the tree canopy.
+- Contains 50 gold coins and a playful elf figurine.
+- Accessible only when wearing the **Bubbly Boots of Bouncing**.
+- Audible "boing" sound hints at the bouncing action needed to reach the nest.
+
+### Jaguar Jewel of Jamming
+- Worn by the **Disco-Dancing Jaguar**, Jive.
+- To obtain: impress Jive in the dance-off or trade a sentimental item.
+- When used in the Luminous Lagoon Lounge (Room 6), forms a spectral bridge to a concealed alcove loaded with treasures.
+
+
+
+#### Jaguar Jive Boot
+
+*Wondrous Item (footwear), rare*
+
+* Weight: 2 pounds
+* Value: 400 gold pieces
+
+These magical boots grant the wearer enhanced dancing agility, allowing them to add their proficiency bonus to Performance checks related to dance moves.
+
+#### Glo-trot Glove
+
+*Wondrous Item (gloves), uncommon*
+
+* Weight: 0.5 pounds
+* Value: 100 gold pieces
+
+When worn, these gloves allow the wearer to produce minor light shows with their fingertips, creating illuminated patterns and colors for aesthetic appeal.
+
+#### Jaguar Jewel of Jamming
+
+*Wondrous Item (gem), very rare*
+
+* Weight: 0.1 pounds
+* Value: 2,000 gold pieces
+
+This beautiful gem, when used in the presence of music or rhythm, emits an enchanting aura that enhances the user's dancing ability. While carrying the Jaguar Jewel of Jamming, the user gains advantage on Performance checks related to dance moves.
+
+\page
+
+{{monster,frame
+## Disco-Dancing Jaguar
+*Medium beast, neutral*
+___
+- **Armor Class** 13 (Natural Armor)
+- **Hit Points** 60 (8d8 + 16)
+- **Speed** 40 ft.
+
+___
+**Abilities**
+- **STR** 14 (+2)
+- **DEX** 16 (+3)
+- **CON** 14 (+2)
+- **INT** 2 (-4)
+- **WIS** 12 (+1)
+- **CHA** 10 (+0)
+
+___
+**Skills**
+- **Perception** +3
+
+___
+**Senses**
+- Darkvision 60 ft., passive Perception 13
+
+___
+**Languages**
+- Understands Common but can't speak
+
+___
+**Challenge**
+- 2 (450 XP)
+
+___
+**Dance-Off.** The Disco-Dancing Jaguar can engage in a dance-off as a bonus action, challenging a creature it can see. The target must make a DC 13 Wisdom saving throw or be charmed and incapacitated until the end of the jaguar's next turn.
+
+**Neon Stripes.** The jaguar's neon stripes grant it advantage on Dexterity (Stealth) checks made in dim light or darkness.
+
+**Dance Move (Recharge 5-6).** The jaguar performs a dazzling dance move. Each creature within 10 feet of the jaguar must make a DC 13 Dexterity saving throw or take 14 (4d6) radiant damage on a failed save, or half as much damage on a successful one.
+
+**Legendary Actions (3/round).** The jaguar can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The jaguar regains spent legendary actions at the start of its turn.
+
+- **Dance Move (Costs 2 Actions).** The jaguar performs a dazzling dance move. Each creature within 10 feet of the jaguar must make a DC 13 Dexterity saving throw or take 14 (4d6) radiant damage on a failed save, or half as much damage on a successful one.
+- **Luminescent Leap (Costs 2 Actions).** The jaguar leaps up to 20 feet and lands in an unoccupied space. This movement does not provoke opportunity attacks.
+- **Disco Distraction (Costs 1 Action).** The jaguar creates illusory duplicates of itself, making it appear as if there are multiple jaguars. Until the start of its next turn, attacks against the jaguar have disadvantage.
+}}
+
+{{monster,frame
+Certainly, here's the updated stat block for the Glow-Toad:
+
+## Glow-Toad
+*Small beast, unaligned*
+___
+- **Armor Class** 12 (Natural Armor)
+- **Hit Points** 7 (1d6 + 4)
+- **Speed** 20 ft., swim 30 ft.
+
+___
+**Abilities**
+- **STR** 6 (-2)
+- **DEX** 14 (+2)
+- **CON** 14 (+2)
+- **INT** 2 (-4)
+- **WIS** 10 (+0)
+- **CHA** 3 (-4)
+
+___
+**Skills**
+- **Perception** +2
+
+___
+**Senses**
+- Darkvision 30 ft., passive Perception 12
+
+___
+**Challenge**
+- 1/4 (50 XP)
+
+___
+**Bioluminescence.** The glow-toad emits dim light in a 10-foot radius.
+
+**Sticky Tongue.** The glow-toad can use its tongue to make a ranged tongue attack against a creature within 15 feet. On a hit, the target is grappled (escape DC 12) and pulled up to 10 feet toward the glow-toad. If the target is Large or smaller, it is also restrained until this grapple ends. 
+
+**Swallow.** The glow-toad makes one tongue attack against a Small or smaller grappled creature it is grappling. If the attack hits, the target is grappled. The grappled target can use its action to try to escape with a DC 12 Strength check. If the escape attempt succeeds, the grapple ends. If the escape fails, the target is swallowed. The swallowed target is blinded and restrained, it has total cover against attacks and other effects outside the glow-toad, and it takes 2 (1d4) acid damage at the start of each of the glow-toad's turns. If the glow-toad takes 10 damage or more on a single turn from a creature inside it, the glow-toad must succeed on a DC 10 Constitution saving throw at the end of that turn or regurgitate the swallowed creature, which falls prone in a space within 10 feet of the glow-toad. If the glow-toad dies, a swallowed creature is no longer restrained by it and can escape from the corpse using 15 feet of movement, exiting prone.
+
+**Vulnerability to Cold.** The glow-toad is vulnerable to cold damage.
+}}
+
+\page
+
+{{monster,frame
+## Luminescent Beetle
+*Tiny beast, unaligned*
+___
+- **Armor Class** 12
+- **Hit Points** 5 (1d4 + 3)
+- **Speed** 20 ft., climb 20 ft.
+
+___
+**Abilities**
+- **STR** 3 (-4)
+- **DEX** 12 (+1)
+- **CON** 12 (+1)
+- **INT** 1 (-5)
+- **WIS** 7 (-2)
+- **CHA** 3 (-4)
+
+___
+**Skills**
+- **Perception** -2
+
+___
+**Senses**
+- Darkvision 60 ft., passive Perception 8
+
+___
+**Challenge**
+- 1/4 (50 XP)
+
+___
+**Bioluminescence.** The luminescent beetle emits dim light in a 5-foot radius.
+
+**Swarm.** The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny beetle. The swarm can't regain hit points or gain temporary hit points.
+
+**Bite.** *Melee Weapon Attack:* +3 to hit, reach 0 ft., one creature in the swarm's space. *Hit:* 3 (1d4 + 1) piercing damage, or 1 (1d4 - 1) piercing damage if the swarm has half of its hit points or fewer. If the target fails a DC 10 Constitution saving throw, it becomes poisoned until the end of its next turn.
+}}
+
+{{monster,frame
+## Groove Monkey
+*Small beast, unaligned*
+___
+- **Armor Class** 11
+- **Hit Points** 16 (3d6 + 6)
+- **Speed** 40 ft., climb 40 ft.
+
+___
+**Abilities**
+- **STR** 8 (-1)
+- **DEX** 14 (+2)
+- **CON** 14 (+2)
+- **INT** 5 (-3)
+- **WIS** 12 (+1)
+- **CHA** 8 (-1)
+
+___
+**Skills**
+- **Acrobatics** +4
+
+___
+**Senses**
+- Darkvision 60 ft., passive Perception 11
+
+___
+**Challenge**
+- 1/2 (100 XP)
+
+___
+**Evasion.** If the groove monkey is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage on a success and half damage on a failure.
+
+**Innate Acrobat.** The groove monkey has advantage on Acrobatics checks made to escape grapples or restraints.
+
+**Actions**
+- **Bite.** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 4 (1d6 + 1) piercing damage.
+
+- **Dance Mimicry.** The groove monkey can mimic the dance moves of a creature it can see within 30 feet. The targeted creature must succeed on a DC 12 Wisdom saving throw or be charmed by the groove monkey for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on a success.
+}}
+
+\page
+
+{{monster,frame
+## Jaguar Cub
+*Medium beast, unaligned*
+___
+- **Armor Class** 12 (Natural Armor)
+- **Hit Points** 22 (5d6 + 5)
+- **Speed** 40 ft., climb 20 ft.
+
+___
+**Abilities**
+- **STR** 12 (+1)
+- **DEX** 16 (+3)
+- **CON** 12 (+1)
+- **INT** 2 (-4)
+- **WIS** 12 (+1)
+- **CHA** 6 (-2)
+
+___
+**Skills**
+- **Perception** +3
+
+___
+**Senses**
+- Darkvision 60 ft., passive Perception 13
+
+___
+**Challenge**
+- 1/2 (100 XP)
+
+___
+**Pounce.** If the jaguar cub moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 11 Strength saving throw or be knocked prone. If the target is prone, the jaguar cub can make one bite attack against it as a bonus action.
+
+**Camouflage.** The jaguar cub can use its surroundings to blend in, gaining advantage on Dexterity (Stealth) checks made in jungle environments.
+
+**Actions**
+- **Multiattack.** The jaguar cub makes two attacks: one with its bite and one with its claws.
+- **Bite.** *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 4 (1d6 + 1) piercing damage.
+- **Claws.** *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 3 (1d4 + 1) slashing damage.
+}}
+
+## Room 5: Vinyl Vault Vestibule
+
+*As you enter, you find yourself in a dimly lit chamber. The walls are lined with shelves filled with ancient vinyl records, each softly glowing. In the center of the room, a turntable continuously spins without a record, and the only sound is the faint scratching of the needle. Eerie silence fills the air, save for the soft hum of the room. There's a sense of whimsy as you notice humorous record titles and vibrant cover art depicting mythical creatures in rave outfits.*
+
+\column
+
+### Description
+The Vinyl Vault Vestibule is a small, square chamber with shelves of vinyl records lining all four walls. The central turntable stands beneath a hanging disco ball, perpetually spinning. In one corner, a broken record cleaner machine with a humorous sign, "For Troll Techno Tunes Only!" On a pedestal, you spot the Holographic History Decoder Lens, but it's locked behind a glass case. A peculiar vinyl titled "The Silent Song" sits on a shelf, while a floating vinyl titled "Griffon's Groovy Grunge" hovers above the others. Tiny dancing fairy lights sway rhythmically from the ceiling.
+
+
+
+
+### Notable Features
+- Shelves lined with **ancient vinyl records** that emit a faint glow. Some have humorous cover art depicting mythical creatures in rave outfits.
+- A **central turntable** without a record but continuously spins, with the soft scratching sound of a needle being the only audible noise.
+- **"The Missing Melody Vinyl"** with a jaguar pattern, when played, reveals a hidden doorway to the **Luminous Lagoon Lounge (Room 6)**.
+- A **Broken Record Cleaner Machine** with a handwritten sign: "For Troll Techno Tunes Only!" in the corner.
+- Floating **"Griffon's Groovy Grunge" vinyl** that hovers above the other records.
+- Enchanted **gramophone** that plays a faint mermaid melody.
+- **Vinyl Mimics** (x3) that disguise as regular vinyls but snap at characters.
+- **Disco balls** (x3) hanging from the ceiling, releasing harmless, colorful sparks when touched.
+- **Tiny dancing fairy lights** that move rhythmically around the room.
+- **Decoder Lens** on a pedestal, unlocked by identifying the vinyl with label clue: "Past echoes in grooves of time."
+
+### Vinyl Trap Mechanism
+- Playing the wrong vinyl on the central turntable:
+  - Triggers a trap with the message "You've lost the melody, and the vipers awaken."
+  - Conjures **Vinyl Vipers** (x2) that attack players.
+  - Produces disorienting cacophony, giving players disadvantage on their next Dexterity saving throw.
+  
+\page
+
+### Lunar Luminescence Phase
+- During this 10-minute phase, specific vinyl records produce lunar melodies that have the following effects:
+  - Heal 1d6 HP.
+  - Grant a +2 bonus on the player's next skill check.
+
+### Vinyl Puzzle and Decoder Lens
+- The oldest vinyl, identifiable with the clue "Past echoes in grooves of time," unlocks the **Decoder Lens** on a pedestal.
+- Using the lens in the **Hall of Holographic Histories (Room 7)** reveals a story of DJ Lyraxia's friendship with the Disco-Dancing Jaguars, granting a +2 bonus to performance rolls in the final dance showdown in **DJ Lyraxia's Legendary Booth (Room 8)**.
+
+### Broken Record Cleaner Machine
+- When activated, this machine:
+  - Produces comical sounds.
+  - Releases imaginary dust and sparkles.
+  - Provides "Troll's Resilience" effect to the user, granting advantage on Constitution saving throws against poison and resistance to poison damage for one hour.
+  - After use, it emits a "Ding!" sound until the next interaction.
+
+### Room Connections
+- **Boogie Bridge Crossing (Room 3)**: Main entrance to Vinyl Vault Vestibule.
+- **Luminous Lagoon Lounge (Room 6)**: Doorway revealed by playing "The Missing Melody Vinyl."
+- If the vinyl puzzle is failed multiple times, players are sent back to **Boogie Bridge Crossing (Room 3)** through a trapdoor.
+
+
+
+#### Lyraxia's Luminous Headphones
+*Wondrous Item (head)*  
+*Weight:* 1 pound  
+*Value:* 750 gold pieces
+
+These golden headphones, adorned with neon blue lights, allow the wearer to hear invisible entities or ghostly voices. While worn, the headphones provide a passive ability, granting advantage on Wisdom (Perception) checks to detect invisible creatures or hear ghostly voices.
+
+#### Harpy's Hip-Hop Vinyl
+*Wondrous Item (instrument)*  
+*Weight:* 0.5 pounds  
+*Value:* 200 gold pieces
+
+This enchanted vinyl, when played, emits soft feathery beats accompanied by an ethereal voice, providing a soothing effect. When played for 1 minute, all creatures within 30 feet gain advantage on their next saving throw against fear.
+
+#### Golden Beats of the Elder Elves Vinyl
+*Wondrous Item (instrument)*  
+*Weight:* 0.5 pounds  
+*Value:* 100 gold pieces
+
+This valuable vinyl, adorned with a golden label, can fetch a high price in the outside world.
+
+#### Broken Record Cleaner Machine (Troll's Resilience)
+*Wondrous Item (utility)*  
+*Weight:* 30 pounds  
+*Value:* 0 gold pieces
+
+This rusty contraption with a trollish face and an oversized toothbrush as its cleaning tool, when turned, produces comical sounds and a cloud of imaginary dust and sparkles. It grants advantage on Constitution saving throws against poison and resistance to poison damage for one hour when used. After use, it emits an exaggerated "Ding!" until the next adventurer interacts with it.
+{{monster,frame
+## Vinyl Mimic
+*Medium construct, unaligned*
+___
+**Armor Class** 15 (natural armor)
+**Hit Points** 35 (6d6 + 12)
+**Speed** 30 ft.
+___
+STR | DEX | CON | INT | WIS | CHA
+--- | --- | --- | --- | --- | ---
+12 (+1) | 14 (+2) | 12 (+1) | 1 (-5) | 6 (-2) | 3 (-4)
+___
+**Damage Immunities** poison
+**Condition Immunities** poisoned
+**Senses** darkvision 60 ft., passive Perception 8
+**Languages** understands Common but can't speak
+**Challenge** 1/2 (100 XP)
+___
+
+***False Appearance.*** The vinyl mimic appears to be a normal vinyl record when motionless.
+
+***Adhesive Grasp.*** When a creature hits the vinyl mimic with a melee attack or starts its turn within 5 feet of the vinyl mimic, the creature must succeed on a DC 13 Strength saving throw or become restrained by the mimic's adhesive surface. A creature can use its action to make a DC 13 Strength check, freeing itself or another creature within its reach on a success. The adhesive can hold one Medium creature or two Small creatures.
+
+***Vinyl Snap.*** *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 6 (1d6 + 2) bludgeoning damage.
+
+***Vinyl Disintegration.*** When reduced to 0 hit points, the vinyl mimic disintegrates into fragments of shattered vinyl, creating a 5-foot radius of difficult terrain. Each creature in that area must make a DC 13 Dexterity saving throw, taking 2d6 slashing damage on a failed save, or half as much damage on a successful one.
+
+}}
+\page
+
+
+{{monster,frame
+## Vinyl Viper
+*Medium construct, unaligned*
+___
+**Armor Class** 13 (natural armor)
+**Hit Points** 60 (8d8 + 24)
+**Speed** 40 ft., climb 40 ft.
+___
+STR | DEX | CON | INT | WIS | CHA
+--- | --- | --- | --- | --- | ---
+14 (+2) | 14 (+2) | 16 (+3) | 1 (-5) | 10 (+0) | 3 (-4)
+___
+**Skills** Stealth +4
+**Damage Resistances** thunder
+**Damage Immunities** poison
+**Condition Immunities** poisoned
+**Senses** darkvision 60 ft., passive Perception 10
+**Languages** understands Common but can't speak
+**Challenge** 1 (200 XP)
+___
+
+***False Appearance.*** The vinyl viper appears to be a normal vinyl record when motionless.
+
+***Vinyl Manipulation.*** The vinyl viper can change its shape and appearance, making it harder to detect when motionless. This requires a DC 14 Wisdom (Perception) check to spot the disguised viper.
+
+***Vinyl Strike.*** The vinyl viper's attacks are rhythmic and precise. On a hit, the target must make a DC 12 Constitution saving throw or take an additional 1d4 poison damage and be disoriented, gaining disadvantage on its next Dexterity saving throw.
+
+***Vinyl Disintegration.*** When reduced to 0 hit points, the vinyl viper disintegrates into fragments of shattered vinyl.
+
+***Spider Climb.*** The vinyl viper can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+___
+**Actions**
+
+***Vinyl Strike.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 8 (1d8 + 2) bludgeoning damage.
+
+***Rhythmic Rendition.*** The vinyl viper makes two Vinyl Strike attacks in a row against the same target as a bonus action.
+}}
+
+
+## Room 6: Luminous Lagoon Lounge
+
+*As you step into Room 6, you find yourself in a serene open space bathed in a soft, ever-changing neon glow. In the center of the room lies a massive lagoon, its waters shimmering with dazzling neon colors. Around the lagoon are cushioned seating areas, dance floors, and scattered luminous drink bottles labeled "Eldergrove Elixir" and "Glowing Groove Juice." Ghostly apparitions of raver elves dance and revel here, their presence adding an eerie yet festive atmosphere. A magical lantern, the **Lagoon Lantern**, rests nearby, ready to reveal hidden paths or secrets.*
+
+### Description
+The Luminous Lagoon Lounge is a spacious chamber filled with enchanting features. The massive lagoon dominates the center, its water crystal clear during the Lunar Luminescence Phase, revealing hidden paths. Neon-colored foods adorn an abandoned picnic setup near the lagoon's edge, including glowing grapes, luminous lemon tarts, and radiant raspberry pies.
+
+
+
+
+### Notable Features
+- Massive central **lagoon** with neon-colored, shifting water.
+- Cushioned seating areas and dance floors circling the **lagoon**.
+- Ghostly apparitions of **raver elves** (neutral) engaging in an eternal dance party.
+- **Lagoon Lantern** present, revealing hidden paths or secrets when its light is cast.
+- Empty luminous drink bottles labeled **Eldergrove Elixir** and **Glowing Groove Juice** are scattered around.
+- Sonic energy burst if lagoon or **raver elves** are disturbed, pushing characters back and potentially causing temporary deafness.
+- Abandoned picnic setup with neon-colored foods near the lagoon's edge.
+- **Glowing spectacles** on a cushioned seat, granting the ability to see the memories of the **raver elves** within the room.
+- **Neon-colored feather** on a small pedestal; transforms into **Neon Phoenix familiar** upon touch.
+- "Dancing Guidebook" in a corner with a text snippet: "Step with grace, twirl thrice, leap with light feet, and feel the Eldergrove beat."
+- Floating glowing bubbles release a brief tune of elvish dance music and a scent when popped.
+- Dancing mat challenges characters to a dance-off with glowing arrows indicating moves; success grants temporary charisma boost.
+- Luminescent lily pad (CR 2) floats in the **lagoon**, awakening a **Neon Naiad** if disturbed.
+- **Disco Ball of Distraction** suspended in the shadows.
+- Glowing **jukebox** narrates ancient tales of the elvish raves in upbeat rhythm.
+- A connection to **Vinyl Vault Vestibule (Room 5)** is unlocked by solving the vinyl puzzle in that room.
+- Magical bridge to **Hall of Holographic Histories (Room 7)** appears when the correct sequence of dance steps is performed.
+- Ethereal bridge to a hidden alcove forms when the **Jaguar Jewel of Jamming** is used; contains a chest with 100 gold coins and a **Potion of Groovy Movement**.
+- Mini hologram display hinting at **Decoder Lens** use.
+- Hidden messages on walls revealed by **Groovy Goggles of Glowing**, one leading to a concealed pocket in a lounge cushion with 50 gold coins.
+- During Lunar Luminescence Phase, **lagoon** water turns crystal clear, revealing hidden paths and a chest with 100 gold coins.
+
+\page
+
+### Dance Bridge Mechanism
+- Upon performing the elvish dance sequence from the "Dancing Guidebook," a magical bridge forms.
+  - Sequence: Step with grace, twirl thrice, leap with light feet.
+  - Successfully completing the dance creates a bridge to **Hall of Holographic Histories (Room 7)**.
+
+### Ethereal Bridge Activation
+- When the **Jaguar Jewel of Jamming** is worn and its wearer steps to the **lagoon** edge, a neon path forms.
+  - Leads to an alcove with a chest containing 100 gold coins and a **Potion of Groovy Movement**.
+
+### Lunar Luminescence Phase Effects
+- **Lagoon** water turns crystal clear.
+- Reveals a hidden underwater path leading to a chest with 100 gold coins.
+- This phase lasts for 10 minutes and occurs every hour.
+
+### Disco Ball Distraction
+- Activation: Interact with the ball.
+- Forces every creature within a 10-ft radius to dance.
+  - Duration: 1 minute.
+  - Save: DC 15 Wisdom save to resist.
+
+
+
+#### Lagoon Lantern
+*Weight:* 2 lbs.  
+*Value:* 100 gp
+
+This magical lantern, filled with lagoon water, emits a soft, soothing light. When its light is cast upon areas or objects, it reveals hidden paths or secrets within 30 feet. It requires attunement by a spellcaster and can be used once per short rest.
+
+#### Eldergrove Elixir
+*Weight:* 0.5 lbs.  
+*Value:* 50 gp
+
+This luminescent elixir, when consumed, grants the drinker a temporary advantage on Charisma-based checks related to dance or social interactions for 1 hour. Additionally, it provides resistance to sonic damage for the same duration.
+
+#### Glowing Groove Juice
+*Weight:* 0.5 lbs.  
+*Value:* 50 gp
+
+This vibrant beverage, when consumed, provides a burst of energy, allowing the drinker to cast the "Dancing Lights" cantrip once. Additionally, it grants temporary advantage on Dexterity saving throws for dance-offs or dance-related challenges for 10 minutes.
+
+#### Groovy Goggles of Glowing
+*Weight:* 0.5 lbs.  
+*Value:* 75 gp
+
+When worn, these oversized sunglasses reveal hidden messages on the walls of the Luminous Lagoon Lounge. They grant the wearer the ability to see in dim light as if it were bright light, and they provide advantage on Wisdom (Perception) checks to spot hidden messages. These effects only apply while within the Luminous Lagoon Lounge.
+
+#### Neon Phoenix Familiar
+*Weight:* None  
+*Value:* Not for sale
+
+This radiant, neon-colored feather, when touched, transforms into a Neon Phoenix familiar that accompanies the party for 10 minutes. The familiar provides dim light in a 10-foot radius and can cast the "Dancing Lights" cantrip once during its duration. Additionally, characters receive a +1 bonus to Dexterity saving throws for dance-offs and dance-related challenges in the Luminous Lagoon Lounge while the familiar is active.
+
+#### Disco Ball of Distraction
+*Weight:* 5 lbs.  
+*Value:* 200 gp
+
+When activated, this disco ball creates an irresistible dance zone within a 10-foot radius. It forces everyone (friend or foe) in the area to dance uncontrollably for 1 minute unless they succeed on a DC 15 Wisdom saving throw. This effect can be used once per long rest.
+
+#### Dancing Guidebook
+*Weight:* 1 lb.  
+*Value:* 75 gp
+
+This intricately illustrated guidebook provides instructions on various elvish dance moves, including "Step with grace, twirl thrice, leap with light feet, and feel the Eldergrove beat." Reading and studying this guidebook grants the reader proficiency in Performance checks related to elvish dance, providing a +2 bonus when attempting dance-related challenges or performances.
+
+#### Potion of Groovy Movement
+*Weight:* 0.5 lbs.  
+*Value:* 100 gp
+
+Upon consumption, this potion grants the drinker a temporary +2 Dexterity bonus for 1 hour, enhancing their ability to perform dance-related actions. This effect is particularly beneficial during dance-offs and dance challenges, providing an advantage on Dexterity-based checks and saving throws related to dancing.
+\page
+#### Neon-Colored Feather
+*Weight:* None  
+*Value:* Not for sale
+
+This radiant feather, when touched, undergoes a magical transformation, summoning a Neon Phoenix familiar for 10 minutes. The familiar provides dim light in a 10-foot radius and can cast the "Dancing Lights" cantrip once during its duration. Additionally, characters receive a +1 bonus to Dexterity saving throws for dance-offs and dance-related challenges in the Luminous Lagoon Lounge while the familiar is active. This feather once belonged to an ancient elvish dance master, adding depth and history to the room.
+
+
+
+## Room 7: Hall of Holographic Histories
+
+*As you step into Room 7, the Hall of Holographic Histories, you're immediately enveloped in a nostalgic atmosphere. The expansive hall is adorned with shimmering, translucent surfaces that project holographic visuals. The walls come alive with past raves, dance-offs, and memories from the Eldergrove Groove era, and the sounds of laughter, cheers, and beats echo through the room. A central dance platform beckons, and various relics from past events, like wristbands and fading flyers, scatter the floor. A shimmering curtain hides a Cosmic Coatroom, and a spectral bartender serves Phantom Fizz.*
+
+### Description
+The Hall of Holographic Histories is a vast, glittering space filled with holographic projections that showcase the vibrant history of Eldergrove Groove. The holograms initially appear scrambled, with fragmented dancers, colors, and flashes, making them incomprehensible. Holographic projectors mounted throughout the room are the source of these scrambled stories.
+
+In the center of the hall stands a dance platform, and nearby, you'll find scattered wristbands from past events, including the "Waltzing Werebeast Weekend" and "Pixie Pop Party." Fading flyers from legendary parties like the "Starstruck Serenade Soiree," "GrooveFest Gala," and "Neon Nights Nostalgia" are scattered across the floor, providing glimpses of legendary songs and dance moves.
+
+A shimmering curtain hides the entrance to the Cosmic Coatroom, where a Disco-ball Shield can be discovered. A spectral bartender serves up Phantom Fizz, a drink that temporarily enhances agility.
+
+
+\column
+
+### Notable Features:
+- Expansive hall illuminated by shimmering, translucent surfaces that project **holographic visuals** of past raves, dance-offs, and Eldergrove Groove memories.
+- Dance platform in the center of the room where players must perform a historical dance to proceed. Mimicry of the dance ritual is required to unlock the passage to **DJ Lyraxia's Legendary Booth**.
+- Several **holographic projectors** from Room 3 (Boogie Bridge Crossing) are placed around the room, displaying fragmented dancers and colors. Interaction with these requires rotating their lenses.
+- **Holographic Hustlers** (x5) patrol the hall, accompanied by **Pulse Patrol Pixies** (x10). Both are non-hostile unless provoked. 
+- Scattered wristbands from events like "Waltzing Werebeast Weekend" and "Pixie Pop Party" lie around. Some, when examined, have the names prominently displayed.
+- **Ethereal Jukebox** beneath a hologram, capable of playing any Eldergrove Groove tune.
+- In a corner, there's a booth with the **Starlit Stilettos** resting upon it.
+- **Fading Flyers** (x8) from various past events litter the floor. Each contains a hint about popular songs or dances from their respective event.
+- A shimmering curtain on the eastern wall conceals the **Cosmic Coatroom**. Inside, among the coats, is the **Disco-ball Shield**.
+- A spectral bartender at the western side can serve the **Phantom Fizz** to anyone who approaches.
+- **Rave Remnants** (x7) roam the room, reminiscing about their past parties and challenging adventurers to dance-offs.
+- On a table near the entrance is the **Eldergrove Echo Microphone**.
+- To the left, a **Mood-Ring Roulette Table** awaits adventurers who wish to gamble.
+- On a small counter, there's a forgotten bowl containing the **Neon Noodle**.
+- Near the exit, the **Holo-Photo Booth** stands, ready to capture moments.
+- In a secluded corner, the **Mirror of Past Moves** waits to be discovered.
+
+### Lunar Luminescence Phase:
+- The room undergoes a distinct transformation every hour for a duration of 10 minutes.
+- Ancient holograms get displayed, providing deeper insights into the dungeon's history.
+- Vivid depiction of **DJ Lyraxia** dancing with jaguars appears, replacing the scrambled holographic stories.
+- A riddle is presented in place of previously displayed text: "When moonlight leads, perform dance steps."
+\page
+### Holographic Stories:
+- Initially, these stories appear as scrambled images of fragmented dancers with flashes of colors.
+- A piece of obscured text among the images reads: "Embrace moon's glow, let dance guide."
+- Using the **Decoder Lens** from Room 5, the scrambled stories become coherent, revealing a clear dance sequence. 
+- Once decoded, a text unveils, transforming into a clear image of DJ Lyraxia dancing with jaguars. The revealed text states: "Dance with feline groovers to unlock bridge."
+
+### Hall Connections:
+- To **Jagged Jaguar Jungle Room (Room 4)**: Hidden vine ladder found by observing dance patterns of specific jaguars.
+- To **Luminous Lagoon Lounge (Room 6)**: Magical bridge manifests when the correct dance sequence is performed on the central platform.
+- To **DJ Lyraxia's Legendary Booth (Room 8)**: Passage unlocked after successfully performing the dance sequence from the deciphered holographic histories.
+
+### In-Room Clues:
+- Scattered flyers indicate popular songs or dances. For instance:
+  - **"Starstruck Serenade Soiree"** flyer: Celestial motif.
+  - **"GrooveFest Gala"** flyer: Holographic ink with DJ lineup.
+  - **"Neon Nights Nostalgia"** flyer: Neon-lit cityscape.
+- **Glowworm Grotto (Room 1)** hint found in the room: "Seek lens where moon's reflection dances."
+
+
+
+#### Lyraxia's Luminescent Locket
+
+- **Weight:** 0.1 lbs
+- **Value:** 1,000 gp
+
+This exquisite pendant contains a fragment of DJ Lyraxia's essence. When worn, it grants the wearer advantage on Charisma (Performance) checks when DJing or engaging in musical performances.
+
+#### Glowstick of Guiding
+
+- **Weight:** 0.05 lbs
+- **Value:** 50 gp
+
+This magical glowstick, when activated, emits a soft, ethereal glow that points toward hidden treasures or secrets within a 30-foot radius. It remains active for 1 hour before fading.
+\column
+#### Starlit Stiletto
+
+- **Weight:** 1 lb
+- **Value:** 500 gp
+
+These enchanted stilettos enhance the wearer's dance moves, granting advantage on Dexterity (Performance) checks related to dance. However, if the wearer is not dancing, they have disadvantage on Dexterity (Stealth) checks.
+
+#### Disco-ball Shield
+
+- **Weight:** 6 lbs
+- **Value:** 1,200 gp
+
+This unique shield, adorned with mirrored facets, can reflect minor spells (2nd level or lower) when angled correctly. When a spell targeting the wielder is cast, they can use a reaction to attempt to deflect it. The wielder makes a DC 14 Dexterity saving throw; on a success, the spell is reflected back at the caster. This property can be used once per short rest.
+
+#### Glimmering Glove
+
+- **Weight:** 0.2 lbs
+- **Value:** 100 gp
+
+This delicate glove, when worn, allows the wearer to produce mini light shows from their fingertips at will. These displays can provide dim illumination in a 10-foot radius or be used for entertainment. The glove has no combat application.
+
+#### Eldergrove Echo Microphone
+
+- **Weight:** 1 lb
+- **Value:** 800 gp
+
+This enchanted microphone amplifies the user's voice but unpredictably adds an auto-tune effect, causing all spoken words to sound like they are sung. This does not affect the user's ability to communicate but adds an entertaining twist to their speech.
+
+#### Phantom Fizz
+
+- **Weight:** 0.5 lbs
+- **Value:** 75 gp
+
+This effervescent drink, when consumed, makes the drinker's steps feel light as air for 1 hour, granting a temporary +2 bonus to Dexterity checks and Dexterity saving throws related to agility.
+
+#### Neon Noodle Bowl
+
+- **Weight:** 0.5 lbs
+- **Value:** 50 gp
+
+When consumed, this forgotten dish causes the consumer's hair to emit a soft neon glow for 1 hour, providing dim illumination in a 5-foot radius. The effect is purely cosmetic and has no combat application.
+\page
+#### Holo-Photo Booth
+
+- **Weight:** 800 lbs
+- **Value:** 2,000 gp
+
+This magical photo booth allows characters to capture moments with holographic recreations of past ravers. Using the booth costs 5 gp per use. The resulting holographic photos are fun keepsakes but have no other in-game effects.
+
+#### Mirror of Past Moves
+
+- **Weight:** 15 lbs
+- **Value:** 1,500 gp
+
+This ornate mirror, when gazed into, reflects the user's past dance moves with stunning clarity. It provides no mechanical benefits but serves as a nostalgic memento for those who enjoy reliving their dance memories.
+
+
+
+{{monster,frame
+## Holographic Hustler
+*Medium humanoid (construct), neutral*
+
+**Armor Class** 14 (Holographic Illusion)
+**Hit Points** 45 (6d8 + 18)
+**Speed** 30 ft.
+
+**STR** 12 (+1)
+**DEX** 16 (+3)
+**CON** 16 (+3)
+**INT** 10 (+0)
+**WIS** 10 (+0)
+**CHA** 14 (+2)
+
+**Skills** Deception +4, Performance +4, Sleight of Hand +5
+**Damage Resistances** Bludgeoning, Piercing, and Slashing from Nonmagical Attacks; Force, Radiant (from added traits)
+**Condition Immunities** Charmed, Frightened, Poisoned
+**Senses** Darkvision 60 ft., Passive Perception 10
+**Languages** understands Common but can't speak
+**Challenge** 2 (450 XP)
+
+**Holographic Illusion.** The Holographic Hustler can create illusory duplicates of itself as a bonus action. These duplicates can move and act independently, mimicking the Holographic Hustler's movements and actions. The illusory duplicates have 1 hit point and are destroyed if they take any damage.
+
+**Multiattack.** The Holographic Hustler makes two attacks with its Shimmering Blade or two ranged attacks with its Laser Beams.
+
+**Shimmering Blade.** *Melee Weapon Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 1d6 slashing damage plus 1d4 force damage.
+
+**Laser Beams.** *Ranged Weapon Attack:* +5 to hit, range 60/120 ft., one target. *Hit:* 1d4 radiant damage.
+
+**Dazzling Dance.** As a bonus action, the Holographic Hustler can perform an intricate dance. All creatures within 10 feet of the Holographic Hustler that can see it must succeed on a DC 13 Wisdom saving throw or be charmed until the start of the Holographic Hustler's next turn. While charmed in this way, a creature is incapacitated and can't attack the Holographic Hustler.
+
+**Blinding Flash (Recharge 6).** The Holographic Hustler emits a blinding flash of light in a 15-foot cone. Each creature in that area must make a DC 13 Constitution saving throw or be blinded until the end of their next turn. Creatures that succeed on the saving throw are immune to this effect for 24 hours.
+
+**Illusory Duplicate (Recharge 6).** The Holographic Hustler creates a perfect illusory duplicate of itself. The duplicate has the same stats as the Holographic Hustler and appears in an unoccupied space within 30 feet of it. The duplicate acts on the same initiative count as the Holographic Hustler and lasts for 1 minute or until destroyed. The duplicate can't create additional duplicates.
+
+**Dance of Displacement (Recharge 5-6).** The Holographic Hustler can teleport up to 30 feet to an unoccupied space as a reaction when it takes damage.
+}}
+\page
+{{monster,frame
+## Pulse Patrol Pixie
+*Tiny fey, neutral*
+
+**Armor Class** 15 (Dancing Lights)
+**Hit Points** 20 (4d4 + 6)
+**Speed** 30 ft., fly 60 ft.
+
+**STR** 6 (-2)
+**DEX** 18 (+4)
+**CON** 14 (+2)
+**INT** 10 (+0)
+**WIS** 12 (+1)
+**CHA** 16 (+3)
+
+**Skills** Acrobatics +6, Perception +3, Performance +5
+**Senses** Darkvision 60 ft., Passive Perception 13
+**Languages** Sylvan
+**Challenge** 1/2 (100 XP)
+
+**Dancing Lights.** The Pulse Patrol Pixie emits a soft, colorful light that grants it advantage on saving throws against being blinded. Additionally, it can use its reaction to cast the *dancing lights* spell at will without requiring concentration.
+
+**Evasive Maneuvers.** The Pulse Patrol Pixie can use a reaction to impose disadvantage on an attack roll against it once per round.
+
+**Fey Step (1/Day).** The Pixie can cast *misty step* once per day to teleport up to 30 feet as a bonus action.
+
+**Innate Spellcasting.** The Pulse Patrol Pixie's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components:
+
+* At will: *faerie fire*
+* 1/day each: *hypnotic pattern*
+
+**Prismatic Burst (1/Day).** The Pixie releases a burst of dazzling light in a 10-foot radius. All creatures in that area must make a DC 13 Constitution saving throw or be blinded until the start of their next turn.
+
+**Light Show.** The Pulse Patrol Pixie creates a mesmerizing light show in a 15-foot cone. Each creature in that area must make a DC 13 Wisdom saving throw or be charmed until the start of their next turn. While charmed in this way, a creature is incapacitated and can't take reactions. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the Pulse Patrol Pixie's Light Show for the next 24 hours.
+
+**Legendary Actions (2/round).**
+The Pulse Patrol Pixie can take 2 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The Pixie regains spent legendary actions at the start of its turn.
+
+**Dazzling Flicker.** The Pixie casts *minor illusion* or *dancing lights* as a reaction to provoke or disorient enemies.
+
+**Fey Distortion (1/Day).** The Pixie creates a temporary magical distortion in a 10-foot radius. This distortion either changes the terrain or causes hallucinatory effects within the area for 1 minute.
+
+**Dance of Shadows.** The Pixie moves through occupied spaces without provoking attacks of opportunity.
+
+**Legendary Resistance (1/Day).** The Pixie can choose to succeed on a failed saving throw, using this ability once per day.
+}}
+
+{{monster,frame
+## Rave Remnant
+*Medium undead, chaotic neutral*
+
+**Armor Class** 11 (Retro Specter)
+**Hit Points** 48 (9d8 + 9)
+**Speed** 30 ft., fly 60 ft.
+
+**STR** 10 (+0)
+**DEX** 18 (+4)
+**CON** 12 (+1)
+**INT** 6 (-2)
+**WIS** 10 (+0)
+**CHA** 16 (+3)
+
+**Skills** Acrobatics +6, Perception +3, Performance +5
+**Damage Resistances** Necrotic
+**Damage Immunities** Poison
+**Condition Immunities** Poisoned
+**Senses** Darkvision 60 ft., Passive Perception 10
+**Languages** Understands Common and Abyssal but can't speak
+**Challenge** 2 (450 XP)
+
+**Retro Specter.** The Rave Remnant has advantage on Dexterity (Stealth) checks made to hide in dim light or darkness.
+
+**Ethereal Sight.** The Rave Remnant can see 60 feet into the Ethereal Plane when it is on the Material Plane, and vice versa. As a reaction once per round, it can phase in and out of the Ethereal Plane, becoming incorporeal and immune to attacks until the start of its next turn.
+
+**Incorporeal Movement.** The Rave Remnant can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+
+**Actions**
+
+**Multiattack.** The Rave Remnant makes two attacks with its Neon Claws.
+
+**Neon Claws.** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 6 (1d6 + 2) slashing damage plus 3 (1d6) necrotic damage.
+
+**Dance-Off.** The Rave Remnant chooses one creature it can see within 30 feet. The target must make a DC 13 Charisma saving throw or engage in a dance-off with the Rave Remnant. The target makes a Performance or Dexterity check, opposed by the Rave Remnant's own Performance check. If the target's check fails by 5 or more, it takes 10 (3d6) psychic damage as it struggles to keep up with the Rave Remnant's supernatural dance moves.
+
+**Legendary Actions (2 Actions).** The Rave Remnant can take 2 legendary actions, choosing from the options below. Only one legendary action can be used at a time and only at the end of another creature's turn. The Rave Remnant regains spent legendary actions at the start of its turn.
+
+- **Neon Claws.** The Rave Remnant makes one Neon Claws attack.
+- **Ethereal Dash.** The Rave Remnant uses its Ethereal Sight ability to phase in and out of the Ethereal Plane, moving up to its speed without provoking opportunity attacks.
+- **Dance-Off (Costs 2 Actions).** The Rave Remnant uses its Dance-Off ability.
+
+}}
+\page
+## Room 8: DJ Lyraxia's Legendary Booth
+
+*As you step into Room 8, your senses are overwhelmed by a dazzling display of neon and sound. At the center of the room stands a massive DJ booth, its surface shimmering with vibrant neon hues. Cascading waterfalls of neon liquid surround the booth, their liquid streams dancing in rhythm to the music. Pulsating dance floors stretch out before you, reacting to the rhythm and your steps. Overhead, a canopy of bioluminescent plants casts intricate, colorful patterns that shift with the music.*
+
+### Description
+Room 8 is an electrifying dance floor with the central focus being DJ Lyraxia's Legendary Booth. The booth commands attention with its neon-lit presence, and the entire room is designed for the ultimate dance experience. DJ Lyraxia's spectral form hovers near the booth, accompanied by her Ethereal Entourage of backup dancers and floating instruments. The ambiance is vibrant and energetic, with floating spectral drink tables offering ethereal beverages around the edges of the room.
+
+
+
+
+### Notable Features
+- A massive **DJ booth** at the room's center, surrounded by cascading waterfalls of neon liquid.
+- Four **pulsating dance floors** spread across the room.
+- Overhead canopy of bioluminescent plants.
+- **DJ Lyraxia's unreleased vinyl track** is prominently displayed on the booth.
+- **Beats of Binding headphones** positioned near the booth on a **Rhythm Rug**.
+- Quirky DJ equipment including **Mushroom Mixers** and **Vine Vinyl Spinners** scattered around the booth.
+- **DJ Lyraxia** hovers near the booth, initially neutral. 
+- **DJ Lyraxia's Ethereal Entourage** consisting of 6 backup dancers and 3 floating instruments positioned around the DJ booth.
+- Five floating spectral drink tables offer ethereal beverages around the room.
+- Ten **Plasma plants** positioned around the room edges.
+- Five **Rhythm Rugs** placed throughout the room: **Sirena's Serenade Rug**, **Elemental Embroidery Rug**, **Rogue's Reel Rug**, **Harmonic Hues Rug**, and **Ethereal Echo Rug**.
+- A collection of 10 spectral vinyl records located on a shelf near the DJ booth.
+- A "Bass Boost" button situated on the DJ booth.
+- **Beatz**, an ethereal parrot, flying freely.
+- **Glowgloves** found on a spectral table near the booth.
+- **Rave Robe** draped over a spectral chair in the room's southeast corner.
+- Numerous **Bubble Beats** floating around.
+- Old sign reading: "Respect the Rhythm. Love the Legacy."
+- **Tempo Tappers**, 8 in total, scattered on the dance floors.
+- **Mix Master Moose** occasionally appears in the northeast corner.
+- Direct exit portal leading to the Glowworm Grotto (Room 1) located in the west wall.
+  
+### Pulsating Dance Floors
+- React to rhythm and dance moves.
+- The shadows on the walls mimic and exaggerate the dancers' movements.
+  
+### DJ Equipment 
+- **Mushroom Mixers**: Produce unique sounds when manipulated.
+- **Vine Vinyl Spinners**: Harness nature's energy to produce calming rhythms.
+  
+### Spectral Vinyl Records
+- Playing alters ambiance.
+- Record text describes effects.
+  
+### Lunar Luminescence Phase
+- **DJ Lyraxia's** booth emanates a soft lunar glow.
+- DM discretion for specific effects and benefits.
+
+### Bass Boost
+- Amplifies bass for 6 seconds, shaking the room.
+
+### Mix Master Moose Dance-Off
+- Requires Dexterity (Performance) check DC 15.
+- If beaten, Moose offers a hint for impressing **DJ Lyraxia**.
+
+
+
+#### Beats of Binding (Headphones)
+*Wondrous item (headphones), uncommon*
+
+Weight: 0.5 lb.
+Value: 100 gp
+
+These enchanted headphones, when worn and activated by stepping on a Rhythm Rug, allow the wearer to attempt to control another's actions through rhythmic beats. The target must make a DC 15 Wisdom saving throw; failure results in being controlled by the wearer for 1 minute.
+
+#### Bubble Beat (Bubble)
+*Wondrous item (bubble), common*
+
+Weight: 0.1 lb.
+Value: 5 gp
+
+Popping this ethereal bubble releases a soothing musical note, creating a calming effect.
+#### Tempo Tapper (Footpad)
+*Wondrous item (footpad), common*
+
+Weight: 0.2 lb.
+Value: 10 gp
+\page
+Stepping on this small footpad in rhythm grants a boost to dance performance, granting advantage on dance-related checks for 1 minute.
+
+#### DJ Lyraxia's Vinyl Track (Vinyl)
+*Wondrous item (vinyl record), rare*
+
+Weight: 0.5 lb.
+Value: 500 gp
+
+This unreleased vinyl record, when played, casts "Hypnotic Pattern" in a 20-foot cube. The text on the vinyl reads, "Let music paint your dreams."
+
+#### Rhythm Rug (Sirena's Serenade)
+*Wondrous item (rug), rare*
+
+Weight: 5 lb.
+Value: 1,000 gp
+
+This deep blue rug with silver threads, gifted by Sirena, allows the user to cast "Water Walk" once per day.
+
+#### Rhythm Rug (Elemental Embroidery)
+*Wondrous item (rug), rare*
+
+Weight: 5 lb.
+Value: 1,000 gp
+
+This rug adorned with elemental patterns grants resistance to one damage type for 1 hour once per day when it is wrapped around the user.
+
+#### Rhythm Rug (Rogue's Reel)
+*Wondrous item (rug), rare*
+
+Weight: 5 lb.
+Value: 1,000 gp
+
+This black rug adorned with golden daggers grants proficiency in Dexterity (Acrobatics) checks for 1 hour once per day when the user stands upon it.
+
+#### Rhythm Rug (Harmonic Hues)
+*Wondrous item (rug), rare*
+
+Weight: 5 lb.
+Value: 1,000 gp
+
+This shifting-color rug allows the user to cast "Color Spray" once per day, centered on themselves.
+
+#### Rhythm Rug (Ethereal Echo)
+*Wondrous item (rug), rare*
+
+Weight: 5 lb.
+Value: 1,000 gp
+
+This rug with spectral patterns grants the ability to cast "Mage Hand" at will for 1 hour, with a spectral hand that can interact with objects.
+
+#### Glowglove (Gloves)
+*Wondrous item (gloves), uncommon*
+
+Weight: 0.1 lb.
+Value: 50 gp
+
+These gloves, when worn and waved, produce entrancing visual effects. While wearing them, the user can cast the "Dancing Lights" cantrip at will.
+
+#### Rave Robe (Robe)
+*Wondrous item (robe), uncommon*
+
+Weight: 1 lb.
+Value: 150 gp
+
+This shimmering and color-changing robe grants the wearer advantage on any dance-related challenges within the room while it is worn.
+\column
+#### Lunar Luminescence Phase (Phase)
+*Magical phenomenon, variable*
+
+Weight: None
+Value: None
+
+This recurring phenomenon affects various rooms within the dungeon every hour, lasting for 10 minutes. During this phase, Room 8, DJ Lyraxia's Legendary Booth, emanates a soft lunar glow, affecting DJ Lyraxia's disposition. Specific effects and benefits in Room 8 are at the discretion of the Dungeon Master based on player actions and negotiations.
+
+{{monster,frame
+## Mix Master Moose
+*Medium humanoid (moosefolk), chaotic neutral*
+___
+- **Armor Class** 12
+- **Hit Points** 45 (6d8 + 18)
+- **Speed** 40 ft.
+___
+STR | DEX | CON | INT | WIS | CHA
+--- | --- | --- | --- | --- | ---
+15 (+2)|12 (+1)|16 (+3)|10 (+0)|14 (+2)|16 (+3)
+___
+- **Skills** Performance +5
+- **Senses** passive Perception 12
+- **Languages** Common
+- **Challenge** 2 (450 XP)
+___
+***Multiattack.*** Mix Master Moose makes two attacks: one with its hoof and one with its headphones.
+
+***Hoof.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 7 (1d10 + 2) bludgeoning damage.
+
+***Headphones.*** *Ranged Weapon Attack:* +3 to hit, range 30/90 ft., one target. *Hit:* 6 (1d8 + 1) bludgeoning damage.
+
+***Funky Dance Moves.*** Mix Master Moose can use its bonus action to break out some funky dance moves, granting itself and friendly creatures within 10 feet of it advantage on Dexterity (Performance) checks for 1 minute.
+
+***Turntable Spin.*** Mix Master Moose can use its bonus action to spin its turntable and create a hypnotic display of lights and sounds. Each creature of its choice within 60 feet of it must succeed on a DC 13 Wisdom saving throw or become charmed for 1 minute. While charmed, the target is incapacitated and has a speed of 0. The effect ends if the charmed target takes any damage or if another creature uses an action to shake the target out of its stupor.
+
+***Moose Jams.*** Mix Master Moose can play a catchy tune that inspires its allies. As a bonus action, it can grant itself and friendly creatures within 30 feet of it 1d6+2 temporary hit points that last for 1 minute.
+
+***Enthralling Performance.*** Mix Master Moose performs a captivating mix, forcing each creature within 60 feet of it that can see and hear it to make a DC 13 Wisdom saving throw. On a failed save, the creature becomes charmed for 1 minute, following Mix Master Moose's commands to the best of its ability. The charmed creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+
+}}
+\page
+
+{{monster,frame,wide
+## DJ Lyraxia
+*Medium undead (specter), neutral*
+___
+- **Armor Class** 12
+- **Hit Points** 60 (8d8 + 24)
+- **Speed** 0 ft., fly 40 ft. (hover)
+___
+STR | DEX | CON | INT | WIS | CHA
+--- | --- | --- | --- | --- | ---
+7 (-2)|16 (+3)|16 (+3)|10 (+0)|12 (+1)|16 (+3)
+___
+- **Skills** Perception +3
+- **Damage Resistances** acid, cold, fire, lightning, thunder
+- **Damage Immunities** necrotic, poison
+- **Condition Immunities** charmed, exhaustion, frightened, grappled, paralyzed, petrified, poisoned, prone, restrained
+- **Senses** darkvision 60 ft., passive Perception 13
+- **Languages** understands Common and understands the languages it knew in life but can't speak
+- **Challenge** 4 (1,100 XP)
+___
+***Ethereal Sight.*** DJ Lyraxia can see 60 feet into the Ethereal Plane when it is on the Material Plane and vice versa.
+
+***Incorporeal Movement.*** DJ Lyraxia can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+
+***Hypnotic Vinyl.*** As a bonus action, DJ Lyraxia can activate her unreleased vinyl track. Each creature within 20 feet of DJ Lyraxia must make a DC 14 Wisdom saving throw or be charmed for 1 minute. While charmed, the target is incapacitated and has a speed of 0. The effect ends if the charmed target takes any damage or if another creature uses an action to shake the target out of its stupor.
+
+***Legendary Resistance (1/Day).*** If DJ Lyraxia fails a saving throw, she can choose to succeed instead.
+___
+**ACTIONS**
+
+***Withering Touch.*** *Melee Spell Attack:* +5 to hit, reach 5 ft., one target. *Hit:* 17 (4d6 + 3) necrotic damage.
+
+***Ethereal Whirlwind (Recharge 6).*** DJ Lyraxia transforms into a swirling vortex of ethereal energy. Each creature in her space and within 5 feet of her must make a DC 14 Strength saving throw or take 22 (4d10) force damage and be pushed 10 feet away. On a successful save, the creature takes half damage and isn't pushed.
+\column
+
+***Spectral Dance.*** DJ Lyraxia creates illusory duplicates of herself within a 30-foot radius. Each duplicate can move independently and lasts for 1 minute. The duplicates can't attack, but they can move, dance, and cast minor illusions. While the duplicates are active, DJ Lyraxia can use a bonus action to teleport to an unoccupied space within 30 feet of one of her duplicates.
+
+***Possession (Recharge 6).*** DJ Lyraxia targets one creature she can see within 10 feet of her. The target must succeed on a DC 14 Charisma saving throw or be possessed by DJ Lyraxia's spirit. DJ Lyraxia disappears, and the target is incapacitated and loses control of its body. DJ Lyraxia controls the body but doesn't deprive the target of awareness. DJ Lyraxia can't be targeted by any attack, spell, or other effect, except ones that turn undead, and it retains its alignment, Intelligence, Wisdom, and Charisma. It otherwise uses the possessed target's statistics, but doesn't gain access to the target's knowledge, class features, or proficiencies. The possession lasts until the body drops to 0 hit points, DJ Lyraxia ends it as a bonus action, or DJ Lyraxia is turned or forced out by an effect like the *dispel evil and good* spell. When the possession ends, DJ Lyraxia reappears in an unoccupied space within 5 feet of the body. The target is immune to DJ Lyraxia's Possession for 24 hours after succeeding on the saving throw or after the possession ends.
+___
+**LEGENDARY ACTIONS**
+
+DJ Lyraxia can take 1 legendary action, choosing from the options below. Only one legendary action option can be used at a time, and only at the end of another creature's turn. DJ Lyraxia regains spent legendary actions at the start of her turn.
+
+***Spectral Dance (Costs 2 Actions).*** DJ Lyraxia creates an illusory duplicate of herself within a 30-foot radius. The duplicate can move independently and lasts for 1 minute. The duplicate can't attack, but it can move, dance, and cast minor illusions. While the duplicate is active, DJ Lyraxia can use a bonus action to teleport to an unoccupied space within 30 feet of the duplicate.
+
+***Withering Touch (Costs 2 Actions).*** DJ Lyraxia makes a withering touch attack.
+
+***Hypnotic Vinyl (Costs 3 Actions).*** DJ Lyraxia activates her unreleased vinyl track.
+___
+}}
+
+
+
+## Conclusion
+Upon securing DJ Lyraxia's legendary track, the rhythm of the Eldergrove Groove synchronizes in celebration. The spectral forms of raver elves and other creatures bow in respect, recognizing the adventurers' mastery of the dance. The dungeon, once alive with challenges and tricks, now serves as a peaceful beacon of dance and music in the heart of the jungle. The vinyl itself, when played outside the dungeon, has the power to influence and mesmerize creatures, but its true strength remains in its ability to unite souls in the joy of dance.
+
+{{descriptive
+This module was generated using a script based on artificial intelligence, with the following parameters.
+:
+keywords: Bioluminescent Jungle - Disco-Dancing Jaguars - Raver Elves
+:
+numRooms: 8
+:
+combatDifficulty: medium
+:
+lootValue: low
+:
+wackiness: high.
+}}

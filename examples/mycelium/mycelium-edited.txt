@@ -1,0 +1,943 @@
+# Mycelium Mirrors: The Celestial Spore Quest
+
+Deep within an ancient, subterranean mushroom forest lies the enigmatic Mushroom Observatory. Here, towering Mycelium Telescopes stand sentinel, allowing scholarly mycologists to study Fungal Constellations and the cosmos through Cosmic Spore Bursts. Crafted by the visionary mycologist Elyndra Stellarspore, the observatory bridges the realms of fungi and stars. Adventurers will face challenges ranging from navigating the ever-shifting Mycelium Maze, to time distortions under the Spacetime Shrooms, to battling guardians of the cosmic realm. At its core, this module is a quest for the Mycocelestial Elixir, a potion with the power to heal reality itself.
+
+## Motivation
+There are many reasons why the PCs might embark on this quest. Some examples are given.
+
+1. A prophecy foretells that the tear in their home realm is expanding rapidly, endangering their loved ones and everything they hold dear.
+
+2. The characters seek to gain the Mycocelestial Elixir's incredible power to restore a fallen comrade's life, who was sacrificed to save the party in a previous adventure.
+
+3. Rumors spread of a nefarious cult attempting to harness the elixir's power for destructive purposes, motivating the party to prevent this catastrophe.
+
+## Background
+The Mushroom Observatory was established centuries ago by the visionary mycologist, Elyndra Stellarspore. She sought to understand the deep connection between the universe's cosmic events and the world of fungi. Together with her Circle of Fungi, a group of dedicated scholars and mycologists, she founded the observatory amidst a vast subterranean mushroom forest.
+
+Elyndra made groundbreaking discoveries, such as the correlation between Fungal Constellations and major cosmic phenomena. The Mycelium Telescopes, her unique creation, don't merely observe the universe but can connect one's consciousness to distant galaxies. The Cosmic Spore Bursts are the results of significant celestial events that, when captured and studied, reveal vast knowledge about the cosmos.
+
+While the observatory was once buzzing with researchers, a catastrophic event led to its abandonment. A tear in the fabric of reality threatened the very essence of their world, causing panic and chaos. Elyndra, in her final days, prophesied the brewing of the Mycocelestial Elixir, a solution that could mend the rift. However, with her passing, the recipe was lost.
+
+Today, the observatory remains mostly deserted but is still alive with remnants of Elyndra's work. Luminary mycologists, Funguardians, and sentient fungal entities protect and maintain the observatory's legacy. Some serve as guardians, ensuring that only the worthy access the observatory's secrets.
+
+Unbeknownst to many, the key to mending the tear in reality lies within the walls of the Mushroom Observatory. The Mycocelestial Elixir's recipe, vital components, and the process of its creation are scattered throughout, awaiting discovery by brave adventurers. As they journey deeper, they'll uncover the bond between fungi and the cosmos, and the delicate balance that keeps the universe in harmony.
+
+## Arrival
+*As the adventurers approach the Mushroom Observatory, they are met with a sprawling expanse of ancient fungal trees with luminescent canopies. The air is thick with a mixture of earthy and otherworldly scents, giving a sense of both the familiar and the unknown. Nestled between the towering mushrooms, a large, dome-like structure emerges, adorned with intricate patterns resembling both constellations and fungal networks. Its entrance, guarded by two statues of fungi scholars, is an archway with a soft glowing barrier that dissipates as the adventurers approach, inviting them into the Chamber of Celestial Echoes.*
+
+## Dungeon layout
+The dungeon's rooms are laid out as follows.
+
+![layout](https://i.ibb.co/yF32tLK/graph-mycelium.png) {height:310px,mix-blend-mode:multiply}
+
+\page
+
+## Room 1: Chamber of Celestial Echoes
+
+*As you enter the Chamber of Celestial Echoes, you find yourself in a large, semi-circular room bathed in soft, shifting colors. The walls are adorned with phosphorescent fungal clusters, casting an eerie yet beautiful glow. The ground beneath your feet is made of condensed mycelium, emitting a gentle hum with every step you take. At the room's center stands a massive Mycelium Telescope, its crystalline cap pointing towards the ceiling.*
+
+### Description
+The Chamber of Celestial Echoes is a spacious, semi-circular chamber with a high ceiling. The walls are covered in phosphorescent fungi, creating an otherworldly ambiance. The floor is made of condensed mycelium, giving off a faint hum as you move. In the center, the Mycelium Telescope looms, its crystalline cap reaching toward the ceiling.
+
+A mycelial pedestal supports the **Starshroom Compass**, a unique item that rests on it. Patches of soft, spongy moss are scattered around, providing resting spots. Ethereal music plays softly in the background, matching the tune needed to safely lift the compass.
+
+A small alcove in one corner holds a fungal fountain with healing properties. Ancient symbols and carvings decorate the walls, depicting the history of the fungal realm and its celestial connections. The ceiling is adorned with bioluminescent stalactites, resembling a starry night sky.
+
+
+
+
+### Notable Features
+
+- The room is **semi-circular**, illuminated by **soft, shifting colors**. 
+- **Phosphorescent fungal clusters** adorn the walls.
+- The ground consists of **condensed mycelium**, humming with each step.
+- A **massive Mycelium Telescope**, with its crystalline cap pointing upwards, is at the center.
+- **Starshroom Compass** rests on a **mycelial pedestal**. Lifting without humming causes spore clouds.
+- **Ring of Mycoluminescence** emits bioluminescent glow.
+- **Stellarspore’s Observational Notes** hint at the Mycelium Maze.
+- **Bioluminescent stalactites** cover the ceiling, resembling a starry night.
+- **Spongy moss patches** are scattered, providing resting or hiding spots.
+- **Glowcap Elixir** grants darkvision.
+- Two **Mycelial Stalkers** camouflage with the fungal decor. 
+\column
+- **Fungal Guardian** and four **Lumispore Minions** lurk in shadows.
+- **Sporebat Swarm** hovers near the ceiling.
+- An **old journal** contains sketches of the **Mycelium Telescope**.
+- **Ancient symbols and carvings** on walls hint at the fungal realm’s history.
+- **Direct Path to Mycosmic Hallways**: A clear passage leading out of the room.
+- **Hidden Path to Elyndra's Sanctum of Synthesis**: Concealed door with **bioluminescent lock mechanism**.
+- **Fungistar Lens slot**: Located on a unique pedestal in the room, meant to enhance the **Mycelium Telescope's** vision.
+- Inscription: "To see beyond, one must harness the light of Fungistar."
+- **Torn journal page** about Elyndra's lens enhancement.
+- **Ethereal voice** whispers: "Seek the Fungistar for clarity."
+- Mycocelestial Resonance illuminates **celestial patterns** on the floor, showcasing history.
+
+### Starshroom Compass Interaction
+
+When characters approach the **Starshroom Compass** without humming the ethereal tune heard in the room, they trigger the release of confusing spore clouds. Affected characters require a DC 15 Constitution saving throw or experience vision blur, imposing disadvantage on their actions for 1 minute. The clue to avoid this trap is the echoing ethereal tune: "Harmony with stars is key."
+
+### Mycoscelestial Resonance
+
+Triggered hourly by the alignment of the Fungal Constellations, the resonance lasts five minutes. During this period:
+- **Celestial patterns** on the floor glow. Characters standing on these patterns can glimpse the observatory’s history through the **Mycelium Telescope**.
+- A **spectral projection of Elyndra** appears during the first resonance, clarifying the significance.
+- **Time-marked celestial symbols** on one wall hint at resonance intervals.
+- The approaching resonance is signified by echoing sounds growing louder.
+- Players must interact with the projection or **Mycelium Telescope** to obtain relevant content about the observatory’s history and Elyndra’s discoveries.
+
+\page
+
+### Bioluminescent Lock Mechanism
+
+To access the **Hidden Path to Elyndra's Sanctum of Synthesis**, players must notice a peculiar constellation pattern on the ceiling (Perception DC 15). Pressing the constellation in sequence unlocks the concealed doorway. The clue to this mechanism is in the Chamber itself and in an ancient tome located in the Luminous Library of Elyndra (Room 3).
+
+
+
+#### Starshroom Compass
+*Wondrous Item (uncommon), weight 0.5 lbs, value 250 gp*
+
+This small, intricate compass, when infused with the user's intention while humming the room's ethereal tune, points unerringly toward a desired Fungal Constellation. When lifted without humming, it releases spore clouds, causing vision blur and disadvantage on rolls for 1 minute (DC 15 Constitution saving throw to avoid).
+
+#### Ring of Mycoluminescence
+*Wondrous Item (common), weight negligible, value 50 gp*
+
+This simple ring allows its wearer to cast the "Light" cantrip at will, emitting a soft, bioluminescent glow in a 30-foot radius of bright light and an additional 30-foot radius of dim light. The inscription inside the ring reads, "Fungus guides your path."
+
+#### Fungispore Pouch
+*Wondrous Item (common), weight 0.5 lbs, value 25 gp*
+
+This pouch contains glittering spores. When thrown, it creates a brief, dazzling display in a 10-foot radius, potentially distracting enemies or illuminating dark areas. Creatures within the radius must make a DC 13 Dexterity saving throw or be blinded for 1 minute.
+
+#### Glowcap Elixir
+*Potion, weight 0.5 lbs, value 75 gp*
+
+This vial contains a glowing liquid. When consumed, it grants darkvision with a range of 60 feet for one hour.
+
+
+
+{{monster,frame
+## Fungal Guardian
+*Medium plant, neutral*
+___
+- **Armor Class** 15 (natural armor)
+- **Hit Points** 60 (8d8 + 24)
+- **Speed** 30 ft.
+
+___
+**STR** 14 (+2)
+**DEX** 10 (0)
+**CON** 16 (+3)
+**INT** 6 (-2)
+**WIS** 12 (+1)
+**CHA** 4 (-3)
+___
+- **Skills** Perception +3
+- **Senses** darkvision 60 ft., passive Perception 13
+- **Languages** understands Common but can't speak
+- **Challenge** 2 (450 XP)
+
+___
+**Spore Breath (Recharge 5-6).** The fungal guardian exhales a cloud of poisonous spores in a 15-foot cone. Each creature in that area must make a DC 13 Constitution saving throw, taking 14 (4d6) poison damage on a failed save, or half as much damage on a successful one.
+
+**Fungal Resilience.** The fungal guardian has advantage on saving throws against being poisoned and is immune to the poisoned condition.
+
+**
+}}
+
+{{monster,frame
+## Lumispore Minion
+*Small plant, neutral*
+___
+- **Armor Class** 12 (natural armor)
+- **Hit Points** 7 (2d6)
+- **Speed** 30 ft.
+
+___
+**STR** 10 (0)
+**DEX** 12 (+1)
+**CON** 11 (0)
+**INT** 2 (-4)
+**WIS** 8 (-1)
+**CHA** 3 (-4)
+___
+- **Senses** darkvision 60 ft., passive Perception 9
+- **Languages** understands Common but can't speak
+- **Challenge** 1/2 (100 XP)
+
+___
+**Limited Bioluminescence.** When a Lumispore Minion is attacked, it can emit a soft bioluminescent glow as a reaction. This glow imposes disadvantage on attacks against the Lumispore Minion for one round, as attackers are temporarily blinded by the sudden burst of light.
+
+**Actions**
+___
+**Melee Attack.** *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 4 (1d6 + 1) bludgeoning damage.
+}}
+
+\page
+
+{{monster,frame
+## Mycelial Stalker
+*Medium plant, neutral*
+___
+- **Armor Class** 13 (natural armor)
+- **Hit Points** 16 (3d8 + 3)
+- **Speed** 30 ft.
+
+___
+**STR** 12 (+1)
+**DEX** 12 (+1)
+**CON** 12 (+1)
+**INT** 2 (-4)
+**WIS** 10 (0)
+**CHA** 3 (-4)
+___
+- **Senses** blindsight 30 ft. (blind beyond this radius), passive Perception 10
+- **Languages** understands Common but can't speak
+- **Challenge** 1/2 (100 XP)
+
+___
+**Mycelial Camouflage.** The mycelial stalker can hide in plain sight among fungal growth or natural terrain made of condensed mycelium, even while lightly obscured, such as in dim light or partial cover.
+
+**Actions**
+___
+**Ambush.** The mycelial stalker makes one Slam attack with advantage against a surprised creature.
+
+**Slam.** *Melee Weapon Attack:* +3 to hit, reach 5 ft., one target. *Hit:* 6 (1d8 + 1) bludgeoning damage.
+}}
+
+{{monster,frame
+## Sporebat Swarm
+*Small beast, unaligned*
+___
+- **Armor Class** 12
+- **Hit Points** 36 (6d6 + 18)
+- **Speed** 0 ft., fly 30 ft. (hover)
+
+___
+**STR** 6 (-2)
+**DEX** 16 (+3)
+**CON** 12 (+1)
+**INT** 2 (-4)
+**WIS** 10 (0)
+**CHA** 4 (-3)
+___
+- **Senses** blindsight 60 ft. (blind beyond this radius), passive Perception 10
+- **Languages** understands Common but can't speak
+- **Challenge** 1/2 (100 XP)
+
+___
+**Swarm.** The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny sporebat. The swarm can't regain hit points or gain temporary hit points.
+
+**Swarm Resilience.** The Sporebat Swarm is resistant to all damage types except for fire and slashing damage.
+
+**Evasion.** If the swarm is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage on a successful save.
+
+**Fungal Flight.** The Sporebat Swarm can use a bonus action to move up to half its speed without provoking opportunity attacks.
+
+**Actions**
+___
+**Spore Cloud (Recharge 6).** The Sporebat Swarm releases a cloud of spores in a 10-foot radius centered on itself. Each creature in that area must make a DC 13 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one. A creature that fails the saving throw is poisoned for 1 minute. A poisoned creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+
+**Swarm Attack.** The Sporebat Swarm's attacks deal an additional 7 (2d6) poison damage when it occupies an enemy's space.
+
+**Lair Actions**
+___
+**Fungal Burst (1/Day).** The Sporebat Swarm releases a burst of spores in a 20-foot radius, creating difficult terrain for 1 round. Creatures that start their turn in the area must make a DC 13 Constitution saving throw or be poisoned for 1 minute.
+}}
+
+\page
+
+## Room 2: Mycosmic Hallways
+
+*As you step into Room 2, you find yourself in a bewildering labyrinth of translucent mycelial walls. The walls shift and change, revealing cosmic vistas and alien fungal landscapes beyond. Bioluminescent spores light your path, casting illusions of distance and direction. The air carries an earthy scent with a hint of ozone, blending nature and cosmos. Soft whisper-like sounds resonate from the shifting walls.*
+
+### Description
+The Mycosmic Hallways is an ever-shifting maze of translucent mycelial walls that create a mesmerizing cosmic spectacle. Cosmic vistas and fungal landscapes can be seen through the walls, constantly rearranging. The bioluminescent spores on the ground provide both illumination and illusions, making navigation challenging.
+
+Occasionally, vacuum pockets form within the walls, requiring a Dexterity saving throw DC 15 to avoid being sucked in briefly. Trickster Spores create mirages, teleporting those who approach them back to the maze's entrance. There are also ethereal birds leaving spore trails, harmless but adding to the room's wonder.
+
+
+
+
+### Notable Features
+
+- **Translucent Mycelial Walls**: Maze-like structure with ever-changing pathways.
+- **Cosmic Vistas**: Alien fungal landscapes visible through walls.
+- **Fungal Constellations**: They rearrange, changing the maze layout.
+- **Bioluminescent Spores**: Illuminate the pathways and create illusions affecting perception of direction.
+- **Vacuum Pockets**: Shifts in the walls occasionally trap air, requiring a Dexterity saving throw DC 15. On failure, players are transported elsewhere in the maze.
+- **Trickster Spores**: Create mirages of tempting vistas. When approached, characters are teleported to the maze's entrance.
+- **Ethereal Birds**: Fly by occasionally, leaving harmless spore trails.
+- **Phosphorescent Moss Patches**: Emit a soft blue glow.
+- **Night Sky Pools**: Small, shallow, and safe to walk through. Ripple with cosmic colors.
+- **Mycosmic Depiction**: A dead-end showcases an ancient civilization's reverence for the Mycosmic Hallways.
+- **Spore Illusionist**: Manipulates the walls to protect the maze. Engages when items are excessively taken or the maze is disturbed.
+- **Hallway Stalkers**: Three camouflaged entities in the maze.
+- **Cosmic Protector**: A passive guardian spirit unless provoked.
+
+### Resonance Mechanism
+
+- When the **Fungal Constellations** align, the Mycocelestial Resonance occurs. The maze's layout stabilizes, and Funguardians become passive.
+- **Auditory Cue**: As resonance approaches, echoing sounds grow louder and harmonize.
+- **Elder Funguardian's Tales**: Sharing stories of the stillness during the resonance.
+- **Wise Funguardian Information**: Shares details about the importance of the **Fungistar Lens** and the location of the **spore-imprinted key** in a glowing **mycelial cocoon**.
+
+### Hidden Items and Pathways
+
+- **Celestial Mycodew**: Found rarely within the maze.
+- **Cloak of Sporestep**: Hidden within the maze.
+- **Fungi Flora of the Cosmos**: Located at a particular juncture.
+- **Mycelium Medallion**: Positioned close to an area dense with vacuum pockets.
+- **Glimmercap**: Randomly scattered throughout the hallways.
+- **Fungistar Lens**: Stored under a glowing mushroom. Nearby wall depicts a lens entering a telescope.
+- **Spore-Imprinted Key**: Concealed in a glowing **mycelial cocoon**. Guided by subtle footpaths and glowing fungal clusters.
+- Darkened Section: A pathway obscured in shadow, revealing itself when bioluminescent moss from **Room 1** is applied. Contains rare fungal samples.
+- **Bioluminescent Moss**: Indication from a soft glow near the path.
+- Ethereal Whisper: Near the dark path, "Bring forth nature's light."
+
+### Connections
+
+- Direct Path to **Room 1**: Chamber of Celestial Echoes.
+- Main Corridor to **Room 3**: Luminous Library of Elyndra.
+- Hidden Path from **Room 1**: Accessed via bioluminescent lock mechanism.
+- Main Corridor from **Room 3**: Returning path to the Mycosmic Hallways.
+
+
+
+#### Celestial Mycodew
+- **Weight:** 0.1 lbs
+- **Value:** 1,000 gp
+This rare galaxy-reflecting dewdrop, when consumed in an elixir, grants the drinker a one-time use of the *Divination* spell, allowing them to receive brief visions of distant galaxies.
+
+\page
+
+#### Cloak of Sporestep
+- **Weight:** 1 lb
+- **Value:** 2,500 gp
+This enchanted cloak allows the wearer to cast *Misty Step* once per day. When activated, the wearer leaves a trail of harmless bioluminescent spores behind that dissipate after a few seconds.
+
+#### Fungi Flora of the Cosmos
+- **Weight:** 3 lbs
+- **Value:** 500 gp
+An illustrated guidebook with vivid and detailed illustrations of various interstellar fungi, including descriptions and lore. Reading this book grants the reader proficiency in *Nature* checks related to interstellar fungi for 24 hours after reading.
+
+#### Mycelium Medallion
+- **Weight:** 0.5 lbs
+- **Value:** 750 gp
+This medallion, embedded with a small piece of translucent mycelium wall, vibrates softly when a vacuum pocket is nearby, granting the wearer a +2 bonus to Dexterity saving throws to avoid being sucked into these pockets while in Mycosmic Hallways (Room 2).
+
+#### Glimmercap
+- **Weight:** 0.1 lbs
+- **Value:** 100 gp
+This unique mushroom has a cap that glows like a star. When consumed, it grants the user darkvision with a range of 60 feet for one hour.
+
+#### Fungistar Lens
+- **Weight:** 0.5 lbs
+- **Value:** 1,500 gp
+This crystalline frame, embedded with a bioluminescent spiral, enhances the Mycelium Telescope in the Chamber of Celestial Echoes (Room 1), granting advantage on Investigation checks made with the telescope and revealing hidden cosmic caches in the Luminous Library of Elyndra (Room 3).
+
+#### Mycocelestial Resonance Auditory Cue
+- **Weight:** 0.2 lbs
+- **Value:** N/A (Invaluable for observatory operations)
+This small device, gradually emitting louder echoing sounds, serves as an auditory cue for the Mycocelestial Resonance. When the resonance approaches, the device becomes more harmonious, alerting those in Mycosmic Hallways (Room 2) to anticipate the upcoming event.
+
+\column
+
+#### Timekeeper Shroom
+- **Weight:** 0.1 lbs
+- **Value:** N/A (Invaluable for observatory operations)
+This unique mushroom found in the Luminous Library of Elyndra (Room 3) displays a rhythmic pulsing pattern. Observing its pattern helps anticipate the Mycocelestial Resonance in Mycosmic Hallways (Room 2) and is crucial for maintaining the observatory's operations.
+
+
+
+{{monster,frame
+## Spore Illusionist
+*Medium plant, chaotic neutral*
+___
+**Armor Class** 13 (natural armor)
+**Hit Points** 45 (7d8 + 14)
+**Speed** 30 ft.
+___
+**STR** 8 (-1)
+**DEX** 16 (+3)
+**CON** 14 (+2)
+**INT** 12 (+1)
+**WIS** 14 (+2)
+**CHA** 16 (+3)
+___
+**Skills** Deception +5, Stealth +5
+**Senses** darkvision 60 ft., passive Perception 12
+**Languages** understands Common and Sylvan but can't speak
+**Challenge** 2
+___
+**False Appearance.** While the Spore Illusionist remains motionless, it is indistinguishable from a fungal wall.
+**Fungal Manipulation.** The Spore Illusionist can manipulate the mycelium walls to create illusory terrain within a 30-foot radius. This terrain can obscure vision and create mirages, making it difficult for creatures to locate the Spore Illusionist or their allies.
+**Spore Burst.** When the Spore Illusionist is attacked or damaged, it can release a burst of spores in a 10-foot radius centered on itself. Each creature in that area must make a DC 13 Constitution saving throw, taking 9 (2d8) poison damage on a failed save, or half as much damage on a successful one.
+**Spore Projectiles (Recharge 5-6).** The Spore Illusionist can release a barrage of spore projectiles as an action. Each creature in a 20-foot cone must make a DC 13 Dexterity saving throw, taking 14 (4d6) poison damage on a failed save, or half as much damage on a successful one.
+___
+**Actions**
+**Spore Mirage.** The Spore Illusionist can create a mirage of a mycelial wall or passage within 30 feet of itself as a bonus action. The mirage lasts for 1 minute or until the Spore Illusionist uses this ability again. The mirage can obscure vision and disorient creatures, causing disadvantage on their Wisdom (Perception) checks.
+**Fungal Teleport (Recharge 6).** The Spore Illusionist can teleport up to 60 feet to an unoccupied space it can see within the maze-like environment of the Mycosmic Hallways.
+___
+}}
+
+\page
+
+{{monster,frame
+## Hallway Stalker
+*Medium plant, neutral*
+___
+**Armor Class** 14 (natural armor)
+**Hit Points** 22 (5d8)
+**Speed** 30 ft.
+___
+**STR** 14 (+2)
+**DEX** 12 (+1)
+**CON** 11 (+0)
+**INT** 2 (-4)
+**WIS** 10 (+0)
+**CHA** 3 (-4)
+___
+**Skills** Stealth +3
+**Senses** blindsight 60 ft., passive Perception 10
+**Languages** understands Sylvan but can't speak
+**Challenge** 1/4 (50 XP)
+___
+**Camouflage Enhancement.** The Hallway Stalker's blindsight range has increased to 60 ft.
+**Plant Stealth.** The Hallway Stalker can take the Hide action as a bonus action while in dim light or darkness, even if it is being observed.
+___
+**Actions**
+**Slam.** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 1d6 + 2 bludgeoning damage.
+**Poisonous Slam (Recharge 5-6).** The Hallway Stalker's Slam attack has a chance to poison its target. On a hit, the target must make a DC 10 Constitution saving throw or be poisoned for 1 minute. At the start of its turn, the poisoned creature takes 2 (1d4) poison damage. The creature can repeat the saving throw at the end of each of its turns, ending the poison effect on a success.
+___
+**Reactions**
+**Ambush from the Shadows.** When a creature moves within 5 feet of the Hallway Stalker while it is hidden, the Hallway Stalker can make a Slam attack against that creature as a reaction.
+}}
+
+
+{{monster,frame
+## Cosmic Protector
+*Medium celestial, lawful neutral*
+___
+**Armor Class** 16 (natural armor)
+**Hit Points** 30 (5d8 + 10)
+**Speed** 30 ft., fly 30 ft.
+___
+**STR** 14 (+2)
+**DEX** 14 (+2)
+**CON** 14 (+2)
+**INT** 10 (+0)
+**WIS** 16 (+3)
+**CHA** 16 (+3)
+___
+**Skills** Insight +5, Perception +5
+**Senses** darkvision 60 ft., passive Perception 15
+**Languages** understands Celestial and Common but can't speak
+**Challenge** 1/2 (100 XP)
+___
+**Celestial Aura.** Friendly creatures within 10 feet of the Cosmic Protector have advantage on saving throws against being frightened and charmed. Additionally, they gain resistance to radiant damage.
+**Ethereal Wings.** The Cosmic Protector can use its wings to fly without provoking opportunity attacks. It has a flying speed of 30 feet.
+___
+**Actions**
+**Cosmic Gaze.** *Ranged Spell Attack:* +5 to hit, range 30 ft., one target. *Hit:* 7 (2d6) radiant damage.
+**Healing Touch (Recharge 4-6).** The Cosmic Protector touches a creature it can reach, causing it to regain 10 (2d6 + 3) hit points.
+**Celestial Smite (1/Day).** The Cosmic Protector can imbue its next melee attack with celestial energy. On a hit, the target takes an extra 7 (2d6) radiant damage.
+___
+**Reactions**
+**Astral Shield.** When a friendly creature within 10 feet of the Cosmic Protector takes damage, the Cosmic Protector can use its reaction to grant that creature resistance to the damage.
+}}
+
+\page
+## Room 3: Luminous Library of Elyndra
+
+*As you enter Room 3, you find yourself in a grand bioluminescent cavern. Vast shelves line the walls, filled with scrolls, books, and petri dishes. Mycelium tendrils act as reading lights, bending down to illuminate the texts. In the center of the room, a large circular reading table hosts a holographic cosmic display showing the current Fungal Constellations and Cosmic Spore Burst patterns.*
+
+### Description
+The Luminous Library of Elyndra is a cavernous chamber with high ceilings, its walls covered in bioluminescent fungi that cast a soothing, dim light. Shelves filled with ancient tomes and scrolls stretch along the walls, while a circular reading table dominates the center of the room. Mycelium tendrils hang from the ceiling, serving as reading lamps that can be directed to specific texts. In the back, a hidden drawer emits a soft humming sound, hinting at its concealed location.
+
+
+### Notable Features
+- **Mycelium tendrils** provide reading lights.
+- A large, **circular reading table** with a hovering holographic cosmic display.
+- **Recipe Scroll for Mycocelestial Elixir**: Placed on the table.
+- **Pendant of Elyndra**: Found within a hidden drawer.
+- **Elyndra’s Personal Diary**: Placed on a prominent shelf.
+- **Mycosmic Globes** (multiple): Distributed throughout the library.
+- Memory Spore-infused scrolls (multiple): Distributed throughout the library. Inhalation requires an Intelligence saving throw (DC 16) or the character forgets the last hour.
+- **Mycelium Archivist**: Roams the library, tending to books and scrolls.
+- **Luminescent Protectors (x4)**: Spread throughout, keeping watch.
+- Revealed texts about a brewing chamber and the significance of the **Mycelium Telescope**.
+- Glass bottles with bioluminescent fungi (multiple): Scattered on various shelves.
+- **Fungal Harp**: Located near the main entrance.
+- Sketches of mushrooms and fungi: Adorning various shelves.
+- **Luminescent Bookworms**: Found within select books.
+- **Mushroom Ring**: Concealed within a book spine.
+- A section dedicated to bioluminescent algae.
+\column
+- Fungi-made stools: Located near reading areas.
+- A humming shelf conceals a **Crystal Vial**.
+- Runic inscriptions on various pillars.
+- A grand archway at the far end leading to **Elyndra's Sanctum of Synthesis (Room 4)**.
+- A sealed cabinet labeled "Stellarspore Legacy".
+- A **Timekeeper Shroom**: Displayed in a library case near the circular table.
+
+### Mycocelestial Resonance Mechanics
+- Trigger: **Mycocelestial Chronometer** near the circular table. Players must align an **Astral Spoon** with a Cosmic Spore Burst pattern.
+- Effects: Hidden texts fluoresce revealing additional potion recipes or lore about the Mycocelestial Elixir.
+
+### Memory Spore Scrolls
+- Scrolls carry a label: "Handle with care; inhale, lose; resist with Mycelium thoughts."
+- Inhaling the spores from these scrolls erases the last hour of memory. Requires an Intelligence saving throw (DC 16) to resist.
+
+### Timekeeper Shroom Significance
+- Plaque near the shroom reads: "Timekeeper Shroom syncs with celestial resonance; understand via Mycelium Telescope alignment."
+- Clues in texts: "Pulsing syncs with celestial resonance." and "To grasp Mycocelestial Resonance secrets, align with Telescope."
+
+### Mycosmic Globes Insight
+- Plaque near display reads: "Globes aglow, seek wisdom in cosmic glow."
+
+### Crystal Vial Details
+- Found in the humming concealed drawer, a label on it reads: "In need, heal wounds; don't squander light." Healing: 2d4+2 HP.
+
+### Stellarspore Legacy Cabinet
+- Requires a unique spore-imprinted key from **Mycosmic Hallways (Room 2)**.
+- Inside: Notes about fungal synergy for potion brewing for **Elyndra's Sanctum of Synthesis (Room 4)** and luminescent ink.
+- Sketch near the cabinet reads: "Guarded by the very essence of our realm."
+
+\page
+
+#### Pendant of Elyndra
+
+*Wondrous Item (necklace), rare*
+
+- *Weight:* 0.1 lb.
+- *Value:* 500 gp
+
+This silver necklace features a pendant shaped like a mushroom with a glowing gem at its center. While wearing it, you can use an action to expend one charge to understand and communicate with fungal entities for one hour. The pendant has three charges and regains one charge at dawn.
+
+#### Fungal Harp
+
+*Wondrous Item (instrument), rare*
+
+- *Weight:* 2 lb.
+- *Value:* 800 gp
+
+This mycelium-stringed harp emits a soothing, enchanting melody when played, calming agitated fungi-based creatures within a 30-foot radius for 1 hour. It can be used up to three times per day, with a 24-hour cooldown between uses.
+
+#### Mushroom Ring
+
+*Wondrous Item (ring), uncommon*
+
+- *Weight:* 0.1 lb.
+- *Value:* 150 gp
+
+When worn, this ring provides resistance to poison damage for one hour. It is a single-use item.
+
+#### Crystal Vial
+
+*Wondrous Item (vial), uncommon*
+
+- *Weight:* 0.1 lb.
+- *Value:* 50 gp
+
+This vial is filled with glowing spores that can be used as a minor healing potion. When consumed, it restores 2d4+2 hit points.
+
+
+
+{{monster,frame
+## Mycelium Archivist
+*Medium plant, neutral*
+
+**Armor Class** 13 (natural armor)
+
+**Hit Points** 68 (8d10 + 24)
+
+**Speed** 30 ft.
+
+**STR** 12 (+1)
+**DEX** 10 (+0)
+**CON** 16 (+3)
+**INT** 14 (+2)
+**WIS** 15 (+2)
+**CHA** 8 (-1)
+
+**Skills** History +4, Nature +4
+
+**Senses** darkvision 60 ft., passive Perception 12
+
+**Languages** telepathy 60 ft.
+
+**Challenge** 3 (700 XP)
+
+**Fungal Aura.** The Mycelium Archivist and friendly creatures within 10 feet of it have advantage on saving throws against being frightened and have resistance to poison damage.
+
+**Fungal Regeneration.** At the start of its turn, the Mycelium Archivist regains 5 hit points.
+
+**Spore Spells.** The Mycelium Archivist can cast the following spells innately, requiring no material components:
+
+- At will: *Dancing Lights*
+- 3/day each: *Entangle*, *Fog Cloud*, *Moonbeam*
+
+**Actions**
+**Multiattack.** The Mycelium Archivist makes two *Spore Burst* attacks.
+
+**Spore Burst.** *Ranged Spell Attack:* +4 to hit, range 60 ft., one target. *Hit:* 14 (3d6 + 2) poison damage. On a failed DC 14 Constitution saving throw, the target is poisoned until the end of its next turn.
+
+**Telepathic Communication.** The Mycelium Archivist can communicate telepathically with any creature it can see within 60 feet of it that understands a language.
+
+**Reactions**
+**Fungal Shield.** When targeted by a ranged attack, the Mycelium Archivist gains temporary hit points equal to half the damage dealt by the attack.
+}}
+
+{{monster,frame
+## Luminescent Protector
+*Small plant, neutral*
+
+**Armor Class** 14 (natural armor)
+
+**Hit Points** 11 (2d6 + 4)
+
+**Speed** 30 ft.
+
+**STR** 10 (+0)
+**DEX** 12 (+1)
+**CON** 14 (+2)
+**INT** 2 (-4)
+**WIS** 10 (+0)
+**CHA** 4 (-3)
+
+**Skills** Stealth +3
+
+**Senses** darkvision 60 ft., passive Perception 10
+
+**Languages** understands Sylvan but can't speak
+
+**Challenge** 1/2 (100 XP)
+
+**Bioluminescence.** The Luminescent Protector emits dim light in a 10-foot radius.
+
+**Spore Burst.** *Ranged Spell Attack:* +3 to hit, range 30 ft., one target. *Hit:* 5 (1d8 + 1) poison damage.
+
+**Actions**
+**Multiattack.** The Luminescent Protector makes two *Spore Burst* attacks.
+
+**Fungal Camouflage.** The Luminescent Protector can take the Hide action as a bonus action while in dim light or darkness.
+
+**Tactics.** Luminescent Protectors prioritize attacking creatures who are concentrating on spells or abilities. They rely on their *Fungal Camouflage* to ambush intruders, attacking with their *Spore Burst* attacks and retreating to cover.
+}}
+
+\page
+
+{{monster,frame
+## Luminescent Bookworm
+*Tiny beast, neutral*
+
+**Armor Class** 11
+
+**Hit Points** 14 (4d4 + 4)
+
+**Speed** 10 ft.
+
+**STR** 3 (-4)
+**DEX** 14 (+2)
+**CON** 12 (+1)
+**INT** 2 (-4)
+**WIS** 10 (+0)
+**CHA** 3 (-4)
+
+**Skills** Stealth +4
+
+**Senses** blindsight 10 ft., passive Perception 10
+
+**Languages** understands but can't speak any languages
+
+**Challenge** 1/2 (100 XP)
+
+**Bioluminescence.** The Luminescent Bookworm emits dim light in a 5-foot radius.
+
+**Spore Glow.** When the Luminescent Bookworm takes damage, it releases a burst of spores. Each creature within 5 feet of it must make a DC 12 Constitution saving throw or be blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on a success.
+
+**Actions**
+**Bite.** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 6 (1d8 + 2) piercing damage.
+
+**Spore Burst.** *Ranged Spell Attack:* +4 to hit, range 30 ft., one target. *Hit:* 5 (1d6 + 2) poison damage.
+
+**Tactics.** Luminescent Bookworms use their *Spore Burst* from a distance and close in for a *Bite* attack when threatened. They attempt to maintain distance when facing multiple foes.
+}}
+
+## Room 4: Elyndra's Sanctum of Synthesis
+
+*As you enter Room 4, you find yourself in an elegant and serene chamber. The walls pulse with cosmic energy, casting a soft, otherworldly glow. In the center, a large alchemical setup stands, with channels leading to various spore collection chambers and crystal reservoirs. Above, an oculus opens to show a clear view of the Fungal Constellations, their light focused onto the brewing apparatus.*
+
+### Description
+The room is spacious, with walls lined with shelves containing ancient tomes and manuscripts detailing Elyndra's research. One particular text, titled "The Celestial Brew: Elyndra's Observations," offers insights into her discoveries and the significance of the Fungal Constellations. The floor features intricate murals depicting the various stages of Elyndra's brewing process. A crystal fountain sits in one corner, giving off a soft glow and restoring a small amount of health when consumed. In another corner, a delicate crystal chime hangs, releasing harmonious, calming tones when swayed.
+
+In the center of the room, a suspended platform holds a crystal podium. Placing a hand on the podium allows one to feel the pulse of the entire fungal universe. A glowing inscription on the main brewing apparatus reads: "In unity of cosmos and mycelium, true synthesis is achieved." Hidden among the shelves is a rare **Lunar Mycelium Cluster** that provides the user with night vision when consumed. 
+
+
+
+
+### Notable Features
+- Walls pulsing with cosmic energy.
+- Central alchemical setup with channels to **spore collection chambers** and **crystal reservoirs**.
+- Oculus above displaying the Fungal Constellations, focusing light on the brewing apparatus.
+- **Elixir Ingredient - Stellarspore Crystal** located at the brewing station.
+- Walls lined with shelves holding ancient tomes and manuscripts. A distinct manuscript titled "The Celestial Brew: Elyndra's Observations" can be found here.
+- Floor murals depicting the various stages of Elyndra's brewing process.
+- A suspended platform with a crystal podium in its center.
+- Crystal chime located in a room corner.
+- Hidden **Lunar Mycelium Cluster** among the shelves.
+- **Celestial Spore Wisp (x2)** orbiting the chamber.
+- Crystal fountain filled with a luminescent liquid.
+- Brewing apparatus with the glowing inscription: "In unity of cosmos and mycelium, true synthesis is achieved."
+- Grand archway leading to the Luminous Library of Elyndra (Room 3).
+- Soft, melodic tune near the location of the **pale blue crystalline shard** at the brewing station. The whispered words heard are "Unity of cosmos and mycelium for true synthesis."
+- **.5 Mycelial Guardian** patrolling the sanctum.
+- **.5 Luminary Mycomancer** conversing with his **Spacetime Sentinels (x3)** near the alchemical setup.
+
+### Crystal Fountain Effects
+- Drinking from the fountain restores 10 hit points.
+- Induces a hallucinogenic effect for 1d4 rounds. While under this effect, the player's perception is distorted, but it has no combat impact.
+
+### Mycocelestial Resonance
+- During the resonance, brewing is more efficient in this room:
+  - Potions and elixirs crafted receive additional benefits (e.g., +1d4 hit points for healing potions).
+  - Brewing time is halved.
+
+### Mycelium Telescope Controls
+- The control panel is located behind the telescope.
+- To achieve optimal brewing, adventurers must align the telescope with the Fungal Constellations.
+
+\page
+### Crystalline Shard Usage
+- The shard is to be placed near the sealed tome "Fungus and Cosmos: Unseen Bonds" in the Luminous Library (Room 3) to unlock it. The revealed message within reads: "Seek rare celestial mushroom."
+
+### Cosmic Clues
+- Timekeeper Shroom in the Luminous Library (Room 3) is etched with: "Time unfolds with celestial grace. Seek alignment in Elyndra's Chamber to unlock synthesis secrets."
+
+
+
+#### Stellarspore Crystal
+*Weight:* 1 lb.  
+*Value:* 1,000 gp  
+
+This crystalline structure, vital for the elixir's infusion process, glows softly and interacts with celestial energies. While in possession, the bearer gains advantage on Arcana checks related to celestial or fungal magic.
+
+#### Gauntlet of Fungal Fortitude
+*Weight:* 2 lbs.  
+*Value:* 5,000 gp  
+
+These intricately designed gauntlets grant the wearer resistance to poison damage, reducing poison damage taken by half. Additionally, the wearer has advantage on saving throws against spore-based effects.
+
+#### Cosmic Spore Vial
+*Weight:* 0.1 lb.  
+*Value:* 500 gp  
+
+These small vials contain spores from various celestial events and glow in different colors. When consumed as an action, the character gains temporary resistance to poison damage for 1 hour.
+
+#### Lunar Mycelium Cluster
+*Weight:* 0.5 lbs.  
+*Value:* 1,500 gp  
+
+When consumed, this rare fungal cluster provides the user with night vision for 1 hour, allowing them to see in darkness as if it were dim light within a range of 60 feet.
+
+
+
+{{monster,frame
+## Luminary Mycomancer
+*Medium humanoid (mycomancer), neutral*
+
+**Armor Class** 12 (robes)
+**Hit Points** 38 (5d8 + 15)
+**Speed** 30 ft.
+
+**STR** 8 (-1)
+**DEX** 12 (+1)
+**CON** 16 (+3)
+**INT** 14 (+2)
+**WIS** 14 (+2)
+**CHA** 10 (+0)
+
+**Skills** Arcana +4, Nature +4, Persuasion +2
+**Senses** darkvision 60 ft., passive Perception 12
+**Languages** Common, Sylvan
+
+**Challenge** 2.5 (450 XP)
+
+***Fungal Connection.*** The Luminary Mycomancer has advantage on saving throws against spore-based effects and resistance to poison damage.
+
+***Spellcasting.*** The Luminary Mycomancer is a 4th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 12, +4 to hit with spell attacks). It has the following spells prepared:
+
+- Cantrips (at will): *druidcraft, mage hand, mending*
+- 1st level (4 slots): *cure wounds, entangle, faerie fire, detect poison and disease*
+- 2nd level (3 slots): *barkskin, enthrall, misty step*
+- 3rd level (2 slots): *call lightning, dispel magic*
+
+***Fungal Ward.*** The Luminary Mycomancer can cast *barkskin* on itself without expending a spell slot.
+
+***Mycelial Resilience.*** When the Luminary Mycomancer takes damage from an attack, it can use its reaction to gain temporary hit points equal to half the damage taken. These temporary hit points last until the end of its next turn.
+
+***Fungal Infusion (1/Day).*** As an action, the Luminary Mycomancer can perform a ritual to enhance the effectiveness of potions and elixirs for itself and allies within 30 feet. For the next hour, any healing potions consumed by those affected restore an additional 1d4 hit points, and they gain temporary hit points equal to the amount of hit points restored.
+
+***Mycelial Shield (3/Day).*** When the Luminary Mycomancer or an ally within 30 feet is targeted by a ranged attack, it can use its reaction to impose disadvantage on the attack roll.
+
+***Actions***
+***Staff.*** *Melee Weapon Attack:* +1 to hit, reach 5 ft., one target. *Hit:* 2 (1d6 - 1) bludgeoning damage.
+
+***Spore Burst (Recharge 5-6).*** The Luminary Mycomancer releases a burst of spores in a 15-foot cone. Each creature in that area must make a DC 12 Constitution saving throw, taking 18 (3d8) poison damage on a failed save, or half as much damage on a successful one.
+}}
+
+\page
+
+{{monster,frame
+## Spacetime Sentinel
+*Small celestial, neutral*
+
+**Armor Class** 14 (natural armor)
+**Hit Points** 30 (5d6 + 10)
+**Speed** 0 ft., fly 30 ft. (hover)
+
+**STR** 6 (-2)
+**DEX** 16 (+3)
+**CON** 12 (+1)
+**INT** 8 (-1)
+**WIS** 10 (+0)
+**CHA** 14 (+2)
+
+**Skills** Perception +2
+**Senses** darkvision 60 ft., passive Perception 12
+**Languages** understands Common and Celestial but can't speak
+
+**Challenge** 1 (200 XP)
+
+***Ethereal Form.*** The Spacetime Sentinel can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+
+***Luminous Aura.*** The Spacetime Sentinel sheds dim light in a 10-foot radius. This light has a calming effect, granting creatures within the aura advantage on Wisdom saving throws against being frightened.
+
+***Actions***
+***Luminous Touch.*** *Melee Spell Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 7 (2d6) radiant damage.
+
+***Warp (Recharge 5-6).*** The Spacetime Sentinel blinks out of existence and reappears in an unoccupied space within 30 feet of its current location.
+}}
+
+{{monster,frame
+## Celestial Spore Wisp
+*Tiny celestial, neutral*
+
+**Armor Class** 13
+**Hit Points** 18 (4d8)
+**Speed** 0 ft., fly 50 ft. (hover)
+
+**STR** 1 (-5)
+**DEX** 16 (+3)
+**CON** 10 (+0)
+**INT** 2 (-4)
+**WIS** 12 (+1)
+**CHA** 10 (+0)
+
+**Skills** Perception +3
+**Senses** darkvision 60 ft., passive Perception 13
+**Languages** understands Celestial but can't speak
+
+**Challenge** 1 (200 XP)
+
+***Ethereal Form.*** The Celestial Spore Wisp can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+
+***Glowing Presence.*** The area within 5 feet of the Celestial Spore Wisp is brightly lit.
+
+***Radiant Burst (Recharge 5-6).*** When the Celestial Spore Wisp takes damage, it can unleash a burst of radiant energy in a 10-foot radius. Each creature in that area must make a DC 13 Constitution saving throw, taking 7 (2d6) radiant damage on a failed save, or half as much damage on a successful one.
+}}
+
+
+## Conclusion
+Upon completing their mission and crafting the Mycocelestial Elixir, a radiant energy fills the observatory. The rip in their home realm's fabric mends, and a sense of tranquility descends. The observatory, having served its purpose, starts to gently pulse, and over time, it becomes a beacon of light and knowledge, attracting scholars and mystics from all realms. The artifacts the adventurers find within, especially the Fungistar Lens, can act as powerful tools to peer into other dimensions or as protective amulets against cosmic disturbances. The Mushroom Observatory stands as a testament to their journey, a place of learning and a bridge between the world of fungi and the vast cosmos.
+{{monster,frame
+## Mycelial Guardian
+*Medium plant, neutral*
+
+**Armor Class** 14 (natural armor)
+**Hit Points** 32 (5d8 + 10)
+**Speed** 20 ft.
+
+**STR** 14 (+2)
+**DEX** 8 (-1)
+**CON** 14 (+2)
+**INT** 2 (-4)
+**WIS** 10 (+0)
+**CHA** 5 (-3)
+
+**Skills** Perception +2
+**Senses** darkvision 60 ft., passive Perception 12
+**Languages** understands Common but can't speak
+
+**Challenge** 1.5 (300 XP)
+
+***Plant Regeneration.*** The Mycelial Guardian regains 3 hit points at the start of its turn if it has at least 1 hit point.
+
+***Fungal Aura.*** The Mycelial Guardian emits spores in a 10-foot radius. Any creature that starts its turn in the aura must succeed on a DC 12 Constitution saving throw or be poisoned until the start of its next turn. A creature can repeat the saving throw at the end of its turn to end the poisoned condition early.
+
+***Actions***
+***Slam.*** *Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 8 (1d8 + 2) bludgeoning damage.
+
+***Spore Burst (Recharge 5-6).*** The Mycelial Guardian releases a burst of spores in a 10-foot cone. Each creature in that area must make a DC 12 Constitution saving throw, taking 14 (4d6) poison damage on a failed save, or half as much damage on a successful one.
+}}
+
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+{{column-count:2
+}}
+
+
+
+{{descriptive
+This module was generated using a script based on artificial intelligence, with the following parameters.
+:
+keywords: Mushroom Observatory, Mycelium Telescopes, Fungal Constellations, Cosmic Spore Bursts, Spacetime Shrooms
+:
+numRooms: 4
+:
+combatDifficulty: medium
+:
+lootValue: low
+:
+wackiness: medium.
+}}
