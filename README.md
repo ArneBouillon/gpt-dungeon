@@ -6,6 +6,15 @@ The techniques used here might also be useful outside the -- admittedly fun -- a
 ## Explore the code!
 If you're interested in the design of a tool like this, by all means, take a look at [the code](/src/dungeon.ts)! Due to the nature of interacting with ChatGPT (natural language!), much of the code consists of prompt texts, and not much coding knowledge is required to completely follow along with the flow of the code. That way, you can see in practice how I tried to deal with the largest [design challenges](#design-challenges).
 
+## Examples
+The repository includes various examples of generated modules.
+- (8 rooms) [Disco Delve: Groovin in the Eldergrove Groove](/examples/disco/disco.pdf): *In the heart of the bioluminescent Eldergrove jungle lies the enigmatic dungeon known as Eldergrove Groove. A rhythmically charged and magical realm, adventurers face a world where traditional combat takes a backseat, and dance battles rule supreme.*
+- (8 rooms) [Celestial Descent: Reclaiming the Starlight Medallion](/examples/celestial/celestial.pdf): *In the heart of the ethereal Phantom Marshes lies the Crystal Cathedral, a beacon of celestial wonder. Here, the characters embark on a quest to reclaim the Starlight Medallion, a potent artifact threatened by a rogue celestial faction.*
+- (6 rooms) [Clockwork Canopy: Quest for the Timeless Bloom](/examples/clockwork/clockwork.pdf): *Deep within the heart of an ancient forest lies the Clockwork Jungle, a breathtaking meld of vibrant overgrowth and intricate machinery. Legend speaks of the "Solstice Bloom," a clockwork flower with the power to grant its consumer an extended day.*
+- (6 rooms) [Whispers of the Verdant Spire](/examples/spire/spire.pdf): *In the heart of an otherworldly jungle stands the Verdant Spire, an ancient colossal tree that houses the Elemental Forge.*
+- (4 rooms) [Quacking Under Pressure: The Whimsical Waterway Adventure!](/examples/quack/quack.pdf): *Deep within an otherworldly forest, the "Rubber Duck Rapids" awaits adventurers brave enough to navigate its glistening waterslides, elude the mischievous Giggling Goblins, and harmonize with the Singing Snails.*
+- (4 rooms) [Mycelium Mirrors: The Celestial Spore Quest](/examples/mycelium/mycelium.pdf): *Deep within an ancient, subterranean mushroom forest lies the enigmatic Mushroom Observatory. Here, towering Mycelium Telescopes stand sentinel, allowing scholarly mycologists to study Fungal Constellations and the cosmos through Cosmic Spore Bursts.*
+
 ## Installation
 Unfortunately, I have had to patch the library used for sending API requests to ChatGPT to support the `continue` action.
 
